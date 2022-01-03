@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
-/* PrimeNG */
+/* Primeng Modules */ 
 import { MenubarModule } from 'primeng/menubar';
+import { ButtonModule } from 'primeng/button';
 
 /* Components */
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -17,7 +18,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   ],
   imports: [
     CommonModule,
-    MenubarModule
+    MenubarModule,
+    ButtonModule
   ]
 })
 export class GlobalModule { }

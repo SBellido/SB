@@ -1,0 +1,25 @@
+@import '../../global.component.scss';
+
+._container_navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0rem 2rem 0rem 0rem;
+  box-shadow: -1px 0px 5px 0px rgba(97,97,97,0.75);
+  -webkit-box-shadow: -1px 0px 5px 0px rgba(97,97,97,0.75);
+  -moz-box-shadow: -1px 0px 5px 0px rgba(97,97,97,0.75);
+}
+:host ::ng-deep 
+  .p-menubar {
+    background-color: white;
+    border: none;
+}
+._logo_navbar {
+  width: 300px;
+  cursor: pointer;
+}
+:host ::ng-deep
+  .p-button {
+    border: none;  
+}
