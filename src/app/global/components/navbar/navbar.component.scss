@@ -1,26 +1,39 @@
-// @import '../../global.component.scss';
+@import '../../global.component.scss';
 
-// ._container_navbar {
-//   display: flex;
-//   flex-direction: row;
-//   align-items: center;
-//   justify-content: space-between;
-//   padding: 0rem 2rem 0rem 0rem;
-//   box-shadow: -1px 0px 5px 0px rgba(97,97,97,0.75);
-//   -webkit-box-shadow: -1px 0px 5px 0px rgba(97,97,97,0.75);
-//   -moz-box-shadow: -1px 0px 5px 0px rgba(97,97,97,0.75);
-// }
-// :host ::ng-deep 
-//   .p-menubar {
-//     background-color: black;
-//     border: none;
-//     width: 20vw;
-// }
-// ._logo_navbar {
-//   width: 300px;
-//   cursor: pointer;
-// }
-// :host ::ng-deep
-//   .p-button {
-//     border: none;  
-// }
+
+@media (min-width: 0px) { 
+  .mat-toolbar.mat-primary {
+    background: red;
+  }
+  .mat-toolbar-row, 
+  .mat-toolbar-single-row {
+    justify-content: space-between;
+  }
+  .mat-menu-item {
+    background: red;
+    font-size: 1.2rem;
+    width: 100vw;
+    height: 10vh;
+  }
+  .mat-menu-item:hover {
+    background: rgb(110, 0, 0);
+  }
+  .mat-menu-item, 
+  .mat-icon-no-color, 
+  .mat-menu-submenu-icon {
+    color: white;
+  }
+  ::ng-deep
+  div.mat-menu-content.ng-tns-c48-0 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: red;
+    position: absolute;
+    left: -16px;
+  }
+  div._empty {
+    width: 40px;
+    height: 40px;
+  }
+
+ }
