@@ -9,12 +9,20 @@ import { WorksRoutingModule } from './works-routing.module';
 /* Components */
 import { WorksComponent } from './works.component';
 import { HomeComponent } from './components/home/home.component';
+import { DesignComponent } from './components/design/design.component';
+import { DevelopmentComponent } from './components/development/development.component';
+import { InterventionComponent } from './components/intervention/intervention.component';
+import { BiographyComponent } from './components/biography/biography.component';
 
 
 @NgModule({
   declarations: [
     WorksComponent,
-    HomeComponent
+    HomeComponent,
+    DesignComponent,
+    DevelopmentComponent,
+    InterventionComponent,
+    BiographyComponent
   ],
   imports: [
     CommonModule,

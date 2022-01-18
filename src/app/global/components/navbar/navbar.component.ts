@@ -14,5 +14,21 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  routeHome() {
+    this.router.navigate(['works/home']);
+  }
+  routeDesign() {
+    this.router.navigate(['works/design']);
+  }
+  routeDevelopment() {
+    this.router.navigate(['works/development']);
+  }
+  routeIntervention() {
+    this.router.navigate(['works/intervention']);
+  }
+  routeBiography() {
+    this.router.navigate(['works/biography']);
+  }
 
 }

@@ -1,36 +1,24 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-   
-    <div class="_container_hamburguer">
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>create</mat-icon>
-          <!-- <mat-icon> border_color</mat-icon> -->
-
-          <span>Diseño</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>code</mat-icon>
-          <span>Desarrollo</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>brush</mat-icon>
-          <span>Intervención</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>fingerprint</mat-icon>
-          <span>Biografía</span>
-        </button>
-      </mat-menu>
-    </div>
-    <div class="_container_logo">
-      <span>My App</span>
-    </div>
-    <div class="_empty">
-
-    </div>
+  <mat-toolbar-row>        
+    <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu" aria-label="Example icon-mat-button with a menu">
+      <mat-icon>menu</mat-icon>
+    </mat-button>
+    <mat-menu mat-mat-button #menu="matMenu">  
+      <mat-button id="design" (click)="routeDesign()" mat-menu-item>
+        <mat-icon>create</mat-icon><span>Diseño</span>
+      </mat-button>
+      <mat-button id="development" (click)="routeDevelopment()" mat-menu-item>
+        <mat-icon>code</mat-icon><span>Desarrollo</span>
+      </mat-button>
+      <mat-button id="intervention" (click)="routeIntervention()" mat-menu-item>
+        <mat-icon>brush</mat-icon><span>Intervención</span>
+      </mat-button>
+      <mat-button id="biography" (click)="routeBiography()" mat-menu-item>
+        <mat-icon>fingerprint</mat-icon><span>Biografía</span>
+      </mat-button>
+    </mat-menu>
+    <div id="logo" (click)="routeHome()" class="_container_logo">
+      <span>My App</span></div>
+    <div class="_empty"></div>
   </mat-toolbar-row>
 </mat-toolbar>
