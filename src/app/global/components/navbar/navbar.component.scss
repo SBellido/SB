@@ -1,22 +1,25 @@
 @import '../../global.component.scss';
 
-
+/* SCREEN 0px*/
 @media (min-width: 0px) { 
   .mat-toolbar.mat-primary {
-    background: red;
+    background: $primary_color;
   }
   .mat-toolbar-row, 
   .mat-toolbar-single-row {
     justify-content: space-between;
+    z-index: 10;
   }
   .mat-menu-item {
-    background: red;
+    background: $primary_color;
     font-size: 1.2rem;
     width: 100vw;
     height: 10vh;
+    display: flex;
+    align-items: center;
   }
   .mat-menu-item:hover {
-    background: rgb(110, 0, 0);
+    background: $primary_color_hover;
   }
   .mat-menu-item, 
   .mat-icon-no-color, 
@@ -28,13 +31,24 @@
   .mat-menu-content {
     padding-top: 8px;
     padding-bottom: 8px;
-    background: red;
+    background: $primary_color;
     position: absolute;
     left: -16px;
+  }
+  img._logo_navbar {
+    height: 60px;
   }
   div._empty {
     width: 40px;
     height: 40px;
+  }
+  ::ng-deep
+    div.mat-elevation-z4 {
+      background: white;
+      margin-top: .7rem;
+      width: 100vw;
+      top:5px;
+      height: 40vh;
   }
 
  }
