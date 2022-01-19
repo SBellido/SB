@@ -26,7 +26,6 @@
   .mat-icon-no-color, 
   .mat-menu-submenu-icon {
     color: white;
-    margin-left: .3rem;
   }
   ::ng-deep
   .mat-menu-content {
@@ -45,7 +44,7 @@
   }
   ::ng-deep
     div.mat-elevation-z4 {
-      background: white;
+      background: $primary_color;
       margin-top: .7rem;
       width: 100vw;
       top:5px;
