@@ -16,6 +16,9 @@ import { BiographyComponent } from './components/biography/biography.component';
 import { GraphPublicityComponent } from './components/design/components/graph-publicity/graph-publicity.component';
 import { UxUiComponent } from './components/design/components/ux-ui/ux-ui.component';
 import { IllustrationSketchComponent } from './components/design/components/illustration-sketch/illustration-sketch.component';
+import { AcademicComponent } from './components/biography/components/academic/academic.component';
+import { LaborComponent } from './components/biography/components/labor/labor.component';
+import { PersonalComponent } from './components/biography/components/personal/personal.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { IllustrationSketchComponent } from './components/design/components/illu
     BiographyComponent,
     GraphPublicityComponent,
     UxUiComponent,
-    IllustrationSketchComponent
+    IllustrationSketchComponent,
+    AcademicComponent,
+    LaborComponent,
+    PersonalComponent
   ],
   imports: [
     CommonModule,
