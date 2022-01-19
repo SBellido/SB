@@ -19,6 +19,8 @@ import { IllustrationSketchComponent } from './components/design/components/illu
 import { AcademicComponent } from './components/biography/components/academic/academic.component';
 import { LaborComponent } from './components/biography/components/labor/labor.component';
 import { PersonalComponent } from './components/biography/components/personal/personal.component';
+import { PrivateComponent } from './components/intervention/components/private/private.component';
+import { PublicComponent } from './components/intervention/components/public/public.component';
 
 
 @NgModule({
@@ -34,7 +36,9 @@ import { PersonalComponent } from './components/biography/components/personal/pe
     IllustrationSketchComponent,
     AcademicComponent,
     LaborComponent,
-    PersonalComponent
+    PersonalComponent,
+    PrivateComponent,
+    PublicComponent
   ],
   imports: [
     CommonModule,
