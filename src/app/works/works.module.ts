@@ -22,7 +22,6 @@ import { PersonalComponent } from './components/biography/components/personal/pe
 import { PrivateComponent } from './components/intervention/components/private/private.component';
 import { PublicComponent } from './components/intervention/components/public/public.component';
 
-
 @NgModule({
   declarations: [
     WorksComponent,

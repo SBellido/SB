@@ -1,6 +1,9 @@
 <article>
-  <section>
-    <img src="..\assets\images\logo_sb_home.svg" 
+  <section class="_container_concepts" >
+    <div *ngFor="let concept of concepts">
+      <h1 class="_concept" [ngStyle]="getStyles()">{{concept}}</h1>
+    </div>
+    <img class="_eye_home" src="..\assets\images\logo_eye.svg" 
       alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
   </section>
 </article>

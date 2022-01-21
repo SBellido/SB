@@ -1,0 +1,17 @@
+@import '../../../global/global.component.scss';
+
+._container_concepts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+._concept {
+  color: $secondary_color;
+  font-size: 2rem;
+}
+img._eye_home {
+  padding-top: 5rem;
+  width: 100vw;
+}
