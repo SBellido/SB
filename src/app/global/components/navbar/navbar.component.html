@@ -1,23 +1,27 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>        
     <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu">
-      <mat-icon>menu</mat-icon>
+      <mat-icon class="_icon_nav">menu</mat-icon>
     </mat-button>
     <mat-menu mat-button #menu="matMenu">  
       <mat-button id="design" (click)="routeDesign()" mat-menu-item>
-        <mat-icon>create</mat-icon><span>Diseño</span>
+        <mat-icon class="_icon_nav">create</mat-icon><span>diseño</span>
       </mat-button>
       <mat-button id="development" (click)="routeDevelopment()" mat-menu-item>
-        <mat-icon>code</mat-icon><span>Desarrollo</span>
+        <mat-icon class="_icon_nav">code</mat-icon><span>desarrollo</span>
       </mat-button>
       <mat-button id="intervention" (click)="routeIntervention()" mat-menu-item>
-        <mat-icon>brush</mat-icon><span>Intervención</span>
+        <mat-icon class="_icon_nav">brush</mat-icon><span>intervención</span>
       </mat-button>
       <mat-button id="biography" (click)="routeBiography()" mat-menu-item>
-        <mat-icon>fingerprint</mat-icon><span>Biografía</span>
+        <mat-icon class="_icon_nav">fingerprint</mat-icon><span>biografía</span>
       </mat-button>
+      <figure class="_firma">
+        <img class="_firma_home" (click)="routeHome()" src="..\assets\images\logo_sb_navbar.svg" 
+        alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
+      </figure>
     </mat-menu>
-    <div id="logo" (click)="routeHome()" class="_container_logo">
+    <div id="logo" class="_container_logo" (click)="routeHome()">
       <img class="_logo_navbar" src="..\assets\images\logo_sb_navbar.svg" 
         alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
     </div>
