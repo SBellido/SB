@@ -1,9 +1,9 @@
-<article>
-  <section>
-    <div class="_container_concepts" *ngFor="let concept of concepts">
-      <h1 class="_concept" [ngStyle]="getStyles()">{{concept}}</h1>
+<article class="_container_all">
+  <section class="_container_concepts">
+    <div class="_concept" *ngFor="let concept of concepts">
+      <h1 [ngStyle]="getStyles()">{{concept}}</h1>
     </div>
-    <img class="_eye_home" src="..\assets\images\logo_eye.svg" 
-      alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
+    <!-- <img class="_eye_home" src="..\assets\images\logo_eye.svg" 
+      alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador"> -->
   </section>
 </article>

@@ -1,16 +1,45 @@
 @import '../../../global/global.component.scss';
 
+._container_all {
+  perspective: 800px;
+  padding-top: 1rem;
+}
 ._container_concepts {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: center ;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: center;
+  transform-style: preserve-3d;
+  animation: displayWords;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+}
+@keyframes displayWords {
+  0% { 
+    transform: translateZ(800px); 
+    filter: blur(1.5rem);
+  }
+  100% { 
+    transform: translateZ(0px);
+    filter: blur(0);
+  }
+}
+h1 { 
+  margin: 0;
+}
+._concept {
+  padding: 0rem .1rem;  
+  color: $secondary_color;
+  width: auto;
+  height: auto;
+  margin: auto;
 }
 
-._concept {
-  color: $secondary_color;
-  font-size: 2rem;
-}
 img._eye_home {
   padding-top: 5rem;
   width: 100vw;

@@ -8,12 +8,12 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 export class HomeComponent implements OnInit {
   
   concepts: string[] = [
-    'aprender','superarse','apertura','perseverancia',
+    'aprendizaje','superación','apertura','perseverancia',
     'creatividad','experiencia','ubicación','respeto',
     'compromiso','comunicación','escuchar','práctica',
-    'dialogar','intuición','respeto','proyectos','ideas',
-    'curiosidad','amor','resultados','equipo','confianza',
-    'interés','arriesgar','actitud','formación','atención',
+    'diálogo','intuición','proyectos','ideas',
+    'curiosidad','amor','resultados','equipo','atención',
+    'interés','arriesgar','actitud','formación',
     'capacitación','confianza','sueños','sinceridad',
     'conocimiento','humildad','empatía','resolución' 
   ];
@@ -29,6 +29,9 @@ export class HomeComponent implements OnInit {
   fontStyle: string[] = [
     'oblique', 'italic','normal'
   ];
+  fontSize: string[] = [
+    '1.5rem', '1rem','1.75rem','1.25rem'
+  ];
   constructor() { }
 
   ngOnInit(): void {   
@@ -43,7 +46,8 @@ export class HomeComponent implements OnInit {
     let myStyles = {
       fontWeight: this.getRandomWeight(),
       color: this.getRandomColor(),
-      fontStyle: this.getRandomFont()
+      fontStyle: this.getRandomFontStyle(),
+      fontSize: this.getRandomFontSize()
     }
     return myStyles;    
   }
@@ -59,10 +63,16 @@ export class HomeComponent implements OnInit {
     result = this.colorFont[0];
     return result;
   }
-  getRandomFont(): string {
+  getRandomFontStyle(): string {
     let result: string;
     this.fontStyle.sort(()=> Math.random() - 0.5); 
     result = this.fontStyle[0];
+    return result;
+  }
+  getRandomFontSize(): string {
+    let result: string;
+    this.fontSize.sort(()=> Math.random() - 0.5); 
+    result = this.fontSize[0];
     return result;
   }
   
