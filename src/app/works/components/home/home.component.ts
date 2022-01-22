@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,10 @@ export class HomeComponent implements OnInit {
   concepts: string[] = [
     'aprendizaje','superación','apertura','perseverancia',
     'creatividad','experiencia','ubicación','respeto',
-    'compromiso','comunicación','escuchar','práctica',
+    'compromiso','comunicación','escucha','práctica',
     'diálogo','intuición','proyectos','ideas',
     'curiosidad','amor','resultados','equipo','atención',
-    'interés','arriesgar','actitud','formación',
+    'interés','riesgos','actitud','formación',
     'capacitación','confianza','sueños','sinceridad',
     'conocimiento','humildad','empatía','resolución' 
   ];
@@ -32,7 +33,8 @@ export class HomeComponent implements OnInit {
   fontSize: string[] = [
     '1.5rem', '1rem','1.75rem','1.25rem'
   ];
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {   
     this.mixArrayContent();
@@ -75,5 +77,20 @@ export class HomeComponent implements OnInit {
     result = this.fontSize[0];
     return result;
   }
-  
+  routeHome() {
+    this.router.navigate(['works/home']);
+  }
+  routeDesign() {
+    this.router.navigate(['works/design']);
+  }
+  routeDevelopment() {
+    this.router.navigate(['works/development']);
+  }
+  routeIntervention() {
+    this.router.navigate(['works/intervention']);
+  }
+  routeBiography() {
+    this.router.navigate(['works/biography']);
+  }
+
 }

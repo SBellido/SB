@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 /* Modules */
 import { GlobalModule }  from '../global/global.module';
 import { WorksRoutingModule } from './works-routing.module';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 /* Components */
 import { WorksComponent } from './works.component';
@@ -43,6 +46,9 @@ import { PublicComponent } from './components/intervention/components/public/pub
     CommonModule,
     GlobalModule,
     WorksRoutingModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule
   ]
 })
 export class WorksModule { }
