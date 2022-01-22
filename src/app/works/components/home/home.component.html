@@ -1,6 +1,6 @@
 <article>
-  <section class="_container_concepts" >
-    <div *ngFor="let concept of concepts">
+  <section>
+    <div class="_container_concepts" *ngFor="let concept of concepts">
       <h1 class="_concept" [ngStyle]="getStyles()">{{concept}}</h1>
     </div>
     <img class="_eye_home" src="..\assets\images\logo_eye.svg" 
