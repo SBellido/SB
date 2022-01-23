@@ -25,6 +25,11 @@
   .mat-icon-no-color {
     color: $second_color;
   }
+  .mat-icon-no-color:hover,
+  .mat-icon-no-color:active,
+  .mat-icon-no-color:focus {
+    color: $third_color;
+  }
   span {
     color: $accent_color;
   }

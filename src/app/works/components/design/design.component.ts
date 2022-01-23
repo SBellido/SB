@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DesignComponent implements OnInit {
 
+  visible: boolean = true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  showMoreUxUi() {  
+    this.visible ? 
+      this.visible = false : this.visible = true; 
+      
+  }
 }

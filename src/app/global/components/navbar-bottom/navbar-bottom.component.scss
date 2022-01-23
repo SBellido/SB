@@ -5,6 +5,11 @@ section._container_buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 0;
+  background: $first_color;
 }
 .mat-menu-item .mat-icon {
   margin-right: 0;
@@ -26,6 +31,7 @@ section._container_buttons {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 5.5rem;
 }
 ._button {
   display: flex;

@@ -1,15 +1,34 @@
 <article class="_container_all">
-  <section class="_container">
+  <div class="_container">
     <div class="_container_cards">
-      <button routerLink="graph-publicity">
-        Gráfico | Publicitario
-      </button>
-      <button routerLink="ux-ui">
-        UX | UI
-      </button>
-      <button routerLink="illustration-sketch">
-        Ilustración | Boceto
-      </button>
+      <section class="_container_item" (click)="showMoreUxUi()">
+        <h2 class="_item" >
+          UX | UI
+        </h2>
+        <div class="_container_info" [hidden]="visible" >
+          <p class="_info"><span>UX</span> - La experiencia de usuario es el conjunto de factores y elementos relativos 
+            a la interacción del usuario con un entorno o dispositivo concretos, dando como resultado 
+            una percepción positiva o negativa de dicho servicio, producto o dispositivo.</p>
+          <p class="_info"><span>UI</span> - El diseño de interfaz de usuario o ingeniería de la interfaz es el resultado 
+            de definir la forma, función, utilidad, ergonomía, imagen de marca y otros aspectos que 
+            afectan a la apariencia externa de las interfaces de usuario en sistemas de todo tipo.</p>
+          <div class="_container_buton">
+            <button class="_button_more" routerLink="ux-ui">
+              <mat-icon class="_icon_button">remove_red_eye</mat-icon>TRABAJOS
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="_container_item" routerLink="graph-publicity">
+        <h2 class="_item" >
+          Gráfico
+        </h2>
+      </section>
+      <section class="_container_item" routerLink="illustration-sketch">
+        <h2 class="_item" >
+          Ilustración
+        </h2>
+      </section>
     </div>
-  </section>
+  </div>
 </article>

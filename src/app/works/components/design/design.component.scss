@@ -2,12 +2,69 @@
 
 ._container_all {
   perspective: 800px;
+  z-index: -10;
 }
 ._container {
   width: 100vw;
-  height: 82vh;
+  height: 60vh;
   padding-top: 2rem;
 }
 div._container_cards {
-  padding: 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding: 0rem;
+}
+._container_item {
+  cursor: pointer;
+  background-color: $third_color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 0rem;
+  width: 91vw;
+  border-radius: 50px;
+  margin: 1.3rem;
+}
+div._container_info {
+  background-color: $accent_color;
+  width: 81vw;
+  height: auto;
+  border-radius: 0px 0px 50px 50px;
+  margin: 1rem 2rem;
+  padding: 1rem;
+  
+}
+h2._item {
+  margin: 0;
+  color: $first_color;
+  font-size: 1.6rem;
+}
+span {
+  font-weight: 800;
+}
+p._info {
+  font-size: .9rem;
+  color: $first_color;
+  margin: .5rem;
+}
+div._container_buton {
+  display: flex;
+  justify-content: flex-end;
+}
+button._button_more {
+  background-color: $second_color;
+  color: $first_color;
+  border-radius: 50px;
+  padding: .2rem 1rem;
+  margin-top: .5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+._icon_button {
+  margin-right: .5rem;
+  color: $first_color;
 }

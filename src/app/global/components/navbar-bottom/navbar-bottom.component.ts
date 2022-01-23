@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-bottom',
   templateUrl: './navbar-bottom.component.html',
   styleUrls: ['./navbar-bottom.component.scss']
 })
+
 export class NavbarBottomComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
+
   }
 
   routeHome() {
@@ -29,4 +31,5 @@ export class NavbarBottomComponent implements OnInit {
     this.router.navigate(['works/biography']);
   }
 
+  
 }
