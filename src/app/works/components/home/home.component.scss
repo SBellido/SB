@@ -2,11 +2,12 @@
 
 ._container_all {
   perspective: 800px;
-  padding-top: 1rem;
+  
 }
 ._container_concepts {
   width: 100vw;
-  height: 85vh;
+  height: 82vh;
+  padding-top: 2rem;
   display: flex;
   align-items: center ;
   justify-content: space-around;
@@ -20,40 +21,69 @@
   animation-iteration-count: 1;
 }
 @keyframes displayWords {
-  0% { 
-    transform: translateZ(800px); 
-    filter: blur(1.5rem);
-  }
-  100% { 
-    transform: translateZ(0px);
-    filter: blur(0);
-  }
+  0% { transform: translateZ(800px); 
+    filter: blur(2rem); }
+  100% { transform: translateZ(0px);
+    filter: blur(0); }
 }
 h1 { 
   margin: 0;
+  // animation: move linear 10s infinite;  
+
 }
+// @keyframes move {
+//   0% {
+//     text-shadow:
+//       2px -2px 0 $first_color, 
+//       1px -1px 0 $first_color,      
+//       -2px 2px 0 $second_color, 
+//       -1px 1px 0 $second_color, 
+//     ;
+//   }
+//   25% {    
+//     text-shadow:      
+//       -2px -2px 0 $second_color, 
+//       -1px -1px 0 $second_color, 
+//       2px 2px 0 $first_color, 
+//       1px 1px 0 $first_color,      
+//     ;
+//   }
+//   50% {
+//     text-shadow:
+//       -2px 2px 0 $first_color, 
+//       -1px 1px 0 $first_color, 
+//       2px -2px 0 $second_color, 
+//       1px -1px 0 $second_color, 
+//     ;
+//   }
+//   75% {
+//     text-shadow:
+//       2px 2px 0 $first_color, 
+//       1px 1px 0 $first_color, 
+//       -2px -2px 0 $second_color, 
+//       -1px -1px 0 $second_color,  
+//     ;
+//   }
+//   100% {
+//     text-shadow:
+//       2px -2px 0 $first_color, 
+//       1px -1px 0 $first_color, 
+//       -2px 2px 0 $second_color, 
+//       -1px 1px 0 $second_color, 
+      
+//     ;
+//   }  
+//}
+
 ._concept {
   padding: 0rem .1rem;  
-  color: $secondary_color;
+  color: $second_color;
   width: auto;
   height: auto;
   margin: auto;
 }
-section._container_buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+
 img._eye_home {
   padding-top: 5rem;
   width: 100vw;
-}
-.mat-menu-item .mat-icon {
-  margin-right: 0;
-  color: $primary_color;
-}
-.mat-menu-item {
-  background: $secondary_color;
-  border-radius: 50px;
-  padding: 0rem .8rem;
 }

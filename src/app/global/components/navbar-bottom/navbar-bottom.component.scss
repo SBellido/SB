@@ -1,0 +1,40 @@
+
+@import '../../../global/global.component.scss';
+
+section._container_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.mat-menu-item .mat-icon {
+  margin-right: 0;
+  color: $first_color;
+}
+.mat-menu-item {
+  background: $second_color;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 0rem .8rem;
+}
+.mat-menu-item:active,
+.mat-menu-item:focus,
+.mat-menu-item:hover {
+  background: $third_color;
+}
+._container_button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+._button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p._text_button {
+  font-size: .7rem;
+  color: $accent_color;
+  margin-block-start: .5em;
+  margin-block-end: .5em;
+}

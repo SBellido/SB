@@ -12,9 +12,9 @@ export class HomeComponent implements OnInit {
     'aprendizaje','superación','apertura','perseverancia',
     'creatividad','experiencia','ubicación','respeto',
     'compromiso','comunicación','escucha','práctica',
-    'diálogo','intuición','proyectos','ideas',
+    'diálogo','intuición','proyectos','ideas','amistad',
     'curiosidad','amor','resultados','equipo','atención',
-    'interés','riesgos','actitud','formación',
+    'interés','riesgos','actitud','formación','familia',
     'capacitación','confianza','sueños','sinceridad',
     'conocimiento','humildad','empatía','resolución' 
   ];
@@ -25,7 +25,8 @@ export class HomeComponent implements OnInit {
   ];
   colorFont: string[] = [
     '#03caff','#03caff','#7AE3FF',
-    '#f9f9f9','#f9f9f9','#FFDD57','#FFEB9B'
+    '#f9f9f9','#f9f9f9','#FFDD57',
+    '#FFEB9B','#8F57FF','#C5A9FE'
   ]; 
   fontStyle: string[] = [
     'oblique', 'italic','normal'
@@ -77,20 +78,6 @@ export class HomeComponent implements OnInit {
     result = this.fontSize[0];
     return result;
   }
-  routeHome() {
-    this.router.navigate(['works/home']);
-  }
-  routeDesign() {
-    this.router.navigate(['works/design']);
-  }
-  routeDevelopment() {
-    this.router.navigate(['works/development']);
-  }
-  routeIntervention() {
-    this.router.navigate(['works/intervention']);
-  }
-  routeBiography() {
-    this.router.navigate(['works/biography']);
-  }
+ 
 
 }
