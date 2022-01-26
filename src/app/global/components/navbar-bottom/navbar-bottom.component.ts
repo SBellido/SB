@@ -9,26 +9,38 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class NavbarBottomComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  item: string= '';
+
+  constructor(
+    private router: Router, 
+    private activeRute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void { 
-
+    console.log("entra");
+    
   }
 
   routeHome() {
-    this.router.navigate(['works/home']);
+    this.router.navigate(['works/home']),
+    {queryParams: {item: 'home'}};
   }
   routeDesign() {
-    this.router.navigate(['works/design']);
+    this.router.navigate(['works/design']),
+    {queryParams: {item: 'design'}};
   }
   routeDevelopment() {
-    this.router.navigate(['works/development']);
+    this.router.navigate(['works/development']),
+    {queryParams: {item: 'development'}};
   }
   routeIntervention() {
-    this.router.navigate(['works/intervention']);
+    this.router.navigate(['works/intervention']),
+    {queryParams: {item: 'intervention'}};
+    ;
   }
   routeBiography() {
-    this.router.navigate(['works/biography']);
+    this.router.navigate(['works/biography']),
+    {queryParams: {item: 'biography'}};
   }
 
   

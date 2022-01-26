@@ -5,29 +5,51 @@
         <h2 class="_item" >
           UX | UI
         </h2>
-        <div class="_container_info" [hidden]="visible" >
-          <p class="_info"><span>UX</span> - La experiencia de usuario es el conjunto de factores y elementos relativos 
+        <div class="_container_info" [hidden]="!visibleUxUi" >
+          <p class="_info"><span>UX</span> - Es el conjunto de elementos relativos 
             a la interacción del usuario con un entorno o dispositivo concretos, dando como resultado 
-            una percepción positiva o negativa de dicho servicio, producto o dispositivo.</p>
-          <p class="_info"><span>UI</span> - El diseño de interfaz de usuario o ingeniería de la interfaz es el resultado 
+            una experiancia positiva o negativa de dicho servicio, producto o dispositivo.</p>
+          <p class="_info"><span>UI</span> - El diseño de interfaz de usuario es el resultado 
             de definir la forma, función, utilidad, ergonomía, imagen de marca y otros aspectos que 
-            afectan a la apariencia externa de las interfaces de usuario en sistemas de todo tipo.</p>
-          <div class="_container_buton">
+            afectan a la apariencia externa de las interfaces en sistemas de todo tipo.</p>
+          <div class="_container_button">
             <button class="_button_more" routerLink="ux-ui">
               <mat-icon class="_icon_button">remove_red_eye</mat-icon>TRABAJOS
             </button>
           </div>
         </div>
       </section>
-      <section class="_container_item" routerLink="graph-publicity">
+      <section class="_container_item" (click)="showMoreGraph()">
         <h2 class="_item" >
           Gráfico
         </h2>
+        <div class="_container_info" [hidden]="!visibleGraph">
+          <p class="_info"><span>Diseño Gráfico</span> - Es la profesión y disciplina 
+            académica cuya actividad consiste en proyectar comunicación visual destinada a transmitir
+            mensajes específicos a grupos sociales con objetivos determinados.
+          </p>
+          <div class="_container_button">
+            <button class="_button_more" routerLink="graph">
+              <mat-icon class="_icon_button">remove_red_eye</mat-icon>TRABAJOS
+            </button>
+          </div>
+        </div>
       </section>
-      <section class="_container_item" routerLink="illustration-sketch">
+      <section class="_container_item" (click)="showMoreIllustration()">
         <h2 class="_item" >
           Ilustración
         </h2>
+        <div class="_container_info" [hidden]="!visibleIllustration">
+          <p class="_info"><span>Ilustración</span> - Se considera un lenguaje gráfico 
+            universal, ha sido utilizado por la humanidad para transmitir ideas, 
+            proyectos y en un sentido más amplio, sus costumbres y cultura.
+          </p>
+          <div class="_container_button">
+            <button class="_button_more" routerLink="illustration-sketch">
+              <mat-icon class="_icon_button">remove_red_eye</mat-icon>TRABAJOS
+            </button>
+          </div>
+        </div>
       </section>
     </div>
   </div>
