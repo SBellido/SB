@@ -1,3 +1,6 @@
+@import './global/global.component.scss';
+
 html>body {
   margin: 0;
+  background: $first_color;
 }

@@ -1,6 +1,7 @@
 /* Angular */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NavbarBottomComponent } from '../navbar-bottom/navbar-bottom.component';
 
 @Component({
   selector: 'app-navbar',
@@ -10,11 +11,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class NavbarComponent implements OnInit {
 
- 
-  constructor(
-    private router: Router,
-    private activeRute: ActivatedRoute
-    ) { }
+  
+  constructor(private router: Router) { 
+  }
 
   ngOnInit() {
     // getStyles() {
@@ -29,7 +28,9 @@ export class NavbarComponent implements OnInit {
   }
 
   route(item: string) {
+    const navBar = new NavbarBottomComponent(this.router)
     if (item === 'design') {
+      navBar.getStyles('design');
       this.router.navigate(['works/design']);
     } else if (item === 'development') {
       this.router.navigate(['works/development']);

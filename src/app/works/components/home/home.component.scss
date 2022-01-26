@@ -1,89 +1,121 @@
 @import '../../../global/global.component.scss';
 
-._container_all {
-  perspective: 800px;
+/* SCREEN 0px */
+@media (min-width: 0px) {
   
-}
-._container_concepts {
-  width: 100vw;
-  height: 82vh;
-  padding-top: 2rem;
-  display: flex;
-  align-items: center ;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-content: center;
-  transform-style: preserve-3d;
-  animation: displayWords;
-  animation-duration: 5s;
-  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-}
-@keyframes displayWords {
-  0% { transform: translateZ(800px); 
-    filter: blur(2rem); }
-  100% { transform: translateZ(0px);
-    filter: blur(0); }
-}
-h1 { 
-  margin: 0;
-  // animation: move linear 10s infinite;  
+  ._container_all {
+    perspective: 800px;
+    display: flex;
+    justify-content: center; 
+  }
+  ._container_concepts {
+    width: 100vw;
+    height: auto;
+    max-height: 50vh;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    transform: translateZ(-50px);
+    transform-style: preserve-3d;
+    animation: displayWords;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+  }
+  @keyframes displayWords {
+    0% { transform: translateZ(800px); 
+      filter: blur(2rem); }
+    100% { transform: translateZ(-50px);
+      filter: blur(0); }
+  }
+  h1 { 
+    margin: 0;
+    // animation: move linear 10s infinite;  
+  
+  }
+  // @keyframes move {
+  //   0% {
+  //     text-shadow:
+  //       2px -2px 0 $first_color, 
+  //       1px -1px 0 $first_color,      
+  //       -2px 2px 0 $second_color, 
+  //       -1px 1px 0 $second_color, 
+  //     ;
+  //   }
+  //   25% {    
+  //     text-shadow:      
+  //       -2px -2px 0 $second_color, 
+  //       -1px -1px 0 $second_color, 
+  //       2px 2px 0 $first_color, 
+  //       1px 1px 0 $first_color,      
+  //     ;
+  //   }
+  //   50% {
+  //     text-shadow:
+  //       -2px 2px 0 $first_color, 
+  //       -1px 1px 0 $first_color, 
+  //       2px -2px 0 $second_color, 
+  //       1px -1px 0 $second_color, 
+  //     ;
+  //   }
+  //   75% {
+  //     text-shadow:
+  //       2px 2px 0 $first_color, 
+  //       1px 1px 0 $first_color, 
+  //       -2px -2px 0 $second_color, 
+  //       -1px -1px 0 $second_color,  
+  //     ;
+  //   }
+  //   100% {
+  //     text-shadow:
+  //       2px -2px 0 $first_color, 
+  //       1px -1px 0 $first_color, 
+  //       -2px 2px 0 $second_color, 
+  //       -1px 1px 0 $second_color, 
+        
+  //     ;
+  //   }  
+  //}
+  
+  ._concept {
+    padding: 0rem .1rem;  
+    color: $second_color;
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  
+  img._eye_home {
+    padding-top: 5rem;
+    width: 100vw;
+  }
 
 }
-// @keyframes move {
-//   0% {
-//     text-shadow:
-//       2px -2px 0 $first_color, 
-//       1px -1px 0 $first_color,      
-//       -2px 2px 0 $second_color, 
-//       -1px 1px 0 $second_color, 
-//     ;
-//   }
-//   25% {    
-//     text-shadow:      
-//       -2px -2px 0 $second_color, 
-//       -1px -1px 0 $second_color, 
-//       2px 2px 0 $first_color, 
-//       1px 1px 0 $first_color,      
-//     ;
-//   }
-//   50% {
-//     text-shadow:
-//       -2px 2px 0 $first_color, 
-//       -1px 1px 0 $first_color, 
-//       2px -2px 0 $second_color, 
-//       1px -1px 0 $second_color, 
-//     ;
-//   }
-//   75% {
-//     text-shadow:
-//       2px 2px 0 $first_color, 
-//       1px 1px 0 $first_color, 
-//       -2px -2px 0 $second_color, 
-//       -1px -1px 0 $second_color,  
-//     ;
-//   }
-//   100% {
-//     text-shadow:
-//       2px -2px 0 $first_color, 
-//       1px -1px 0 $first_color, 
-//       -2px 2px 0 $second_color, 
-//       -1px 1px 0 $second_color, 
-      
-//     ;
-//   }  
-//}
 
-._concept {
-  padding: 0rem .1rem;  
-  color: $second_color;
-  width: auto;
-  height: auto;
-  margin: auto;
+/* SCREEN 375px */
+@media (min-width: 375px) {
+
+  ._container_concepts {
+    width: 100vw;
+    height: 60vh;
+    max-height: 80vh;
+    padding-top: 3rem;
+   
+  }
 }
 
-img._eye_home {
-  padding-top: 5rem;
-  width: 100vw;
+/* SCREEN 768px */
+@media (min-width: 768px) {
+
+  ._container_concepts {
+    width: 70vw;
+    height: 100vh;
+    max-height: 80vh;
+    padding-top: 0rem;
+  }
+  
 }

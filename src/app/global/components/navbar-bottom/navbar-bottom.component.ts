@@ -9,39 +9,38 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class NavbarBottomComponent implements OnInit {
 
-  item: string= '';
+  item: string = '';
 
-  constructor(
-    private router: Router, 
-    private activeRute: ActivatedRoute
-  ) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void { 
     console.log("entra");
     
   }
 
-  routeHome() {
-    this.router.navigate(['works/home']),
-    {queryParams: {item: 'home'}};
-  }
-  routeDesign() {
-    this.router.navigate(['works/design']),
-    {queryParams: {item: 'design'}};
-  }
-  routeDevelopment() {
-    this.router.navigate(['works/development']),
-    {queryParams: {item: 'development'}};
-  }
-  routeIntervention() {
-    this.router.navigate(['works/intervention']),
-    {queryParams: {item: 'intervention'}};
-    ;
-  }
-  routeBiography() {
-    this.router.navigate(['works/biography']),
-    {queryParams: {item: 'biography'}};
+  route(item: string) {
+    if (item === 'design') {
+      this.router.navigate(['works/design']);     
+    } else if (item === 'development') {
+      this.router.navigate(['works/development']);
+    } else if (item === 'intervention') {
+      this.router.navigate(['works/intervention']);
+    } else if (item === 'biography') {
+      this.router.navigate(['works/biography']);
+    } else if (item === 'home') {
+      this.router.navigate(['works/home']);
+    }
   }
 
-  
-}
+
+  getStyles(item: string) {
+    if (item === 'design') {
+      
+    } else if (item === 'development') {
+    } else if (item === 'intervention') {
+    } else if (item === 'biography') {
+    } else if (item === 'home') {
+    }
+  }
+
+ }

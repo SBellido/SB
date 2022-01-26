@@ -4,6 +4,9 @@
 @media (min-width: 0px) { 
 ::ng-deep  .mat-toolbar.mat-primary {
     background: $first_color;
+    position: fixed;
+    top: 0;
+    z-index: 1;
   }
   .mat-toolbar-row, 
   .mat-toolbar-single-row {
@@ -48,7 +51,7 @@
     height: 60px;
   }
   div._empty {
-    width: 40px;
+    width: 24px;
     height: 40px;
   }
   figure {
