@@ -1,32 +1,70 @@
 <mat-toolbar color="primary" style="position: fixed; z-index:1">
   <mat-toolbar-row>        
     <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu">
-      <mat-icon class="_icon_nav">menu</mat-icon>
+      <mat-icon class="_icon_hamburguer">menu</mat-icon>
     </mat-button>
     <mat-menu mat-button #menu="matMenu">  
-      <mat-button id="design" (click)="route('design')" mat-menu-item>
-        <mat-icon class="_icon_nav">create</mat-icon><span>diseño</span>
+      <mat-button class="_button_hamburguer" id="design"
+        (click)="setButtonsStyle('design')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">create</mat-icon><span>diseño</span>
       </mat-button>
-      <mat-button id="development" (click)="route('development')" mat-menu-item>
-        <mat-icon class="_icon_nav">code</mat-icon><span>desarrollo</span>
+      <mat-button class="_button_hamburguer" id="development"
+        (click)="setButtonsStyle('development')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">code</mat-icon><span>desarrollo</span>
       </mat-button>
-      <mat-button id="intervention" (click)="route('intervention')" mat-menu-item>
-        <mat-icon class="_icon_nav">color_lens</mat-icon><span>intervención</span>
+      <mat-button class="_button_hamburguer" id="intervention"
+        (click)="setButtonsStyle('intervention')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">color_lens</mat-icon><span>intervención</span>
       </mat-button>
-      <mat-button id="biography" (click)="route('biography')" mat-menu-item>
-        <mat-icon class="_icon_nav">fingerprint</mat-icon><span>biografía</span>
+      <mat-button class="_button_hamburguer" id="biography" 
+        (click)="setButtonsStyle('biography')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">fingerprint</mat-icon><span>biografía</span>
       </mat-button>
-      <figure class="_firma">
-        <img class="_firma_home" (click)="route('home')" src="..\assets\images\logo_sb_navbar.svg" 
+      <!-- <figure class="_firma">
+        <img class="_firma_home" (click)="setButtonsStyle('home')" src="..\assets\images\logo_sb_navbar.svg" 
         alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
-      </figure>
+      </figure> -->
     </mat-menu>
-    <div id="logo" class="_container_logo" (click)="route('home')">
+    <div id="logo" class="_container_logo" (click)="setButtonsStyle('/home')">
       <img class="_logo_navbar" src="..\assets\images\logo_sb_navbar.svg" 
         alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
     </div>
     <div class="_empty"></div>
   </mat-toolbar-row>
 </mat-toolbar>
-<app-navbar-bottom></app-navbar-bottom>
 
+<!-- NAVBAR CIRCLE BUTONS -->
+<section class="_container_buttons">   
+  <div class="_container_button">
+    <mat-button class="_button" id="design"
+      [ngClass]="designActive ? '_active_button' : '_inactive_button'" 
+      (click)="setButtonsStyle('design')" mat-menu-item>
+      <mat-icon class="_icon_nav">create</mat-icon>
+    </mat-button>
+    <p class="_text_button">diseño</p>
+  </div>
+  <div class="_container_button">
+    <mat-button class="_button" id="development"
+      [ngClass]="developmentActive ? '_active_button' : '_inactive_button'" 
+      (click)="setButtonsStyle('development')" mat-menu-item>
+      <mat-icon class="_icon_nav">code</mat-icon>
+    </mat-button>
+    <p class="_text_button">desarrollo</p>
+  </div>
+  <div class="_container_button">
+    <mat-button class="_button" id="intervention"
+      [ngClass]="interventionActive ? '_active_button' : '_inactive_button'" 
+      (click)="setButtonsStyle('intervention')" mat-menu-item>
+      <mat-icon class="_icon_nav">color_lens</mat-icon>
+    </mat-button>
+    <p class="_text_button">intervención</p>
+  </div>
+  <div class="_container_button">
+    <mat-button class="_button" id="biography"
+      [ngClass]="biographyActive ? '_active_button' : '_inactive_button'" 
+      (click)="setButtonsStyle('biography')" mat-menu-item>
+      <mat-icon class="_icon_nav">fingerprint</mat-icon>
+    </mat-button>
+    <p class="_text_button">biografía</p>
+  </div>
+</section>

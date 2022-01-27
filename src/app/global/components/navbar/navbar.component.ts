@@ -1,7 +1,6 @@
 /* Angular */
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { NavbarBottomComponent } from '../navbar-bottom/navbar-bottom.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -11,47 +10,90 @@ import { NavbarBottomComponent } from '../navbar-bottom/navbar-bottom.component'
 
 export class NavbarComponent implements OnInit {
 
-  
+  designActive:boolean = false;
+  developmentActive:boolean = false;
+  interventionActive:boolean = false;
+  biographyActive:boolean = false;
+
   constructor(private router: Router) { 
   }
 
   ngOnInit() {
-    // getStyles() {
-    //   let myStyles = {
-    //     fontWeight: this.getRandomWeight(),
-    //     color: this.getRandomColor(),
-    //     fontStyle: this.getRandomFontStyle(),
-    //     fontSize: this.getRandomFontSize()
-    //   }
-    //   return myStyles;    
-    // }
+   
   }
 
-  route(item: string) {
-    const navBar = new NavbarBottomComponent(this.router)
+  // route(item: string) {
+  //   if (item === 'design') {
+  //     this.router.navigate(['works/design']);
+  //   } else if (item === 'development') {
+  //     this.router.navigate(['works/development']);
+  //   } else if (item === 'intervetion') {
+  //     this.router.navigate(['works/intervention']);
+  //   } else if (item === 'biography') {
+  //     this.router.navigate(['works/biography']);
+  //   } else if (item === 'home') {
+  //     this.router.navigate(['works/home']);
+  //   }
+  //  this.getButtonsStyles(item);
+
+  // }
+  public setButtonsStyle(item: string) {
     if (item === 'design') {
-      navBar.getStyles('design');
+      this.designActive = true;
+      this.developmentActive = false;
+      this.interventionActive = false; 
+      this.biographyActive = false; 
+      console.log(
+        "diseño "+this.designActive,
+        "dev "+this.developmentActive,
+        "intern "+ this.interventionActive,
+        "bio "+ this.biographyActive);
       this.router.navigate(['works/design']);
     } else if (item === 'development') {
+      this.designActive = false; 
+      this.developmentActive = true;
+      this.interventionActive = false; 
+      this.biographyActive = false; 
+      console.log(
+        "diseño "+this.designActive,
+        "dev "+this.developmentActive,
+        "intern "+ this.interventionActive,
+        "bio "+ this.biographyActive);
       this.router.navigate(['works/development']);
-    } else if (item === 'intervetion') {
+    } else if (item === 'intervention') {
+      this.designActive = false;
+      this.developmentActive = false;
+      this.interventionActive = true; 
+      this.biographyActive = false; 
+      console.log(
+        "diseño "+this.designActive,
+        "dev "+this.developmentActive,
+        "intern "+ this.interventionActive,
+        "bio "+ this.biographyActive);
       this.router.navigate(['works/intervention']);
     } else if (item === 'biography') {
-      this.router.navigate(['works/biography']);
-    } else if (item === 'home') {
+      this.designActive = false; 
+      this.developmentActive = false;
+      this.interventionActive = false; 
+      this.biographyActive = true; 
+      console.log(
+        "diseño "+this.designActive,
+        "dev "+this.developmentActive,
+        "intern "+ this.interventionActive,
+        "bio "+ this.biographyActive);
+        this.router.navigate(['works/biography']);
+      } else {
+        this.designActive = false; 
+        this.developmentActive = false;
+        this.interventionActive = false; 
+        this.biographyActive = false;
+        console.log(
+          "diseño "+this.designActive,
+          "dev "+this.developmentActive,
+          "intern "+ this.interventionActive,
+          "bio "+ this.biographyActive);
       this.router.navigate(['works/home']);
-    }
+    } 
   }
-  getStyles(item: string):any {
-    if (item === 'design') {
-    let myStyles = {
-      background: '#ffffff'
-    }
-    return myStyles; 
-  }
-}
   
-  
-
-
 }

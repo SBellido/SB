@@ -20,16 +20,16 @@
     color: $first_color;
   }
   .mat-menu-item {
-    background: $second_color;
+    // background: $second_color;
     cursor: pointer;
     border-radius: 50px;
     padding: 0rem .8rem;
   }
-  .mat-menu-item:active,
-  .mat-menu-item:focus,
-  .mat-menu-item:hover {
-    background: $third_color;
-  }
+  // .mat-menu-item:active,
+  // .mat-menu-item:focus,
+  // .mat-menu-item:hover {
+  //   // background: $third_color;
+  // }
   ._container_button {
     display: flex;
     flex-direction: column;

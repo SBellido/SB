@@ -1,5 +1,7 @@
+/* Angular */
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navbar-bottom',
@@ -7,15 +9,18 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./navbar-bottom.component.scss']
 })
 
-export class NavbarBottomComponent implements OnInit {
+export class NavbarBottomComponent implements OnInit {  
 
-  item: string = '';
-
+  second_color = '#03caff';
+  third_color = '#ffdd57'
+  designActive = this.second_color;
+  developmentActive = this.second_color;
+  interventionActive = this.second_color;
+  biographyActive = this.second_color;
+  
   constructor(private router: Router) { }
 
   ngOnInit(): void { 
-    console.log("entra");
-    
   }
 
   route(item: string) {
@@ -31,16 +36,6 @@ export class NavbarBottomComponent implements OnInit {
       this.router.navigate(['works/home']);
     }
   }
-
-
-  getStyles(item: string) {
-    if (item === 'design') {
-      
-    } else if (item === 'development') {
-    } else if (item === 'intervention') {
-    } else if (item === 'biography') {
-    } else if (item === 'home') {
-    }
-  }
+  
 
  }
