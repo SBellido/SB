@@ -1,6 +1,8 @@
 <mat-toolbar color="primary" style="position: fixed; z-index:1">
   <mat-toolbar-row>        
-    <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu">
+    <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu"
+      [ngClass]="hamburguernActive ? '_active_icon_hamburguer' : '_inactive_icon_hamburguer'" 
+      (click)="setButtonsStyle('hamburguer')">
       <mat-icon class="_icon_hamburguer">menu</mat-icon>
     </mat-button>
     <mat-menu mat-button #menu="matMenu">  
@@ -25,7 +27,7 @@
         alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
       </figure> -->
     </mat-menu>
-    <div id="logo" class="_container_logo" (click)="setButtonsStyle('/home')">
+    <div id="logo" class="_container_logo" (click)="setButtonsStyle('home')">
       <img class="_logo_navbar" src="..\assets\images\logo_sb_navbar.svg" 
         alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
     </div>

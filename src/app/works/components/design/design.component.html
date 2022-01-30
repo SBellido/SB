@@ -5,18 +5,38 @@
         <h2 class="_item" >
           UX | UI
         </h2>
-        <div class="_container_info" [hidden]="!visibleUxUi" >
-          <p class="_info"><span>UX</span> - Es el conjunto de elementos relativos 
-            a la interacción del usuario con un entorno o dispositivo concretos, dando como resultado 
-            una experiancia positiva o negativa de dicho servicio, producto o dispositivo.</p>
-          <p class="_info"><span>UI</span> - El diseño de interfaz de usuario es el resultado 
-            de definir la forma, función, utilidad, ergonomía, imagen de marca y otros aspectos que 
-            afectan a la apariencia externa de las interfaces en sistemas de todo tipo.</p>
+        <div class="_container_info" [hidden]="!visibleUxUi">
           <div class="_container_button">
             <button class="_button_more" routerLink="ux-ui">
-              <mat-icon class="_icon_button">remove_red_eye</mat-icon>TRABAJOS
+              <mat-icon class="_icon_button">work_outline</mat-icon>portafolio digital
             </button>
           </div>
+          <figure class="_container_realizations">
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/ux_ui/v_life_isologo_grises.png" alt="Logo de V-Life">
+              <p class="_name_realization">v-life</p>
+            </div>
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/ux_ui/travelLog_isologo_grises.png" alt="Logo de TravelLog">
+              <p class="_name_realization">travel-log</p>
+            </div>
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/ux_ui/nighx_isologo_grises.png" alt="Logo de V-Life">
+              <p class="_name_realization">nighx</p>
+            </div>
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/ux_ui/hunt_isologo_grises.png" alt="Logo de V-Life">
+              <p class="_name_realization">hunt</p>
+            </div>   
+          </figure><hr>
+          <p class="_info"><span>UX</span> - 
+            La <span>experiencia de usuario,</span> por su enfoque en la <span>relación sistema humano | máquina,</span> 
+            aparece como una evolución de la ergonomía y mantiene al <span>diseño en el papel protagónico</span> 
+            para la búsqueda de <span>satisfacción de las experiencias.</span></p>
+          <p class="_info"><span>UI</span> - El <span>diseño de interfaz de usuario</span> 
+            es el resultado de definir la <span>forma, función, utilidad, ergonomía, imagen de marca</span>
+            y otros aspectos que afectan a la apariencia externa de las interfaces en sistemas de todo tipo.
+          </p>
         </div>
       </section>
       <section class="_container_item" (click)="showMoreGraph()">
@@ -30,8 +50,11 @@
           </p>
           <div class="_container_button">
             <button class="_button_more" routerLink="graph">
-              <mat-icon class="_icon_button">remove_red_eye</mat-icon>TRABAJOS
+              <mat-icon class="_icon_button">remove_red_eye</mat-icon>REALIZACIONES
             </button>
+          </div>
+          <div class="_container_realizationS">
+            
           </div>
         </div>
       </section>
@@ -46,8 +69,11 @@
           </p>
           <div class="_container_button">
             <button class="_button_more" routerLink="illustration-sketch">
-              <mat-icon class="_icon_button">remove_red_eye</mat-icon>TRABAJOS
+              <mat-icon class="_icon_button">remove_red_eye</mat-icon>REALIZACIONES
             </button>
+          </div>
+          <div class="_container_realizationS">
+
           </div>
         </div>
       </section>

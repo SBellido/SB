@@ -14,6 +14,7 @@ export class NavbarComponent implements OnInit {
   developmentActive:boolean = false;
   interventionActive:boolean = false;
   biographyActive:boolean = false;
+  hamburguernActive:boolean = false;
 
   constructor(private router: Router) { 
   }
@@ -22,77 +23,49 @@ export class NavbarComponent implements OnInit {
    
   }
 
-  // route(item: string) {
-  //   if (item === 'design') {
-  //     this.router.navigate(['works/design']);
-  //   } else if (item === 'development') {
-  //     this.router.navigate(['works/development']);
-  //   } else if (item === 'intervetion') {
-  //     this.router.navigate(['works/intervention']);
-  //   } else if (item === 'biography') {
-  //     this.router.navigate(['works/biography']);
-  //   } else if (item === 'home') {
-  //     this.router.navigate(['works/home']);
-  //   }
-  //  this.getButtonsStyles(item);
-
-  // }
   public setButtonsStyle(item: string) {
     if (item === 'design') {
       this.designActive = true;
-      this.developmentActive = false;
+      this.hamburguernActive = false; 
+       this.developmentActive = false; 
       this.interventionActive = false; 
       this.biographyActive = false; 
-      console.log(
-        "diseño "+this.designActive,
-        "dev "+this.developmentActive,
-        "intern "+ this.interventionActive,
-        "bio "+ this.biographyActive);
       this.router.navigate(['works/design']);
     } else if (item === 'development') {
-      this.designActive = false; 
-      this.developmentActive = true;
-      this.interventionActive = false; 
-      this.biographyActive = false; 
-      console.log(
-        "diseño "+this.designActive,
-        "dev "+this.developmentActive,
-        "intern "+ this.interventionActive,
-        "bio "+ this.biographyActive);
-      this.router.navigate(['works/development']);
-    } else if (item === 'intervention') {
-      this.designActive = false;
-      this.developmentActive = false;
-      this.interventionActive = true; 
-      this.biographyActive = false; 
-      console.log(
-        "diseño "+this.designActive,
-        "dev "+this.developmentActive,
-        "intern "+ this.interventionActive,
-        "bio "+ this.biographyActive);
-      this.router.navigate(['works/intervention']);
-    } else if (item === 'biography') {
-      this.designActive = false; 
-      this.developmentActive = false;
-      this.interventionActive = false; 
-      this.biographyActive = true; 
-      console.log(
-        "diseño "+this.designActive,
-        "dev "+this.developmentActive,
-        "intern "+ this.interventionActive,
-        "bio "+ this.biographyActive);
-        this.router.navigate(['works/biography']);
-      } else {
+        this.developmentActive = true;
+        this.hamburguernActive = false; 
         this.designActive = false; 
-        this.developmentActive = false;
+        this.interventionActive = false; 
+        this.biographyActive = false; 
+        this.router.navigate(['works/development']);
+    } else if (item === 'intervention') {
+        this.interventionActive = true; 
+        this.hamburguernActive = false; 
+        this.designActive = false; 
+        this.developmentActive = false; 
+        this.biographyActive = false;       
+        this.router.navigate(['works/intervention']);
+    } else if (item === 'biography') {
+        this.biographyActive = true; 
+        this.hamburguernActive = false; 
+        this.designActive = false; 
+        this.developmentActive = false; 
+        this.interventionActive = false; 
+        this.router.navigate(['works/biography']);
+    } else if (item === 'home'){
+        this.hamburguernActive = false; 
+        this.designActive = false; 
+        this.developmentActive = false; 
         this.interventionActive = false; 
         this.biographyActive = false;
-        console.log(
-          "diseño "+this.designActive,
-          "dev "+this.developmentActive,
-          "intern "+ this.interventionActive,
-          "bio "+ this.biographyActive);
-      this.router.navigate(['works/home']);
+        this.router.navigate(['works/home']);
+    } else {
+        console.log("burguer: " +this.hamburguernActive);
+        this.hamburguernActive ?  
+        this.hamburguernActive = false :  
+        this.hamburguernActive = true;
+        console.log("burguer: " +this.hamburguernActive);
+        
     } 
   }
   
