@@ -9,6 +9,7 @@
     position: fixed;
     top: 0;
     z-index: 1;
+    padding: .5rem 0rem;
   }
   .mat-toolbar-row, 
   .mat-toolbar-single-row {
@@ -18,14 +19,14 @@
     color: $second_color;
     cursor: pointer;
   }
-  ._icon_hamburguer:hover {
-    color: $fifth_color;
-  }
-  ._icon_hamburguer:active,
-  ._icon_hamburguer:visited,
-  ._icon_hamburguer:focus {
-    color: $third_color;
-  }
+  // ._icon_hamburguer:hover {
+  //   color: $second_color_light;
+  // }
+  // ._icon_hamburguer:active,
+  // ._icon_hamburguer:visited,
+  // ._icon_hamburguer:focus {
+  //   color: $third_color;
+  // }
   ._active_icon_hamburguer {
     color: $third_color;
   }
@@ -41,9 +42,9 @@
     display: flex;
     align-items: center;
   }
-  .mat-menu-item._button_hamburguer:hover {
-    background: $first_color_hover;
-  }
+  // .mat-menu-item._button_hamburguer:hover {
+  //   background: $first_color_hover;
+  // }
   .mat-menu-item, 
   .mat-icon-no-color {
     color: $second_color;
@@ -61,10 +62,6 @@
     background: $first_color;
     position: absolute;
     left: -16px;
-  }
-  img._logo_navbar {
-    height: 60px;
-    cursor: pointer;
   }
   div._empty {
     width: 24px;
@@ -98,16 +95,23 @@
   }
 
   /* ------------NAVBAR CIRCLE BUTTONS---------------*/
+  
+  img._logo_navbar {
+    padding: 0rem;
+    height: 55px;
+  }
   section._container_buttons {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: sticky;
     top: 0px;
-    z-index: 0;
+    z-index: 1;
     background: $first_color;
-    margin-top: -1rem;
     padding-top: 5rem;
+    padding-bottom: .5rem;
+    -webkit-box-shadow: 0px 0px 4px 0px #1a1a1a; 
+    box-shadow: 0px 0px 4px 0px #1a1a1a; 
   }
   ._container_button {
     display: flex;
@@ -115,21 +119,30 @@
     justify-content: center;
     align-items: center; 
   }
-  ._button:hover {
-    background: $fifth_color;
+  ._button { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;  
+    padding: 0rem .8rem;
   }
-  ._button:focus {
-    background: $third_color;
-  }
+  // ._button:hover,
+  // ._button_logo:hover {
+  //   background: $second_color_light;
+  // }
+  // ._button:focus
+  // ._button_logo:focus {
+  //   background: $third_color;
+  // }
   ._active_button {
     background: $third_color;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 50px;  
     padding: 0rem .8rem;
-    margin-right: 0px;
   }
   ._inactive_button {
     background: $second_color;
@@ -137,11 +150,9 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    border-radius: 50px;
+    border-radius: 50px;  
     padding: 0rem .8rem;
-    margin-right: 0px;
   }
-  
   ._icon_nav {
     color: $first_color;
     margin-right: 0px !important;
@@ -155,49 +166,49 @@
   
 }
 
-/* SCREEN 414px */
-@media (min-width: 414px) { 
+// /* SCREEN 414px */
+// @media (min-width: 414px) { 
 
-  section._container_buttons {
-    padding-top: 7rem;
-  }
+//   section._container_buttons {
+//     padding-top: 4.5rem;
+//   }
 
-}
+// }
 
 
-/* SCREEN 768px */
-@media (min-width: 768px) { 
+// /* SCREEN 768px */
+// @media (min-width: 768px) { 
 
-  section._container_buttons {
-    padding: 7rem 10rem;
-  }
+//   section._container_buttons {
+//     padding: 5rem auto 2rem auto;
+//   }
 
-}
+// }
 
-/* SCREEN 1024px */
-@media (min-width: 1024px) { 
+// /* SCREEN 1024px */
+// @media (min-width: 1024px) { 
 
-  section._container_buttons {
-    padding: 7rem 13rem;
-  }
+//   section._container_buttons {
+//     padding: 7rem 13rem;
+//   }
 
-}
+// }
 
-/* SCREEN 1336px */
-@media (min-width: 1336px) { 
+// /* SCREEN 1336px */
+// @media (min-width: 1336px) { 
 
-  section._container_buttons {
-    padding: 7rem 28rem;
-  }
+//   section._container_buttons {
+//     padding: 7rem auto 2rem auto;
+//   }
 
-}
+// }
 
-/* SCREEN 1920px */
-@media (min-width: 1920px) { 
+// /* SCREEN 1920px */
+// @media (min-width: 1920px) { 
 
-  section._container_buttons {
-    padding: 7rem 45rem;
-  }
+//   section._container_buttons {
+//     padding: 7rem auto 2rem auto;
+//   }
 
-}
+// }
 

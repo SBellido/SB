@@ -1,9 +1,65 @@
-<article class="_container_all">
-  <section class="_container_concepts">
+<!-- 
+  <section class="_container_parallax">
     <div class="_concept" *ngFor="let concept of concepts">
       <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
     </div>
-    <!-- <img class="_eye_home" src="..\assets\images\logo_eye.svg" 
-      alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador"> -->
+    <div class="_concept" *ngFor="let concept of concepts">
+      <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+    </div>
+    <div class="_concept" *ngFor="let concept of concepts">
+      <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+    </div>
+    <div class="_concept" *ngFor="let concept of concepts">
+      <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+    </div>
+    <figure class="_firma">
+      <img class="_firma_home" src="..\assets\images\logo_sb_navbar.svg" 
+      alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
+    </figure>
+  </section> -->
+
+
+<!-- <article class="_container_parallax">
+  <div class="_text _text_front" *ngFor="let concept of concepts">
+    <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+  </div>
+  <div class="_text_middle_0" *ngFor="let concept of concepts">
+    <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+  </div>
+  <div class="_text _text_middle" *ngFor="let concept of concepts">
+    <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+  </div>
+  <div class="_text _text_back" *ngFor="let concept of concepts">
+    <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+  </div>
+  <figure class="_firma">
+    <img class="_firma_home" src="..\assets\images\logo_sb_navbar.svg" 
+    alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
+  </figure>
+</article> -->
+
+<article class="_container_all">
+  <section class="_container_concepts">
+   
+      <div class="_concept" *ngFor="let concept of concepts">
+        <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+      </div>
+   
+      <div id="middle" class="_concept" *ngFor="let concept of concepts">
+        <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+      </div>
+  
+      <div id="middle_0" class="_concept" *ngFor="let concept of concepts">
+        <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+      </div>
+   
+      <div id="back" class="_concept" *ngFor="let concept of concepts">
+        <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
+      </div>
+   
+    <figure class="_firma">
+      <img class="_firma_home" src="..\assets\images\logo_sb_navbar.svg" 
+      alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
+    </figure>
   </section>
 </article>

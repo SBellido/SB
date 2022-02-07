@@ -10,7 +10,7 @@ export class DesignComponent implements OnInit {
   visibleUxUi: boolean = false;
   visibleGraph: boolean = false;
   visibleIllustration: boolean = false;
-
+  visibleDesigns: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -29,14 +29,20 @@ export class DesignComponent implements OnInit {
         this.visibleGraph = true,
         this.visibleUxUi = false,
         this.visibleIllustration = false;  
-    }
+  }
   showMoreIllustration() {
     this.visibleIllustration ? 
       this.visibleIllustration = false : 
       this.visibleIllustration = true,
       this.visibleUxUi = false,
-      this.visibleGraph = false;  
+      this.visibleGraph = false;    
+  }
+  showMoreDesigns() {
+    console.log(this.visibleDesigns);
     
+    this.visibleDesigns ? 
+      this.visibleDesigns = false : 
+      this.visibleDesigns = true;
   }
 
 }

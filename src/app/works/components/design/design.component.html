@@ -14,19 +14,19 @@
         </div>
         <figure class="_container_realizations">
           <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/v_life_isologo_grey.png" alt="Logo de V-Life">
+            <img class="_logo_realization" src="../assets/images/ux_ui/v_life_isologo.png" alt="Logo de V-Life">
             <p class="_name_realization">v-life</p>
           </div>
           <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/travelLog_isologo_grey.png" alt="Logo de TravelLog">
+            <img class="_logo_realization" src="../assets/images/ux_ui/travelLog_isologo.png" alt="Logo de TravelLog">
             <p class="_name_realization">travel-log</p>
           </div>
           <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/nighx_isologo_grey.png" alt="Logo de Nighx">
+            <img class="_logo_realization" src="../assets/images/ux_ui/nighx_isologo.png" alt="Logo de Nighx">
             <p class="_name_realization">nighx</p>
           </div>
           <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/hunt_isologo_grey.png" alt="Logo de hunt">
+            <img class="_logo_realization" src="../assets/images/ux_ui/hunt_isologo.png" alt="Logo de hunt">
             <p class="_name_realization">hunt</p>
           </div>   
         </figure><hr>
@@ -50,20 +50,73 @@
             <mat-icon class="_icon_button">work_outline</mat-icon>portafolio digital
           </button>
         </div>
-        <figure class="_container_realizations">
+        <figure class="_container_realizations">   
           <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/lopez_logo_grey.png" alt="Logo de López Propiedades">
+            <img class="_logo_realization" src="../assets/images/graph/sweetart_logo.png" alt="Logo de SweetArt">
+            <p class="_name_realization">sweetart</p>
+          </div>
+          <div class="_container_realization">
+            <img class="_logo_realization" src="../assets/images/graph/nescafe.png" alt="Logo de ïcono campaña Nescafé">
+            <p class="_name_realization">nescafé</p>
+          </div>
+          <div class="_container_realization">
+            <img class="_logo_realization" src="../assets/images/graph/doritos.png" alt="Logo de Doritos Trío">
+            <p class="_name_realization">doritos</p>
+          </div>
+          <div class="_container_realization">
+            <img class="_logo_realization" src="../assets/images/graph/barista.png" alt="Logo de Barista Bros">
+            <p class="_name_realization">barista</p>
+          </div>
+        </figure>
+        <figure class="_container_realizations" >
+          <div class="_container_realization">
+            <img class="_logo_realization" src="../assets/images/graph/branca_logo.png" alt="Logo de Fernet Branca">
+            <p class="_name_realization">branca</p>
+          </div>
+          <div class="_container_realization">
+            <img class="_logo_realization" src="../assets/images/graph/lopez_logo.png" alt="Logo de López Propiedades">
             <p class="_name_realization">lópez</p>
           </div>
           <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/nudel_logo_grey.png" alt="Logo de Nudel">
-            <p class="_name_realization">nudel</p>
+            <img class="_logo_realization" src="../assets/images/graph/mdq_logo.png" alt="Logo de Garage MDQ">
+            <p class="_name_realization">mdq</p>
           </div>
           <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/nescafe_grey.png" alt="Logo de Nudel">
-            <p class="_name_realization">nescafé</p>
+            <img id="nudel" class="_logo_realization" src="../assets/images/graph/nudel_logo.png" alt="Logo de Nudel">
+            <p class="_name_realization">nudel</p>
           </div>
-        </figure ><hr>
+        </figure>
+        <div class="_show_more" (click)="showMoreDesigns()">
+          <div class="_container_see_more" *ngIf="visibleDesigns">
+            <mat-icon class="_icon_expand">expand_less</mat-icon>
+            <p class="_see_more">ver menos</p>
+          </div>
+          <div class="_container_see_more" *ngIf="!visibleDesigns">
+            <mat-icon class="_icon_expand">expand_more</mat-icon>
+            <p class="_see_more">ver más</p>
+          </div>
+        </div>
+        <div [hidden]="!visibleDesigns">
+          <figure class="_container_realizations" >
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/graph/branca_logo.png" alt="Logo de Fernet Branca">
+              <p class="_name_realization">branca</p>
+            </div>
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/graph/lopez_logo.png" alt="Logo de López Propiedades">
+              <p class="_name_realization">lópez</p>
+            </div>
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/graph/mdq_logo.png" alt="Logo de Garage MDQ">
+              <p class="_name_realization">mdq</p>
+            </div>
+            <div class="_container_realization">
+              <img class="_logo_realization" src="../assets/images/graph/nudel_logo.png" alt="Logo de Nudel">
+              <p class="_name_realization">nudel</p>
+            </div>
+          </figure>
+        </div>
+        <hr>
         <p class="_info"><span>Diseño Gráfico </span> - Profesión y disciplina académica 
           cuya actividad consiste en <span>proyectar comunicación visual</span> destinada a 
           <span>transmitir mensajes</span> específicos a grupos sociales con <span>objetivos 
@@ -82,7 +135,7 @@
         </p>
         <div class="_container_button">
           <button class="_button_more" routerLink="illustration-sketch">
-            <mat-icon class="_icon_button">remove_red_eye</mat-icon>REALIZACIONES
+            <mat-icon class="_icon_button">work_outline</mat-icon>portafolio digital
           </button>
         </div>
         <figure class="_container_realizations">

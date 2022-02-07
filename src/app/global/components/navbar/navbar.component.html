@@ -1,39 +1,3 @@
-<mat-toolbar color="primary" style="position: fixed; z-index:1">
-  <mat-toolbar-row>        
-    <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu"
-      [ngClass]="hamburguernActive ? '_active_icon_hamburguer' : '_inactive_icon_hamburguer'" 
-      (click)="setButtonsStyle('hamburguer')">
-      <mat-icon class="_icon_hamburguer">menu</mat-icon>
-    </mat-button>
-    <mat-menu mat-button #menu="matMenu">  
-      <mat-button class="_button_hamburguer" id="design"
-        (click)="setButtonsStyle('design')" mat-menu-item>
-        <mat-icon class="_icon_nav_hamburguer">create</mat-icon><span>diseño</span>
-      </mat-button>
-      <mat-button class="_button_hamburguer" id="development"
-        (click)="setButtonsStyle('development')" mat-menu-item>
-        <mat-icon class="_icon_nav_hamburguer">code</mat-icon><span>desarrollo</span>
-      </mat-button>
-      <mat-button class="_button_hamburguer" id="intervention"
-        (click)="setButtonsStyle('intervention')" mat-menu-item>
-        <mat-icon class="_icon_nav_hamburguer">color_lens</mat-icon><span>intervención</span>
-      </mat-button>
-      <mat-button class="_button_hamburguer" id="biography" 
-        (click)="setButtonsStyle('biography')" mat-menu-item>
-        <mat-icon class="_icon_nav_hamburguer">fingerprint</mat-icon><span>biografía</span>
-      </mat-button>
-      <!-- <figure class="_firma">
-        <img class="_firma_home" (click)="setButtonsStyle('home')" src="..\assets\images\logo_sb_navbar.svg" 
-        alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
-      </figure> -->
-    </mat-menu>
-    <div id="logo" class="_container_logo" (click)="setButtonsStyle('home')">
-      <img class="_logo_navbar" src="..\assets\images\logo_sb_navbar.svg" 
-        alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
-    </div>
-    <div class="_empty"></div>
-  </mat-toolbar-row>
-</mat-toolbar>
 
 <!-- NAVBAR CIRCLE BUTONS -->
 <section class="_container_buttons">   
@@ -70,3 +34,48 @@
     <p class="_text_button">biografía</p>
   </div>
 </section>
+
+<mat-toolbar color="primary" style="position: fixed; z-index:1">
+  <mat-toolbar-row>        
+    <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu"
+      (click)="setButtonsStyle('hamburguer')">
+      <mat-icon class="_icon_hamburguer">menu</mat-icon>
+    </mat-button>
+    <mat-menu mat-button #menu="matMenu">  
+      <mat-button class="_button_hamburguer" id="design"
+        (click)="setButtonsStyle('design')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">create</mat-icon><span>diseño</span>
+      </mat-button>
+      <mat-button class="_button_hamburguer" id="development"
+        (click)="setButtonsStyle('development')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">code</mat-icon><span>desarrollo</span>
+      </mat-button>
+      <mat-button class="_button_hamburguer" id="intervention"
+        (click)="setButtonsStyle('intervention')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">color_lens</mat-icon>
+      </mat-button>
+      <mat-button class="_button_hamburguer" id="biography" 
+        (click)="setButtonsStyle('biography')" mat-menu-item>
+        <mat-icon class="_icon_nav_hamburguer">fingerprint</mat-icon><span>biografía</span>
+      </mat-button>
+    </mat-menu>
+    
+  
+
+    <div class="_container_logo">   
+      <img class="_logo_navbar" src="../assets/images/logo_sb_navbar.svg" 
+      alt="Firma de Sebastián Bellido">
+    </div>
+
+    <div class="_empty"></div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- <div id="logo" class="_container_logo" (click)="setButtonsStyle('home')">
+  <img class="_logo_navbar" src="../assets/images/sb/logo_sb.svg" 
+  alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
+</div> -->
+<!-- <figure class="_firma">
+  <img class="_firma_home" (click)="setButtonsStyle('home')" src="..\assets\images\logo_sb_navbar.svg" 
+  alt="Firma de Sebastián Bellido con dibujo de un ojo-pez-volador">
+</figure> -->
