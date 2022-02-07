@@ -4,7 +4,7 @@
   <div class="_container_button">
     <mat-button class="_button" id="design"
       [ngClass]="designActive ? '_active_button' : '_inactive_button'" 
-      (click)="setButtonsStyle('design')" mat-menu-item>
+      (click)="setButtonsStyle('design')">
       <mat-icon class="_icon_nav">create</mat-icon>
     </mat-button>
     <p class="_text_button">diseño</p>
@@ -12,7 +12,7 @@
   <div class="_container_button">
     <mat-button class="_button" id="development"
       [ngClass]="developmentActive ? '_active_button' : '_inactive_button'" 
-      (click)="setButtonsStyle('development')" mat-menu-item>
+      (click)="setButtonsStyle('development')">
       <mat-icon class="_icon_nav">code</mat-icon>
     </mat-button>
     <p class="_text_button">desarrollo</p>
@@ -20,7 +20,7 @@
   <div class="_container_button">
     <mat-button class="_button" id="intervention"
       [ngClass]="interventionActive ? '_active_button' : '_inactive_button'" 
-      (click)="setButtonsStyle('intervention')" mat-menu-item>
+      (click)="setButtonsStyle('intervention')">
       <mat-icon class="_icon_nav">color_lens</mat-icon>
     </mat-button>
     <p class="_text_button">intervención</p>
@@ -28,14 +28,14 @@
   <div class="_container_button">
     <mat-button class="_button" id="biography"
       [ngClass]="biographyActive ? '_active_button' : '_inactive_button'" 
-      (click)="setButtonsStyle('biography')" mat-menu-item>
+      (click)="setButtonsStyle('biography')">
       <mat-icon class="_icon_nav">fingerprint</mat-icon>
     </mat-button>
     <p class="_text_button">biografía</p>
   </div>
 </section>
 
-<mat-toolbar color="primary" style="position: fixed; z-index:1">
+<mat-toolbar color="primary" style="position: fixed;">
   <mat-toolbar-row>        
     <mat-button mat-icon-mat-button [matMenuTriggerFor]="menu"
       (click)="setButtonsStyle('hamburguer')">

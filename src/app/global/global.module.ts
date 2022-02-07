@@ -1,10 +1,12 @@
+/* Angular */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /* Components */
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { NavbarBottomComponent } from './components/navbar-bottom/navbar-bottom.component'
+import { FooterComponent } from './components/footer/footer.component';
 
+/* Modules */
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,11 +15,11 @@ import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   exports: [
     NavbarComponent,
-    NavbarBottomComponent
+    FooterComponent
   ],
   declarations: [ 
     NavbarComponent, 
-    NavbarBottomComponent
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -27,4 +29,5 @@ import { MatMenuModule } from '@angular/material/menu';
     MatMenuModule
   ]
 })
+
 export class GlobalModule { }

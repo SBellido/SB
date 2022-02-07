@@ -23,6 +23,7 @@ export class NavbarComponent implements OnInit {
   }
 
   public setButtonsStyle(item: string) {
+    
     if (item === 'design') {
       this.designActive = true;
       this.developmentActive = false; 
@@ -54,6 +55,7 @@ export class NavbarComponent implements OnInit {
         this.biographyActive = false;
         this.router.navigate(['works/home']);
     }
+    
   }
   
 }
