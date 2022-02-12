@@ -91,25 +91,6 @@
   h1 { 
     margin: 0;
   }
-  // #front {
-  //   transform: translateZ(20px) scale(2.5);
-  // }
-  // #middle {
-  //   height: 100%;
-  //   width: 100%;
-  //   transform: translateZ(50px) scale(2);
-  // }
-  // #middle_0 {
-  //   height: 100%;
-  //   width: 100%;
-  //   transform: translateZ(30px) scale(1.5);
-
-  // }
-  // #back {
-  //   height: auto;
-  //   width: 100%;
-  //   transform: translateZ(0px) scale(1);
-  // }
   ._concept {
     padding: 0rem .1rem;  
     width: auto;
@@ -119,6 +100,10 @@
   img._eye_home {
     padding-top: 5rem;
     width: 100vw;
+  }
+  ._footer {
+    position: absolute;
+    top: 1500px;
   }
 
 }

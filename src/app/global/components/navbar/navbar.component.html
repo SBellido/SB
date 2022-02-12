@@ -52,7 +52,7 @@
       </mat-button>
       <mat-button class="_button_hamburguer" id="intervention"
         (click)="setButtonsStyle('intervention')" mat-menu-item>
-        <mat-icon class="_icon_nav_hamburguer">color_lens</mat-icon>
+        <mat-icon class="_icon_nav_hamburguer">color_lens</mat-icon><span>intervención</span>
       </mat-button>
       <mat-button class="_button_hamburguer" id="biography" 
         (click)="setButtonsStyle('biography')" mat-menu-item>
@@ -62,9 +62,9 @@
     
   
 
-    <div class="_container_logo">   
+    <div class="_container_logo" (click)="setButtonsStyle('home')">   
       <img class="_logo_navbar" src="../assets/images/logo_sb_navbar.svg" 
-      alt="Firma de Sebastián Bellido">
+      alt="Firma de Sebastián Bellido">      
     </div>
 
     <div class="_empty"></div>
