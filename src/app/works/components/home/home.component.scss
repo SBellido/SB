@@ -2,15 +2,30 @@
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
-  
+
+  ._container_all {
+    padding-top: 39rem;
+  }
   ._container_parallax {
     width: 100%;
     height: 100vh;
-    perspective: 8px;
     perspective-origin: 50%;
     overflow-x: hidden;
     overflow-y: scroll;
-    position: relative;
+    max-height: 50vh;
+    padding-top: 5rem;
+    display: flex;
+    align-items: center ;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    transform: translateZ(-50px);
+    transform-style: preserve-3d;
+    animation: displayWords;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-delay: 0s;
+    animation-iteration-count: 1;
   }
   ._text {
     position: absolute;
@@ -35,29 +50,6 @@
     transform: translateZ(0px) scale(1);
     transform-origin: 0 50%;
   }
-  ._container_parallax {
-    width: 100%;
-    height: 100vh;
-    perspective-origin: 50%;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    // position: relative;
-    max-height: 50vh;
-    padding-top: 5rem;
-    display: flex;
-    align-items: center ;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-content: center;
-    transform: translateZ(-50px);
-    transform-style: preserve-3d;
-    animation: displayWords;
-    animation-duration: 5s;
-    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-  }
-
   ._container_all {
     perspective: 800px;
     display: flex;
@@ -102,15 +94,11 @@
     width: 100vw;
   }
   ._footer {
-    position: absolute;
-    top: 1500px;
+    position: relative;
+    top: 45rem;
   }
-
 }
-  
-
-/* SCREEN 375px */
-@media (min-width: 375px) {
+  @media (min-width: 375px) {
 
   ._container_concepts {
     width: 100vw;

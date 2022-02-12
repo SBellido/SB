@@ -6,13 +6,14 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
   
   concepts: string[] = [
     'aprendizaje','superación','apertura','perseverancia',
-    'creatividad','experiencia','ubicación','respeto',
-    'compromiso','comunicación','escucha','práctica',
-    'diálogo','intuición','proyectos','ideas','amistad',
+    'creatividad','experiencia', 'respeto', 'equilibrio',
+    'compromiso','comunicación','escucha','práctica', 'disposición',
+    'diálogo','intuición','proyectos','ideas','amistad', 'razonamiento',
     'curiosidad','amor','resultados','equipo','atención',
     'interés','riesgos','actitud','formación','familia',
     'capacitación','confianza','sueños','sinceridad',
@@ -78,6 +79,5 @@ export class HomeComponent implements OnInit {
     result = this.fontSize[0];
     return result;
   }
- 
 
 }

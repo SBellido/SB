@@ -1,0 +1,156 @@
+@import '../../global.component.scss';
+
+/* SCREEN 0px */
+@media (min-width: 0px) { 
+
+  article._container_footer {
+    width: 100%;
+    height: auto;
+    background-color: $accent_color;
+  }
+  div._flag {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  div._blue_light {
+    background-color: $second_color;
+    width: 100%;
+    height: .8rem;
+  }
+  div._sun {
+    background-color: $third_color;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 50px;
+    margin: .15rem auto;
+  }
+  div._container_ornament {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+  }
+  section._container_social_network {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  div._logo_social_net {
+    width: 2.5rem;
+    height: auto;
+    margin: 1rem auto;
+    cursor: pointer;
+  }
+  section._container_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: $accent_color;
+    margin: 0rem 1rem;
+  }
+  ._container_button {
+    background: $accent_color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+  ._button { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 50px;  
+    padding: 0rem .7rem;
+  }
+  ._button:hover { 
+    background: $second_color_light;
+  }
+  ._active_button {
+    background: $third_color; 
+  }
+  ._inactive_button {
+    background: $second_color;
+  }
+  ._icon_nav {
+    color: $first_color;
+    margin-right: 0px !important;
+    padding: .7rem 0rem;
+  }
+  p._text_button {
+    font-size: .7rem;
+    color: $first_color;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+  }
+  div._container_firm {
+    margin: 1rem auto 0rem auto;
+    width: 14rem;
+    height: auto;
+  }
+  div._container_buttons_contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  button._btn_footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    background: $third_color;
+    color: $first_color;
+    width: 270px;
+    height: 50px;
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: 50px;
+  }
+  img._btn_icon {
+    width: 1.7rem;
+    height: auto;
+    color: $first_color;
+    margin-right: .5rem;
+  }
+  div._container_divisor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 1.5rem auto;
+    padding: 0rem 2rem;
+  }
+  hr {
+    width: 50%;
+    border: 1px solid $first_color;
+    opacity: 50%;
+  }
+  p._o_divisor {
+    margin: 0rem 1.5rem;
+  }
+  div._footer_bottom {
+    background: $fifth_color_light;
+    color: $accent_color;
+    margin-top: 3rem;
+    padding: 0.8rem;
+    text-align: center;
+  }
+  p>span {
+    font-weight: 600;
+  }
+}
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) { 
+
+  section._container_buttons {
+    padding: 7rem 13rem;
+  }
+  ._button:hover { 
+    background: $second_color_light;
+  }
+  
+}

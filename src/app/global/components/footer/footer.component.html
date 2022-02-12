@@ -1,28 +1,82 @@
 <article class="_container_footer">
   <section class="_header_footer">
     <div class="_flag">
-    <div class="_blue_light">
-      
-    </div>
-    <div class="_sun">
-
-    </div>
-    <div class="_blue_light">
-
-    </div>
-    </div>    
-    <img src="../../../../assets/images/logo_eye.svg" alt="ojo pez volador">
+      <div class="_blue_light"></div>
+      <div class="_sun"></div>
+      <div class="_blue_light"></div>
+    </div> 
+    <div class="_container_ornament">
+      <img src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
+    </div>   
   </section>
-  <section class="_social_network">
 
+  <section class="_container_social_network">
+    <div class="_logo_social_net"><img src="../../../../assets/images/social_network/linkeding/logo_social_network_linkedin.svg" alt="logo de linkedin"></div>
+    <div class="_logo_social_net"><img src="../../../../assets/images/social_network/instagram/logo_social_network_instagram.svg" alt="logo de instagram"></div>
+    <div class="_logo_social_net"><img src="../../../../assets/images/social_network/github/logo_social_network_github.svg" alt="logo de github"></div>
+    <div class="_logo_social_net"><img src="../../../../assets/images/social_network/bitbucket/logo_social_network_bitbucket.svg" alt="logo de bitbucket"></div>
   </section>
-  <section class="_nav_buttons">
 
-  </section>
   <section class="_personal_data">
-
+    <div class="_container_firm">
+      <img src="../../../../assets/images/footer/firma_footer.svg" alt="Firma de Sebastián Bellido">
+    </div>
+    <!-- NAVBAR CIRCLE BUTONS -->
+    <section class="_container_buttons">   
+      <div class="_container_button">
+        <mat-button class="_button" id="design"
+          [ngClass]="designActive ? '_active_button' : '_inactive_button'" 
+          (click)="setButtonsStyle('design')">
+          <mat-icon class="_icon_nav">create</mat-icon>
+        </mat-button>
+        <p class="_text_button _text_button_footer">diseño</p>
+      </div>
+      <div class="_container_button">
+        <mat-button class="_button" id="development"
+          [ngClass]="developmentActive ? '_active_button' : '_inactive_button'" 
+          (click)="setButtonsStyle('development')">
+          <mat-icon class="_icon_nav">code</mat-icon>
+        </mat-button>
+        <p class="_text_button _text_button_footer">desarrollo</p>
+      </div>
+      <div class="_container_button">
+        <mat-button class="_button" id="intervention"
+          [ngClass]="interventionActive ? '_active_button' : '_inactive_button'" 
+          (click)="setButtonsStyle('intervention')">
+          <mat-icon class="_icon_nav">color_lens</mat-icon>
+        </mat-button>
+        <p class="_text_button _text_button_footer">intervención</p>
+      </div>
+      <div class="_container_button">
+        <mat-button class="_button" id="biography"
+          [ngClass]="biographyActive ? '_active_button' : '_inactive_button'" 
+          (click)="setButtonsStyle('biography')">
+          <mat-icon class="_icon_nav">fingerprint</mat-icon>
+        </mat-button>
+        <p class="_text_button _text_button_footer">biografía</p>
+      </div>
+    </section>
+    <div class="_container_ornament">
+      <img src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
+    </div>  
   </section>
+
   <section class="_footer">
-    
+    <div class="_container_buttons_contact">
+      <button matButton class="_btn_footer" routerLink="https://api.whatsapp.com/send?phone=541121580848">
+        <img class="_btn_icon" src="../../../../assets/images/footer/logo_whatsapp.svg" alt="logo de whatsapp">
+        LLÁMAME
+      </button>
+      <div class="_container_divisor">
+        <hr><p class="_o_divisor">ó</p><hr>
+      </div>
+      <button class="_btn_footer">
+        <img class="_btn_icon" src="../../../../assets/images/footer/icon_email.svg" alt="icono de un sobre">
+        CONTÁCTAME
+      </button>
+    </div>
+    <div class="_footer_bottom">
+      <p class="_copyright"><span>@Copyright</span> | Todos los derechos reservados a <span>Sebastián Bellido.</span></p>
+    </div>
   </section>
 </article> 
