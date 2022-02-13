@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     z-index: 1;
-    padding: .5rem 0rem;
+    padding-top: .5rem;
   }
   .mat-toolbar-row, 
   .mat-toolbar-single-row {
@@ -19,14 +19,6 @@
     color: $second_color;
     cursor: pointer;
   }
-  // ._icon_hamburguer:hover {
-  //   color: $second_color_light;
-  // }
-  // ._icon_hamburguer:active,
-  // ._icon_hamburguer:visited,
-  // ._icon_hamburguer:focus {
-  //   color: $third_color;
-  // }
   ._active_icon_hamburguer {
     color: $third_color;
   }

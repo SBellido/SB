@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {   
-    this.mixArrayContent();
+    // this.mixArrayContent();
   }
 
   mixArrayContent() {    
@@ -53,30 +53,35 @@ export class HomeComponent implements OnInit {
       fontStyle: this.getRandomFontStyle(),
       fontSize: this.getRandomFontSize()
     }
+    this.mixArrayContent();
     return myStyles;    
   }
   getRandomWeight(): number {
     let result: number;
     this.weightFont.sort(()=> Math.random() - 0.5); 
     result = this.weightFont[0];
+    this.mixArrayContent();
     return result;
   }
   getRandomColor(): string {
     let result: string;
     this.colorFont.sort(()=> Math.random() - 0.5); 
     result = this.colorFont[0];
+    this.mixArrayContent();
     return result;
   }
   getRandomFontStyle(): string {
     let result: string;
     this.fontStyle.sort(()=> Math.random() - 0.5); 
     result = this.fontStyle[0];
+    this.mixArrayContent();
     return result;
   }
   getRandomFontSize(): string {
     let result: string;
     this.fontSize.sort(()=> Math.random() - 0.5); 
     result = this.fontSize[0];
+    this.mixArrayContent();
     return result;
   }
 

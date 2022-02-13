@@ -31,15 +31,23 @@
     justify-content: center;
     margin: 2rem auto;
   }
-  section._container_social_network {
+  section._container_social_networks {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
-  div._logo_social_net {
+  div._container_logo_socialnet {
     width: 2.5rem;
     height: auto;
     margin: 1rem auto;
+  }
+  img._logo_socialnet {
+    -webkit-transition:-webkit-transform .5s ease-out;
+    -moz-transition:-moz-transform .5s ease-out;
+    -o-transition:-o-transform .5s ease-out;
+    -ms-transition:-ms-transform .5s ease-out;
+    transition:transform .5s ease-out;
+    opacity: 80%;
     cursor: pointer;
   }
   section._container_buttons {
@@ -95,19 +103,19 @@
     align-items: center;
     justify-content: center;
   }
-  button._btn_footer {
+  a._btn_footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-weight: 600;
     background: $third_color;
     color: $first_color;
-    width: 270px;
-    height: 50px;
-    padding: 1rem 5rem;
+    padding: .8rem 5.5rem;
+    width: 100px;
     border: none;
     border-radius: 50px;
+    cursor: pointer;
   }
   img._btn_icon {
     width: 1.7rem;
@@ -141,6 +149,10 @@
   p>span {
     font-weight: 600;
   }
+  a:-webkit-any-link {
+    text-decoration: none;
+  }
+
 }
 
 /* SCREEN 1024px */
@@ -152,5 +164,15 @@
   ._button:hover { 
     background: $second_color_light;
   }
-  
+  img._logo_socialnet:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 100%;
+  }
+  button._btn_footer:hover {
+    background: $third_color_light;
+  }
 }
