@@ -8,6 +8,7 @@ import { WorksRoutingModule } from './works-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 /* Components */
 import { WorksComponent } from './works.component';
@@ -48,7 +49,8 @@ import { PublicComponent } from './components/intervention/components/public/pub
     WorksRoutingModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule
+    MatMenuModule,
+    MDBBootstrapModule
   ]
 })
 export class WorksModule { }

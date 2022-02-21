@@ -24,9 +24,11 @@ export class HomeComponent implements OnInit {
     100,200,300,400,
     500,600,700,800,900
   ];
+  
   colorFont: string[] = [
     '#03caff','#03caff','#7AE3FF',
     '#f9f9f9','#f9f9f9','#FFDD57',
+    '#f8cbf6','#f8cbf6','#f89af3',
     '#FFEB9B','#8F57FF','#C5A9FE'
   ]; 
   fontStyle: string[] = [

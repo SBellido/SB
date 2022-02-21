@@ -8,23 +8,10 @@
     height: auto;
     background-color: $accent_color;
   }
-  div._flag {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-  }
   div._blue_light {
     background-color: $second_color;
     width: 100%;
-    height: .8rem;
-  }
-  div._sun {
-    background-color: $third_color;
-    width: .5rem;
     height: .5rem;
-    border-radius: 50px;
-    margin: .15rem auto;
   }
   div._container_ornament {
     display: flex;
@@ -93,7 +80,7 @@
     margin-block-end: .5em;
   }
   div._container_firm {
-    margin: 1rem auto 0rem auto;
+    margin: .5rem auto;
     width: 14rem;
     height: auto;
   }
@@ -111,7 +98,7 @@
     font-weight: 600;
     background: $third_color;
     color: $first_color;
-    padding: .8rem 5.5rem;
+    padding: .7rem 5rem;
     width: 100px;
     border: none;
     border-radius: 50px;
@@ -140,7 +127,7 @@
     margin: 0rem 1.5rem;
   }
   div._footer_bottom {
-    background: $fifth_color_light;
+    background: $first_color;
     color: $accent_color;
     margin-top: 3rem;
     padding: 0.8rem;
