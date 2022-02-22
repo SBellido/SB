@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-design',
@@ -11,7 +12,8 @@ export class DesignComponent implements OnInit {
   visibleGraph: boolean = false;
   visibleIllustration: boolean = false;
   visibleDesigns: boolean = false;
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +24,11 @@ export class DesignComponent implements OnInit {
         this.visibleUxUi = true, 
         this.visibleGraph = false,
         this.visibleIllustration = false;     
+  }
+  routingVlife() {
+    console.log("lalal");
+    
+    this.router.navigate(["works/design/ux-ui/v-life"])
   }
   showMoreGraph() {
     this.visibleGraph ? 

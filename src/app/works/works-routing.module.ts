@@ -17,6 +17,7 @@ import { DesignComponent } from './components/design/design.component';
 import { DevelopmentComponent } from './components/development/development.component';
 import { PublicComponent } from './components/intervention/components/public/public.component';
 import { PrivateComponent } from './components/intervention/components/private/private.component';
+import { VLifeComponent } from './components/design/components/ux-ui/components/v-life/v-life.component';
 
 const routes: Routes = [
   {
@@ -44,6 +45,11 @@ const routes: Routes = [
         path: 'design/ux-ui',
         pathMatch: 'full',
         component: UxUiComponent
+      },
+      {
+        path: 'design/ux-ui/v-life',
+        pathMatch: 'full',
+        component: VLifeComponent
       },
       {
         path: 'design/illustration-sketch',

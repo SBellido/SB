@@ -1,9 +1,12 @@
 <article class="_container_all">
   <div class="_container">
+    <div class="_container_title">
+      <hr class="_line_title"><h1 class="_title">diseño</h1><hr class="_line_title">
+    </div>
     <div class="_container_cards">
       <section class="_container_item" (click)="showMoreUxUi()">
         <h2 class="_item" >
-          UX | UI
+          ux | ui
         </h2>
       </section>
       <div class="_container_info" [hidden]="!visibleUxUi">
@@ -13,7 +16,7 @@
           </button>
         </div>
         <figure class="_container_realizations">
-          <div class="_container_realization">
+          <div class="_container_realization" (click)="routingVlife()">
             <img class="_logo_realization" src="../assets/images/ux_ui/v_life_isologo.png" alt="Logo de V-Life">
             <p class="_name_realization">v-life</p>
           </div>
@@ -41,7 +44,7 @@
       </div>
       <section class="_container_item" (click)="showMoreGraph()">
         <h2 class="_item" >
-          Diseño Gráfico
+          gráfico | publicitario
         </h2>
       </section>
       <div class="_container_info" [hidden]="!visibleGraph">
@@ -126,7 +129,7 @@
       </div>
       <section class="_container_item" (click)="showMoreIllustration()">
         <h2 class="_item" >
-          Ilustración
+         boceto | ilustración
         </h2>
       </section>
       <div class="_container_info" [hidden]="!visibleIllustration">
