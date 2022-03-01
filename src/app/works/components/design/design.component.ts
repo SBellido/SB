@@ -38,16 +38,14 @@ export class DesignComponent implements OnInit {
   showMoreIllustration() {
     this.visibleIllustration ? 
       this.visibleIllustration = false : 
-      this.visibleIllustration = true,
-      this.visibleUxUi = false,
-      this.visibleGraph = false;    
+        this.visibleIllustration = true,
+        this.visibleUxUi = false,
+        this.visibleGraph = false;    
   }
   showMoreDesigns() {
-    console.log(this.visibleDesigns);
-    
     this.visibleDesigns ? 
       this.visibleDesigns = false : 
-      this.visibleDesigns = true;
+        this.visibleDesigns = true;
   }
 
 }
