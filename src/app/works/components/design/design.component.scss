@@ -12,7 +12,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    padding: 1rem .5rem 0rem .5rem;
+    padding: 2rem .5rem 0rem .5rem;
   }
   hr._line_title {
     width: 30%;
@@ -31,7 +31,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding: 0rem 0rem 4rem 0rem;
+    padding: .5rem 0rem 5rem 0rem;
   }
   ._container_item {
     cursor: pointer;
@@ -41,7 +41,7 @@
     align-items: center;
     flex-direction: column;
     padding: 1rem 0rem;
-    width: 91vw;
+    width: 84vw;
     border-radius: 50px;
     margin: 1.3rem;
   }
@@ -59,7 +59,7 @@
   h2._item {
     margin: 0;
     color: $first_color;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
   }
   span {

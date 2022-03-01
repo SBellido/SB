@@ -4,7 +4,7 @@
 @media (min-width: 0px) { 
 
 /* ------------NAVBAR HAMBURGUER---------------*/
-::ng-deep  .mat-toolbar.mat-primary {
+::ng-deep .mat-toolbar.mat-primary {
     background: $first_color;
     position: fixed;
     top: 0;
@@ -100,7 +100,7 @@
     top: 0px;
     z-index: 1;
     background: $first_color;
-    padding: 5rem 1.4rem .5rem 1.4rem;
+    padding: 4.5rem 1.4rem .5rem 1.4rem;
     -webkit-box-shadow: 0px 0px 4px 0px #1a1a1a; 
     box-shadow: 0px 0px 4px 0px #1a1a1a; 
   }
@@ -116,7 +116,7 @@
     align-items: center;
     cursor: pointer;
     border-radius: 50px;  
-    padding: 0rem .7rem;
+    padding: 0rem .4rem;
   }
   ._active_button {
     background: $third_color; 
@@ -127,7 +127,7 @@
   ._icon_nav {
     color: $first_color;
     margin-right: 0px !important;
-    padding: .7rem 0rem;
+    padding: .4rem 0rem;
   }
   p._text_button {
     font-size: .7rem;

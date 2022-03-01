@@ -25,9 +25,7 @@ export class DesignComponent implements OnInit {
         this.visibleGraph = false,
         this.visibleIllustration = false;     
   }
-  routingVlife() {
-    console.log("lalal");
-    
+  routingVlife() {    
     this.router.navigate(["works/design/ux-ui/v-life"])
   }
   showMoreGraph() {

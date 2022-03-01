@@ -1,7 +1,41 @@
 <article class="_container_all">
-  <div class="_container">
+  <mdb-carousel [isControls]="false" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+              [animation]="'slide'">
+  <mdb-carousel-item *ngFor="let item of slides; let i = index">
+    <div class="_card" *ngFor="let card of item; let cardIndex = index">
+      <mdb-card class="my-1 h-100">
+        <mdb-card-img class="_card_image" [src]="card.img" alt="Logo del proyecto"></mdb-card-img>
+        <mdb-card-body class="_card_body">
+          <p class="_p_card">{{card.description}}</p>
+        </mdb-card-body>
+        <mdb-card-footer>
+          <a href="#" mdbBtn color="primary" class="waves-light _button_see_more" mdbWavesEffect>{{card.buttonText}}</a>
+        </mdb-card-footer>
+      </mdb-card>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+  <!-- <div class="_container">
     <div class="_container_title">
       <hr class="_line_title"><h1 class="_title">ux | ui</h1><hr class="_line_title">
     </div>
-  </div>
+    <figure class="_container_realizations">
+      <div class="_container_realization" (click)="routingVlife()">
+        <img class="_logo_realization" src="../assets/images/ux_ui/v_life_isologo.png" alt="Logo de V-Life">
+        <p class="_name_realization">v-life</p>
+      </div>
+      <div class="_container_realization">
+        <img class="_logo_realization" src="../assets/images/ux_ui/travelLog_isologo.png" alt="Logo de TravelLog">
+        <p class="_name_realization">travel-log</p>
+      </div>
+      <div class="_container_realization">
+        <img class="_logo_realization" src="../assets/images/ux_ui/nighx_isologo.png" alt="Logo de Nighx">
+        <p class="_name_realization">nighx</p>
+      </div>
+      <div class="_container_realization">
+        <img class="_logo_realization" src="../assets/images/ux_ui/hunt_isologo.png" alt="Logo de hunt">
+        <p class="_name_realization">hunt</p>
+      </div>   
+    </figure>
+  </div> -->
 </article>

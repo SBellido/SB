@@ -9,6 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CarouselModule, ModalModule, WavesModule } from 'angular-bootstrap-md';
 
 /* Components */
 import { WorksComponent } from './works.component';
@@ -58,7 +59,10 @@ import { HuntComponent } from './components/design/components/ux-ui/components/h
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MDBBootstrapModule
+    MDBBootstrapModule,
+    CarouselModule, 
+    ModalModule, 
+    WavesModule 
   ]
 })
 export class WorksModule { }
