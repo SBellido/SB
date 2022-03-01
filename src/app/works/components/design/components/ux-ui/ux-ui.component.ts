@@ -12,28 +12,14 @@ export class UxUiComponent implements OnInit {
 
   cards = [
     {
-
-      description: 'App mobile que conecta pacientes con profesionales de salud. En 2019, Sebastián Bellido fue encargado del rediseño de marca, desarrollo UX | UI, diseño de interacción y armado de prototipos en alta definición para Trenda Software. La aplicación fue lanzada en 2020 en Argentina.',
+      description: 'App mobile que conecta pacientes con profesionales de salud. En 2019, Sebastián fue encargado del rediseño de marca, desarrollo UX | UI, diseño de interacción y armado de prototipos en alta definición para Trenda Software. La aplicación fue lanzada en 2020 en Argentina.',
       buttonText: 'Ver proyecto',
       img: '../assets/images/ux_ui/v_life.png'
     },
     {
-      title: 'TravelLog',
-      description: 'This card has supporting text below as a natural lead-in to additional content.',
-      buttonText: 'Ver',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).webp'
-    },
-    {
-      title: 'Nighx',
-      description: 'This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. This text is much longer so that you can see a significant difference between the text in  previous tabs.',
+      description: 'App mobile que permite agendar viajes, asociando vuelos, reservas, excursiones, entre otras funcionalidades. Sebastián realizó diseño de interacción, wireframes, mockups y maquetado en el marco de la Cátedra Introducción a las Metodologías de desarrollo de software de la carrera TUDAI de FCEx de UniCen Tandil Argentina.',
       buttonText: 'Ver proyecto',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).webp'
-    },
-    {
-      title: 'hunt',
-      description: 'Some quick example text to build on the card title and make up the bulk of the card content',
-      buttonText: 'Ver proyecto',
-      img: 'https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).webp'
+      img: '../assets/images/ux_ui/travelLog_logo.png'
     }
   ];
 
@@ -50,8 +36,8 @@ export class UxUiComponent implements OnInit {
     this.slides = this.chunk(this.cards, 3);
   }
 
-  routingVlife() {    
-    this.router.navigate(["works/design/ux-ui/v-life"])
+  routeVlife() {    
+    this.router.navigateByUrl("works/design/ux-ui/v-life");
   }
 
 }
