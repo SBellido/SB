@@ -1,4 +1,30 @@
 <article class="_container_all">
+  <section class="_container_card">
+    <div class="_card">
+      <div class="_header">
+        <img class="_card_image" 
+          src="../assets/images/ux_ui/v-life/logo/v_life.png" alt="Logo del proyecto">
+      </div>
+      <div class="_card_body">
+        <p class="_p_card">App mobile que <span>conecta pacientes con profesionales de salud.</span>En 2019, Sebastián fue encargado de realizar <span>rediseño de marca, desarrollo UX | UI, diseño de interacción y armado de prototipos en alta definición</span> para Trenda Software. La aplicación fue lanzada en 2020 en Argentina.
+        </p>
+      </div>
+      <div class="_footer">
+        <button class="_button_see_more"
+          (click)="routeVlife()" mdbBtn color="primary">
+          VER PROYECTO
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div class="_container_button">
+    <button mat-button class="_button_back" routerLink="../">
+      <mat-icon class="_icon_button">keyboard_backspace</mat-icon>volver
+    </button>
+  </div>
+
+
   <mdb-carousel [isControls]="false" class="carousel-multi-item multi-animation" 
   [type]="'carousel-multi-item'" [animation]="'slide'">
     <mdb-carousel-item *ngFor="let item of slides; let i = index">
@@ -15,7 +41,7 @@
       </div>
     </mdb-carousel-item>
   </mdb-carousel>
-   <div class="_container_button">
+  <div class="_container_button">
     <button mat-button class="_button_back" routerLink="../">
       <mat-icon class="_icon_button">keyboard_backspace</mat-icon>volver
     </button>

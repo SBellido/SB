@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   
   concepts: string[] = [
-    'aprendizaje','superación','apertura','perseverancia',
-    'creatividad','experiencia', 'respeto', 'equilibrio',
+    'aprendizaje','superación','apertura','perseverancia', 'lectura',
+    'creatividad','experiencia', 'respeto', 'equilibrio', 'estudio',
     'compromiso','comunicación','escucha','práctica', 'disposición',
     'diálogo','intuición','proyectos','ideas','amistad', 'razonamiento',
     'curiosidad','amor','resultados','equipo','atención',
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {   
-    // this.mixArrayContent();
+    this.mixArrayContent();
   }
 
   mixArrayContent() {    

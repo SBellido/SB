@@ -3,12 +3,18 @@
 /* SCREEN 0px */
 @media (min-width: 0px) {
 
+  section._container_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   div._card {
     background-color: $accent_color;
     border-radius: 50px;
     margin: 1.5rem;
     display: flex;
     justify-content: center;
+    flex-direction: column;
   }
   .card {
     display: flex;
