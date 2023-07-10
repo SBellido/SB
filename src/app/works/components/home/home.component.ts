@@ -10,22 +10,23 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   
   concepts: string[] = [
-    'learning', 'overcoming', 'openness', 'perseverance', 'reading',
-    'creativity', 'experience', 'respect', 'balance', 'study',
-    'commitment', 'communication', 'listening', 'practice', 'disposition',
-    'dialogue', 'intuition', 'projects', 'ideas', 'friendship', 'reasoning',
-    'curiosity', 'love', 'results', 'team', 'attention',
-    'interest', 'risks', 'attitude', 'training', 'family',
-    'training', 'trust', 'dreams', 'sincerity',
-    'knowledge', 'humility', 'empathy', 'resolution', 'responsibility'
-    // 'aprendizaje','superación','apertura','perseverancia', 'lectura',
-    // 'creatividad','experiencia', 'respeto', 'equilibrio', 'estudio',
-    // 'compromiso','comunicación','escucha','práctica', 'disposición',
-    // 'diálogo','intuición','proyectos','ideas','amistad', 'razonamiento',
-    // 'curiosidad','amor','resultados','equipo','atención',
-    // 'interés','riesgos','actitud','formación','familia',
-    // 'capacitación','confianza','sueños','sinceridad',
-    // 'conocimiento','humildad','empatía','resolución','responsabilidad' 
+   // 'learning', 'overcoming', 'openness', 'perseverance', 'reading',
+    // 'creativity', 'experience', 'respect', 'balance', 'study',
+    // 'commitment', 'communication', 'listening', 'practice', 'disposition',
+    // 'dialogue', 'intuition', 'projects', 'ideas', 'friendship', 'reasoning',
+    // 'curiosity', 'love', 'results', 'team', 'attention',
+    // 'interest', 'risks', 'attitude', 'training', 'family',
+    // 'training', 'trust', 'dreams', 'sincerity',
+    // 'knowledge', 'humility', 'empathy', 'resolution', 'responsibility'
+    'aprendizaje','superación','apertura','perseverancia', 'lectura',
+    'creatividad','experiencia', 'respeto', 'equilibrio', 'estudio',
+    'compromiso','comunicación','escucha','práctica', 'disposición',
+    'diálogo','intuición','proyectos','ideas','amistad', 'razonamiento',
+    'curiosidad','amor','resultados','equipo','atención',
+    'interés','riesgos','actitud','formación','familia',
+    'capacitación','confianza','sueños','sinceridad',
+    'conocimiento','humildad','empatía','resolución','responsabilidad',
+    'intelecto','ingenio'
   ];
 
   weightFont: number[] = [

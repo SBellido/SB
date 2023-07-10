@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class DesignComponent implements OnInit {
 
+  public area: string = 'diseño';
+  public icon: string = 'local_florist';
   visibleUxUi: boolean = false;
   visibleGraph: boolean = false;
   visibleIllustration: boolean = false;
