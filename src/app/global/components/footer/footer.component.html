@@ -1,7 +1,6 @@
 <article class="_container_footer">
 
   <section class="_header_footer">
-    <!-- <div class="_divisor_top"></div> -->
     <div class="_container_ornament">
       <img class="_ornament" src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
     </div>  
@@ -12,48 +11,30 @@
       <img class="_ornament" src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
     </div>   
   </section>
-
+  <p class="_message">Contáctame!</p>
   <section class="_container_contact">     
-    <p class="_message">Contáctame!</p>
-    <div class="_container_buttons">
-      <div class="_contact_buttons">  
-        <mat-button class="_button_contact" id="icon_email" mat-menu-item>
-          <mat-icon class="_icon_nav">alternate_email</mat-icon>
-        </mat-button>
-      </div>
-      <div class="_contact_buttons">  
-        <mat-button class="_button_contact" id="phone" mat-menu-item>
-          <mat-icon class="_icon_nav">perm_phone_msg</mat-icon>
-        </mat-button>
-      </div>
+    <div class="_container_social_networks"
+    *ngFor="let btn of btnContact">
+      <a target="_blank" href="{{ btn.route }}">
+        <div class="">  
+          <button class="_button_contact" id="icon_email" mat-menu-item>
+            <mat-icon class="_icon_contact">{{ btn.img }}</mat-icon>
+          </button>
+        </div>
+      </a>
     </div>
   </section>
-
   <section class="_container_social_networks">
-    <div class="_container_logo_socialnet">
-      <a href="https://www.linkedin.com/in/sebastian-bellido-9a0a6681/" target="_blank">
-        <img class="_logo_socialnet" title="Sebastián Bellido en Linkedin" 
-        src="../../../../assets/images/social_network/linkeding/logo_social_network_linkedin.svg" alt="logo de linkedin">
-      </a>
-    </div>
-    <div class="_container_logo_socialnet">
-      <a href="https://www.behance.net/sebastianba389" target="_blank">
-        <img class="_logo_socialnet" title="Sebastián Bellido en Behance"
-        src="../../../../assets/images/social_network/behance/logo_social_network_behance.svg" alt="logo de instagram">
-      </a>
-    </div>
-    <div class="_container_logo_socialnet">
-      <a href="https://github.com/SBellido" target="_blank">
-        <img class="_logo_socialnet" title="Sebastián Bellido en Github"
-        src="../../../../assets/images/social_network/github/logo_social_network_github.svg" alt="logo de github">
+    <div class="_container_logo_socialnet" 
+    *ngFor="let btn of btnSN">
+      <a href="{{ btn.route }}" target="_blank">
+        <img class="_logo_socialnet" title="{{ btn.title}}" 
+        src="{{ btn.img }}" alt="{{ btn.text }}">
       </a>
     </div>
   </section>
 
-
-  
-  <div class="_footer_bottom">
-  
+  <div class="_footer_bottom"> 
     <p class="_copyright"><span>@Copyright</span> | All rights reserved to <span>Sebastián Bellido.</span></p>
   </div>
 

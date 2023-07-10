@@ -20,3 +20,10 @@ export interface ItemContact {
   tittle: string;
   active: boolean;
 }
+
+export interface Button {
+  route: string;
+  img: string;
+  title: string;
+  text: string;
+}
