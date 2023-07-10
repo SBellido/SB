@@ -1,11 +1,33 @@
 <article class="_container_footer">
-<!-- 
+
   <section class="_header_footer">
-    <div class="_divisor_top"></div>
+    <!-- <div class="_divisor_top"></div> -->
     <div class="_container_ornament">
-      <img src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
+      <img class="_ornament" src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
+    </div>  
+    <div class="_container_firm">
+      <img class="_img_sb" src="../../../../assets/images/footer/azulejo_yo.png" alt="Firma de Sebastián Bellido">
+    </div>
+    <div class="_container_ornament">
+      <img class="_ornament" src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
     </div>   
-  </section> -->
+  </section>
+
+  <section class="_container_contact">     
+    <p class="_message">Contáctame!</p>
+    <div class="_container_buttons">
+      <div class="_contact_buttons">  
+        <mat-button class="_button_contact" id="icon_email" mat-menu-item>
+          <mat-icon class="_icon_nav">alternate_email</mat-icon>
+        </mat-button>
+      </div>
+      <div class="_contact_buttons">  
+        <mat-button class="_button_contact" id="phone" mat-menu-item>
+          <mat-icon class="_icon_nav">perm_phone_msg</mat-icon>
+        </mat-button>
+      </div>
+    </div>
+  </section>
 
   <section class="_container_social_networks">
     <div class="_container_logo_socialnet">
@@ -26,68 +48,12 @@
         src="../../../../assets/images/social_network/github/logo_social_network_github.svg" alt="logo de github">
       </a>
     </div>
-    <div class="_container_logo_socialnet">
-      <a href="https://bitbucket.org/account/workspaces/" target="_blank">
-        <img class="_logo_socialnet" title="Sebastián Bellido en Bitbucket"
-        src="../../../../assets/images/social_network/bitbucket/logo_social_network_bitbucket.svg" alt="logo de bitbucket">
-      </a>
-    </div>
   </section>
 
-  <section class="_personal_data">
-    <div class="_container_firm">
-      <img src="../../../../assets/images/footer/firma_footer.svg" alt="Firma de Sebastián Bellido">
-    </div>
-    <!-- NAVBAR CIRCLE BUTONS -->
-    <section class="_container_buttons">   
-      <div class="_container_button">
-        <mat-button class="_button" id="design"
-          [ngClass]="designActive ? '_active_button' : '_inactive_button'" 
-          (click)="setButtonsStyle('design')">
-          <!-- <mat-icon class="_icon_nav">create</mat-icon> -->
-          <mat-icon class="_icon_nav"> local_florist</mat-icon>
-        </mat-button>
-        <p class="_text_button _text_button_footer">designer</p>
-      </div>
-      <div class="_container_button">
-        <mat-button class="_button" id="development"
-          [ngClass]="developmentActive ? '_active_button' : '_inactive_button'" 
-          (click)="setButtonsStyle('development')">
-          <mat-icon class="_icon_nav">developer_mode</mat-icon>
-        </mat-button>
-        <p class="_text_button _text_button_footer">developer</p>
-      </div>
-      <div class="_container_button">
-        <mat-button class="_button" id="biography"
-          [ngClass]="biographyActive ? '_active_button' : '_inactive_button'" 
-          (click)="setButtonsStyle('biography')">
-          <mat-icon class="_icon_nav">fingerprint</mat-icon>
-        </mat-button>
-        <p class="_text_button _text_button_footer">profile</p>
-      </div>
-    </section>
-    <!-- <div class="_container_ornament">
-      <img src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
-    </div>   -->
-  </section>
 
-  <section class="_container_contact">     
-    <div class="_container_buttons">
-      <div class="_contact_buttons">  
-        <mat-button class="_button_contact" id="icon_email" mat-menu-item>
-          <mat-icon class="_icon_nav">alternate_email</mat-icon>
-        </mat-button>
-      </div>
-      <div class="_contact_buttons">  
-        <mat-button class="_button_contact" id="phone" mat-menu-item>
-          <mat-icon class="_icon_nav">perm_phone_msg</mat-icon>
-        </mat-button>
-      </div>
-    </div>
-    <p class="message">Write me or Call me!</p>
-  </section>
-
+  
   <div class="_footer_bottom">
+  
     <p class="_copyright"><span>@Copyright</span> | All rights reserved to <span>Sebastián Bellido.</span></p>
   </div>
 

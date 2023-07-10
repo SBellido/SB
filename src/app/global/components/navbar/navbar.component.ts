@@ -12,14 +12,41 @@ import { ItemNavBar, ItemContact} from '../../../models/models';
 export class NavbarComponent implements OnInit {
   
   btnNavBar: ItemNavBar[] = [
-    { id: 1, icon: 'fingerprint',tittle: 'perfil', active: false, router:'works/biography' },
-    { id: 2, icon: 'developer_mode', tittle: 'desarrollo', active: false, router:'works/development' },
-    { id: 3, icon: 'local_florist', tittle: 'diseño', active: false, router:'works/design' },
+    { 
+      id: 1, 
+      icon: 'fingerprint',
+      tittle: 'perfil', 
+      active: false, 
+      router:'works/biography' 
+    },
+    { 
+      id: 2, 
+      icon: 'developer_mode', 
+      tittle: 'desarrollo', 
+      active: false, 
+      router:'works/development' 
+    },
+    { 
+      id: 3, 
+      icon: 'local_florist', 
+      tittle: 'diseño', 
+      active: false, 
+      router:'works/design' 
+    },
   ]
 
   btnContact: ItemContact[] = [
-    { id: 1, icon: 'perm_phone_msg', tittle: 'llámame', active: false },
-    { id: 2, icon: 'alternate_email', tittle: 'escríbeme', active: false }
+    { 
+      id: 1, 
+      icon: 'perm_phone_msg', 
+      tittle: 'llámame', 
+      active: false 
+    },
+    { id: 2, 
+      icon: 'alternate_email', 
+      tittle: 'escríbeme', 
+      active: false 
+    }
   ]
 
   constructor(private router: Router) { 
