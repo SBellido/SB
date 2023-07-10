@@ -1,6 +1,7 @@
 /* Angular */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ItemNavBar, ItemContact} from '../../../models/models';
 
 @Component({
   selector: 'app-navbar',
@@ -9,53 +10,39 @@ import { Router } from '@angular/router';
 })
 
 export class NavbarComponent implements OnInit {
+  
+  btnNavBar: ItemNavBar[] = [
+    { id: 1, icon: 'fingerprint',tittle: 'perfil', active: false, router:'works/biography' },
+    { id: 2, icon: 'developer_mode', tittle: 'desarrollo', active: false, router:'works/development' },
+    { id: 3, icon: 'local_florist', tittle: 'diseño', active: false, router:'works/design' },
+  ]
 
-  designActive:boolean = false;
-  developmentActive:boolean = false;
-  interventionActive:boolean = false;
-  biographyActive:boolean = false;
+  btnContact: ItemContact[] = [
+    { id: 1, icon: 'perm_phone_msg', tittle: 'llámame', active: false },
+    { id: 2, icon: 'alternate_email', tittle: 'escríbeme', active: false }
+  ]
 
   constructor(private router: Router) { 
   }
 
   ngOnInit() {
-   
   }
 
-  public setButtonsStyle(item: string) {
-    
-    if (item === 'design') {
-      this.designActive = true;
-      this.developmentActive = false; 
-      this.interventionActive = false; 
-      this.biographyActive = false; 
-      this.router.navigate(['works/design']);
-    } else if (item === 'development') {
-        this.developmentActive = true;
-        this.designActive = false; 
-        this.interventionActive = false; 
-        this.biographyActive = false; 
-        this.router.navigate(['works/development']);
-    } else if (item === 'intervention') {
-        this.interventionActive = true; 
-        this.designActive = false; 
-        this.developmentActive = false; 
-        this.biographyActive = false;       
-        this.router.navigate(['works/intervention']);
-    } else if (item === 'biography') {
-        this.biographyActive = true; 
-        this.designActive = false; 
-        this.developmentActive = false; 
-        this.interventionActive = false; 
-        this.router.navigate(['works/biography']);
-    } else {
-        this.designActive = false; 
-        this.developmentActive = false; 
-        this.interventionActive = false; 
-        this.biographyActive = false;
-        this.router.navigate(['works/home']);
+  navigateBtnTo(btn: ItemNavBar) {
+    this.setActiveButton(btn.id); // Aquí se invoca al método setActiveButton()
+    this.router.navigate([btn.router]);
+  }
+  navigateTo(destiny: string) {
+    for (const btn of this.btnNavBar) {
+      btn.active = false;
     }
-    
+    this.router.navigate([destiny]);
+  }
+  
+  setActiveButton(id: number) {
+    for (const btn of this.btnNavBar) {
+      btn.active = btn.id === id;
+    }
   }
   
 }
