@@ -6,9 +6,7 @@
     </div>
     <div class="_container_cards">
       <section class="_container_item" (click)="showMoreUxUi()">
-        <h2 class="_item" >
-          ux | ui
-        </h2>
+        <h2 class="_item" >ux | ui</h2>
       </section>
       <div class="_container_info" [hidden]="!visibleUxUi">
         <div class="_container_brands">
@@ -30,9 +28,7 @@
         </p>
       </div>
       <section class="_container_item" (click)="showMoreGraph()">
-        <h2 class="_item" >
-          graphic
-        </h2>
+        <h2 class="_item">gráfico</h2>
       </section>
       <div class="_container_info" [hidden]="!visibleGraph">
         <div class="_container_brands">
@@ -64,7 +60,6 @@
             <div class="_container_realization" >
               <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
               <p class="_name_realization">{{ btn.title }}</p>
-              <app-gallery-modal></app-gallery-modal>
             </div>
           </figure>
         </div>

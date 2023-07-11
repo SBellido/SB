@@ -1,5 +1,8 @@
 <article>
-  <section>
+  <section>  
+    <button mat-button class="_button_back" title="Volver" routerLink="../../">
+      <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
+    </button>
     <div class="_container_title">
       <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
       <h1 class="_title">{{ area }}</h1>
@@ -23,21 +26,19 @@
           <mat-icon>navigate_next</mat-icon>
         </button>
       </section>
+      <div class="_container_count">
+        <div class="_image_counter">{{ currentImageNumber }} / {{ images.length }}</div>
+      </div>
       <div class="_container_info">
         <h4 class="_title_product">V-LIFE App Mobile</h4>
         <p class="_p_card">App mobile que <span>conecta pacientes con profesionales de la salud.</span> 
-          En <span>2019, Sebastián</span> fue encargado de realizar <span>rediseño de marca, diseño UX | UI, 
-          flujo de interacción, realizó test con usuarios y armado de prototipos en alta definición.</span> 
-          Trabajo realizado para Trenda Software. 
-          La <span>aplicación</span> fue <span>lanzada en 2020</span> en Argentina.
+          En el <span>año 2019, Sebastián</span> fue encargado de realizar <span>rediseño de marca, diseño UX | UI, 
+          flujo de interacción</span> en baja definición, <span>test con usuarios y armado de prototipos</span> en alta definición,
+          utilizando <span>Adobe Xd</span> y componentes <span>UI Ionic.</span> El trabajo fue realizado para Trenda Software ocupando el rol de <span>UX Design Lead.</span> 
+          La app fue <span>lanzada en 2020</span> en Argentina.
         </p> 
       </div>
     </article>
-    <div class="_container_button_back">
-      <button mat-button class="_button_back" routerLink="../../">
-        <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
-      </button>
-    </div>
     <app-footer class="_footer"></app-footer>
   </section>
 </article>

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { NgxSpinnerService } from 'ngx-spinner';
 
 import { GalleryImage } from 'src/app/models/models';
 import { GalleryService } from 'src/app/services/gallery.services';
@@ -10,17 +9,17 @@ import { GalleryService } from 'src/app/services/gallery.services';
   templateUrl: './v-life.component.html',
   styleUrls: ['./v-life.component.scss']
 })
-export class VLifeComponent implements OnInit {
 
+export class VLifeComponent implements OnInit {
+  
+  /*--------VARIABLES -------*/ 
+  currentImageNumber: number = 1;
   public area: string = 'diseño';
   public icon: string = 'local_florist';
-
   imgGallery:string = '../assets/images/ux_ui/v-life/patient/0.png';
   activeNext:boolean = false;
   activeBefore:boolean = false;
-  
   currentImageIndex: number = 0;
-
   images : GalleryImage[] = [
     { src: '../assets/images/ux_ui/v-life/patient/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/v-life/patient/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -55,6 +54,7 @@ export class VLifeComponent implements OnInit {
     { src: '../assets/images/ux_ui/v-life/patient/31.png', position: 31, alt: 'string', first: false, last: true },
 
   ] 
+
   constructor(
     private router: Router,
     private galleryService: GalleryService) {
@@ -64,6 +64,8 @@ export class VLifeComponent implements OnInit {
     this.updateButtonStatus();
   }
 
+  
+/* ----------- MÉTODOS ----------- */
   activeGallery() {
     this.imgGallery='';
   }
@@ -77,15 +79,16 @@ export class VLifeComponent implements OnInit {
       this.currentImageIndex++;
       this.imgGallery = this.images[this.currentImageIndex].src;
       this.updateButtonStatus();
+      this.currentImageNumber = this.currentImageIndex + 1;
     }
   }
-  
   
   beforeImg() {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
       this.imgGallery = this.images[this.currentImageIndex].src;
       this.updateButtonStatus();
+      this.currentImageNumber = this.currentImageIndex + 1;
     }
   }
   
