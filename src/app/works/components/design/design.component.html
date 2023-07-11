@@ -13,7 +13,7 @@
       <div class="_container_info" [hidden]="!visibleUxUi">
         <div class="_container_brands">
           <figure class="_container_realizations" *ngFor="let btn of UX_UI">   
-            <div class="_container_realization">
+            <div class="_container_realization" (click)="routeTo(btn.route)">
               <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
               <p class="_name_realization">{{ btn.title }}</p>
             </div>
@@ -53,7 +53,7 @@
         </div>
         <div class="_container_brands">
           <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line3">   
-            <div class="_container_realization">
+            <div class="_container_realization" onclick="routeTo(btn.route)">
               <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
               <p class="_name_realization">{{ btn.title }}</p>
             </div>
@@ -61,9 +61,10 @@
         </div>
         <div class="_container_brands">
           <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line4">   
-            <div class="_container_realization">
+            <div class="_container_realization" >
               <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
               <p class="_name_realization">{{ btn.title }}</p>
+              <app-gallery-modal></app-gallery-modal>
             </div>
           </figure>
         </div>

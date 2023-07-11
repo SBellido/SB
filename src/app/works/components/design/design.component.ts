@@ -18,7 +18,7 @@ export class DesignComponent implements OnInit {
       text: 'Logo de YPF',
     },
     {
-      route: '',
+      route: 'works/design/ux-ui/v-life',
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
       title: 'V-Life',
       text: 'Logo V-Life',
@@ -150,15 +150,19 @@ export class DesignComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+  routeTo(route:string) {    
+    this.router.navigateByUrl(route);
+  }
+  routingVlife() {   
+    this.router.navigateByUrl("works/design/ux-ui/v-life");
+  }
   showMoreUxUi() {  
     this.visibleUxUi ? 
       this.visibleUxUi = false : 
         this.visibleUxUi = true, 
         this.visibleGraph = false,
         this.visibleIllustration = false;     
-  }
-  routingVlife() {    
-    this.router.navigate(["works/design/ux-ui/v-life"])
   }
   showMoreGraph() {
     this.visibleGraph ? 

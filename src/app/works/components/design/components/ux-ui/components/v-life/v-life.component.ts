@@ -11,11 +11,31 @@ import { GalleryService } from 'src/app/services/gallery.services';
 })
 export class VLifeComponent implements OnInit {
 
-  imgGallery:string = '';
-  images: GalleryImage | undefined;
+  imgGallery:string = '../assets/images/ux_ui/v-life/patient/login_pass_input.png';
   activeNext:boolean = false;
   activeBefore:boolean = false;
- 
+  
+  currentImageIndex: number = 0;
+
+  images : GalleryImage[] = [
+    {  
+      src: '../assets/images/ux_ui/v-life/patient/aditional_info_end.png',
+      position: 0,
+      alt: 'string',
+      first: true,
+      last: false,
+    
+    },
+    {  
+      src: '../assets/images/ux_ui/v-life/patient/login_pass_input.png',
+      position: 1,
+      alt: 'string',
+      first: false,
+      last: true,
+    
+    }
+
+  ] 
   constructor(
     private router: Router,
     private galleryService: GalleryService) {
@@ -28,14 +48,19 @@ export class VLifeComponent implements OnInit {
     this.imgGallery='';
   }
   nextImg() {
-    this.imgGallery='../assets/images/ux_ui/v-life/patient/login_pass_input.png';
-    
+    if (this.currentImageIndex < this.images.length - 1) {
+      this.currentImageIndex++;
+      this.imgGallery = this.images[this.currentImageIndex].src;
+    }
   }
   
   beforeImg() {
-    console.log("anterior imagen");
-
+    if (this.currentImageIndex > 0) {
+      this.currentImageIndex--;
+      this.imgGallery = this.images[this.currentImageIndex].src;
+    }
   }
+  
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }

@@ -1,105 +1,40 @@
 
-<div class="_container_mobile">
-  <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
-</div>
-<article class="_container_all">
-  <section class="_gallery">  
-    <!-- <button class="_btn_gallery _before" (click)="beforeImg()"
-      [ngClass]="activeBefore ? '_active_button' : '_inactive_button'">
-      <mat-icon>navigate_before</mat-icon>
-    </button>  
-    <div class="_container_image">
-      <img class="_image_gallery" alt="First slide"
-        [src]="imgGallery">
-      <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-    </div> 
-    <button class="_btn_gallery _next" (click)="nextImg()"
-      [ngClass]="activeBefore ? '_active_button' : '_inactive_button'">
-      <mat-icon>navigate_next</mat-icon>
-    </button>  -->
-    <!-- <button fxHide fxShow.gt-sm *ngIf="!image.first" mat-button (click)="changeImg(-1)">
-      <mat-icon>chevron_left</mat-icon>
-    </button>
-    <img class="mat-dialog-content-img"
-         [src]="image.src"
-         [alt]="image.alt">
-    <button fxHide fxShow.gt-sm *ngIf="!image.last" mat-button (click)="changeImg(1)">
-      <mat-icon>chevron_right</mat-icon>
-    </button> -->
+<article>
+  <section>
+    <div class="_container_mobile">
+      <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
+    </div>
+    <article class="_container_all">
+      <section class="_gallery">  
+        <!-- <button class="_btn_gallery _before" (click)="beforeImg()"
+          [ngClass]="activeBefore ? '_active_button' : '_inactive_button'">
+          <mat-icon>navigate_before</mat-icon>
+        </button>   -->
+        <button class="_btn_gallery _before" (click)="beforeImg()"
+          [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
+          <mat-icon>navigate_before</mat-icon>
+        </button>
+        <div class="_container_image">
+          <img class="_image_gallery" alt="First slide"
+            [src]="imgGallery">
+          <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+        </div> 
+        <button class="_btn_gallery _next" (click)="nextImg()"
+          [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
+          <mat-icon>navigate_next</mat-icon>
+        </button>
+        
+        <!-- <button class="_btn_gallery _next" (click)="nextImg()"
+          [ngClass]="activeBefore ? '_active_button' : '_inactive_button'">
+          <mat-icon>navigate_next</mat-icon>
+        </button>     -->
+      </section>
+    </article>
+    <div class="_container_button_back">
+      <button mat-button class="_button_back" routerLink="../../">
+        <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
+      </button>
+    </div>
+    <app-footer class="_footer"></app-footer>
   </section>
 </article>
-<div class="_container_button_back">
-  <button mat-button class="_button_back" routerLink="../">
-    <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
-  </button>
-</div>
-<!-- 
-<div class="_container_all">
-  <mdb-carousel [isControls]="false" class="carousel slide carousel-fade" [animation]="'fade'">
-    <mdb-carousel-item>
-      <div class="_container_image view active">
-        <img class="_image_gallery" alt="First slide"
-          src="../assets/images/ux_ui/v-life/patient/start.png">
-        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-      </div>
-    </mdb-carousel-item>
-   
-    <mdb-carousel-item>
-      <div class="_container_image">
-        <img class="_image_gallery" alt="Second slide"
-          src="../assets/images/ux_ui/v-life/patient/login_pass_input.png">
-        <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
-      </div>
-    </mdb-carousel-item>
-  
-    <mdb-carousel-item>
-      <div class="_container_image">
-        <img class="_image_gallery" alt="Third slide"
-          src="../assets/images/ux_ui/v-life/patient/services.png">
-        <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
-      </div>
-    </mdb-carousel-item>
-  </mdb-carousel>
-  <div class="_container_button">
-    <button mat-button class="_button_back" routerLink="../">
-      <mat-icon class="_icon_button">keyboard_backspace</mat-icon>volver
-    </button>
-  </div>
-</div> -->
-
-<!-- 
-<section class="container-home" id="container-home" name="container-home">      
-  <article id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="../assets/images/ux_ui/v-life/patient/start.png" class="d-block w-100 imgMobile" alt="imagen alegórica a tecnologías">
-        <div class="carousel-caption d-md-block info_home">
-          <h1 class="title-home">Tecnolog&iacute;a</h1>
-          <p class="text-home">Hacemos posible todo lo imaginado utilizando la herramienta apropiada y explotando sus recursos al m&aacute;ximo.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../assets/images/ux_ui/v-life/patient/login_pass_input.png" class="d-block w-100 imgMobile" alt="imagen alegórica a innovación">
-        <div class="carousel-caption d-md-block info_home">
-          <h1 class="title-home">Innovaci&oacute;n</h1>
-          <p class="text-home">Hacemos posible todo lo imaginado utilizando la herramienta apropiada y explotando sus recursos al m&aacute;ximo.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="../assets/images/ux_ui/v-life/patient/services.png" class="d-block w-100 imgMobile" alt="imagen alegórica al diseño">
-        <div class="carousel-caption d-md-block info_home">
-          <h1 class="title-home">Diseño</h1>
-          <p class="text-home">Hacemos posible todo lo imaginado utilizando la herramienta apropiada y explotando sus recursos al m&aacute;ximo.</p>
-        </div>
-      </div>
-    </div>
-  </article>
-  <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </a>
-</section> -->
