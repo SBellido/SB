@@ -20,6 +20,7 @@ import { MatDividerModule } from '@angular/material/divider';
   exports: [
     NavbarComponent,
     FooterComponent,
+    GalleryModalComponent,
   ],
   declarations: [ 
     NavbarComponent, 

@@ -11,42 +11,15 @@
         </h2>
       </section>
       <div class="_container_info" [hidden]="!visibleUxUi">
-        <!-- <div class="_container_button">
-          <button class="_button_more" routerLink="ux-ui">
-            <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
-          </button>
-        </div> -->
-        <figure class="_container_realizations">
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/ypf/YPF_logo.png" alt="Logo de YPF">
-            <p class="_name_realization">YPF</p>
-          </div>   
-          <div class="_container_realization" (click)="routingVlife()">
-            <img class="_logo_realization" src="../assets/images/ux_ui/v-life/logo/v_life_isologo.png" alt="Logo de V-Life">
-            <p class="_name_realization">v-life</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png" alt="Logo de TravelLog">
-            <p class="_name_realization">travel-log</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/nighx/logo/nighx_isologo.png" alt="Logo de Nighx">
-            <p class="_name_realization">nighx</p>
-          </div>
-          <!--<div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/ux_ui/hunt/logo/hunt_isologo.png" alt="Logo de hunt">
-            <p class="_name_realization">hunt</p>
-          </div>-->
-          
-        </figure><hr>
-        <!-- <p class="_info"><span>UX</span> - 
-          It is called <span>user experience,</span> due to its approach, to the <span>human system|machine relationship,</span>
-          and appears as an evolution of ergonomics, keeping design in the leading role
-          for the <span>search for satisfaction in people who interact with a system, product or environment.</span></p>
-        <p class="_info"><span>UI</span> - The <span>user interface design</span>
-          it is the result of defining the <span>form, function, utility, ergonomics, brand image</span>
-          and other aspects that affect the external appearance of interfaces in systems of all kinds.
-        </p> -->
+        <div class="_container_brands">
+          <figure class="_container_realizations" *ngFor="let btn of UX_UI">   
+            <div class="_container_realization">
+              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
+              <p class="_name_realization">{{ btn.title }}</p>
+            </div>
+          </figure>
+        </div>
+        <hr>
         <p class="_info"><span>UX</span> - 
           Se llama <span>experiencia de usuario,</span> por su enfoque, a la <span>relación sistema humano/máquina,</span> 
           y aparece como una evolución de la ergonomía, manteniendo al diseño en el papel protagónico
@@ -62,113 +35,44 @@
         </h2>
       </section>
       <div class="_container_info" [hidden]="!visibleGraph">
-        <!-- <div class="_container_button">
-          <button class="_button_more" routerLink="graph">
-            <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
-          </button>
-        </div> -->
-         <div class="_container_button">
-          <button class="_button_more" routerLink="graph">
-            <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
-          </button>
-        </div>
-        <figure class="_container_realizations">   
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/sweetart_logo.png" alt="Logo de SweetArt">
-            <p class="_name_realization">sweetart</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/nescafe.png" alt="Logo de ïcono campaña Nescafé">
-            <p class="_name_realization">nescafé</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/doritos.png" alt="Logo de Doritos Trío">
-            <p class="_name_realization">doritos</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/barista.png" alt="Logo de Barista Bros">
-            <p class="_name_realization">barista</p>
-          </div>
-        </figure>
-        <figure class="_container_realizations" >
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/branca_logo.png" alt="Logo de Fernet Branca">
-            <p class="_name_realization">branca</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/lopez_logo.png" alt="Logo de López Propiedades">
-            <p class="_name_realization">lópez</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/mdq_logo.png" alt="Logo de Garage MDQ">
-            <p class="_name_realization">mdq</p>
-          </div>
-          <div class="_container_realization">
-            <img id="nudel" class="_logo_realization" src="../assets/images/graph/nudel_logo.png" alt="Logo de Nudel">
-            <p class="_name_realization">nudel</p>
-          </div>
-        </figure>
-        <figure class="_container_realizations">
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/branca_logo.png" alt="Logo de Fernet Branca">
-            <p class="_name_realization">branca</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/lopez_logo.png" alt="Logo de López Propiedades">
-            <p class="_name_realization">lópez</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/mdq_logo.png" alt="Logo de Garage MDQ">
-            <p class="_name_realization">mdq</p>
-          </div>
-          <div class="_container_realization">
-            <img class="_logo_realization" src="../assets/images/graph/nudel_logo.png" alt="Logo de Nudel">
-            <p class="_name_realization">nudel</p>
-          </div>
-        </figure>
-        <!-- <div class="_show_more" (click)="showMoreDesigns()">
-          <div class="_container_see_more" *ngIf="visibleDesigns">
-            <mat-icon class="_icon_expand">expand_less</mat-icon>
-            <p class="_see_more">see less</p>
-          </div>
-          <div class="_container_see_more" *ngIf="!visibleDesigns">
-            <mat-icon class="_icon_expand">expand_more</mat-icon>
-            <p class="_see_more">see more</p>
-          </div>
-        </div>
-        <div [hidden]="!visibleDesigns">
-          <figure class="_container_realizations" >
+        <div class="_container_brands">
+          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line1">   
             <div class="_container_realization">
-              <img class="_logo_realization" src="../assets/images/graph/branca_logo.png" alt="Logo de Fernet Branca">
-              <p class="_name_realization">branca</p>
-            </div>
-            <div class="_container_realization">
-              <img class="_logo_realization" src="../assets/images/graph/lopez_logo.png" alt="Logo de López Propiedades">
-              <p class="_name_realization">lópez</p>
-            </div>
-            <div class="_container_realization">
-              <img class="_logo_realization" src="../assets/images/graph/mdq_logo.png" alt="Logo de Garage MDQ">
-              <p class="_name_realization">mdq</p>
-            </div>
-            <div class="_container_realization">
-              <img class="_logo_realization" src="../assets/images/graph/nudel_logo.png" alt="Logo de Nudel">
-              <p class="_name_realization">nudel</p>
+              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
+              <p class="_name_realization">{{ btn.title }}</p>
             </div>
           </figure>
-        </div> -->
+        </div>
+        <div class="_container_brands">
+          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line2">   
+            <div class="_container_realization">
+              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
+              <p class="_name_realization">{{ btn.title }}</p>
+            </div>
+          </figure>
+        </div>
+        <div class="_container_brands">
+          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line3">   
+            <div class="_container_realization">
+              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
+              <p class="_name_realization">{{ btn.title }}</p>
+            </div>
+          </figure>
+        </div>
+        <div class="_container_brands">
+          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line4">   
+            <div class="_container_realization">
+              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
+              <p class="_name_realization">{{ btn.title }}</p>
+            </div>
+          </figure>
+        </div>
         <hr>
-        <!-- <p class="_info"><span>Diseño Gráfico </span> - Profesión y disciplina académica 
+        <p class="_info"><span>Diseño Gráfico </span> - Profesión y disciplina académica 
           cuya actividad consiste en <span>proyectar comunicación visual</span> destinada a 
           <span>transmitir mensajes</span> específicos a grupos sociales con <span>objetivos 
           determinados. Se aplica para producir un discurso de marca homogéneo generando 
           identidad visual</span> a personas, productos o servicios.
-        </p> -->
-        <p class="_info"><span>Graphic Design </span>
-          - Profession and academic discipline whose activity consists of 
-          <span>projecting visual communication</span> aimed at
-          <span>broadcast specific messages</span> to social groups with <span>targets
-          determined. It is applied to produce a homogeneous brand discourse generating
-          visual identity</span> to people, products or services.
         </p>
       </div>
       <section class="_container_item_disabled" (click)="showMoreIllustration()">
@@ -179,17 +83,11 @@
       <p class="_item_disabled">in progress</p>
       <div class="_container_info" [hidden]="!visibleIllustration">
         <p class="_info">
-          The term experimentation, its application and its purpose were born in the <span>world of science.</span>
-          Experimentation is understood as <span>inquiry based on voluntary provocation</span>
-          of certain phenomena to confirm some hypothesis.
-          Experimentation is the <span>directed observation </span> that completes the <span> spontaneous observation.</span>
-        </p>
-        <!-- <p class="_info">
           El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
           Por experimentación se entiende la <span>indagación fundada a partir de la provocación voluntaria </span>  
           de ciertos fenómenos para confirmar alguna hipótesis. 
           La experimentación es la <span>observación dirigida </span> que completa la <span> observación espontánea.</span>
-        </p> -->
+        </p>
         <div class="_container_button">
           <button class="_button_more" routerLink="illustration-sketch">
             <mat-icon class="_icon_button">work_outline</mat-icon>portafolio

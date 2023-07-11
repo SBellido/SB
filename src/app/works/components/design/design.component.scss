@@ -59,7 +59,7 @@
     background-color: $first_color_medium;
   }
   ._container_item:hover { 
-    background-color: red;
+    background: $third_color_lighter;
   }
   div._container_info {
     perspective: 800px;
@@ -111,12 +111,27 @@
     align-items: center;
     width: auto;
   }
-  figure._container_realizations {
+  // figure._container_realizations {
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-around;
+  //   margin: 1rem auto;
+  // }
+  figure {
+    display: flex;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+}
+  div._container_brands {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 1rem auto;
+    width: 5rem;
   }
+
   img._logo_realization {
     -webkit-transition:-webkit-transform 0.5s ease-out;
     -moz-transition:-moz-transform 0.5s ease-out;

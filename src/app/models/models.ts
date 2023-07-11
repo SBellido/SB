@@ -27,3 +27,7 @@ export interface Button {
   title: string;
   text: string;
 }
+
+export interface ButtonList {
+  buttons: Button;
+}
