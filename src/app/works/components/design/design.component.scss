@@ -59,7 +59,10 @@
     background-color: $first_color_medium;
   }
   ._container_item:hover { 
-    background: $third_color_lighter;
+    background: linear-gradient(
+      0deg, $third_color_light 33%, 
+      $third_color_lighter 100%
+    );
   }
   div._container_info {
     perspective: 800px;
@@ -116,6 +119,7 @@
   //   flex-direction: row;
   //   justify-content: space-around;
   //   margin: 1rem auto;
+  //   max-width: 10rem;
   // }
   figure {
     display: flex;
@@ -211,7 +215,8 @@
   // div._container_cards {
   //   padding: 5rem;
   // }
-  ._container_item {
+  ._container_item,
+  ._container_item_disabled {
     width: 50vw;
   }
 

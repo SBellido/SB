@@ -29,5 +29,5 @@ export interface Button {
 }
 
 export interface ButtonList {
-  buttons: Button;
+  buttons: Button[];
 }

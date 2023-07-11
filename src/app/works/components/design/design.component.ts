@@ -36,8 +36,6 @@ export class DesignComponent implements OnInit {
       text: 'Logo de Nighx',
     },
   ]
-
-  
   btnNDesigns_line1: Button[] = [
     {
       route: '',
@@ -62,7 +60,7 @@ export class DesignComponent implements OnInit {
       img: '../assets/images/graph/barista.png',
       title: 'Barista',
       text: 'Logo de Barista Bros',
-    },
+    },    
   ]
 
   btnNDesigns_line2: Button[] = [

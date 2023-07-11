@@ -61,7 +61,8 @@
       circle, $third_color_lighter 3%, 
       $third_color 100%
     );
-  }
+    cursor: default;
+    }
   ._inactive_button {
     background: radial-gradient(
       circle, $second_color_lighter 9%, 
@@ -109,11 +110,13 @@
     padding: 7rem 13rem;
   }
   ._button:hover { 
-    background: $second_color_lighter;
+      background: radial-gradient(
+      circle, $third_color_lighter 3%, 
+      $third_color 100%
+    );
+
   }
-
 }
-
 // /* SCREEN 1336px */
 // @media (min-width: 1336px) { 
 
@@ -131,4 +134,3 @@
 //   }
 
 // }
-
