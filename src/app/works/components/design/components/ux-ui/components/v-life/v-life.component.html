@@ -1,16 +1,15 @@
-
 <article>
   <section>
+    <div class="_container_title">
+      <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
+      <h1 class="_title">{{ area }}</h1>
+    </div>
     <div class="_container_mobile">
       <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
     </div>
     <article class="_container_all">
       <section class="_gallery">  
-        <!-- <button class="_btn_gallery _before" (click)="beforeImg()"
-          [ngClass]="activeBefore ? '_active_button' : '_inactive_button'">
-          <mat-icon>navigate_before</mat-icon>
-        </button>   -->
-        <button class="_btn_gallery _before" (click)="beforeImg()"
+        <button class="_active_button" (click)="beforeImg()"
           [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
           <mat-icon>navigate_before</mat-icon>
         </button>
@@ -19,16 +18,20 @@
             [src]="imgGallery">
           <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
         </div> 
-        <button class="_btn_gallery _next" (click)="nextImg()"
+        <button class="_active_button" (click)="nextImg()"
           [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
           <mat-icon>navigate_next</mat-icon>
         </button>
-        
-        <!-- <button class="_btn_gallery _next" (click)="nextImg()"
-          [ngClass]="activeBefore ? '_active_button' : '_inactive_button'">
-          <mat-icon>navigate_next</mat-icon>
-        </button>     -->
       </section>
+      <div class="_container_info">
+        <h4 class="_title_product">V-LIFE App Mobile</h4>
+        <p class="_p_card">App mobile que <span>conecta pacientes con profesionales de la salud.</span> 
+          En <span>2019, Sebastián</span> fue encargado de realizar <span>rediseño de marca, diseño UX | UI, 
+          flujo de interacción, realizó test con usuarios y armado de prototipos en alta definición.</span> 
+          Trabajo realizado para Trenda Software. 
+          La <span>aplicación</span> fue <span>lanzada en 2020</span> en Argentina.
+        </p> 
+      </div>
     </article>
     <div class="_container_button_back">
       <button mat-button class="_button_back" routerLink="../../">
