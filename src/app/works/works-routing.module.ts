@@ -17,6 +17,7 @@ import { DevelopmentComponent } from './components/development/development.compo
 import { VLifeComponent } from './components/design/components/ux-ui/components/v-life/v-life.component';
 import { YpfComponent } from './components/design/components/ux-ui/components/ypf/ypf.component';
 import { NighxComponent } from './components/design/components/ux-ui/components/nighx/nighx.component';
+import { TravelLogComponent } from './components/design/components/ux-ui/components/travel-log/travel-log.component';
 
 const routes: Routes = [
   {
@@ -59,6 +60,11 @@ const routes: Routes = [
         path: 'design/ux-ui/nighx',
         pathMatch: 'full',
         component: NighxComponent
+      },
+      {
+        path: 'design/ux-ui/trevel-log',
+        pathMatch: 'full',
+        component: TravelLogComponent
       },
       {
         path: 'design/experimental',

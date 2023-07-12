@@ -1,1 +1,48 @@
-<p>travel-log works!</p>
+<article>
+    <section>  
+      <button mat-button class="_button_back" title="Volver" routerLink="../../">
+        <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
+      </button>
+      <div class="_container_title" routerLink="../../">
+        <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
+        <h1 class="_title">{{ area }}</h1>
+      </div>
+      <div class="_container_mobile">
+        <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
+      </div>
+      <article class="_container_all">
+        <section class="_gallery">  
+          <button class="_active_button" (click)="beforeImg()"
+            [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <div class="_container_image">
+            <img class="_image_gallery" alt="First slide"
+              [src]="imgGallery">
+            <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+          </div> 
+          <button class="_active_button" (click)="nextImg()"
+            [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </section>
+        <div class="_container_count">
+          <div class="_image_counter">{{ currentImageNumber }} / {{ images.length }}</div>
+        </div>
+        <div class="_container_info">
+          <h4 class="_title_product">Travel Log</h4>
+          <p class="_p_card">
+            Web App que permite <span>crear viajes y planes</span> entre otras funcionalidades extra.
+            En el <span>año 2020</span> fue realizado este trabajo en el marco de la Cátedra Introducción a las Metodologías Ágiles del 
+            Software (TUDAI/FCEx/UniCen), junto a un grupo de compañeros. <span> Sebastián</span> fue encargado de realizar 
+            <span>diseño de prototipos, flujos de interacción, aplicación de patrones de diseño, 
+            diseño UX | UI, de presentación en público y desempeño como Scrum Master dentro del equipo.</span>
+            El diseño y desarrollo, incluído, Diagrama de Clases y de Entidad y Relación, 
+            se realizó a partir de un texto que simulaba ser un diálogo con el cliente.
+          </p> 
+        </div>
+      </article>
+      <app-footer class="_footer"></app-footer>
+    </section>
+  </article>
+  

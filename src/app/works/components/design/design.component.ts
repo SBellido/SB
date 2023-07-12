@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, ButtonList } from '../../../models/models';
+import { Button } from '../../../models/models';
 
 @Component({
   selector: 'app-design',
@@ -29,12 +29,12 @@ export class DesignComponent implements OnInit {
       title: 'Nighx',
       text: 'Logo de Nighx',
     },
-    // {
-    //   route: '',
-    //   img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
-    //   title: 'TravelLog',
-    //   text: 'Logo de TravelLog',
-    // },
+    {
+      route: 'works/design/ux-ui/trevel-log',
+      img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
+      title: 'TravelLog',
+      text: 'Logo de TravelLog',
+    },
   ]
   btnNDesigns_line1: Button[] = [
     {
