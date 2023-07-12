@@ -30,7 +30,7 @@ export class DesignComponent implements OnInit {
       text: 'Logo de Nighx',
     },
     {
-      route: 'works/design/ux-ui/trevel-log',
+      route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
       title: 'TravelLog',
       text: 'Logo de TravelLog',

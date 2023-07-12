@@ -62,7 +62,7 @@ const routes: Routes = [
         component: NighxComponent
       },
       {
-        path: 'design/ux-ui/trevel-log',
+        path: 'design/ux-ui/travel-log',
         pathMatch: 'full',
         component: TravelLogComponent
       },

@@ -19,6 +19,7 @@ export class VLifeComponent implements OnInit {
   activeNext: boolean = false;
   activeBefore: boolean = false;
   currentImageIndex: number = 0;
+
   images : GalleryImage[] = [
     { src: '../assets/images/ux_ui/v-life/patient/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/v-life/patient/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -55,18 +56,24 @@ export class VLifeComponent implements OnInit {
     { src: '../assets/images/ux_ui/v-life/patient/29.png', position: 32,  alt: 'string', first: false, last: false },
     { src: '../assets/images/ux_ui/v-life/patient/30.png', position: 33, alt: 'string', first: false, last: false },
     { src: '../assets/images/ux_ui/v-life/patient/31.png', position: 34, alt: 'string', first: false, last: false },
-
   ] 
+
+
 
   constructor(private router: Router) {
   }
 
   ngOnInit(): void {
+    this.topFunction();
     this.updateButtonStatus();
   }
-
   
-/* ----------- MÉTODOS ----------- */
+  
+  /* ----------- MÉTODOS ----------- */
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   activeGallery() {
     this.imgGallery='';
   }
@@ -74,7 +81,7 @@ export class VLifeComponent implements OnInit {
     this.activeNext = this.currentImageIndex < this.images.length - 1;
     this.activeBefore = this.currentImageIndex > 0;
   }
-  
+
   nextImg() {
     if (this.currentImageIndex < this.images.length - 1) {
       this.currentImageIndex++;
@@ -96,6 +103,7 @@ export class VLifeComponent implements OnInit {
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+
   
 
 }

@@ -1,46 +1,47 @@
 <article>
-    <section>  
-      <button mat-button class="_button_back" title="Volver" routerLink="../../">
-        <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
-      </button>
-      <div class="_container_title">
-        <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
-        <h1 class="_title">{{ area }}</h1>
+  <section>  
+    <button mat-button class="_button_back" title="Volver" routerLink="../../">
+      <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
+    </button>
+    <div class="_container_title">
+      <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
+      <h1 class="_title">{{ area }}</h1>
+    </div>
+    <div class="_container_desktop">
+      <img class="_desktop" src="../assets/images/desktop.png" alt="">
+    </div>
+    <article class="_container_all">
+      <section class="_gallery">  
+        <button class="_active_button" (click)="beforeImg()"
+          [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
+          <mat-icon>navigate_before</mat-icon>
+        </button>
+        <div class="_container_image">
+          <img class="_image_gallery" alt="First slide"
+            [src]="imgGallery">
+          <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+        </div> 
+        <button class="_active_button" (click)="nextImg()"
+          [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
+          <mat-icon>navigate_next</mat-icon>
+        </button>
+      </section>
+      <div class="_container_count">
+        <div class="_image_counter">{{ currentImageNumber }} / {{ images.length }}</div>
       </div>
-      <div class="_container_desktop">
-        <img class="_desktop" src="../assets/images/desktop.png" alt="">
+      <div class="_container_info">
+        <h4 class="_title_product">Gestión de Inversiones</h4>
+        <p class="_p_card">Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades que <span>funciona como herramienta para que 
+          YPF gestione sus inversiones de negocio de manera ordenada y coherente.</span> 
+          En el <span>año 2022, Sebastián</span> fue encargado de realizar <span>entrevistas con usuarios, análisis de problema, diseño UX | UI, 
+          flujo de interacción, diseño de prototipos y presentaciones al cliente.</span> El trabajo fue realizado para Tsoft ocupando el rol de <span>UX/UI Sr.</span> 
+          Participó durante un año en el ptoyecto, <span>diseñó la aplicación y llegó a ocupar el rol de Analista Funcional y Product Owner, 
+          por el conocimiento adquirido de la lógica del negocio.</span> El diseño de la app se entregó completo y el proyecto aún se encuenta en etapa de desarrollo.
+        </p> 
       </div>
-      <article class="_container_all">
-        <section class="_gallery">  
-          <button class="_active_button" (click)="beforeImg()"
-            [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
-            <mat-icon>navigate_before</mat-icon>
-          </button>
-          <div class="_container_image">
-            <img class="_image_gallery" alt="First slide"
-              [src]="imgGallery">
-            <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-          </div> 
-          <button class="_active_button" (click)="nextImg()"
-            [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
-            <mat-icon>navigate_next</mat-icon>
-          </button>
-        </section>
-        <div class="_container_count">
-          <div class="_image_counter">{{ currentImageNumber }} / {{ images.length }}</div>
-        </div>
-        <div class="_container_info">
-          <h4 class="_title_product">Gestión de Inversiones</h4>
-          <p class="_p_card">Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades que <span>funciona como herramienta para que 
-            YPF gestione sus inversiones de negocio de manera ordenada y coherente.</span> 
-            En el <span>año 2022, Sebastián</span> fue encargado de realizar <span>entrevistas con usuarios, análisis de problema, diseño UX | UI, 
-            flujo de interacción, diseño de prototipos y presentaciones al cliente.</span> en alta definición. El trabajo fue realizado para Tsoft ocupando el rol de <span>UX/UI Sr.</span> 
-            aunque posteriormente. <span>Su participación fue cobrando protagonismo</span> por el conocimiento adquirido de la lógica del negocio, <span>llegando a acupar roles tales como
-            Analista Funcional y Product Owner. </span>El diseño de la app se realizó desde cero hasta su finalización y entrega en Argentina.
-          </p> 
-        </div>
-      </article>
-      <app-footer class="_footer"></app-footer>
-    </section>
-  </article>
+      <app-brands-buttons></app-brands-buttons>
+    </article>
+    <app-footer class="_footer"></app-footer>
+  </section>
+</article>
   

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { GalleryImage } from 'src/app/models/models';
+import { Button, GalleryImage } from 'src/app/models/models';
 @Component({
   selector: 'app-travel-log',
   templateUrl: './travel-log.component.html',
@@ -18,6 +18,7 @@ export class TravelLogComponent implements OnInit {
   activeNext: boolean = false;
   activeBefore: boolean = false;
   currentImageIndex: number = 0;
+
   images : GalleryImage[] = [
     { src: '../assets/images/ux_ui/travel_log/flujo_1/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/travel_log/flujo_1/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -36,13 +37,18 @@ export class TravelLogComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.topFunction();
     this.updateButtonStatus();
   }
 
-  
-/* ----------- MÉTODOS ----------- */
+    
+  /* ----------- MÉTODOS ----------- */
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   activeGallery() {
-    this.imgGallery='';
+      this.imgGallery='';
   }
   updateButtonStatus() {
     this.activeNext = this.currentImageIndex < this.images.length - 1;
@@ -70,6 +76,7 @@ export class TravelLogComponent implements OnInit {
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+
   
 
 }

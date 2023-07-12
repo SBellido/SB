@@ -32,11 +32,16 @@ export class NighxComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.topFunction();
     this.updateButtonStatus();
   }
 
   
 /* ----------- MÉTODOS ----------- */
+topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
   activeGallery() {
     this.imgGallery='';
   }

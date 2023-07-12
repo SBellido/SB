@@ -25,6 +25,7 @@ import { VLifeComponent } from './components/design/components/ux-ui/components/
 import { TravelLogComponent } from './components/design/components/ux-ui/components/travel-log/travel-log.component';
 import { NighxComponent } from './components/design/components/ux-ui/components/nighx/nighx.component';
 import { YpfComponent } from './components/design/components/ux-ui/components/ypf/ypf.component';
+import { BrandsButtonsComponent } from './components/brands-buttons/brands-buttons.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { YpfComponent } from './components/design/components/ux-ui/components/yp
     VLifeComponent,
     TravelLogComponent,
     NighxComponent,
-    YpfComponent
+    YpfComponent,
+    BrandsButtonsComponent
   ],
   imports: [
     CommonModule,

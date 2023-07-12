@@ -1,0 +1,44 @@
+@import '../../../global/global.component.scss';
+
+/* SCREEN 0px */
+@media (min-width: 0px) {
+
+  /* ---------- BRANDS ------------ */
+  div._container_brands {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem auto;
+    width: 100%;
+  }
+  figure._container_realizations {
+    margin: 0 .75rem;
+  }
+  img._logo_realization {
+    -webkit-transition:-webkit-transform 0.5s ease-out;
+    -moz-transition:-moz-transform 0.5s ease-out;
+    -o-transition:-o-transform 0.5s ease-out;
+    -ms-transition:-ms-transform 0.5s ease-out;
+    transition:transform 0.5s ease-out;
+    width: 3rem;
+    filter: grayscale(1);
+    outline: 2px solid $second_color;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  img._logo_realization:hover {
+    filter: none;
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  p._name_realization {
+    font-size: .7rem;
+    color: $first_color;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+  }
+
+}

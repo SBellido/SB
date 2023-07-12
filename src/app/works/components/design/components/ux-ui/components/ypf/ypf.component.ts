@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Button, GalleryImage } from 'src/app/models/models';
 
-import { GalleryImage } from 'src/app/models/models';
 @Component({
   selector: 'app-hunt',
   templateUrl: './ypf.component.html',
@@ -16,6 +16,7 @@ export class YpfComponent implements OnInit {
   activeNext: boolean = false;
   activeBefore: boolean = false;
   currentImageIndex: number = 0;
+
   images : GalleryImage[] = [
     { src: '../assets/images/ux_ui/ypf/asignarComite/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/ypf/asignarComite/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -23,15 +24,20 @@ export class YpfComponent implements OnInit {
     { src: '../assets/images/ux_ui/ypf/asignarComite/3.png', position: 3, alt: 'string', first: false, last: false },
   ] 
 
-  constructor(private router: Router) {
-  }
+  
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.topFunction();
     this.updateButtonStatus();
   }
 
   
 /* ----------- MÉTODOS ----------- */
+topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
   activeGallery() {
     this.imgGallery='';
   }
@@ -60,6 +66,9 @@ export class YpfComponent implements OnInit {
   
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
+  }
+  routeTo(route:string) {    
+    this.router.navigateByUrl(route);
   }
   
 
