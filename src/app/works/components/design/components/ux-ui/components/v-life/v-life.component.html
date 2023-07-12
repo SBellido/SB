@@ -10,24 +10,7 @@
     <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
   </div>
   <article class="_container_all">
-    <section class="_gallery">  
-      <button class="_active_button" (click)="beforeImg()"
-        [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
-        <mat-icon>navigate_before</mat-icon>
-      </button>
-      <div class="_container_image">
-        <img class="_image_gallery" alt="First slide"
-          [src]="imgGallery">
-        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
-      </div> 
-      <button class="_active_button" (click)="nextImg()"
-        [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
-        <mat-icon>navigate_next</mat-icon>
-      </button>
-    </section>
-    <div class="_container_count">
-      <div class="_image_counter">{{ currentImageNumber }} / {{ images.length }}</div>
-    </div>
+    <app-gallery [images]="images" [imgGallery]="imgGallery"></app-gallery>
     <div class="_container_info">
       <h4 class="_title_product">V-LIFE App Mobile</h4>
       <p class="_p_card">App mobile que <span>conecta pacientes con profesionales de la salud.</span> 
@@ -35,7 +18,7 @@
         flujo de interacción</span> en baja definición, <span>test con usuarios y armado de prototipos</span> en alta definición,
         utilizando <span>Adobe Xd</span> y componentes <span>UI Ionic.</span> El trabajo fue realizado para Trenda Software ocupando el rol de <span>UX Design Lead.</span> 
         La app fue <span>lanzada en 2020</span> en Argentina.
-      </p> 
+      </p>
     </div>
     <app-brands-buttons></app-brands-buttons>
   </article>

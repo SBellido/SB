@@ -5,19 +5,16 @@ import { GalleryImage } from 'src/app/models/models';
 @Component({
   selector: 'app-nighx',
   templateUrl: './nighx.component.html',
-  styleUrls: ['./nighx.component.scss']
+  styleUrls: ['./nighx.component.scss','../../../../../gallery/gallery.component.scss']
 })
-export class NighxComponent implements OnInit {
 
+export class NighxComponent implements OnInit {
     
-  /*--------VARIABLES -------*/ 
-  currentImageNumber: number = 1;
+/*--------VARIABLES -------*/ 
   public area: string = 'diseño';
   public icon: string = 'local_florist';
-  imgGallery: string = '../assets/images/ux_ui/nighx/inicio/0.png';
-  activeNext: boolean = false;
-  activeBefore: boolean = false;
-  currentImageIndex: number = 0;
+
+  imgGallery = "../assets/images/ux_ui/nighx/inicio/0.png";
   images : GalleryImage[] = [
     { src: '../assets/images/ux_ui/nighx/inicio/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/nighx/inicio/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -28,44 +25,17 @@ export class NighxComponent implements OnInit {
     { src: '../assets/images/ux_ui/nighx/inicio/6.png', position: 6, alt: 'string', first: false, last: false }
   ] 
 
-  constructor(private router: Router) {
-  }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.topFunction();
-    this.updateButtonStatus();
   }
 
   
 /* ----------- MÉTODOS ----------- */
-topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-  activeGallery() {
-    this.imgGallery='';
-  }
-  updateButtonStatus() {
-    this.activeNext = this.currentImageIndex < this.images.length - 1;
-    this.activeBefore = this.currentImageIndex > 0;
-  }
-  
-  nextImg() {
-    if (this.currentImageIndex < this.images.length - 1) {
-      this.currentImageIndex++;
-      this.imgGallery = this.images[this.currentImageIndex].src;
-      this.updateButtonStatus();
-      this.currentImageNumber = this.currentImageIndex + 1;
-    }
-  }
-  
-  beforeImg() {
-    if (this.currentImageIndex > 0) {
-      this.currentImageIndex--;
-      this.imgGallery = this.images[this.currentImageIndex].src;
-      this.updateButtonStatus();
-      this.currentImageNumber = this.currentImageIndex + 1;
-    }
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
   
   routeBack() {    

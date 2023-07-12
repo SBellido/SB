@@ -26,6 +26,7 @@ import { TravelLogComponent } from './components/design/components/ux-ui/compone
 import { NighxComponent } from './components/design/components/ux-ui/components/nighx/nighx.component';
 import { YpfComponent } from './components/design/components/ux-ui/components/ypf/ypf.component';
 import { BrandsButtonsComponent } from './components/brands-buttons/brands-buttons.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { BrandsButtonsComponent } from './components/brands-buttons/brands-butto
     TravelLogComponent,
     NighxComponent,
     YpfComponent,
-    BrandsButtonsComponent
+    BrandsButtonsComponent,
+    GalleryComponent
   ],
   imports: [
     CommonModule,
