@@ -23,17 +23,17 @@ export class DesignComponent implements OnInit {
       title: 'V-Life',
       text: 'Logo V-Life',
     },
+    {
+      route: 'works/design/ux-ui/nighx',
+      img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
+      title: 'Nighx',
+      text: 'Logo de Nighx',
+    },
     // {
     //   route: '',
     //   img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
     //   title: 'TravelLog',
     //   text: 'Logo de TravelLog',
-    // },
-    // {
-    //   route: '',
-    //   img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
-    //   title: 'Nighx',
-    //   text: 'Logo de Nighx',
     // },
   ]
   btnNDesigns_line1: Button[] = [

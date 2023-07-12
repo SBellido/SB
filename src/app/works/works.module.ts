@@ -23,7 +23,7 @@ import { LaborComponent } from './components/biography/components/labor/labor.co
 import { PersonalComponent } from './components/biography/components/personal/personal.component';
 import { VLifeComponent } from './components/design/components/ux-ui/components/v-life/v-life.component';
 import { TravelLogComponent } from './components/design/components/ux-ui/components/travel-log/travel-log.component';
-import { NightComponent } from './components/design/components/ux-ui/components/night/night.component';
+import { NighxComponent } from './components/design/components/ux-ui/components/nighx/nighx.component';
 import { YpfComponent } from './components/design/components/ux-ui/components/ypf/ypf.component';
 
 @NgModule({
@@ -41,7 +41,7 @@ import { YpfComponent } from './components/design/components/ux-ui/components/yp
     PersonalComponent,
     VLifeComponent,
     TravelLogComponent,
-    NightComponent,
+    NighxComponent,
     YpfComponent
   ],
   imports: [
