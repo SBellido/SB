@@ -24,7 +24,7 @@ import { PersonalComponent } from './components/biography/components/personal/pe
 import { VLifeComponent } from './components/design/components/ux-ui/components/v-life/v-life.component';
 import { TravelLogComponent } from './components/design/components/ux-ui/components/travel-log/travel-log.component';
 import { NightComponent } from './components/design/components/ux-ui/components/night/night.component';
-import { HuntComponent } from './components/design/components/ux-ui/components/hunt/hunt.component';
+import { YpfComponent } from './components/design/components/ux-ui/components/ypf/ypf.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,7 @@ import { HuntComponent } from './components/design/components/ux-ui/components/h
     VLifeComponent,
     TravelLogComponent,
     NightComponent,
-    HuntComponent
+    YpfComponent
   ],
   imports: [
     CommonModule,

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { GalleryImage } from 'src/app/models/models';
-import { GalleryService } from 'src/app/services/gallery.services';
 
 @Component({
   selector: 'app-v-life',
@@ -16,9 +15,9 @@ export class VLifeComponent implements OnInit {
   currentImageNumber: number = 1;
   public area: string = 'diseño';
   public icon: string = 'local_florist';
-  imgGallery:string = '../assets/images/ux_ui/v-life/patient/0.png';
-  activeNext:boolean = false;
-  activeBefore:boolean = false;
+  imgGallery: string = '../assets/images/ux_ui/v-life/patient/0.png';
+  activeNext: boolean = false;
+  activeBefore: boolean = false;
   currentImageIndex: number = 0;
   images : GalleryImage[] = [
     { src: '../assets/images/ux_ui/v-life/patient/0.png', position: 0, alt: 'string', first: true, last: false },
@@ -59,9 +58,7 @@ export class VLifeComponent implements OnInit {
 
   ] 
 
-  constructor(
-    private router: Router,
-    private galleryService: GalleryService) {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
