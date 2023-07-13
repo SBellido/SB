@@ -12,7 +12,7 @@ import { GalleryService } from './services/gallery.services';
 @NgModule({
   declarations: [
     AppComponent,
-    ErrorFourZeroFourComponent
+    ErrorFourZeroFourComponent,
   ],
   imports: [
     BrowserModule,

@@ -28,6 +28,7 @@ import { YpfComponent } from './components/design/components/ux-ui/components/yp
 import { BrandsButtonsComponent } from './components/brands-buttons/brands-buttons.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { GalleryDesptopComponent } from './components/gallery-desptop/gallery-desptop.component';
+import { InvestigarComponent } from './components/development/components/investigar/investigar.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { GalleryDesptopComponent } from './components/gallery-desptop/gallery-de
     YpfComponent,
     BrandsButtonsComponent,
     GalleryComponent,
-    GalleryDesptopComponent
+    GalleryDesptopComponent,
+    InvestigarComponent
   ],
   imports: [
     CommonModule,
