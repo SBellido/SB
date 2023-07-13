@@ -9,14 +9,9 @@
         <h2 class="_item" >ux | ui</h2>
       </section>
       <div class="_container_info" [hidden]="!visibleUxUi">
-        <div class="_container_brands">
-          <figure class="_container_realizations" *ngFor="let btn of UX_UI">   
-            <div class="_container_realization" (click)="routeTo(btn.route)">
-              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
-              <p class="_name_realization">{{ btn.title }}</p>
-            </div>
-          </figure>
-        </div>
+        <app-brands-buttons 
+          [brands]="brands">
+        </app-brands-buttons>
         <hr>
         <p class="_info"><span>UX</span> - 
           Se llama <span>experiencia de usuario,</span> por su enfoque, a la <span>relación sistema humano/máquina.</span> 
@@ -31,38 +26,18 @@
         <h2 class="_item">gráfico</h2>
       </section>
       <div class="_container_info" [hidden]="!visibleGraph">
-        <div class="_container_brands">
-          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line1">   
-            <div class="_container_realization">
-              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
-              <p class="_name_realization">{{ btn.title }}</p>
-            </div>
-          </figure>
-        </div>
-        <div class="_container_brands">
-          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line2">   
-            <div class="_container_realization">
-              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
-              <p class="_name_realization">{{ btn.title }}</p>
-            </div>
-          </figure>
-        </div>
-        <div class="_container_brands">
-          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line3">   
-            <div class="_container_realization" onclick="routeTo(btn.route)">
-              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
-              <p class="_name_realization">{{ btn.title }}</p>
-            </div>
-          </figure>
-        </div>
-        <div class="_container_brands">
-          <figure class="_container_realizations" *ngFor="let btn of btnNDesigns_line4">   
-            <div class="_container_realization" >
-              <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
-              <p class="_name_realization">{{ btn.title }}</p>
-            </div>
-          </figure>
-        </div>
+        <app-brands-buttons 
+          [brands]="brands_line1">
+        </app-brands-buttons>
+        <app-brands-buttons 
+          [brands]="brands_line2">
+        </app-brands-buttons>
+        <app-brands-buttons 
+          [brands]="brands_line3">
+        </app-brands-buttons>
+        <app-brands-buttons 
+          [brands]="brands_line4">
+        </app-brands-buttons>
         <hr>
         <p class="_info"><span>Diseño Gráfico </span> - Profesión y disciplina académica 
           cuya actividad consiste en <span>proyectar comunicación visual</span> destinada a 

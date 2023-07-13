@@ -10,7 +10,7 @@ import { Button } from '../../../models/models';
 export class DesignComponent implements OnInit {
 
 
-  UX_UI: Button[] = [
+  brands: Button[] = [
     {
       route: 'works/design/ux-ui/ypf',
       img: '../assets/images/ux_ui/ypf/YPF_logo.png',
@@ -36,7 +36,7 @@ export class DesignComponent implements OnInit {
       text: 'Logo de TravelLog',
     },
   ]
-  btnNDesigns_line1: Button[] = [
+  brands_line1: Button[] = [
     {
       route: '',
       img: '../assets/images/graph/sweetart_logo.png',
@@ -63,7 +63,7 @@ export class DesignComponent implements OnInit {
     },    
   ]
 
-  btnNDesigns_line2: Button[] = [
+  brands_line2: Button[] = [
     {
       route: '',
       img: '../assets/images/graph/branca_logo.png',
@@ -90,7 +90,7 @@ export class DesignComponent implements OnInit {
     },
   ]
 
-  btnNDesigns_line3: Button[] = [
+  brands_line3: Button[] = [
     {
       route: '',
       img: '../assets/images/graph/estancias_logo.png',
@@ -116,7 +116,7 @@ export class DesignComponent implements OnInit {
       text: 'Logo de De La Yaya',
     },
   ]
-  btnNDesigns_line4: Button[] = [
+  brands_line4: Button[] = [
     {
       route: '',
       img: '../assets/images/graph/mdq_logo.png',
