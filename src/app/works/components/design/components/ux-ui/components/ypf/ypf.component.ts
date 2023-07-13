@@ -13,9 +13,6 @@ export class YpfComponent implements OnInit {
   public area: string = 'diseño';
   public icon: string = 'local_florist';
   imgGallery: string = '../assets/images/ux_ui/ypf/asignarComite/0.png';
-  activeNext: boolean = false;
-  activeBefore: boolean = false;
-  currentImageIndex: number = 0;
 
   images : GalleryImage[] = [
     { src: '../assets/images/ux_ui/ypf/asignarComite/0.png', position: 0, alt: 'string', first: true, last: false },
@@ -24,46 +21,45 @@ export class YpfComponent implements OnInit {
     { src: '../assets/images/ux_ui/ypf/asignarComite/3.png', position: 3, alt: 'string', first: false, last: false },
   ] 
 
-  
+  brands : Button[] = [
+    {
+      route: 'works/design/ux-ui/ypf',
+      img: '../assets/images/ux_ui/ypf/YPF_logo.png',
+      title: 'YPF',
+      text: 'Logo de YPF',
+    },
+    {
+      route: 'works/design/ux-ui/v-life',
+      img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
+      title: 'V-Life',
+      text: 'Logo V-Life',
+    },
+    {
+      route: 'works/design/ux-ui/nighx',
+      img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
+      title: 'Nighx',
+      text: 'Logo de Nighx',
+    },
+    {
+      route: 'works/design/ux-ui/travel-log',
+      img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
+      title: 'TravelLog',
+      text: 'Logo de TravelLog',
+    },
+  ]
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.topFunction();
-    this.updateButtonStatus();
+    // this.updateButtonStatus();
   }
-
   
 /* ----------- MÉTODOS ----------- */
-topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-  activeGallery() {
-    this.imgGallery='';
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
-  updateButtonStatus() {
-    this.activeNext = this.currentImageIndex < this.images.length - 1;
-    this.activeBefore = this.currentImageIndex > 0;
-  }
-  
-  nextImg() {
-    if (this.currentImageIndex < this.images.length - 1) {
-      this.currentImageIndex++;
-      this.imgGallery = this.images[this.currentImageIndex].src;
-      this.updateButtonStatus();
-      this.currentImageNumber = this.currentImageIndex + 1;
-    }
-  }
-  
-  beforeImg() {
-    if (this.currentImageIndex > 0) {
-      this.currentImageIndex--;
-      this.imgGallery = this.images[this.currentImageIndex].src;
-      this.updateButtonStatus();
-      this.currentImageNumber = this.currentImageIndex + 1;
-    }
-  }
-  
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }

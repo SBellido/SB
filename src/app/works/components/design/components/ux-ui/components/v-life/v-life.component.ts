@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, GalleryImage } from 'src/app/models/models';
-import { GalleryComponent } from 'src/app/works/components/gallery/gallery.component';
 
 @Component({
   selector: 'app-v-life',
@@ -14,8 +13,6 @@ export class VLifeComponent implements OnInit {
   /*--------VARIABLES -------*/ 
   public area: string = 'diseño';
   public icon: string = 'local_florist';
-  public marginBottom: string = '0'; 
-  public galleryWidth: string = '0'; 
 
   imgGallery = "../assets/images/ux_ui/v-life/patient/0.png";
 
@@ -84,10 +81,7 @@ export class VLifeComponent implements OnInit {
     },
   ]
 
-  constructor(private router: Router) {
-    this.marginBottom = '10rem'; 
-    this.galleryWidth = '11rem'; 
-  }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.topFunction();

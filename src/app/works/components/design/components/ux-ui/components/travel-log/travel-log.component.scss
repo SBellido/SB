@@ -94,5 +94,21 @@
   span {
     font-weight: 700;
   }
+  /*------------ GALLERY ------------*/
+  div._container_mobile {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 220px;
+    z-index: -1;  
+  }
+  img._mobile {   
+    width: 68%;
+  }
+  img._image_gallery {
+    width: 111%;
+    z-index: -2;  
+    margin-bottom: 4rem;
+  }
 
 }

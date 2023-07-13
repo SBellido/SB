@@ -1,5 +1,5 @@
 /* Angular */
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /* Modules */
@@ -27,6 +27,7 @@ import { NighxComponent } from './components/design/components/ux-ui/components/
 import { YpfComponent } from './components/design/components/ux-ui/components/ypf/ypf.component';
 import { BrandsButtonsComponent } from './components/brands-buttons/brands-buttons.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { GalleryDesptopComponent } from './components/gallery-desptop/gallery-desptop.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     NighxComponent,
     YpfComponent,
     BrandsButtonsComponent,
-    GalleryComponent
+    GalleryComponent,
+    GalleryDesptopComponent
   ],
   imports: [
     CommonModule,
@@ -55,6 +57,9 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+  ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
   ]
 })
 export class WorksModule { }

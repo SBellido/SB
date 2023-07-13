@@ -10,7 +10,10 @@
     <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
   </div>
   <article class="_container_all">
-    <app-gallery [images]="images" [imgGallery]="imgGallery"></app-gallery>
+    <app-gallery 
+      [images]="images" 
+      [imgGallery]="imgGallery">
+    </app-gallery>
     <div class="_container_info">
       <h4 class="_title_product">V-LIFE App Mobile</h4>
       <p class="_p_card">App mobile que <span>conecta pacientes con profesionales de la salud.</span> 
@@ -20,7 +23,7 @@
         La app fue <span>lanzada en 2020</span> en Argentina.
       </p>
     </div>
-    <app-brands-buttons></app-brands-buttons>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
   </article>
   <app-footer class="_footer"></app-footer>
 </article>

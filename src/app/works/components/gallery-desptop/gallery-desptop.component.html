@@ -1,0 +1,18 @@
+<section class="_gallery">  
+    <button class="_active_button" (click)="beforeImg()"
+        [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
+        <mat-icon>navigate_before</mat-icon>
+    </button>
+    <div class="_container_image">
+        <img class="_image_gallery" alt="First slide"
+        [src]="imgGallery">
+        <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+    </div> 
+    <button class="_active_button" (click)="nextImg()"
+        [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
+        <mat-icon>navigate_next</mat-icon>
+    </button>
+</section>
+<div class="_container_count">
+    <div class="_image_counter">{{ currentImageNumber }} / {{ images.length }}</div>
+</div>
