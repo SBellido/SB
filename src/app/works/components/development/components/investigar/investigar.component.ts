@@ -13,6 +13,7 @@ export class InvestigarComponent implements OnInit {
  /*--------VARIABLES -------*/ 
  public area: string = 'desarrollo';
  public icon: string = 'developer_mode';
+//  public isMobile: boolean = false;
 
  imgGallery = '../assets/images/dev/mobile/0.png';
  images : GalleryImage[] = [
@@ -31,6 +32,23 @@ export class InvestigarComponent implements OnInit {
    { src: '../assets/images/dev/mobile/12.png', position: 12, alt: 'string', first: false, last: false },
    { src: '../assets/images/dev/mobile/13.png', position: 13, alt: 'string', first: false, last: false },
  ] 
+
+//  imgGallery_desktop = '../assets/images/dev/desktop/0.png';
+//  images_desktop : GalleryImage[] = [
+//    { src: '../assets/images/dev/desktop/0.png', position: 0, alt: 'string', first: true, last: false },
+//    { src: '../assets/images/dev/desktop/1.png', position: 1, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/2.png', position: 2, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/3.png', position: 3, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/4.png', position: 4, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/5.png', position: 5, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/6.png', position: 6, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/7.png', position: 7, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/8.png', position: 8, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/9.png', position: 9, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/10.png', position: 10, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/11.png', position: 11, alt: 'string', first: false, last: false },
+//    { src: '../assets/images/dev/desktop/12.png', position: 12, alt: 'string', first: false, last: false },
+//  ] 
 
  brands : Button[] = [
    {
@@ -58,13 +76,10 @@ export class InvestigarComponent implements OnInit {
      text: 'Logo de TravelLog',
    },
  ]
+ 
+  constructor(private router: Router) {}
 
- constructor(private router: Router) {
- }
-
- ngOnInit(): void {
-   this.topFunction();
- }
+  ngOnInit() {}
    
  /* ----------- MÉTODOS ----------- */
  topFunction() {
