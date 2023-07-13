@@ -1,4 +1,7 @@
-@import '../../../../../../../global/global.component.scss';
+@import '../../../../../global/global.component.scss';
+@import '../../../gallery/gallery.component.scss';
+@import '../../../gallery-desptop/gallery-desptop.component.scss';
+
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
@@ -33,6 +36,23 @@
     margin-block-end: 0em;
   }
 
+/*------------ GALLERY ------------*/
+  div._container_mobile {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 220px;
+    z-index: -1;  
+  }
+  img._mobile {   
+    width: 68%;
+  }
+  img._image_gallery {
+    width: 111%;
+    z-index: -2;  
+    margin-bottom: 4rem;
+  }
+  
   /*-------- BUTTON BACK --------*/
   div._container_button_back {
     position: absolute;
@@ -96,21 +116,5 @@
     font-weight: 700;
   }
 
-   /*------------ GALLERY ------------*/
-   div._container_mobile {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 220px;
-    z-index: -1;  
-  }
-  img._mobile {   
-    width: 68%;
-  }
-  img._image_gallery {
-    width: 111%;
-    z-index: -2;  
-    margin-bottom: 4rem;
-  }
-
+  
 }

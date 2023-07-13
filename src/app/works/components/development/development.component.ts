@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button } from '../../../models/models';
+
 @Component({
   selector: 'app-development',
   templateUrl: './development.component.html',
   styleUrls: ['./development.component.scss']
 })
+
 export class
  DevelopmentComponent implements OnInit {
 
-  
+/*--------VARIABLES -------*/ 
+
+
   brands: Button[] = [
     {
       route: 'works/development/investigar',
@@ -36,102 +40,7 @@ export class
       text: 'Logo de TravelLog',
     },
   ]
-  brands_line1: Button[] = [
-    {
-      route: '',
-      img: '../assets/images/graph/sweetart_logo.png',
-      title: 'SweetTart',
-      text: 'Logo de SweetTart',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/nescafe.png',
-      title: 'Nescafé',
-      text: 'Logo de ïcono campaña Nescafé',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/doritos.png',
-      title: 'Doritos',
-      text: 'Logo de Doritos Trío',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/barista.png',
-      title: 'Barista',
-      text: 'Logo de Barista Bros',
-    },    
-  ]
-
-  brands_line2: Button[] = [
-    {
-      route: '',
-      img: '../assets/images/graph/branca_logo.png',
-      title: 'Branca',
-      text: 'Logo de Fernet Branca',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/OCB_logo.png',
-      title: 'OCB',
-      text: 'Logo de OCB',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/convertiko_logo.png',
-      title: 'Convertiko',
-      text: 'Logo Convertiko',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/muy_logo.png',
-      title: 'Muy!',
-      text: 'Logo de Muy',
-    },
-  ]
-
-  brands_line3: Button[] = [
-    {
-      route: '',
-      img: '../assets/images/graph/estancias_logo.png',
-      title: 'Estancias',
-      text: 'Logo de Estancias Integradas',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/norita_logo.png',
-      title: 'Norita',
-      text: 'Logo de Norita',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/nudel_logo.png',
-      title: 'Nudel',
-      text: 'Logo de Nudel',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/deLaYaya_logo.png',
-      title: 'La Yaya',
-      text: 'Logo de De La Yaya',
-    },
-  ]
-  brands_line4: Button[] = [
-    {
-      route: '',
-      img: '../assets/images/graph/mdq_logo.png',
-      title: 'Garage',
-      text: 'Logo Garage MDQ',
-    },
-    {
-      route: '',
-      img: '../assets/images/graph/odonto_logo.png',
-      title: 'Odontología',
-      text: 'Logo de Odontología Integral',
-     },
-  ]
-  
-
+ 
   public area: string = 'desarrollo';
   public icon: string = 'developer_mode';
   
