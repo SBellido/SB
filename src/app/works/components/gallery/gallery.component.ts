@@ -6,7 +6,9 @@ import { GalleryImage } from 'src/app/models/models';
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss']
 })
+
 export class GalleryComponent implements OnInit {
+  
   /*--------VARIABLES -------*/ 
   currentImageNumber: number = 1;
   activeNext: boolean = false;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GalleryImage } from 'src/app/models/models';
+import { Button, GalleryImage } from 'src/app/models/models';
+import { GalleryComponent } from 'src/app/works/components/gallery/gallery.component';
 
 @Component({
   selector: 'app-v-life',
@@ -13,6 +14,8 @@ export class VLifeComponent implements OnInit {
   /*--------VARIABLES -------*/ 
   public area: string = 'diseño';
   public icon: string = 'local_florist';
+  public marginBottom: string = '0'; 
+  public galleryWidth: string = '0'; 
 
   imgGallery = "../assets/images/ux_ui/v-life/patient/0.png";
 
@@ -54,7 +57,36 @@ export class VLifeComponent implements OnInit {
     { src: '../assets/images/ux_ui/v-life/patient/31.png', position: 34, alt: 'string', first: false, last: false },
   ]
 
+  brands : Button[] = [
+    {
+      route: 'works/design/ux-ui/ypf',
+      img: '../assets/images/ux_ui/ypf/YPF_logo.png',
+      title: 'YPF',
+      text: 'Logo de YPF',
+    },
+    {
+      route: 'works/design/ux-ui/v-life',
+      img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
+      title: 'V-Life',
+      text: 'Logo V-Life',
+    },
+    {
+      route: 'works/design/ux-ui/nighx',
+      img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
+      title: 'Nighx',
+      text: 'Logo de Nighx',
+    },
+    {
+      route: 'works/design/ux-ui/travel-log',
+      img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
+      title: 'TravelLog',
+      text: 'Logo de TravelLog',
+    },
+  ]
+
   constructor(private router: Router) {
+    this.marginBottom = '10rem'; 
+    this.galleryWidth = '11rem'; 
   }
 
   ngOnInit(): void {

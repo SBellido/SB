@@ -11,7 +11,12 @@
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
     <article class="_container_all">
-      <section class="_gallery">  
+      <app-gallery 
+        [images]="images" [imgGallery]="imgGallery"
+        [galleryMarginBottom]="marginBottom"
+        [galleryWidth]="galleryWidth">
+      </app-gallery>   
+      <!-- <section class="_gallery">  
         <button class="_active_button" (click)="beforeImg()"
           [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
           <mat-icon>navigate_before</mat-icon>
@@ -25,12 +30,9 @@
           [ngClass]="currentImageIndex === images.length - 1 ? '_inactive_button' : '_active_button'">
           <mat-icon>navigate_next</mat-icon>
         </button>
-      </section>
-      <div class="_container_count">
-        <div class="_image_counter">{{ currentImageNumber }} / {{ images.length }}</div>
-      </div>
+      </section> -->
       <div class="_container_info">
-        <h4 class="_title_product">Gestión de Inversiones</h4>
+        <h4 class="_title_product">Gestión de Inversiones | Web App</h4>
         <p class="_p_card">Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades que <span>funciona como herramienta para que 
           YPF gestione sus inversiones de negocio de manera ordenada y coherente.</span> 
           En el <span>año 2022, Sebastián</span> fue encargado de realizar <span>entrevistas con usuarios, análisis de problema, diseño UX | UI, 
@@ -39,7 +41,7 @@
           por el conocimiento adquirido de la lógica del negocio.</span> El diseño de la app se entregó completo y el proyecto aún se encuenta en etapa de desarrollo.
         </p> 
       </div>
-      <app-brands-buttons></app-brands-buttons>
+      <app-brands-buttons [brands]="brands"></app-brands-buttons>
     </article>
     <app-footer class="_footer"></app-footer>
   </section>

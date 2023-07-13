@@ -11,20 +11,25 @@
         <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
       </div>
       <article class="_container_all">
-        <app-gallery [images]="images" [imgGallery]="imgGallery"></app-gallery>
+        <app-gallery 
+          [images]="images" 
+          [imgGallery]="imgGallery">
+        </app-gallery>
         <div class="_container_info">
-          <h4 class="_title_product">Travel Log</h4>
+          <h4 class="_title_product">Travel Log | Web App</h4>
           <p class="_p_card">
             Web App que permite <span>crear viajes y planes</span> entre otras funcionalidades extra.
             En el <span>año 2020</span> fue realizado este trabajo en el marco de la Cátedra Introducción a las Metodologías Ágiles del 
             Software (TUDAI/FCEx/UniCen), junto a un grupo de compañeros. <span> Sebastián</span> fue encargado de realizar 
-            <span>diseño de prototipos, flujos de interacción, aplicación de patrones de diseño, 
-            diseño UX | UI, de presentación en público y desempeño como Scrum Master dentro del equipo.</span>
+            <span>diseño de prototipos, flujos de interacción, diseño de logo, 
+            diseño UX | UI, presentación en público y se desempeñó como Scrum Master dentro del equipo.</span>
             El diseño y desarrollo, incluído, Diagrama de Clases y de Entidad y Relación, 
-            se realizó a partir de un texto que simulaba ser un diálogo con el cliente.
+            se realizó a partir de un texto que simulaba ser un diálogo con el cliente. 
+            El objetivo del trabajo era captura rrequerimientos y trabajar <span>aplicando Scrum</span> y 
+            diseñar una app que cumpla con las espectativas del cliente.
           </p> 
         </div>
-        <app-brands-buttons></app-brands-buttons>
+        <app-brands-buttons [brands]="brands"></app-brands-buttons>
       </article>
       <app-footer class="_footer"></app-footer>
     </section>

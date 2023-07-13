@@ -11,16 +11,19 @@
         <img class="_mobile" src="../assets/images/ux_ui/v-life/mobile_dark.png" alt="">
       </div>
       <article class="_container_all">
-        <app-gallery [images]="images" [imgGallery]="imgGallery"></app-gallery>
+        <app-gallery 
+          [images]="images" 
+          [imgGallery]="imgGallery">
+        </app-gallery>
         <div class="_container_info">
-          <h4 class="_title_product">Nighx Streaming</h4>
+          <h4 class="_title_product">Nighx | Streaming</h4>
           <p class="_p_card">Nighx es un <span>servicio de streaming</span> que ofrece ver series y películas en un dispositivo con conexión a internet.
             En el <span>año 2019, Sebastián</span> fue encargado de realizar <span>diseño de prototipos, flujos de interacción, aplicación de patrones de diseño, 
             diseño UX | UI y presentación en público. </span>Trabajo realizado en el marco de la Cátedra Interfaces de Usuario e Interacción (TUDAI/FCEx/UniCen), 
             junto a Germán Wivaux y Pablo Santa María. <span>Durante 2020 y 2021,</span> tras ser convocado y ganar concurso, <span>se desempeñó como ayudante alumno</span> en dicha Cátedra. 
           </p> 
         </div>
-        <app-brands-buttons></app-brands-buttons>
+        <app-brands-buttons [brands]="brands"></app-brands-buttons>
       </article>
       <app-footer class="_footer"></app-footer>
     </section>
