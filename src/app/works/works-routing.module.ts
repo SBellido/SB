@@ -19,6 +19,7 @@ import { YpfComponent } from './components/design/components/ux-ui/components/yp
 import { NighxComponent } from './components/design/components/ux-ui/components/nighx/nighx.component';
 import { TravelLogComponent } from './components/design/components/ux-ui/components/travel-log/travel-log.component';
 import { InvestigarComponent } from './components/development/components/investigar/investigar.component';
+import { XuboxComponent } from './components/development/components/xubox/xubox.component';
 
 const routes: Routes = [
   {
@@ -79,6 +80,11 @@ const routes: Routes = [
         path: 'development/investigar',
         pathMatch: 'full',
         component: InvestigarComponent
+      },
+      {
+        path: 'development/xubox',
+        pathMatch: 'full',
+        component: XuboxComponent
       },
       {
         path: 'biography',

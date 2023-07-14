@@ -29,6 +29,7 @@ import { BrandsButtonsComponent } from './components/brands-buttons/brands-butto
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { GalleryDesptopComponent } from './components/gallery-desptop/gallery-desptop.component';
 import { InvestigarComponent } from './components/development/components/investigar/investigar.component';
+import { XuboxComponent } from './components/development/components/xubox/xubox.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { InvestigarComponent } from './components/development/components/investi
     BrandsButtonsComponent,
     GalleryComponent,
     GalleryDesptopComponent,
-    InvestigarComponent
+    InvestigarComponent,
+    XuboxComponent
   ],
   imports: [
     CommonModule,
