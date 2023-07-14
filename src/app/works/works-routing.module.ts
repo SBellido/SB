@@ -9,7 +9,6 @@ import { BiographyComponent } from './components/biography/biography.component';
 import { AcademicComponent } from './components/biography/components/academic/academic.component';
 import { LaborComponent } from './components/biography/components/labor/labor.component';
 import { PersonalComponent } from './components/biography/components/personal/personal.component';
-import { GraphicComponent } from './components/design/components/graphic/graphic.component';
 import { ExperimentalComponent } from './components/design/components/experimental/experimental';
 import { UxUiComponent } from './components/design/components/ux-ui/ux-ui.component';
 import { DesignComponent } from './components/design/design.component';
@@ -39,11 +38,6 @@ const routes: Routes = [
       {
         path: 'design',
         component: DesignComponent
-      },
-      {
-        path: 'design/graphic',
-        pathMatch: 'full',
-        component: GraphicComponent
       },
       {
         path: 'design/ux-ui',
