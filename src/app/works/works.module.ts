@@ -32,6 +32,7 @@ import { InvestigarComponent } from './components/development/components/investi
 import { XuboxComponent } from './components/development/components/xubox/xubox.component';
 import { HuntComponent } from './components/development/components/hunt/hunt.component';
 import { StormtechComponent } from './components/development/components/stormtech/stormtech.component';
+import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-polaroid.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { StormtechComponent } from './components/development/components/stormtec
     InvestigarComponent,
     XuboxComponent,
     HuntComponent,
-    StormtechComponent
+    StormtechComponent,
+    GalleryPolaroidComponent
   ],
   imports: [
     CommonModule,

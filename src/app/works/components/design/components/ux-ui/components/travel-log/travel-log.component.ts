@@ -11,7 +11,7 @@ import { Button, GalleryImage } from 'src/app/models/models';
 export class TravelLogComponent implements OnInit {
      
   /*--------VARIABLES -------*/ 
-  public area: string = 'diseño';
+  public area: string = 'diseño/ux|ui';
   public icon: string = 'local_florist';
 
   imgGallery = "../assets/images/ux_ui/travel_log/flujo_1/0.png";

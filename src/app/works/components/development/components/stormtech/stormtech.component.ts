@@ -11,7 +11,7 @@ export class StormtechComponent implements OnInit {
 
  
   currentImageNumber: number = 1;
-  public area: string = 'desarrollo';
+  public area: string = 'desarrollo/bootstrap';
   public icon: string = 'developer_mode';
   imgGallery: string = '../assets/images/dev/stormtech/desktop/0.png';
 

@@ -11,7 +11,7 @@ export class XuboxComponent implements OnInit {
 
 
  /*--------VARIABLES -------*/ 
- public area: string = 'desarrollo';
+ public area: string = 'desarrollo/angular';
  public icon: string = 'developer_mode';
 //  public isMobile: boolean = false;
 

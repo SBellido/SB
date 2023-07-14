@@ -10,7 +10,7 @@ import { Button, GalleryImage } from 'src/app/models/models';
 export class YpfComponent implements OnInit {
 
   currentImageNumber: number = 1;
-  public area: string = 'diseño';
+  public area: string = 'diseño/ux|ui';
   public icon: string = 'local_florist';
   imgGallery: string = '../assets/images/ux_ui/ypf/asignarComite/0.png';
 

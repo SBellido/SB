@@ -12,7 +12,7 @@ export class HuntComponent implements OnInit {
  
 
  /*--------VARIABLES -------*/ 
- public area: string = 'desarrollo';
+ public area: string = 'desarrollo/bootstrap';
  public icon: string = 'developer_mode';
 //  public isMobile: boolean = false;
 
