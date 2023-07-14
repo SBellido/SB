@@ -23,7 +23,6 @@ import { StormtechComponent } from './components/development/components/stormtec
 import { HuntComponent } from './components/development/components/hunt/hunt.component';
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
-import { PublicationsComponent } from './components/design/components/publications/publications.component';
 
 const routes: Routes = [
   {
@@ -76,11 +75,6 @@ const routes: Routes = [
         path: 'design/competitions',
         pathMatch: 'full',
         component: CompetitionsComponent
-      },
-      {
-        path: 'design/publications',
-        pathMatch: 'full',
-        component: PublicationsComponent
       },
       {
         path: 'design/experimental',

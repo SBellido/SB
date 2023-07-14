@@ -49,12 +49,6 @@ export class DesignComponent implements OnInit {
       title: 'Concursos',
       text: 'Logo de Eyeka',
     },
-    {
-      route: 'works/design/publications',
-      img: '../assets/images/graph/publications.png',
-      title: 'Publicaciones',
-      text: 'Logos de RFacebook, Instagram y TikTok',
-    }
   ]
 
 

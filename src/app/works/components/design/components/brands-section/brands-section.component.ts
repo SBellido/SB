@@ -16,12 +16,12 @@ export class BrandsSectionComponent implements OnInit {
  public icon: string = 'local_florist';
 //  public isMobile: boolean = false;
 
- imgGallery = '../assets/images/brands/muy/0.png';
+ imgGallery = '../assets/images/brands/0.png';
  images : GalleryImage[] = [
-   { src: '../assets/images/brands/muy/0.png', position: 0, alt: 'string', first: true, last: false },
-   { src: '../assets/images/brands/muy/1.png', position: 1, alt: 'string', first: false, last: false },
-   { src: '../assets/images/brands/muy/2.png', position: 2, alt: 'string', first: false, last: false },
-   { src: '../assets/images/brands/mdq/0.png', position: 3, alt: 'string', first: false, last: true },
+   { src: '../assets/images/brands/0.png', position: 0, alt: 'string', first: true, last: false },
+   { src: '../assets/images/brands/1.png', position: 1, alt: 'string', first: false, last: false },
+   { src: '../assets/images/brands/2.png', position: 2, alt: 'string', first: false, last: false },
+   { src: '../assets/images/brands/4.png', position: 3, alt: 'string', first: false, last: true },
  ] 
 
 brands: Button[] = [

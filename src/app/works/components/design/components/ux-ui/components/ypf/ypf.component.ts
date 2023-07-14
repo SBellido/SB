@@ -14,12 +14,8 @@ export class YpfComponent implements OnInit {
   public icon: string = 'local_florist';
   imgGallery: string = '../assets/images/ux_ui/ypf/asignarComite/0.png';
 
-  images : GalleryImage[] = [
-    { src: '../assets/images/ux_ui/ypf/asignarComite/0.png', position: 0, alt: 'string', first: true, last: false },
-    { src: '../assets/images/ux_ui/ypf/asignarComite/1.png', position: 1, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/ypf/asignarComite/2.png', position: 2, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/ypf/asignarComite/3.png', position: 3, alt: 'string', first: false, last: false },
-  ] 
+  images : GalleryImage[] = [] 
+  images2 : GalleryImage[] = []
 
   brands : Button[] = [
     // {
@@ -56,6 +52,30 @@ export class YpfComponent implements OnInit {
   }
   
 /* ----------- MÉTODOS ----------- */
+
+onChange(event: Event) {
+  const selectedValue = (event.target as HTMLSelectElement).value;
+  if (selectedValue === 'images') {
+    this.images = [
+      { src: '../assets/images/ux_ui/ypf/asignarComite/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/asignarComite/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/asignarComite/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/asignarComite/3.png', position: 3, alt: 'string', first: false, last: false },
+    ];
+    this.imgGallery = '../assets/images/ux_ui/ypf/asignarComite/0.png';
+  } else if (selectedValue === 'images2') {
+    this.images = [
+      { src: '../assets/images/ux_ui/ypf/asignarComite/4.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/asignarComite/5.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/asignarComite/6.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/asignarComite/7.png', position: 3, alt: 'string', first: false, last: false },
+    ];
+    this.imgGallery = '../assets/images/ux_ui/ypf/asignarComite/4.png';
+  }
+}
+
+
+
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -66,6 +86,8 @@ export class YpfComponent implements OnInit {
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
+
+
   
 
 }

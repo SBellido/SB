@@ -7,6 +7,10 @@
       <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
       <h1 class="_title">{{ area }}</h1>
     </div>
+    <select (change)="onChange($event)">
+      <option value="images">Images</option>
+      <option value="images2">Images 2</option>
+    </select>
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
