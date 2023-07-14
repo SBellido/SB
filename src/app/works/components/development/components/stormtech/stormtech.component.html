@@ -1,1 +1,34 @@
-<p>stormtech works!</p>
+<article>
+    <section>  
+      <button mat-button class="_button_back" title="Volver" routerLink="../">
+        <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
+      </button>
+      <div class="_container_title" routerLink="../">
+        <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
+        <h1 class="_title">{{ area }}</h1>
+      </div>
+      <div class="_container_desktop">
+        <img class="_desktop" src="../assets/images/desktop.png" alt="">
+      </div>
+      <article class="_container_all">
+        <app-gallery-desptop
+          [images]="images" 
+          [imgGallery]="imgGallery">
+        </app-gallery-desptop> 
+        <div class="_container_info">
+          <h4 class="_title_product">Stormtech SL | Landing Page</h4>
+          <p class="_p_card">
+            Durante los <span>años 2020, 2021 y 2022</span>, Sebastián <span>integra el equipo de desarrollo de Stormtech SL.</span> 
+            Participó en varios proyectos <span>como Desarrollador Frontend y Diseñador UX/UI.</span>Una de las tareas asignadas fue
+            <span>rediseñar el sitio oficial de la compañia.</span> Se definieron tecnologías como <span>Bootstrap y JavaScript</span> 
+            por la simplicidad del proyecto, la velocidad con la que se lo necesitaba activo y por no ser un producto que requiera gran escalabilidad.
+            Es una Landing Page simple y ordenada que muestra los servicios que ofrece, los clientes con los que 
+            ha trabajado y un formulario de contacto.
+          </p> 
+        </div>
+        <app-brands-buttons [brands]="brands"></app-brands-buttons>
+      </article>
+      <app-footer class="_footer"></app-footer>
+    </section>
+  </article>
+    
