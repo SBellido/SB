@@ -4,72 +4,73 @@
 @media (min-width: 0px) {
 
 /*------------ GALLERY ------------*/
-  ._gallery {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0;
-  }
-  ._container_image {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 0;
-    width: 11rem;
-  }
-  ._image_gallery {
-    width: 111%;
-    z-index: -2;  
-    margin-bottom: 4rem;
-  }
-  ._inactive_button,
-  ._active_button {
-    color: $first_color;
-    cursor: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    padding: .5rem;
-    border: none;
-    margin-bottom: 6rem;
-  }
-  ._active_button {
-    background: radial-gradient(
-      circle, $third_color_lighter 9%, 
-      $third_color 100%
-    );
-  }
-  ._active_button:hover {
-    background-color: radial-gradient(
-      circle, $third_color_lighter 9%, 
-      $third_color 100%
-    );
-    cursor: pointer;
-  }
-  ._inactive_button {
-    background-color: radial-gradient(
-      circle, $third_color_lighter 9%, 
-      $third_color 100%
-    );
-    color: $first_color;
-    opacity: 0.5;
-    cursor: default;
-  }
+//   ._gallery {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-around;
+//     align-items: center;
+//     margin-bottom: 0;
+//     width: 20rem;
+//   }
+//   ._container_image {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: center;
+//     align-items: center;
+//     padding-top: 0;
+//     width: 11rem;
+//   }
+//   ._image_gallery {
+//     width: 111%;
+//     z-index: -2;  
+//     margin-bottom: 5rem;
+//   }
+//   ._inactive_button,
+//   ._active_button {
+//     color: $first_color;
+//     cursor: none;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     border-radius: 50px;
+//     padding: .5rem;
+//     border: none;
+//     margin-bottom: 6rem;
+//   }
+//   ._active_button {
+//     background: radial-gradient(
+//       circle, $third_color_lighter 9%, 
+//       $third_color 100%
+//     );
+//   }
+//   ._active_button:hover {
+//     background-color: radial-gradient(
+//       circle, $third_color_lighter 9%, 
+//       $third_color 100%
+//     );
+//     cursor: pointer;
+//   }
+//   ._inactive_button {
+//     background-color: radial-gradient(
+//       circle, $third_color_lighter 9%, 
+//       $third_color 100%
+//     );
+//     color: $first_color;
+//     opacity: 0.5;
+//     cursor: default;
+//   }
 
-  /*--------COUNTER----------*/
-  div._container_count {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  ._image_counter {
-    font-size: 1.5rem;
-    font-weight: 100;
-    color: $first_color_light;
-    margin-top: -1rem;
-  }
+//   /*--------COUNTER----------*/
+//   div._container_count {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+//   ._image_counter {
+//     font-size: 1.5rem;
+//     font-weight: 100;
+//     color: $first_color_light;
+//     margin-top: -1rem;
+//   }
 
 }

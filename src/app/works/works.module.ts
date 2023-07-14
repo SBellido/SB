@@ -32,6 +32,9 @@ import { XuboxComponent } from './components/development/components/xubox/xubox.
 import { HuntComponent } from './components/development/components/hunt/hunt.component';
 import { StormtechComponent } from './components/development/components/stormtech/stormtech.component';
 import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-polaroid.component';
+import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
+import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
+import { PublicationsComponent } from './components/design/components/publications/publications.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-
     XuboxComponent,
     HuntComponent,
     StormtechComponent,
-    GalleryPolaroidComponent
+    GalleryPolaroidComponent,
+    BrandsSectionComponent,
+    CompetitionsComponent,
+    PublicationsComponent
   ],
   imports: [
     CommonModule,

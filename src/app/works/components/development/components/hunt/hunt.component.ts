@@ -9,8 +9,6 @@ import { Button, GalleryImage } from 'src/app/models/models';
 })
 export class HuntComponent implements OnInit {
 
- 
-
  /*--------VARIABLES -------*/ 
  public area: string = 'desarrollo/bootstrap';
  public icon: string = 'developer_mode';
