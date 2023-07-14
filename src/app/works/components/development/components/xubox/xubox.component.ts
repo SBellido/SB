@@ -38,12 +38,12 @@ brands: Button[] = [
     title: 'InventigAr',
     text: 'Logo de InventigAr',
   },
-  {
-    route: 'works/development/xubox',
-    img: '../assets/images/dev/xubox/logo/xubox_logo.png',
-    title: 'Xubox',
-    text: 'Logo Xubox',
-  },
+  // {
+  //   route: 'works/development/xubox',
+  //   img: '../assets/images/dev/xubox/logo/xubox_logo.png',
+  //   title: 'Xubox',
+  //   text: 'Logo Xubox',
+  // },
   {
     route: 'works/development/mabell',
     img: '../assets/images/dev/mabell/mabell_logo.png',
@@ -54,7 +54,9 @@ brands: Button[] = [
  
   constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.topFunction();
+  }
    
  /* ----------- MÉTODOS ----------- */
  topFunction() {

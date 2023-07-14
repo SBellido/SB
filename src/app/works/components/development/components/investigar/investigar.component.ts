@@ -15,7 +15,7 @@ export class InvestigarComponent implements OnInit {
  public icon: string = 'developer_mode';
 //  public isMobile: boolean = false;
 
- imgGallery = '../assets/images/dev/mobile/0.png';
+ imgGallery = '../assets/images/dev/investigar/mobile/0.png';
  images : GalleryImage[] = [
    { src: '../assets/images/dev/investigar/mobile/0.png', position: 0, alt: 'string', first: true, last: false },
    { src: '../assets/images/dev/investigar/mobile/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -51,12 +51,12 @@ export class InvestigarComponent implements OnInit {
 //  ] 
 
 brands: Button[] = [
-  {
-    route: 'works/development/investigar',
-    img: '../assets/images/dev/investigar/logo_investigar.png',
-    title: 'InventigAr',
-    text: 'Logo de InventigAr',
-  },
+  // {
+  //   route: 'works/development/investigar',
+  //   img: '../assets/images/dev/investigar/logo_investigar.png',
+  //   title: 'InventigAr',
+  //   text: 'Logo de InventigAr',
+  // },
   {
     route: 'works/development/xubox',
     img: '../assets/images/dev/xubox/logo/xubox_logo.png',
@@ -73,7 +73,9 @@ brands: Button[] = [
  
   constructor(private router: Router) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.topFunction();
+  }
    
  /* ----------- MÉTODOS ----------- */
  topFunction() {
