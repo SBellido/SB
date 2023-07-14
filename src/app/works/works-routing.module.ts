@@ -20,6 +20,8 @@ import { NighxComponent } from './components/design/components/ux-ui/components/
 import { TravelLogComponent } from './components/design/components/ux-ui/components/travel-log/travel-log.component';
 import { InvestigarComponent } from './components/development/components/investigar/investigar.component';
 import { XuboxComponent } from './components/development/components/xubox/xubox.component';
+import { StormtechComponent } from './components/development/components/stormtech/stormtech.component';
+import { HuntComponent } from './components/development/components/hunt/hunt.component';
 
 const routes: Routes = [
   {
@@ -85,6 +87,16 @@ const routes: Routes = [
         path: 'development/xubox',
         pathMatch: 'full',
         component: XuboxComponent
+      },
+      {
+        path: 'development/stormtech',
+        pathMatch: 'full',
+        component: StormtechComponent
+      },
+      {
+        path: 'development/hunt',
+        pathMatch: 'full',
+        component: HuntComponent
       },
       {
         path: 'biography',

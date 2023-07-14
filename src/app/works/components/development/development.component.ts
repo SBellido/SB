@@ -14,7 +14,7 @@ export class
 /*--------VARIABLES -------*/ 
 
 
-  brands: Button[] = [
+  brands_angular: Button[] = [
     {
       route: 'works/development/investigar',
       img: '../assets/images/dev/investigar/logo_investigar.png',
@@ -25,7 +25,7 @@ export class
       route: 'works/development/xubox',
       img: '../assets/images/dev/xubox/logo/xubox_logo.png',
       title: 'Xubox',
-      text: 'Logo Xubox',
+      text: 'Logo de Xubox',
     },
     {
       route: 'works/development/mabell',
@@ -34,6 +34,22 @@ export class
       text: 'Logo de Mabell Studio',
     }
   ]
+
+  brands_botstrap: Button[] = [
+    {
+      route: 'works/development/stormtech',
+      img: '../assets/images/dev/stormtech/stormtech_logo.png',
+      title: 'Stormtech',
+      text: 'Logo de Stormtech',
+    },
+    {
+      route: 'works/development/hunt',
+      img: '../assets/images/dev/hunt/hunt_logo.png',
+      title: 'Hunt',
+      text: 'Logo de Hunt',
+    }
+  ]
+ 
  
   public area: string = 'desarrollo';
   public icon: string = 'developer_mode';

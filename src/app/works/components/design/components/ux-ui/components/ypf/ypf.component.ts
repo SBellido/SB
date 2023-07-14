@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Button, GalleryImage } from 'src/app/models/models';
 
 @Component({
-  selector: 'app-hunt',
+  selector: 'app-ypf',
   templateUrl: './ypf.component.html',
   styleUrls: ['./ypf.component.scss']
 })
