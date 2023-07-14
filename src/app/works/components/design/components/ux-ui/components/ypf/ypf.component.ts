@@ -22,12 +22,12 @@ export class YpfComponent implements OnInit {
   ] 
 
   brands : Button[] = [
-    {
-      route: 'works/design/ux-ui/ypf',
-      img: '../assets/images/ux_ui/ypf/YPF_logo.png',
-      title: 'YPF',
-      text: 'Logo de YPF',
-    },
+    // {
+    //   route: 'works/design/ux-ui/ypf',
+    //   img: '../assets/images/ux_ui/ypf/YPF_logo.png',
+    //   title: 'YPF',
+    //   text: 'Logo de YPF',
+    // },
     {
       route: 'works/design/ux-ui/v-life',
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
