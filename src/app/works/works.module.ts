@@ -30,6 +30,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { GalleryDesptopComponent } from './components/gallery-desptop/gallery-desptop.component';
 import { InvestigarComponent } from './components/development/components/investigar/investigar.component';
 import { XuboxComponent } from './components/development/components/xubox/xubox.component';
+import { HuntComponent } from './components/development/components/hunt/hunt.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { XuboxComponent } from './components/development/components/xubox/xubox.
     GalleryComponent,
     GalleryDesptopComponent,
     InvestigarComponent,
-    XuboxComponent
+    XuboxComponent,
+    HuntComponent
   ],
   imports: [
     CommonModule,
