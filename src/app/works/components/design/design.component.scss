@@ -57,6 +57,7 @@
   }
   ._container_item_disabled {
     background-color: $first_color_medium;
+    cursor: default;
   }
   ._container_item:hover { 
     background: linear-gradient(

@@ -46,7 +46,6 @@ export class AcademicComponent implements OnInit {
       link: 'http://www2.fba.unlp.edu.ar/dcv/contactos-materias-dcv/',
       description_link: 'programa'
     },
-
   ]
 
   constructor() { }

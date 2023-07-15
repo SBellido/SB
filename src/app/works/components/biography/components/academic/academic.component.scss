@@ -52,19 +52,6 @@
     color: $third_color;
     margin-bottom: 2rem;
   }
-  div._open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  button._details {
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-  }
   mat-icon {
     text-align: center;
   }

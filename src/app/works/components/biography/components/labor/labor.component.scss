@@ -2,7 +2,7 @@
 
 // --------------INFO-------------- //
 
-article._container_info {
+div._container_info {
     perspective: 800px;
     background-color: $accent_color;
     width: 85vw;
@@ -24,8 +24,10 @@ article._container_info {
     align-items: center;
     padding-bottom: 1rem;
   }
-  h3._year  {
-    margin: 2rem 0 0 0;
+  h3._title  {
+    margin: 0;
+    text-align: center;
+    color: $first_color;
   }
   div._container_logo {
     display: flex;
@@ -35,7 +37,7 @@ article._container_info {
     padding-top: .5rem;
   }
   img._logo {
-    width: 50vw;
+    width: 45vw;
     // filter: grayscale(1);
   }
   img._logo_vert {
@@ -55,6 +57,12 @@ article._container_info {
   span._close {
     color: $first_color_light;
   }
+  p._p_link {
+    margin-block-start: .8em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
   p {
     font-size: .9rem;
   }
@@ -67,13 +75,15 @@ article._container_info {
   ._link {
     display: inherit;
     align-items: inherit;
-    color: $first_color_lighter;
+    color: $first_color_light;
     text-decoration: none;
+    cursor: pointer;
+  }
+  ._link:hover {
+    color: $fifth_color;
   }
   section._container_links {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
-    width: 60vw;
   }
