@@ -10,6 +10,7 @@ import { Button, GalleryImage } from 'src/app/models/models';
 export class YpfComponent implements OnInit {
 
   currentImageNumber: number = 1;
+  public list: string = 'list';
   public area: string = 'diseño/ux|ui';
   public icon: string = 'local_florist';
   imgGallery: string = '../assets/images/ux_ui/ypf/asignarComite/0.png';
@@ -65,12 +66,10 @@ onChange(event: Event) {
     this.imgGallery = '../assets/images/ux_ui/ypf/asignarComite/0.png';
   } else if (selectedValue === 'images2') {
     this.images = [
-      { src: '../assets/images/ux_ui/ypf/asignarComite/4.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/asignarComite/5.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/asignarComite/6.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/asignarComite/7.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/yo.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/azulejo.PNG', position: 1, alt: 'string', first: false, last: false },
     ];
-    this.imgGallery = '../assets/images/ux_ui/ypf/asignarComite/4.png';
+    this.imgGallery = '../assets/images/yo.png';
   }
 }
 

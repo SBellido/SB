@@ -1,35 +1,31 @@
 <article class="_container_all">
   <section class="_container">
     <div class="_container_title">
-      <hr class="_line_title"><h1 class="_title">profile</h1><hr class="_line_title">
+      <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
+      <h1 class="_title">{{ area }}</h1>
     </div>
     <div class="_container_cards">
       <section class="_container_item" (click)="showMoreAcademic()">
-        <h2 class="_item" >
-          academic
-        </h2>
+        <h2 class="_item" >académico</h2>
       </section>
       <app-academic [hidden]="!visibleAcademic"></app-academic> 
 
       <section class="_container_item" (click)="showMoreLabor()">
-        <h2 class="_item" >
-          laboral
-        </h2>
+        <h2 class="_item" >laboral</h2>
       </section>
       <app-labor  [hidden]="!visibleLabor"></app-labor>
   
-      <section class="_container_item_disabled">
-        <h2 class="_item_disabled">
-          personal
-        </h2>
+      <section class="_container_item" (click)="showMorePersonal()">
+        <h2 class="_item">personal</h2>
       </section>
-      <p class="_item_disabled">in progress</p>
+      <app-personal [hidden]="!visiblePersonal"></app-personal>  
+      <!-- <p class="_item_disabled">in progress</p> -->
     </div>
-    <div class="_container_title">
+    <!-- <div class="_container_title">
       <hr class="_line_title"><h1 class="_title">description</h1><hr class="_line_title">
-    </div>
+    </div> -->
   </section>
-  <section class="_container_profile">
+  <!-- <section class="_container_profile">
     <div class="_profile">
       <p class="_info">
         Sebastián is a talented graphic designer with 20 years of experience creating several 
@@ -52,7 +48,7 @@
         process, from planning to implementation.
       </p> 
     </div>
-  </section>
+  </section> -->
 </article>
 <app-footer></app-footer>
   <!-- 

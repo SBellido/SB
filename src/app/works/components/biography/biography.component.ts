@@ -10,7 +10,11 @@ export class BiographyComponent implements OnInit {
 
   visibleLabor: boolean = false;
   visibleAcademic: boolean = false;
-  
+  visiblePersonal: boolean = false;
+
+  public area: string = 'perfil';
+  public icon: string = 'fingerprint';
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {  
@@ -27,6 +31,7 @@ export class BiographyComponent implements OnInit {
       this.visibleLabor = false : 
         this.visibleLabor = true,
         this.visibleAcademic = false; 
+        this.visiblePersonal = false;
   }
 
   showMoreAcademic() {
@@ -34,6 +39,14 @@ export class BiographyComponent implements OnInit {
       this.visibleAcademic = false : 
         this.visibleAcademic = true,
         this.visibleLabor = false;
+        this.visiblePersonal = false;
   }
-
+  
+  showMorePersonal() {
+    this.visiblePersonal? 
+      this.visiblePersonal = false : 
+        this.visiblePersonal = true,
+        this.visibleLabor = false;
+        this.visibleAcademic = false; 
+  }
 }
