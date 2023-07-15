@@ -86,6 +86,18 @@
     font-size: 1.3rem;
     font-weight: 500;
   }
+  div._container_donwload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a._donwload {
+    color: $third_color;
+    text-decoration: underline;
+  }
+  a._donwload:hover {
+    color: $first_color_light;
+  }
   // section._container {
   //   height: auto;
   //   padding-top: 0rem;

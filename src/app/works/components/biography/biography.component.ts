@@ -21,6 +21,21 @@ export class BiographyComponent implements OnInit {
     this.topFunction();
   }
 
+  /*------------MÉTODOS--------------*/
+  descargarPDF() {
+    const url = '../../../../assets/images/biography/SebastianBellido_CV2023_ok.pdf';
+    fetch(url)
+      .then(response => response.blob())
+      .then(blob => {
+        const blobUrl = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = blobUrl;
+        link.download = 'CV_Sebastian_Bellido.pdf';
+        link.click();
+        URL.revokeObjectURL(blobUrl);
+      });
+  }
+
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

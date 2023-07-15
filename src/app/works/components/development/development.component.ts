@@ -12,8 +12,6 @@ export class
  DevelopmentComponent implements OnInit {
 
 /*--------VARIABLES -------*/ 
-
-
   brands_angular: Button[] = [
     {
       route: 'works/development/investigar',

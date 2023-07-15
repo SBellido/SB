@@ -11,20 +11,19 @@
       <app-academic [hidden]="!visibleAcademic"></app-academic> 
 
       <section class="_container_item" (click)="showMoreLabor()">
-        <h2 class="_item" >laboral</h2>
+        <h2 class="_item">profesional</h2>
       </section>
-      <app-labor  [hidden]="!visibleLabor"></app-labor>
+      <app-labor [hidden]="!visibleLabor"></app-labor>
   
       <section class="_container_item" (click)="showMorePersonal()">
         <h2 class="_item">personal</h2>
       </section>
       <app-personal [hidden]="!visiblePersonal"></app-personal>  
-      <!-- <p class="_item_disabled">in progress</p> -->
     </div>
-    <!-- <div class="_container_title">
-      <hr class="_line_title"><h1 class="_title">description</h1><hr class="_line_title">
-    </div> -->
   </section>
+  <div class="_container_donwload">
+    <a class="_donwload" (click)="descargarPDF()">Descargar CV de Sebastián</a>
+  </div>
   <!-- <section class="_container_profile">
     <div class="_profile">
       <p class="_info">

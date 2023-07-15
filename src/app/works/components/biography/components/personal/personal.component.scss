@@ -29,7 +29,7 @@ article._container_info {
     align-items: center;
     padding-bottom: 1rem;
   }
-  h3._year  {
+  h3._title  {
     color: $first_color;
     margin: 1rem 0 0 0;
   }
@@ -64,6 +64,9 @@ article._container_info {
   }
   p {
     font-size: .9rem;
+  }p._year {
+    color: $first_color;
+    margin: 0 0 .5rem 0;
   }
   p._info {
     color: $first_color;

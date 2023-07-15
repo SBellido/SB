@@ -7,6 +7,7 @@ import { Button } from '../../../models/models';
   templateUrl: './design.component.html',
   styleUrls: ['./design.component.scss']
 })
+
 export class DesignComponent implements OnInit {
 
 

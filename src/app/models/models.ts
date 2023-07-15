@@ -31,3 +31,13 @@ export interface Button {
 export interface ButtonList {
   buttons: Button[];
 }
+
+export interface ItemProfile {
+  img: string,
+  description_img: string,
+  acronyms_career: string,
+  year: string,
+  name_career: string,
+  link: string,
+  description_link: string
+}
