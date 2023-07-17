@@ -33,7 +33,7 @@ export class AcademicComponent implements OnInit {
       description_img: 'Instituto Superior de Formación, Capacitación y Actualización Docente Continua Vocación Docente',
       acronyms_career: 'Tramo Pedagógico',
       year: '2015 | 2016',
-      name_career: 'Tramo Pedagígico para Profesionales',
+      name_career: 'Tramo Pedagógico para Profesionales',
       link: 'https://www.vocaciondocente.com/',
       description_link: 'institución'
     },
@@ -41,8 +41,8 @@ export class AcademicComponent implements OnInit {
       img: '../../../../assets/images/biography/academic/fda_unlp.jpg',
       description_img: 'Logo de la Facultad de Bellas Artes',
       acronyms_career: 'DCV',
-      year: '2015 | 2016',
-      name_career: 'Lincenciatura en Diseño en Comunicación Visual',
+      year: '1998 | 2007',
+      name_career: 'Diseño en Comunicación Visual',
       link: 'http://www2.fba.unlp.edu.ar/dcv/contactos-materias-dcv/',
       description_link: 'programa'
     },

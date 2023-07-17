@@ -19,7 +19,7 @@ export class GalleryComponent implements OnInit {
     this.updateButtonStatus();
   }
   
-  @Input() images: GalleryImage[] = [];
+  @Input() imagesList: GalleryImage[] = [];
   @Input() imgGallery: string = '';
 
   ngOnInit(): void {
@@ -29,14 +29,14 @@ export class GalleryComponent implements OnInit {
     this.imgGallery='';
   }
   updateButtonStatus() {
-    this.activeNext = this.currentImageIndex < this.images.length - 1;
+    this.activeNext = this.currentImageIndex < this.imagesList.length - 1;
     this.activeBefore = this.currentImageIndex > 0;
   }
   
   nextImg() {
-    if (this.currentImageIndex < this.images.length - 1) {
+    if (this.currentImageIndex < this.imagesList.length - 1) {
       this.currentImageIndex++;
-      this.imgGallery = this.images[this.currentImageIndex].src;
+      this.imgGallery = this.imagesList[this.currentImageIndex].src;
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
     }
@@ -45,7 +45,7 @@ export class GalleryComponent implements OnInit {
   beforeImg() {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
-      this.imgGallery = this.images[this.currentImageIndex].src;
+      this.imgGallery = this.imagesList[this.currentImageIndex].src;
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
     }

@@ -13,7 +13,7 @@ article._container_info {
   }
   ._img_personal {
     width: 8rem;
-    border: solid $second_color 1px;
+    border: solid $second_color 3px;
     border-radius: 50%;
   }
   section._container_job {
@@ -62,13 +62,24 @@ article._container_info {
   span._close {
     color: $first_color_light;
   }
-  p {
+  ul {
+    // display: block;
+    // list-style-type: disc;
+    // margin-block-start: 1em;
+    // margin-block-end: 1em;
+    // margin-inline-start: 0px;
+    // margin-inline-end: 0px;
+    padding-inline-start: 1.5rem;
+    padding-inline-end: 1.5rem;
+}
+  li, p {
     font-size: .9rem;
-  }p._year {
+  }
+  li._year, p._year {
     color: $first_color;
     margin: 0 0 .5rem 0;
   }
-  p._info {
+  li._info {
     color: $first_color;
     line-height : 1.2rem;
     margin: .5rem 0;

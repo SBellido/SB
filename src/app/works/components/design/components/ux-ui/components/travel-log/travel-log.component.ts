@@ -15,7 +15,7 @@ export class TravelLogComponent implements OnInit {
   public icon: string = 'local_florist';
 
   imgGallery = "../assets/images/ux_ui/travel_log/flujo_1/0.png";
-  images : GalleryImage[] = [
+  imagesList : GalleryImage[] = [
     { src: '../assets/images/ux_ui/travel_log/flujo_1/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/travel_log/flujo_1/1.png', position: 1, alt: 'string', first: false, last: false },
     { src: '../assets/images/ux_ui/travel_log/flujo_1/2.png', position: 2, alt: 'string', first: false, last: false },

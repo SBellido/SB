@@ -16,16 +16,16 @@ export class LaborComponent implements OnInit {
       description_img: 'Logo de la Tsoft',
       acronyms_career: 'UX/UI Sr.',
       year: '2022 | 2023',
-      name_career: 'Diseño de Herramienta digital para la Gestión de Inversiones en YPF',
+      name_career: 'Diseño de Herramienta digital para Gestión de Inversiones en YPF.',
       link: 'https://www.tsoftglobal.com/',
       description_link: 'empresa'
     },
     {
       img: '../../../../assets/images/biography/profetional/stormtech.png',
       description_img: 'Logo de la Stormtech',
-      acronyms_career: 'UX | UI & Frontend Dev',
+      acronyms_career: 'UX/UI & Frontend Dev',
       year: '2020 | 2022',
-      name_career: '',
+      name_career: 'Desarrollos en Angular, Bootstrap y JavaScript.',
       link: 'https://stormtechlabs.com/#container-home',
       description_link: 'empresa'
     },
@@ -34,7 +34,7 @@ export class LaborComponent implements OnInit {
       description_img: 'Logo de MediaLab',
       acronyms_career: 'Desarrollador Web Multimedia',
       year: '2020 | 2021',
-      name_career: 'Práctica Profesional Supervisada (PPS)',
+      name_career: 'Práctica Profesional Supervisada (PPS).',
       link: 'https://medialab.com.ar/',
       description_link: 'institución'
     },
@@ -42,9 +42,9 @@ export class LaborComponent implements OnInit {
     {
       img: '../../../../assets/images/biography/profetional/trenda.png',
       description_img: 'Logo de la Trenda Software',
-      acronyms_career: 'Lead UX | UI',
+      acronyms_career: 'Lead UX/UI',
       year: '2019 | 2020',
-      name_career: '',
+      name_career: 'Captura de requerimientos, test con usuarios, prototipado.',
       link: 'http://trendasoftware.com/',
       description_link: 'empresa'
     },

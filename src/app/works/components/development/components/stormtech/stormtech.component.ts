@@ -15,7 +15,7 @@ export class StormtechComponent implements OnInit {
   public icon: string = 'developer_mode';
   imgGallery: string = '../assets/images/dev/stormtech/desktop/0.png';
 
-  images : GalleryImage[] = [
+  imagesList : GalleryImage[] = [
     { src: '../assets/images/dev/stormtech/desktop/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/dev/stormtech/desktop/1.png', position: 1, alt: 'string', first: false, last: false },
     { src: '../assets/images/dev/stormtech/desktop/2.png', position: 2, alt: 'string', first: false, last: false },
