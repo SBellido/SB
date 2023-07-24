@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, GalleryImage } from 'src/app/models/models';
+import { GalleryComponent } from 'src/app/works/components/gallery/gallery.component';
 
 @Component({
   selector: 'app-nighx',
@@ -9,12 +10,15 @@ import { Button, GalleryImage } from 'src/app/models/models';
 })
 
 export class NighxComponent implements OnInit {
-    
+  @ViewChild('galleryComponent') galleryComponent!: GalleryComponent;
+
 /*--------VARIABLES -------*/ 
   public area: string = 'diseño/ux|ui';
   public icon: string = 'local_florist';
   
   imgGallery = "../assets/images/ux_ui/nighx/inicio/0.png";
+  selectedOption: string = '';
+
   imagesList : GalleryImage[] = [
     { src: '../assets/images/ux_ui/nighx/inicio/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/nighx/inicio/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -23,7 +27,16 @@ export class NighxComponent implements OnInit {
     { src: '../assets/images/ux_ui/nighx/inicio/4.png', position: 4, alt: 'string', first: false, last: false },
     { src: '../assets/images/ux_ui/nighx/inicio/5.png', position: 5, alt: 'string', first: false, last: false },
     { src: '../assets/images/ux_ui/nighx/inicio/6.png', position: 6, alt: 'string', first: false, last: false }
-  ] 
+  ];
+  imagesList2 : GalleryImage[] = [
+    { src: '../assets/images/ux_ui/travel-log/0.png', position: 0, alt: 'string', first: true, last: false },
+    { src: '../assets/images/ux_ui/travel-log/1.png', position: 1, alt: 'string', first: false, last: false },
+    { src: '../assets/images/ux_ui/travel-log/2.png', position: 2, alt: 'string', first: false, last: false },
+    { src: '../assets/images/ux_ui/travel-log/3.png', position: 3, alt: 'string', first: false, last: false },
+    { src: '../assets/images/ux_ui/travel-log/4.png', position: 4, alt: 'string', first: false, last: false },
+    { src: '../assets/images/ux_ui/travel-log/5.png', position: 5, alt: 'string', first: false, last: false },
+    { src: '../assets/images/ux_ui/travel-log/6.png', position: 6, alt: 'string', first: false, last: false }
+  ];
 
   brands : Button[] = [
     {
@@ -60,6 +73,7 @@ export class NighxComponent implements OnInit {
 
   
 /* ----------- MÉTODOS ----------- */
+
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -68,6 +82,35 @@ export class NighxComponent implements OnInit {
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+
+  selectOption(event: Event) {
+    const selectedValue = (event.target as HTMLSelectElement).value;
+
+    if (selectedValue === 'option1') {
+      this.imgGallery = '../assets/images/ux_ui/nighx/inicio/0.png';
+      this.imagesList = [
+        { src: '../assets/images/ux_ui/nighx/inicio/0.png', position: 0, alt: 'string', first: true, last: false },
+        { src: '../assets/images/ux_ui/nighx/inicio/1.png', position: 1, alt: 'string', first: false, last: false },
+        // Otras imágenes para la opción 1
+      ];
+    } else if (selectedValue  === 'option2') {
+      this.imgGallery = '../assets/images/ux_ui/travel_log/flujo_1/0.png';
+      this.imagesList = [
+        { src: '../assets/images/ux_ui/travel_log/flujo_1/0.png', position: 0, alt: 'string', first: true, last: false },
+        { src: '../assets/images/ux_ui/travel_log/flujo_1/1.png', position: 1, alt: 'string', first: false, last: false },
+        // Otras imágenes para la opción 2
+      ];
+    } else if (selectedValue  === 'option3') {
+      this.imgGallery = '../assets/images/ux_ui/v-life/patient/0.png';
+      this.imagesList = [
+        { src: '../assets/images/ux_ui/v-life/patient/0.png', position: 0, alt: 'string', first: true, last: false },
+        { src: '../assets/images/ux_ui/v-life/patient/1.png', position: 1, alt: 'string', first: false, last: false },
+        // Otras imágenes para la opción 3
+      ];
+    }
+    this.galleryComponent.updateButtonStatus();
+  }
+
   
 
 }

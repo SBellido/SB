@@ -7,11 +7,23 @@
         <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
         <h1 class="_title">{{ area }}</h1>
       </div>
+      <select class="_dropdown" (change)="selectOption($event)">
+        <option value="option1">
+          <span class="icon"></span>flujo 1
+        </option>
+        <option value="option2">
+          <span class="icon"></span>flujo 2
+        </option>
+        <option value="option3">
+          <span class="icon"></span>flujo 3
+        </option>
+      </select>
       <div class="_container_mobile">
         <img class="_mobile" src="../assets/images/mobile_dark.png" alt="">
       </div>
       <article class="_container_all">
         <app-gallery 
+          #galleryComponent
           [imagesList]="imagesList" 
           [imgGallery]="imgGallery">
         </app-gallery>

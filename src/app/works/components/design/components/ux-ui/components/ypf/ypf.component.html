@@ -3,11 +3,23 @@
     <button mat-button class="_button_back" title="Volver" routerLink="../../">
       <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
     </button>
-    <div class="_container_title" routerLink="../../">
+    <div class="_container_title">
       <mat-icon class="_icon_nav">local_florist</mat-icon>
       <h1 class="_title">{{ area }}</h1>
     </div>
-    <mat-select (change)="onChange($event)" matNativeControl>
+    <!-- <select class="_dropdown">
+      <option value="images">Opción 1</option>
+      <option value="images2">Opción 2</option>
+    </select> -->
+    <select class="_dropdown" (change)="onChange($event)">
+      <option value="imagesList">
+        <span class="icon"></span>1
+      </option>
+      <option value="imagesList2">
+        <span class="icon"></span>2
+      </option>
+    </select>
+    <!-- <mat-select (change)="onChange($event)" matNativeControl>
       <mat-option value="images">
         <mat-icon class="_icon_nav">list</mat-icon>
         List
@@ -16,13 +28,13 @@
         <mat-icon>collections</mat-icon>
         Images
       </mat-option>
-    </mat-select>
+    </mat-select> -->
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
     <article class="_container_all">
       <app-gallery-desptop
-        [images]="images" 
+        [imagesList]="imagesList" 
         [imgGallery]="imgGallery">
       </app-gallery-desptop> 
       <div class="_container_info">

@@ -29,8 +29,11 @@ export class GalleryComponent implements OnInit {
     this.imgGallery='';
   }
   updateButtonStatus() {
-    this.activeNext = this.currentImageIndex < this.imagesList.length - 1;
-    this.activeBefore = this.currentImageIndex > 0;
+    // this.activeNext = this.currentImageIndex < this.imagesList.length - 1;
+    // this.activeBefore = this.currentImageIndex > 0;
+    const currentIndex = this.imagesList.findIndex(image => image.src === this.imgGallery);
+    this.activeNext = currentIndex < this.imagesList.length - 1;
+    this.activeBefore = currentIndex > 0;
   }
   
   nextImg() {
@@ -50,4 +53,5 @@ export class GalleryComponent implements OnInit {
       this.currentImageNumber = this.currentImageIndex + 1;
     }
   }
+
 }

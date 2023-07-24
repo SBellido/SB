@@ -56,7 +56,7 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateBtnTo(btn: ItemNavBar) {
-    this.setActiveButton(btn.id); // Aquí se invoca al método setActiveButton()
+    this.setActiveButton(btn.id); 
     this.router.navigate([btn.router]);
   }
   navigateTo(destiny: string) {
