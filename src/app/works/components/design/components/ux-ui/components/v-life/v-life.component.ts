@@ -111,8 +111,17 @@ export class VLifeComponent implements OnInit {
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/asignarComite/2.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/yo.png', position: 1, alt: 'string', first: false, last: true }
+      { src: '../assets/images/ux_ui/v-life/professional/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/6.png', position: 6, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/7.png', position: 7, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/8.png', position: 8, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/9.png', position: 9, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/v-life/professional/10.png', position: 10, alt: 'string', first: false, last: false },
     ];
     this.imgGallery = this.imagesList[0].src;
   }
