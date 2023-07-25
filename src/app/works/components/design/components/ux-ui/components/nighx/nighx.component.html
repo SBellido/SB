@@ -7,15 +7,12 @@
         <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
         <h1 class="_title">{{ area }}</h1>
       </div>
-      <select class="_dropdown" (change)="selectOption($event)">
-        <option value="option1">
-          <span class="icon"></span>flujo 1
+      <select class="_dropdown" (change)="onChange($event)">
+        <option value="imagesList">
+          <span class="icon"></span>1
         </option>
-        <option value="option2">
-          <span class="icon"></span>flujo 2
-        </option>
-        <option value="option3">
-          <span class="icon"></span>flujo 3
+        <option value="imagesList2">
+          <span class="icon"></span>2
         </option>
       </select>
       <div class="_container_mobile">
@@ -23,9 +20,9 @@
       </div>
       <article class="_container_all">
         <app-gallery 
-          #galleryComponent
           [imagesList]="imagesList" 
-          [imgGallery]="imgGallery">
+          [imgGallery]="imgGallery"
+          [totalImages]="imagesList.length">
         </app-gallery>
         <div class="_container_info">
           <h4 class="_title_product">Nighx | Streaming</h4>
