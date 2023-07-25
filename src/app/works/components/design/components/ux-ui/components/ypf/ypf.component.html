@@ -7,16 +7,15 @@
       <mat-icon class="_icon_nav">local_florist</mat-icon>
       <h1 class="_title">{{ area }}</h1>
     </div>
-    <!-- <select class="_dropdown">
-      <option value="images">Opción 1</option>
-      <option value="images2">Opción 2</option>
-    </select> -->
     <select class="_dropdown" (change)="onChange($event)">
       <option value="imagesList">
         <span class="icon"></span>1
       </option>
       <option value="imagesList2">
         <span class="icon"></span>2
+      </option>
+      <option value="imagesList3">
+        <span class="icon"></span>3
       </option>
     </select>
     <!-- <mat-select (change)="onChange($event)" matNativeControl>
@@ -33,10 +32,12 @@
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
     <article class="_container_all">
-      <app-gallery-desptop
+      <app-gallery-desptop 
         [imagesList]="imagesList" 
-        [imgGallery]="imgGallery">
-      </app-gallery-desptop> 
+        [imgGallery]="imgGallery"
+        [totalImages]="imagesList.length"
+        >
+      </app-gallery-desptop>
       <div class="_container_info">
         <h4 class="_title_product">Gestión de Inversiones | Web App</h4>
         <p class="_p_card">Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. <span>Diseñada como herramienta para que 
