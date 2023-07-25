@@ -73,17 +73,18 @@ export class YpfComponent implements OnInit {
 
   loadImages() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/asignarComite/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/asignarComite/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/asignarComite/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/asignarComite/3.png', position: 3, alt: 'string', first: false, last: true }
+      { src: '../assets/images/ux_ui/ypf/0/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/0/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/0/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/0/3.png', position: 3, alt: 'string', first: false, last: true }
     ];
     this.imgGallery = this.imagesList[0].src;
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/asignarComite/2.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/yo.png', position: 1, alt: 'string', first: false, last: true }
+      { src: '../assets/images/ux_ui/ypf/1/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/1/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/1/2.png', position: 2, alt: 'string', first: false, last: false },
     ];
     this.imgGallery = this.imagesList[0].src;
   }
