@@ -18,7 +18,7 @@
   button._button_back {
     position: absolute;
     top: 10.7rem;
-    left: 0rem;
+    left: -.3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@
     border-radius: 50px;
   }
   button._button_back:hover {
-    border: solid .5px $third_color;
+    // border: solid .5px $third_color;
     mat-icon._icon_button {
       color: $accent_color;
     }
