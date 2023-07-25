@@ -12,31 +12,12 @@ import { GalleryComponent } from 'src/app/works/components/gallery/gallery.compo
 export class NighxComponent implements OnInit {
   @ViewChild('galleryComponent') galleryComponent!: GalleryComponent;
 
-/*--------VARIABLES -------*/ 
+  /*--------VARIABLES -------*/ 
   public area: string = 'diseño/ux|ui';
   public icon: string = 'local_florist';
-  
-  imgGallery = "../assets/images/ux_ui/nighx/inicio/0.png";
-  selectedOption: string = '';
 
-  imagesList : GalleryImage[] = [
-    { src: '../assets/images/ux_ui/nighx/inicio/0.png', position: 0, alt: 'string', first: true, last: false },
-    { src: '../assets/images/ux_ui/nighx/inicio/1.png', position: 1, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/nighx/inicio/2.png', position: 2, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/nighx/inicio/3.png', position: 3, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/nighx/inicio/4.png', position: 4, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/nighx/inicio/5.png', position: 5, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/nighx/inicio/6.png', position: 6, alt: 'string', first: false, last: false }
-  ];
-  imagesList2 : GalleryImage[] = [
-    { src: '../assets/images/ux_ui/travel-log/0.png', position: 0, alt: 'string', first: true, last: false },
-    { src: '../assets/images/ux_ui/travel-log/1.png', position: 1, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/travel-log/2.png', position: 2, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/travel-log/3.png', position: 3, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/travel-log/4.png', position: 4, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/travel-log/5.png', position: 5, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/travel-log/6.png', position: 6, alt: 'string', first: false, last: false }
-  ];
+  imgGallery = '';
+  imagesList : GalleryImage[] = [] 
 
   brands : Button[] = [
     {
@@ -52,12 +33,6 @@ export class NighxComponent implements OnInit {
       text: 'Logo V-Life',
     },
     {
-      route: 'works/design/ux-ui/nighx',
-      img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
-      title: 'Nighx',
-      text: 'Logo de Nighx',
-    },
-    {
       route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
       title: 'TravelLog',
@@ -69,48 +44,55 @@ export class NighxComponent implements OnInit {
 
   ngOnInit(): void {
     this.topFunction();
+    this.loadImages(); 
   }
-
   
 /* ----------- MÉTODOS ----------- */
-
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
-
-  selectOption(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-
-    if (selectedValue === 'option1') {
-      this.imgGallery = '../assets/images/ux_ui/nighx/inicio/0.png';
-      this.imagesList = [
-        { src: '../assets/images/ux_ui/nighx/inicio/0.png', position: 0, alt: 'string', first: true, last: false },
-        { src: '../assets/images/ux_ui/nighx/inicio/1.png', position: 1, alt: 'string', first: false, last: false },
-        // Otras imágenes para la opción 1
-      ];
-    } else if (selectedValue  === 'option2') {
-      this.imgGallery = '../assets/images/ux_ui/travel_log/flujo_1/0.png';
-      this.imagesList = [
-        { src: '../assets/images/ux_ui/travel_log/flujo_1/0.png', position: 0, alt: 'string', first: true, last: false },
-        { src: '../assets/images/ux_ui/travel_log/flujo_1/1.png', position: 1, alt: 'string', first: false, last: false },
-        // Otras imágenes para la opción 2
-      ];
-    } else if (selectedValue  === 'option3') {
-      this.imgGallery = '../assets/images/ux_ui/v-life/patient/0.png';
-      this.imagesList = [
-        { src: '../assets/images/ux_ui/v-life/patient/0.png', position: 0, alt: 'string', first: true, last: false },
-        { src: '../assets/images/ux_ui/v-life/patient/1.png', position: 1, alt: 'string', first: false, last: false },
-        // Otras imágenes para la opción 3
-      ];
-    }
-    this.galleryComponent.updateButtonStatus();
+  routeTo(route:string) {    
+    this.router.navigateByUrl(route);
   }
 
-  
+  onChange(event: Event) {
+    const selectedValue = (event.target as HTMLSelectElement).value;
+    if (selectedValue === 'imagesList') {
+      this.loadImages();
+    } else if (selectedValue === 'imagesList2') {
+      this.loadImages2();
+    }
+  }
+
+  loadImages() {
+    this.imagesList = [
+      { src: '../assets/images/ux_ui/nighx/inicio/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio/6.png', position: 6, alt: 'string', first: false, last: false }
+    ];
+    this.imgGallery = this.imagesList[0].src;
+  }
+  loadImages2() {
+    this.imagesList = [
+      { src: '../assets/images/ux_ui/travel-log/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/travel-log/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/travel-log/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/travel-log/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/travel-log/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/travel-log/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/travel-log/6.png', position: 6, alt: 'string', first: false, last: false }
+    ];
+    this.imgGallery = this.imagesList[0].src;
+  }
 
 }
+
+
