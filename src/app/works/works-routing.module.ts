@@ -23,6 +23,7 @@ import { StormtechComponent } from './components/development/components/stormtec
 import { HuntComponent } from './components/development/components/hunt/hunt.component';
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
+import { QxComponent } from './components/development/components/qx/qx.component';
 
 const routes: Routes = [
   {
@@ -93,6 +94,11 @@ const routes: Routes = [
         path: 'development/xubox',
         pathMatch: 'full',
         component: XuboxComponent
+      },
+      {
+        path: 'development/qx',
+        pathMatch: 'full',
+        component: QxComponent
       },
       {
         path: 'development/stormtech',

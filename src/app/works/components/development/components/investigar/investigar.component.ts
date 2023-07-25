@@ -51,12 +51,6 @@ export class InvestigarComponent implements OnInit {
 //  ] 
 
 brands: Button[] = [
-  // {
-  //   route: 'works/development/investigar',
-  //   img: '../assets/images/dev/investigar/logo_investigar.png',
-  //   title: 'InventigAr',
-  //   text: 'Logo de InventigAr',
-  // },
   {
     route: 'works/development/xubox',
     img: '../assets/images/dev/xubox/logo/xubox_logo.png',
@@ -64,10 +58,10 @@ brands: Button[] = [
     text: 'Logo Xubox',
   },
   {
-    route: 'works/development/mabell',
-    img: '../assets/images/dev/mabell/mabell_logo.png',
-    title: 'Mabell',
-    text: 'Logo de Mabell Studio',
+    route: 'works/development/qx',
+    img: '../assets/images/dev/qx/qx_logo.png',
+    title: 'Logística',
+    text: 'Logo de QX Logística',
   }
 ]
  

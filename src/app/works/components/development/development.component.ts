@@ -22,15 +22,21 @@ export class
     {
       route: 'works/development/xubox',
       img: '../assets/images/dev/xubox/logo/xubox_logo.png',
-      title: 'Xubox',
+      title: 'Logística',
       text: 'Logo de Xubox',
     },
     {
-      route: 'works/development/mabell',
-      img: '../assets/images/dev/mabell/mabell_logo.png',
-      title: 'Mabell',
-      text: 'Logo de Mabell Studio',
+      route: 'works/development/qx',
+      img: '../assets/images/dev/qx/qx_logo.png',
+      title: 'Logística',
+      text: 'Logo de QX Logística',
     }
+    // {
+    //   route: 'works/development/mabell',
+    //   img: '../assets/images/dev/mabell/mabell_logo.png',
+    //   title: 'Mabell',
+    //   text: 'Logo de Mabell Studio',
+    // }
   ]
 
   brands_botstrap: Button[] = [

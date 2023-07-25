@@ -1,0 +1,34 @@
+<p>xubox works!</p>
+<article>
+  <button mat-button class="_button_back" title="Volver" routerLink="../">
+    <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
+  </button>
+  <div class="_container_title">
+    <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
+    <h1 class="_title">{{ area }}</h1>
+  </div>
+  
+  <article class="_container_all">  
+    <div class="_container_mobile">
+      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="">
+    </div>
+    <app-gallery
+        [imagesList]="imagesList" 
+        [imgGallery]="imgGallery">
+    </app-gallery>
+    <div class="_container_info">
+      <h4 class="_title_product">Xubox | Web App</h4>
+      <p class="_p_card"><span>Plataforma interactiva que permite gestionar envíos
+          postales,</span> dando la posibilidad de personalizarlos de acuerdo a las necesidades del usuario.
+          Una <span>herramienta flexible y adaptada a los servicios que ofrece la empresa.</span> 
+          Consta de un <span>formulario complejo, en cuanto a su implementación,</span> que va guardando los datos
+          cargados y plantea el flujo en una serie de pasos. <span>Los datos a cargar varian</span> de acuerdo
+          a la información cargada hasta el momento. Sebastián se desempeñó como <span>desarrollador Frontend e implementó 
+          el alta de perfiles de usuario, cambio de contraseña, login y todo el proceso de carga de datos.</span> El trabajo fue hecho para Stormtech SL 
+          en el <span>año 2021.</span>
+      </p>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </article>
+</article>
+  
