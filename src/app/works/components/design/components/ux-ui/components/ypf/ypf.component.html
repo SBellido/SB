@@ -18,26 +18,15 @@
         <span class="icon"></span>3
       </option>
     </select>
-    <!-- <mat-select (change)="onChange($event)" matNativeControl>
-      <mat-option value="images">
-        <mat-icon class="_icon_nav">list</mat-icon>
-        List
-      </mat-option>
-      <mat-option value="images2">
-        <mat-icon>collections</mat-icon>
-        Images
-      </mat-option>
-    </mat-select> -->
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
     <article class="_container_all">
-      <app-gallery-desptop 
+      <app-gallery 
         [imagesList]="imagesList" 
         [imgGallery]="imgGallery"
-        [totalImages]="imagesList.length"
-        >
-      </app-gallery-desptop>
+        [totalImages]="imagesList.length">
+      </app-gallery>
       <div class="_container_info">
         <h4 class="_title_product">Gestión de Inversiones | Web App</h4>
         <p class="_p_card">Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. <span>Diseñada como herramienta para que 

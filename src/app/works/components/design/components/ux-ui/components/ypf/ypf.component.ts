@@ -14,7 +14,7 @@ export class YpfComponent implements OnInit {
   public area: string = 'diseño/ux|ui';
   public icon: string = 'local_florist';
 
-  imgGallery: string = '../assets/images/ux_ui/ypf/asignarComite/0.png';
+  imgGallery: string = '';
   
   currentImageIndex: number = 0;
   imagesCount: number = 0;
@@ -94,12 +94,6 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
   }
-
-  updateCounter() {
-    // Actualizar el contador con la cantidad de imágenes cargadas
-    this.imagesCount = this.imagesList.length;
-  }
-
 
 }
 
