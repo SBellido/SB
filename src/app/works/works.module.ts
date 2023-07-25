@@ -34,6 +34,7 @@ import { StormtechComponent } from './components/development/components/stormtec
 import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-polaroid.component';
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
+import { QxComponent } from './components/development/components/qx/qx.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { CompetitionsComponent } from './components/design/components/competitio
     GalleryPolaroidComponent,
     BrandsSectionComponent,
     CompetitionsComponent,
+    QxComponent
   ],
   imports: [
     CommonModule,

@@ -82,13 +82,15 @@ export class NighxComponent implements OnInit {
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/travel-log/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/travel-log/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel-log/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel-log/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel-log/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel-log/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel-log/6.png', position: 6, alt: 'string', first: false, last: false }
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/6.png', position: 6, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/8.png', position: 7, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/nighx/inicio_sesion/9.png', position: 8, alt: 'string', first: false, last: false },
     ];
     this.imgGallery = this.imagesList[0].src;
   }
