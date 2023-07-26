@@ -45,6 +45,14 @@
     filter: invert(100%);
     cursor: pointer;
   }
+  img._logo_socialnet:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 100%;
+  }
   img._img_sb {
     width: 13rem;
     height: auto;
@@ -152,25 +160,46 @@
 
   img._ornament {
     width: 30vw;
+    padding: 0 1.5rem;
   }
-  section._container_buttons {
-    padding: 7rem 13rem;
+  section._container_contact {
+    padding: 0 28rem;
   }
-  ._button:hover { 
-    background: $second_color_light;
-  }
-  img._logo_socialnet:hover {
-    -moz-transform: scale(1.2);
-    -webkit-transform: scale(1.2);
-    -o-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
-    opacity: 100%;
-  }
-  button._btn_footer:hover {
-    background: $third_color_light;
+  section._container_social_networks {
+    padding: 0 25rem;
   }
 
 }
 
 
+/* SCREEN 1440px*/
+@media (min-width: 1440px) { 
+
+  img._ornament {
+    width: 20vw;
+  }
+  section._container_contact {
+    padding: 0 40rem;
+  }
+  section._container_social_networks {
+    padding: 0 35rem;
+  }
+  article._container_footer {
+    width: auto;
+  }
+
+}
+/* SCREEN 1920px*/
+@media (min-width: 1920px) { 
+
+  img._ornament {
+    width: 20vw;
+  }
+  section._container_contact {
+    padding: 0 40rem;
+  }
+  section._container_social_networks {
+    padding: 0 35rem;
+  }
+
+}

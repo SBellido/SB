@@ -10,11 +10,11 @@
             <p class="_info">{{ item.name_career }}</p>
             <section class="_container_links">
                 <a class="_link" href="{{ item.link }}" target="_blank">
-                <mat-icon>link</mat-icon>
-                <p class="_p_link">{{ item.description_link }}</p>
+                    <mat-icon>link</mat-icon>
+                    <p class="_p_link">{{ item.description_link }}</p>
                 </a>
             </section>
         </section>
-        <hr>
+        <hr *ngIf="item.link != 'http://trendasoftware.com/'">
     </article>
 </article>

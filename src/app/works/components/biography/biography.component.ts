@@ -40,28 +40,18 @@ export class BiographyComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
-  showMoreLabor() {  
-    this.visibleLabor ? 
-      this.visibleLabor = false : 
-        this.visibleLabor = true,
-        this.visibleAcademic = false; 
-        this.visiblePersonal = false;
-  }
-
-  showMoreAcademic() {
-    this.visibleAcademic ? 
-      this.visibleAcademic = false : 
-        this.visibleAcademic = true,
-        this.visibleLabor = false;
-        this.visiblePersonal = false;
-  }
-  
-  showMorePersonal() {
-    this.visiblePersonal? 
-      this.visiblePersonal = false : 
-        this.visiblePersonal = true,
-        this.visibleLabor = false;
-        this.visibleAcademic = false; 
+  OpenClose(section: string) {
+    switch (section) {
+      case 'personal':
+        this.visiblePersonal = !this.visiblePersonal;
+        break;
+      case 'academic':
+        this.visibleAcademic = !this.visibleAcademic;
+        break;
+      case 'laboral':
+        this.visibleLabor = !this.visibleLabor;
+        break;
+    }
+    this.topFunction();
   }
 }

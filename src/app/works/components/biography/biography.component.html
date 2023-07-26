@@ -6,20 +6,34 @@
     </div>
 
     <div class="_container_cards">
-      <section class="_container_item" (click)="showMorePersonal()">
-        <h2 class="_item">personal</h2>
-      </section>
-      <app-personal [hidden]="!visiblePersonal"></app-personal>  
-      <section class="_container_item" (click)="showMoreAcademic()">
-        <h2 class="_item" >académico</h2>
-      </section>
-      <app-academic [hidden]="!visibleAcademic"></app-academic> 
-      <section class="_container_item" (click)="showMoreLabor()">
-        <h2 class="_item">profesional</h2>
-      </section>
-      <app-labor [hidden]="!visibleLabor"></app-labor>
+      <article class="_container_section">
+        <section class="_container_item" (click)="OpenClose('personal')">
+          <h2 class="_item">personal</h2>
+        </section>
+        <app-personal [hidden]="!visiblePersonal"></app-personal>
+        <div class="_container_button" *ngIf="visiblePersonal">
+          <button class="_close" (click)="OpenClose('personal')">cerrar</button>
+        </div>
+      </article>
+      <article class="_container_section">
+        <section class="_container_item" (click)="OpenClose('academic')">
+          <h2 class="_item">académico</h2>
+        </section>
+        <app-academic [hidden]="!visibleAcademic"></app-academic>
+        <div class="_container_button" *ngIf="visibleAcademic">
+          <button class="_close" (click)="OpenClose('academic')">cerrar</button>
+        </div>
+      </article>
+      <article class="_container_section">
+        <section class="_container_item" (click)="OpenClose('laboral')">
+          <h2 class="_item">profesional</h2>
+        </section>
+        <app-labor [hidden]="!visibleLabor"></app-labor>
+        <div class="_container_button" *ngIf="visibleLabor">
+          <button class="_close" (click)="OpenClose('laboral')">cerrar</button>
+        </div>
+      </article>
     </div>
-
   </section>
   <div class="_container_donwload">
     <a class="_donwload" (click)="descargarPDF()">Descargar CV de Sebastián</a>
