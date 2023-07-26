@@ -69,6 +69,12 @@
       $second_color 100%
     );
   }
+  ._button:hover { 
+    background: radial-gradient(
+      circle, $third_color_lighter 3%, 
+      $third_color 100%
+    );
+  }
   ._icon_nav {
     color: $first_color;
     margin-right: 0px !important;
@@ -106,16 +112,10 @@
 /* SCREEN 1024px */
 @media (min-width: 1024px) { 
 
-  section._container_buttons {
-    padding: 7rem 13rem;
-  }
-  ._button:hover { 
-      background: radial-gradient(
-      circle, $third_color_lighter 3%, 
-      $third_color 100%
-    );
+  // section._container_buttons {
+  //   padding: 7rem 13rem;
+  // }
 
-  }
 }
 // /* SCREEN 1336px */
 // @media (min-width: 1336px) { 

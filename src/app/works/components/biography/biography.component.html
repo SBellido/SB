@@ -4,82 +4,24 @@
       <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
       <h1 class="_title">{{ area }}</h1>
     </div>
-    <div class="_container_cards">
-      <section class="_container_item" (click)="showMoreAcademic()">
-        <h2 class="_item" >académico</h2>
-      </section>
-      <app-academic [hidden]="!visibleAcademic"></app-academic> 
 
-      <section class="_container_item" (click)="showMoreLabor()">
-        <h2 class="_item">profesional</h2>
-      </section>
-      <app-labor [hidden]="!visibleLabor"></app-labor>
-  
+    <div class="_container_cards">
       <section class="_container_item" (click)="showMorePersonal()">
         <h2 class="_item">personal</h2>
       </section>
       <app-personal [hidden]="!visiblePersonal"></app-personal>  
+      <section class="_container_item" (click)="showMoreAcademic()">
+        <h2 class="_item" >académico</h2>
+      </section>
+      <app-academic [hidden]="!visibleAcademic"></app-academic> 
+      <section class="_container_item" (click)="showMoreLabor()">
+        <h2 class="_item">profesional</h2>
+      </section>
+      <app-labor [hidden]="!visibleLabor"></app-labor>
     </div>
+
   </section>
   <div class="_container_donwload">
     <a class="_donwload" (click)="descargarPDF()">Descargar CV de Sebastián</a>
   </div>
 </article>
-  <!-- <section class="_container_profile">
-    <div class="_profile">
-      <p class="_info">
-        Sebastián is a talented graphic designer with 20 years of experience creating several 
-        and varied digital solutions. Skilled at software development, he specializes in UX/UI 
-        with Adobe XD, Figma, Invision among other technologies. For Sebastián, clean and organized 
-        design as well as user experience are essential. He has extensive experience working with 
-        testing, user profiles, and information architecture, among other models, methods, 
-        and technologies of UX/UI. As a graphic designer he successfully manages sales strategies, 
-        digital marketing, brand design, digital publications, packaging design, iIllustrations, 
-        editorial design, photography and preparation of sheets for printing.
-      </p>
-      <p class="_info">
-        As a front-end developer, he is skilled at developing and implementing web 
-        applications using Angular, JavaScript, Firebase, HTML5 and CSS3.
-      </p>
-      <p class="_info">
-        Sebastián is well versed at communicating with technical and non-technical staff. 
-        He is passionate about design and new technologies, constantly seeking to improve 
-        his skills. His experience allows him to be involved in the entire design and development 
-        process, from planning to implementation.
-      </p> 
-    </div>
-  </section> -->
-
-  <!-- 
-    
-        <div class="_container_info">
-        <p class="_info"><span>2022 - en curso</span></p>
-        <p class="_info"><span>Ssr. UX | UI</span></p>
-        <p class="_info">Se llama <span>experiencia de usuario,</span> por su enfoque, a la <span>relación sistema humano|máquina,</span> 
-          y aparece como una evolución de la ergonomía, manteniendo al diseño en el papel protagónico
-          para la <span>búsqueda de satisfacción en las personas que interactúan con un sistema, producto o entorno.</span></p>
-        <p class="_info"><span>UI</span> - El <span>diseño de interfaz de usuario</span> 
-          es el resultado de definir la <span>forma, función, utilidad, ergonomía, imagen de marca</span>
-          y otros aspectos que afectan a la apariencia externa de las interfaces en sistemas de todo tipo.
-        </p>
-      </div><button routerLink="academic">
-
-        
-        Académica
-      </button>
-      <button routerLink="labor">
-        Laboral
-      </button>
-      <button routerLink="personal">
-        Personal
-      </button> 
-      
-      <section class="_container_links">
-      <p class="_link"><span class="_litte_title">Links de interés</span></p>
-      <div class="_link">
-        <a class="_link" href="https://exa.unicen.edu.ar/tudai/" target="_blank">TUDAI</a>
-        <a class="_link" href="https://uxdi.exa.unicen.edu.ar/" target="_blank">UXDI</a>
-        <a class="_link" href="http://www2.fba.unlp.edu.ar/dcv/carrera/plan-de-estudios/" target="_blank">DCV</a>
-        <a class="_link" href="https://www.vocaciondocente.com/" target="_blank">DCV</a>
-      </div>
-    </section> -->

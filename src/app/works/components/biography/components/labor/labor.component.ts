@@ -12,6 +12,15 @@ export class LaborComponent implements OnInit {
   /*--------VARIABLES -------*/ 
   items: ItemProfile[] = [ 
     {
+      img: '../../../../assets/images/biography/profetional/coderhouse.png',
+      description_img: 'Logo de Coderhouse',
+      acronyms_career: 'Docente',
+      year: '2021 | en curso',
+      name_career: 'Curso de Desarrollo Web',
+      link: 'https://www.coderhouse.es/nosotros',
+      description_link: 'empresa'
+    },
+    {
       img: '../../../../assets/images/biography/profetional/tsoft.png',
       description_img: 'Logo de la Tsoft',
       acronyms_career: 'UX/UI Sr.',
@@ -32,13 +41,12 @@ export class LaborComponent implements OnInit {
     {
       img: '../../../../assets/images/biography/profetional/medialab.png',
       description_img: 'Logo de MediaLab',
-      acronyms_career: 'Desarrollador Web Multimedia',
+      acronyms_career: 'Desarrollador Web',
       year: '2020 | 2021',
-      name_career: 'Práctica Profesional Supervisada (PPS).',
+      name_career: 'Práctica Profesional Supervisada (PPS). Desarrollo en Angular y Firebase',
       link: 'https://medialab.com.ar/',
       description_link: 'institución'
     },
-
     {
       img: '../../../../assets/images/biography/profetional/trenda.png',
       description_img: 'Logo de la Trenda Software',
