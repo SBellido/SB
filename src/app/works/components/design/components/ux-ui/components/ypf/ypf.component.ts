@@ -45,7 +45,7 @@ export class YpfComponent implements OnInit {
 
   ngOnInit(): void {
     this.topFunction();
-    this.loadImages(); 
+    this.loadImages0(); 
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -62,16 +62,22 @@ export class YpfComponent implements OnInit {
 
   onChange(event: Event) {
     const selectedValue = (event.target as HTMLSelectElement).value;
-    if (selectedValue === 'imagesList') {
-      this.loadImages();
+    if (selectedValue === 'imagesList1') {
+      this.loadImages0();
     } else if (selectedValue === 'imagesList2') {
-      this.loadImages2();
+      this.loadImages1();
     } else if (selectedValue === 'imagesList3') {
+      this.loadImages2();
+    } else if (selectedValue === 'imagesList4') {
       this.loadImages3();
+    } else if (selectedValue === 'imagesList5') {
+      this.loadImages4();
+    } else if (selectedValue === 'imagesList6') {
+      this.loadImages5();
     }
   }
 
-  loadImages() {
+  loadImages0() {
     this.imagesList = [
       { src: '../assets/images/ux_ui/ypf/0/0.png', position: 0, alt: 'string', first: true, last: false },
       { src: '../assets/images/ux_ui/ypf/0/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -80,7 +86,7 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0].src;
   }
-  loadImages2() {
+  loadImages1() {
     this.imagesList = [
       { src: '../assets/images/ux_ui/ypf/1/0.png', position: 0, alt: 'string', first: true, last: false },
       { src: '../assets/images/ux_ui/ypf/1/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -88,10 +94,46 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0].src;
   }
+  loadImages2() {
+    this.imagesList = [
+      { src: '../assets/images/ux_ui/ypf/2/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/2/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/2/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/2/3.png', position: 3, alt: 'string', first: false, last: true },
+    ];
+    this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
+  }
   loadImages3() {
     this.imagesList = [
-      { src: '../assets/images/firma_sb.svg', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/logo_eye.svg', position: 1, alt: 'string', first: false, last: true }
+      { src: '../assets/images/ux_ui/ypf/3/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/3/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/3/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/3/3.png', position: 3, alt: 'string', first: false, last: true },
+      { src: '../assets/images/ux_ui/ypf/3/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/3/5.png', position: 5, alt: 'string', first: false, last: true },
+    ];
+    this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
+  }
+  loadImages4() {
+    this.imagesList = [
+      { src: '../assets/images/ux_ui/ypf/4/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/4/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/4/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/4/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/4/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/4/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/4/6.png', position: 6, alt: 'string', first: false, last: true },
+    ];
+    this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
+  }
+  loadImages5() {
+    this.imagesList = [
+      { src: '../assets/images/ux_ui/ypf/5/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/ux_ui/ypf/5/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/5/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/5/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/5/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/ux_ui/ypf/5/5.png', position: 5, alt: 'string', first: false, last: true },
     ];
     this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
   }
