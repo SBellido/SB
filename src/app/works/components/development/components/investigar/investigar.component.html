@@ -15,44 +15,46 @@
         [imagesList]="imagesList" 
         [imgGallery]="imgGallery">
     </app-gallery>
-    <!-- <app-gallery-desptop *ngIf="!isMobile"
-        [images]="images_desktop" 
-        [imgGallery]="imgGallery_desktop">
-    </app-gallery-desptop>    -->
-    <div class="_container_info">
-      <h4 class="_title_product">InvestigAr | Web App</h4>
-      <p class="_p_card"><span>Plataforma interactiva de investigación 
-          multidisciplinaria</span> que tiene como principal objetivo 
-          <span>evaluar distintos procesos cognitivos</span> dentro de la sociedad. 
-          La finalidad principal es <span>generar estrategias para mejorar la calidad de vida</span> 
-          de las personas basadas en evidencias científicas.<span>lanzada en 2020</span> 
-          en Argentina. Sebastián se encargo de realizar tareas tales como <span>análisis de requisitos,
-          comprensión del problema, captura de requerimientos, definición de objetivos y estimación de tiempos.</span>
-          Una vez tomadas las decisiones correspondientes y acordado con Cristian García Bauza, 
-          su supervisor de PPS (Práctica Profesional Supervisada), se encargó del
-          <span>diseño del sistema, identidad gráfica, flujos de interacción y prototipos.</span>
-          Posteriormente de llevó a cabo <span>desarrollo, implementación y presentación con el cliente. </span>
-          Se utilizaron herramientas como <span>Angular, </span>incorporando <span>Firebase y Google Analithycs.</span>
-          Tuvo un <span>seguimiento de más de un año</span> posterior a su despliegue.
-      </p>
-      <h4 class="_title_tecno">Herramientas utilizadas</h4><hr class="_hr">
-        <figure class="_container_tecno">
-          <a href="https://angular.io/" target="_blank">
-            <img class="_logo_tecno" src="../assets/images/tecnologies/angular.png" title="Angular" alt="Logo de Angular">
-          </a>
-          <a href="https://firebase.google.com/?hl=es-419" target="_blank">
-            <img class="_logo_tecno" src="../assets/images/tecnologies/firebase.png" title="Firebase" alt="Logo de Firebase">
-          </a>
-          <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">       
-            <img class="_logo_tecno" src="../assets/images/tecnologies/html.png" title="HTML5" alt="Logo de HTML5">
-          </a>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">       
-            <img class="_logo_tecno" src="../assets/images/tecnologies/css.png" title="CSS3" alt="Logo de CSS3">
-          </a>
-        </figure>
-    </div>
-    <h4 class="_title">Más trabajos desarrollados en Angular</h4><hr>
-    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+    <section class="_container_info_tecno">
+      <div class="_container_info">
+        <h4 class="_title_product">InvestigAr | Web App</h4>
+        <p class="_p_card"><span>Plataforma interactiva de investigación 
+            multidisciplinaria</span> que tiene como principal objetivo 
+            <span>evaluar distintos procesos cognitivos</span> dentro de la sociedad. 
+            La finalidad principal es <span>generar estrategias para mejorar la calidad de vida</span> 
+            de las personas basadas en evidencias científicas.<span>lanzada en 2020</span> 
+            en Argentina. Sebastián se encargo de realizar tareas tales como <span>análisis de requisitos,
+            comprensión del problema, captura de requerimientos, definición de objetivos y estimación de tiempos.</span>
+            Una vez tomadas las decisiones correspondientes y acordado con Cristian García Bauza, 
+            su supervisor de PPS (Práctica Profesional Supervisada), se encargó del
+            <span>diseño del sistema, identidad gráfica, flujos de interacción y prototipos.</span>
+            Posteriormente de llevó a cabo <span>desarrollo, implementación y presentación con el cliente. </span>
+            Se utilizaron herramientas como <span>Angular, </span>incorporando <span>Firebase y Google Analithycs.</span>
+            Tuvo un <span>seguimiento de más de un año</span> posterior a su despliegue.
+        </p>
+        <h4 class="_title_tecno">Herramientas utilizadas</h4><hr class="_hr">
+          <figure class="_container_tecno">
+            <a href="https://angular.io/" target="_blank">
+              <img class="_logo_tecno" src="../assets/images/tecnologies/angular.png" title="Angular" alt="Logo de Angular">
+            </a>
+            <a href="https://firebase.google.com/?hl=es-419" target="_blank">
+              <img class="_logo_tecno" src="../assets/images/tecnologies/firebase.png" title="Firebase" alt="Logo de Firebase">
+            </a>
+            <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">       
+              <img class="_logo_tecno" src="../assets/images/tecnologies/html.png" title="HTML5" alt="Logo de HTML5">
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">       
+              <img class="_logo_tecno" src="../assets/images/tecnologies/css.png" title="CSS3" alt="Logo de CSS3">
+            </a>
+          </figure>
+      </div>
+    </section>
   </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos desarrollados en Angular</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
 </article>
   

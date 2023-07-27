@@ -1,6 +1,12 @@
 @import '../biography/biography.component.scss';
 
-p._info {
-    text-align: left;
-    padding: 1rem;
+
+/* SCREEN 0px */
+@media (min-width: 0px) {
+
+    p._info {
+        text-align: left;
+        padding: .5rem 2rem;
+    }
+
 }

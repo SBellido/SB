@@ -27,7 +27,6 @@
   ._inactive_button,
   ._active_button {
     color: $first_color;
-    cursor: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +36,7 @@
     margin-bottom: 6rem;
   }
   ._active_button {
+    cursor: pointer;
     background: radial-gradient(
       circle, $third_color_lighter 9%, 
       $third_color 100%
@@ -47,16 +47,16 @@
       circle, $third_color_lighter 9%, 
       $third_color 100%
     );
-    cursor: pointer;
+    
   }
   ._inactive_button {
+    cursor: default;
     background-color: radial-gradient(
       circle, $third_color_lighter 9%, 
       $third_color 100%
     );
     color: $first_color;
     opacity: 0.5;
-    cursor: default;
   }
 
   /*--------COUNTER----------*/
@@ -70,6 +70,49 @@
     font-weight: 100;
     color: $first_color_light;
     margin-top: -1rem;
+  }
+
+}
+
+/* SCREEN 375px */
+@media (min-width: 375px) {
+  
+  ._container_image {
+    padding-top: .8rem;
+    width: 13rem;
+  }
+  #left_btn {
+    margin-right: 1rem;
+  }
+  #right_btn {
+    margin-left: 1rem;
+  }
+
+}
+/* SCREEN 425px */
+@media (min-width: 425px) {
+  
+  ._container_image {
+    // padding-top: .8rem;
+    width: 14rem;
+  }
+  // #left_btn {
+  //   margin-right: 1rem;
+  // }
+  // #right_btn {
+  //   margin-left: 1rem;
+  // }
+
+}
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+  
+  ._container_image {
+    width: 14rem;
+  }
+  ._container_image {
+    padding-top: 2.5rem;
   }
 
 }

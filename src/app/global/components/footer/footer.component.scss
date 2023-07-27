@@ -128,6 +128,18 @@
   }
 
 }
+
+/* SCREEN 375px */ 
+@media (min-width: 375px) {
+
+  section._container_contact {
+    padding: 0 7rem;
+  }
+  img._ornament {
+    width: 65vw;
+  }
+}
+
 /* SCREEN 425px */ 
 @media (min-width: 425px) {
 
@@ -181,7 +193,7 @@
     width: 15vw;
   }
   section._container_contact {
-    padding: 0 42rem;
+    padding: 0 40rem;
   }
   section._container_social_networks {
     padding: 0 35rem;

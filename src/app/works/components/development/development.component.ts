@@ -15,6 +15,7 @@ export class
   public area: string = 'desarrollo';
   public icon: string = 'developer_mode';
 
+  allCardsClosed: boolean = true;
   visibleAngular: boolean = false;
   visibleBootstrap: boolean = false;
   visibleJavaScript: boolean = false;
@@ -91,7 +92,10 @@ export class
         this.visibleJavaScript = !this.visibleJavaScript;
         break;
     }
-    this.topFunction();
+    this.allCardsClosed = !this.visibleAngular && !this.visibleBootstrap && !this.visibleJavaScript;
+    if (this.allCardsClosed) {
+      this.topFunction();
+    }
   }
 
 }
