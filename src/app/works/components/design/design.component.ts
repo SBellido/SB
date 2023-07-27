@@ -10,6 +10,12 @@ import { Button } from '../../../models/models';
 
 export class DesignComponent implements OnInit {
 
+  public area: string = 'diseño';
+  public icon: string = 'local_florist';
+  
+  visibleUX_UI: boolean = false;
+  visibleGraphic: boolean = false;
+  visibleExperimental: boolean = false;
 
   brands_ux_ui: Button[] = [
     {
@@ -52,15 +58,6 @@ export class DesignComponent implements OnInit {
     },
   ]
 
-
-  public area: string = 'diseño';
-  public icon: string = 'local_florist';
-  
-  visibleUxUi: boolean = false;
-  visibleGraph: boolean = false;
-  visibleIllustration: boolean = false;
-  visibleDesigns: boolean = false;
-
   constructor(private router: Router) { }
 
   ngOnInit(): void {  
@@ -78,31 +75,19 @@ export class DesignComponent implements OnInit {
   routingVlife() {   
     this.router.navigateByUrl("works/design/ux-ui/v-life");
   }
-  showMoreUxUi() {  
-    this.visibleUxUi ? 
-      this.visibleUxUi = false : 
-        this.visibleUxUi = true, 
-        this.visibleGraph = false,
-        this.visibleIllustration = false;     
-  }
-  showMoreGraph() {
-    this.visibleGraph ? 
-      this.visibleGraph = false : 
-        this.visibleGraph = true,
-        this.visibleUxUi = false,
-        this.visibleIllustration = false;  
-  }
-  showMoreIllustration() {
-    this.visibleIllustration ? 
-      this.visibleIllustration = false : 
-        this.visibleIllustration = true,
-        this.visibleUxUi = false,
-        this.visibleGraph = false;    
-  }
-  showMoreDesigns() {
-    this.visibleDesigns ? 
-      this.visibleDesigns = false : 
-        this.visibleDesigns = true;
+  OpenClose(section: string) {
+    switch (section) {
+      case 'ux/ui':
+        this.visibleUX_UI = !this.visibleUX_UI;
+        break;
+      case 'graphic':
+        this.visibleGraphic = !this.visibleGraphic;
+        break;
+      case 'experimental':
+        this.visibleExperimental = !this.visibleExperimental;
+        break;
+    }
+    this.topFunction();
   }
 
 }

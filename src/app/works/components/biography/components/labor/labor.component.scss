@@ -1,2 +1,6 @@
-@import '../../../../../global/global.component.scss';
 @import '../../biography.component.scss';
+
+article._container_info {
+    height: 507px;
+    overflow-x: auto;
+}
