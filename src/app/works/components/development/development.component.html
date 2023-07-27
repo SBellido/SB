@@ -14,7 +14,7 @@
           <app-brands-buttons 
             [brands]="brands_angular">
           </app-brands-buttons>
-          <hr>
+          <hr class="_hr">
           <p class="_info">
             <span>Framework </span>de ingeniería de software <span>de código abierto</span> que se utiliza 
             <span>para crear aplicaciones web</span> de una sola página. Los desarrolladores 
@@ -33,7 +33,7 @@
         <section class="_container_item" (click)="OpenClose('bootstrap')">
           <h2 class="_item">bootstrap</h2>
         </section>
-        <div class="_container_info" [hidden]="!visibleBootstrap">
+        <article class="_container_info" [hidden]="!visibleBootstrap">
           <app-brands-buttons 
             [brands]="brands_botstrap">
           </app-brands-buttons>
@@ -43,9 +43,9 @@
             utilizado por el usuario.  <span>Ofrece una gran cantidad de componentes para mejorar 
             la comunicación con el usuario.</span> Diferentes tipos de alerta, carrusel de diapositivas 
             para facilitar la visualización de imágenes, barra de navegación que permite múltiples 
-            configuraciones, menús de navegación, barras de progreso, controles de página entre otros. 
+            configuraciones, menús de navegación, barras de progreso, paginadores entre otros. 
           </p>
-        </div>
+        </article>
         <div class="_container_button" *ngIf="visibleBootstrap">
           <button class="_close" (click)="OpenClose('bootstrap')">cerrar</button>
         </div>

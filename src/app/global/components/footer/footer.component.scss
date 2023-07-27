@@ -77,6 +77,12 @@
     cursor: pointer;
     padding: .5rem;
   }
+  ._button_contact:hover { 
+    background-color: $accent_color;
+    ._icon_contact {
+      color: $first_color;
+    }
+  }
   ._active_button {
     background: $third_color; 
   }
