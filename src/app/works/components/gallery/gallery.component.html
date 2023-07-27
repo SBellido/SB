@@ -1,5 +1,5 @@
 <section class="_gallery">  
-    <button class="_active_button" (click)="beforeImg()"
+    <button id="left_btn" class="_active_button" (click)="beforeImg()"
         [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
         <mat-icon>navigate_before</mat-icon>
     </button>
@@ -8,7 +8,7 @@
         [src]="imgGallery">
         <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
     </div> 
-    <button class="_active_button" (click)="nextImg()"
+    <button id="right_btn" class="_active_button" (click)="nextImg()"
         [ngClass]="currentImageIndex === imagesList.length - 1 ? '_inactive_button' : '_active_button'">
         <mat-icon>navigate_next</mat-icon>
     </button>

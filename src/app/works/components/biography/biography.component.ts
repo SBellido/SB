@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class BiographyComponent implements OnInit {
 
+  allCardsClosed: boolean = true;
   visibleLabor: boolean = false;
   visibleAcademic: boolean = false;
   visiblePersonal: boolean = false;
@@ -38,6 +39,10 @@ export class BiographyComponent implements OnInit {
         this.visibleLabor = !this.visibleLabor;
         break;
     }
-    this.topFunction();
+    this.allCardsClosed = !this.visiblePersonal && !this.visibleAcademic && !this.visibleLabor;
+    if (this.allCardsClosed) {
+      this.topFunction();
+    }
   }
+
 }

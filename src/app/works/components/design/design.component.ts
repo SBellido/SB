@@ -13,6 +13,7 @@ export class DesignComponent implements OnInit {
   public area: string = 'diseño';
   public icon: string = 'local_florist';
   
+  allCardsClosed: boolean = true;
   visibleUx_Ui: boolean = false;
   visibleGraphic: boolean = false;
   visibleExperimental: boolean = false;
@@ -87,7 +88,10 @@ export class DesignComponent implements OnInit {
         this.visibleExperimental = !this.visibleExperimental;
         break;
     }
-    this.topFunction();
+    this.allCardsClosed = !this.visibleUx_Ui && !this.visibleGraphic && !this.visibleExperimental;
+    if (this.allCardsClosed) {
+      this.topFunction();
+    }
   }
 
 }
