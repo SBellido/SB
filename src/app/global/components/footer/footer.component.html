@@ -17,7 +17,7 @@
     *ngFor="let btn of btnContact">
       <a target="_blank" href="{{ btn.route }}">
         <div class="">  
-          <button class="_button_contact" id="icon_email" mat-menu-item>
+          <button class="_button_contact" title="{{btn.title}}" id="icon_email" mat-menu-item>
             <mat-icon class="_icon_contact">{{ btn.img }}</mat-icon>
           </button>
         </div>
