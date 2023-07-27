@@ -64,24 +64,27 @@
       $third_color_lighter 100%
     );
   }
-  h2._item , 
-  h2._item_disabled {
+  #dissabled {
+    opacity: 50%;
+    cursor: default;
+  }
+  #dissabled:hover {
+      opacity: 50%;
+      cursor: default;
+  }
+  #dissabled:hover {
+      background: linear-gradient(
+        0deg, $third_color 33%, 
+        $third_color_light 100%
+      );
+  }
+  h2._item {
     margin: 0;
     font-size: 1.3rem;
     font-weight: 500;
   }
   h2._item {
     color: $first_color;
-  }
-  h2._item_disabled {
-    color: $first_color_light;
-  }
-  p._item_disabled {
-    color: $first_color_light;
-    margin-top: -17px;
-    font-size: .8rem;
-    margin-block-end: 1.65em;
-    text-align: center;
   }
   h2._item {
     margin: 0;
@@ -92,7 +95,9 @@
   p._info {
     font-size: .9rem;
     color: $first_color;
-    line-height : 1.3rem;
+    line-height : 1.2rem;
+    margin: 0;
+    text-align: center;
   }
   ._icon_button {
     margin-right: .5rem;
