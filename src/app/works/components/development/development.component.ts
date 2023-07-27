@@ -12,6 +12,13 @@ export class
  DevelopmentComponent implements OnInit {
 
 /*--------VARIABLES -------*/ 
+  public area: string = 'desarrollo';
+  public icon: string = 'developer_mode';
+
+  visibleAngular: boolean = false;
+  visibleBootstrap: boolean = false;
+  visibleJavaScript: boolean = false;
+
   brands_angular: Button[] = [
     {
       route: 'works/development/investigar',
@@ -53,15 +60,6 @@ export class
       text: 'Logo de Hunt',
     }
   ]
- 
- 
-  public area: string = 'desarrollo';
-  public icon: string = 'developer_mode';
-  
-  visibleUxUi: boolean = false;
-  visibleGraph: boolean = false;
-  visibleIllustration: boolean = false;
-  visibleDesigns: boolean = false;
 
   constructor(private router: Router) { }
 
@@ -80,31 +78,20 @@ export class
   routingVlife() {   
     this.router.navigateByUrl("works/design/ux-ui/v-life");
   }
-  showMoreUxUi() {  
-    this.visibleUxUi ? 
-      this.visibleUxUi = false : 
-        this.visibleUxUi = true, 
-        this.visibleGraph = false,
-        this.visibleIllustration = false;     
-  }
-  showMoreGraph() {
-    this.visibleGraph ? 
-      this.visibleGraph = false : 
-        this.visibleGraph = true,
-        this.visibleUxUi = false,
-        this.visibleIllustration = false;  
-  }
-  showMoreIllustration() {
-    this.visibleIllustration ? 
-      this.visibleIllustration = false : 
-        this.visibleIllustration = true,
-        this.visibleUxUi = false,
-        this.visibleGraph = false;    
-  }
-  showMoreDesigns() {
-    this.visibleDesigns ? 
-      this.visibleDesigns = false : 
-        this.visibleDesigns = true;
+
+  OpenClose(section: string) {
+    switch (section) {
+      case 'angular':
+        this.visibleAngular = !this.visibleAngular;
+        break;
+      case 'bootstrap':
+        this.visibleBootstrap = !this.visibleBootstrap;
+        break;
+      case 'javascript':
+        this.visibleJavaScript = !this.visibleJavaScript;
+        break;
+    }
+    this.topFunction();
   }
 
 }

@@ -4,62 +4,81 @@
       <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
       <h1 class="_title">{{ area }}</h1>
     </div>
+
     <div class="_container_cards">
-      <section class="_container_item" (click)="showMoreUxUi()">
-        <h2 class="_item">angular</h2>
-      </section>
-      <div class="_container_info" [hidden]="!visibleUxUi">
-        <app-brands-buttons 
-          [brands]="brands_angular">
-        </app-brands-buttons>
-        <hr>
-        <p class="_info">
-          <span>Framework </span>de ingeniería de software <span>de código abierto</span> que se utiliza 
-          <span>para crear aplicaciones web</span> de una sola página. Los desarrolladores 
-          también lo utilizan para crear menús animados para páginas web HTML.
-          El framework <span>es una creación de los ingenieros de Google, Misko Hevery y Adam Abrons.</span> 
-          Google lanzó oficialmente la <span>primera versión, AngularJS, 
-          en 2012</span> y la ha mantenido desde entonces.
-        </p>
-      </div>
-      <section class="_container_item" (click)="showMoreGraph()">
-        <h2 class="_item">bootstrap</h2>
-      </section>
-      <div class="_container_info" [hidden]="!visibleGraph">
-        <app-brands-buttons 
-          [brands]="brands_botstrap">
-        </app-brands-buttons>
-        <hr>
-        <p class="_info">
-          Bootstrap es un <span>framework front-end que se adapta a la pantalla del dispositivo</span> 
-          utilizado por el usuario.  <span>Ofrece una gran cantidad de componentes para mejorar 
-          la comunicación con el usuario.</span> Diferentes tipos de alerta, carrusel de diapositivas 
-          para facilitar la visualización de imágenes, barra de navegación que permite múltiples 
-          configuraciones, menús de navegación, barras de progreso, controles de página entre otros. 
-        </p>
-      </div>
-      <section class="_container_item_disabled" (click)="showMoreIllustration()">
-        <h2 class="_item_disabled" >
-         javascript
-        </h2>
-      </section>
-      <!-- <p class="_item_disabled">in progress</p> -->
-      <div class="_container_info" [hidden]="!visibleIllustration">
-        <p class="_info">
-          El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
-          Por experimentación se entiende la <span>indagación fundada a partir de la provocación voluntaria </span>  
-          de ciertos fenómenos para confirmar alguna hipótesis. 
-          La experimentación es la <span>observación dirigida </span> que completa la <span> observación espontánea.</span>
-        </p>
-        <div class="_container_button">
-          <button class="_button_more" routerLink="illustration-sketch">
-            <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
-          </button>
+      <article class="_container_section">
+        <section class="_container_item" (click)="OpenClose('angular')">
+          <h2 class="_item">angular</h2>
+        </section>
+        <article class="_container_info" [hidden]="!visibleAngular">
+          <app-brands-buttons 
+            [brands]="brands_angular">
+          </app-brands-buttons>
+          <hr>
+          <p class="_info">
+            <span>Framework </span>de ingeniería de software <span>de código abierto</span> que se utiliza 
+            <span>para crear aplicaciones web</span> de una sola página. Los desarrolladores 
+            también lo utilizan para crear menús animados para páginas web HTML.
+            El framework <span>es una creación de los ingenieros de Google, Misko Hevery y Adam Abrons.</span> 
+            Google lanzó oficialmente la <span>primera versión, AngularJS, 
+            en 2012</span> y la ha mantenido desde entonces.
+          </p>
+        </article>
+        <div class="_container_button" *ngIf="visibleAngular">
+          <button class="_close" (click)="OpenClose('angular')">cerrar</button>
         </div>
-        <figure class="_container_realizations">
-        </figure>
-      </div>  
+      </article>
+
+      <article class="_container_section">
+        <section class="_container_item" (click)="OpenClose('bootstrap')">
+          <h2 class="_item">bootstrap</h2>
+        </section>
+        <div class="_container_info" [hidden]="!visibleBootstrap">
+          <app-brands-buttons 
+            [brands]="brands_botstrap">
+          </app-brands-buttons>
+          <hr>
+          <p class="_info">
+            Bootstrap es un <span>framework front-end que se adapta a la pantalla del dispositivo</span> 
+            utilizado por el usuario.  <span>Ofrece una gran cantidad de componentes para mejorar 
+            la comunicación con el usuario.</span> Diferentes tipos de alerta, carrusel de diapositivas 
+            para facilitar la visualización de imágenes, barra de navegación que permite múltiples 
+            configuraciones, menús de navegación, barras de progreso, controles de página entre otros. 
+          </p>
+        </div>
+        <div class="_container_button" *ngIf="visibleBootstrap">
+          <button class="_close" (click)="OpenClose('bootstrap')">cerrar</button>
+        </div>
+      </article>
+
+      <article class="_container_section">
+        <section id="dissabled" class="_container_item">
+          <h2 class="_item" >
+           javascript
+          </h2>
+        </section>
+        <!-- <p class="_item_disabled">in progress</p> -->
+        <div class="_container_info" [hidden]="!visibleJavaScript">
+          <p class="_info">
+            El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
+            Por experimentación se entiende la <span>indagación fundada a partir de la provocación voluntaria </span>  
+            de ciertos fenómenos para confirmar alguna hipótesis. 
+            La experimentación es la <span>observación dirigida </span> que completa la <span> observación espontánea.</span>
+          </p>
+          <div class="_container_button">
+            <button class="_button_more" routerLink="illustration-sketch">
+              <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
+            </button>
+          </div>
+          <figure class="_container_realizations">
+          </figure>
+        </div>  
+        <div class="_container_button" *ngIf="visibleJavaScript">
+          <button class="_close">cerrar</button>
+        </div>
+      </article>
     </div>
+
   </section>
   <app-download></app-download>
 </article>
