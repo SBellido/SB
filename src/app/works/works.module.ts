@@ -64,7 +64,7 @@ import { DownloadComponent } from './components/download/download.component';
     BrandsSectionComponent,
     CompetitionsComponent,
     QxComponent,
-    DownloadComponent
+    DownloadComponent,
   ],
   imports: [
     CommonModule,

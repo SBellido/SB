@@ -13,7 +13,7 @@ export class DesignComponent implements OnInit {
   public area: string = 'diseño';
   public icon: string = 'local_florist';
   
-  visibleUX_UI: boolean = false;
+  visibleUx_Ui: boolean = false;
   visibleGraphic: boolean = false;
   visibleExperimental: boolean = false;
 
@@ -77,8 +77,8 @@ export class DesignComponent implements OnInit {
   }
   OpenClose(section: string) {
     switch (section) {
-      case 'ux/ui':
-        this.visibleUX_UI = !this.visibleUX_UI;
+      case 'ux_ui':
+        this.visibleUx_Ui = !this.visibleUx_Ui;
         break;
       case 'graphic':
         this.visibleGraphic = !this.visibleGraphic;

@@ -1,7 +1,11 @@
-@import '../../../global/global.component.scss';
 @import '../biography/biography.component.scss';
-@import '../../works.component.scss';
 
+article._container_item {
+}
+p._info {
+    text-align: left;
+    padding: 1rem;
+}
 // /* SCREEN 0px */
 // @media (min-width: 0px) {
 //   article._container_all {
