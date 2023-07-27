@@ -1,0 +1,18 @@
+@import '../../../global/global.component.scss';
+
+/*---------DOWNLOAD----------*/
+div._container_donwload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+a._donwload {
+    color: $third_color;
+    text-decoration: underline;
+    cursor: pointer;
+}
+a._donwload:hover {
+    color: $second_color;
+}
+

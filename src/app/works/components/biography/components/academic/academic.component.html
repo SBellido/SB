@@ -1,20 +1,22 @@
 <article class="_container_info">
-  <article  *ngFor="let item of items">
-    <section class="_container_career">   
-      <div class="_container_logo">
-        <img class="_logo" src="{{ item.img }}" 
-          alt="{{ item.description_img }}">
-      </div>
-      <h3 class="_title">{{ item.acronyms_career }}</h3>
-      <p class="_info"><span>{{ item.year }}</span></p>
-      <p class="_info">{{ item.name_career }}</p>
-      <section class="_container_links">
-        <a class="_link" href="{{ item.link }}" target="_blank">
-          <mat-icon>link</mat-icon>
-          <p class="_p_link">{{ item.description_link }}</p>
-        </a>
+  <div class="_scroll">
+    <article  *ngFor="let item of items">
+      <section class="_container_career">   
+        <div class="_container_logo">
+          <img class="_logo" src="{{ item.img }}" 
+            alt="{{ item.description_img }}">
+        </div>
+        <h3 class="_title">{{ item.acronyms_career }}</h3>
+        <p class="_info"><span>{{ item.year }}</span></p>
+        <p class="_info">{{ item.name_career }}</p>
+        <section class="_container_links">
+          <a class="_link" href="{{ item.link }}" target="_blank">
+            <mat-icon>link</mat-icon>
+            <p class="_p_link">{{ item.description_link }}</p>
+          </a>
+        </section>
       </section>
-    </section>
-    <hr *ngIf="item.link != 'http://www2.fba.unlp.edu.ar/dcv/contactos-materias-dcv/'">
-  </article>
+      <hr class="_hr" *ngIf="item.link != 'http://www2.fba.unlp.edu.ar/dcv/contactos-materias-dcv/'">
+    </article>
+  </div>
 </article>

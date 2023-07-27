@@ -1,4 +1,3 @@
-@import '../../../../../global/global.component.scss';
 @import '../../biography.component.scss';
 
 
@@ -7,9 +6,12 @@
 
 // --------------INFO-------------- //
   ._img_personal {
-    width: 8rem;
+    width: 6rem;
     border: solid $second_color 3px;
     border-radius: 50%;
+  }
+  div._scroll {
+    height: 335px;
   }
   ul {
     padding-inline-start: 1.5rem;

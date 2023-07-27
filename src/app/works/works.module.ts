@@ -35,6 +35,7 @@ import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
+import { DownloadComponent } from './components/download/download.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { QxComponent } from './components/development/components/qx/qx.component
     GalleryPolaroidComponent,
     BrandsSectionComponent,
     CompetitionsComponent,
-    QxComponent
+    QxComponent,
+    DownloadComponent
   ],
   imports: [
     CommonModule,

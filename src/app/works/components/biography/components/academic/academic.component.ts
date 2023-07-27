@@ -24,7 +24,7 @@ export class AcademicComponent implements OnInit {
       description_img: 'Logo de Formación UXDI',
       acronyms_career: 'UXDI',
       year: '2018',
-      name_career: 'Diplomatura Universitaria en Diseño de Interfaces de Usuario y Experiencias Digitales',
+      name_career: 'Diplomatura Univ. en Diseño de Interfaces de Usuario y Experiencias Digitales',
       link: 'https://wiki.uxdi.org/doku.php?id=programa_uxdi',
       description_link: 'programa'
     },
