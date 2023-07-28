@@ -10,9 +10,15 @@
     }
 
 /*--------SCROLL---------*/
+    div._scroll_small,
     div._scroll {
-        height: 175px;
         overflow-x: auto;
+    }
+    div._scroll {
+        height: auto;       
+    }
+    div._scroll_small {
+        height: 175px;
     }
 
     article._container_all {
@@ -170,9 +176,9 @@
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
   
-    ._gallery {
-      margin-right: 1rem;
-    }
+    // ._gallery {
+    //   margin-right: 1rem;
+    // }
   
     article._container_all {
       padding: 0;
