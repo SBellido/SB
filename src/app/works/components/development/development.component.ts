@@ -15,10 +15,10 @@ export class
   public area: string = 'desarrollo';
   public icon: string = 'developer_mode';
 
-  allCardsClosed: boolean = true;
-  visibleAngular: boolean = false;
-  visibleBootstrap: boolean = false;
-  visibleJavaScript: boolean = false;
+  allCardsClosed: boolean = false;
+  visibleAngular: boolean = true;
+  visibleBootstrap: boolean = true;
+  visibleJavaScript: boolean = true;
 
   brands_angular: Button[] = [
     {

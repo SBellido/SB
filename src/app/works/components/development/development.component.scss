@@ -6,7 +6,12 @@
 
     p._info {
         text-align: left;
-        padding: .5rem 2rem;
+        padding: .5rem 1rem;
+    }
+    /*--------SCROLL---------*/
+    div._scroll {
+        height: 175px;
+        overflow-x: auto;
     }
 
 }

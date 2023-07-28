@@ -4,6 +4,11 @@
 @media (min-width: 0px) {
 
 /*------------ GALLERY ------------*/
+article._container_gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   ._gallery {
     display: flex;
     flex-direction: row;
@@ -22,7 +27,7 @@
   ._image_gallery {
     width: 111%;
     z-index: -2;  
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
   }
   ._inactive_button,
   ._active_button {
@@ -62,14 +67,19 @@
   /*--------COUNTER----------*/
   div._container_count {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: $first_color;
+    border: solid .5px $first_color_light;
+    border-radius: 50px;
+    width: 9rem
   }
+
   ._image_counter {
     font-size: 1.5rem;
     font-weight: 100;
     color: $first_color_light;
-    margin-top: -1rem;
   }
 
 }
@@ -93,26 +103,30 @@
 @media (min-width: 425px) {
   
   ._container_image {
-    // padding-top: .8rem;
     width: 14rem;
   }
-  // #left_btn {
-  //   margin-right: 1rem;
-  // }
-  // #right_btn {
-  //   margin-left: 1rem;
-  // }
+
+}
+/* SCREEN 768px */
+@media (min-width: 768px) {
+  
+  ._image_gallery {  
+    margin-bottom: 4rem;
+  }
 
 }
 
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
-  
+
   ._container_image {
+    margin-top: .8rem;
     width: 14rem;
-  }
-  ._container_image {
     padding-top: 2.5rem;
+    margin-bottom: .7rem;
+  }
+  ._image_gallery {
+    margin-bottom: 2.5rem;
   }
 
 }

@@ -7,7 +7,7 @@
   div._container_brands {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     margin: 1rem auto;
     width: 100%;
   }
@@ -21,7 +21,7 @@
     -o-transition:-o-transform 0.5s ease-out;
     -ms-transition:-ms-transform 0.5s ease-out;
     transition:transform 0.5s ease-out;
-    width: 3rem;
+    width: 2.5rem;
     filter: grayscale(1);
     outline: 2px solid $second_color;
     border-radius: 50%;
@@ -40,6 +40,24 @@
     color: $first_color;
     margin-block-start: .5em;
     margin-block-end: .5em;
+  }
+
+}
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+
+  img._logo_realization {
+    width: 2.3rem;
+  }
+
+}
+
+/* SCREEN 1440px */
+@media (min-width: 1440px) {
+
+  img._logo_realization {
+    width: 3rem;
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ItemSection } from 'src/app/models/models';
 
 @Component({
   selector: 'app-biography',
@@ -8,15 +8,22 @@ import { Router } from '@angular/router';
 })
 export class BiographyComponent implements OnInit {
 
-  allCardsClosed: boolean = true;
-  visibleLabor: boolean = false;
-  visibleAcademic: boolean = false;
-  visiblePersonal: boolean = false;
+  allCardsClosed: boolean = false;
+  visibleLabor: boolean = true;
+  visibleAcademic: boolean = true;
+  visiblePersonal: boolean = true;
+  
+  item: ItemSection = {
+    id:  0,
+    title: '',
+    active: false,
+    value: ''
+  }
 
   public area: string = 'perfil';
   public icon: string = 'fingerprint';
 
-  constructor(private router: Router) { }
+  constructor() { }
 
   ngOnInit(): void {  
     this.topFunction();
