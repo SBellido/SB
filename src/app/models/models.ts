@@ -29,7 +29,7 @@ export interface Button {
 }
 
 export interface ButtonList {
-  buttons: Button[];
+  buttons: Button[],
 }
 
 export interface ItemProfile {
@@ -40,4 +40,16 @@ export interface ItemProfile {
   name_career: string,
   link: string,
   description_link: string
+}
+
+export interface ItemSection {
+  id: number,
+  title: string,
+  active: boolean,
+  value: string
+}
+
+export interface Section {
+  items: ItemSection [],
+  allClosed: boolean
 }

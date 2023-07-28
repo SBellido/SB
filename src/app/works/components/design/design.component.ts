@@ -13,10 +13,10 @@ export class DesignComponent implements OnInit {
   public area: string = 'diseño';
   public icon: string = 'local_florist';
   
-  allCardsClosed: boolean = true;
-  visibleUx_Ui: boolean = false;
-  visibleGraphic: boolean = false;
-  visibleExperimental: boolean = false;
+  allCardsClosed: boolean = false;
+  visibleUx_Ui: boolean = true;
+  visibleGraphic: boolean = true;
+  visibleExperimental: boolean = true;
 
   brands_ux_ui: Button[] = [
     {

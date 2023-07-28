@@ -14,25 +14,27 @@
           <app-brands-buttons 
             [brands]="brands_ux_ui">
           </app-brands-buttons>
-          <hr class="_hr">
-          <p class="_info">
-            <span>UX, se enfoca en la relación humano/máquina.</span> Evolución de la ergonomía, 
-            el diseño juega un papel protagónico <span>buscando la satisfacción de quienes 
-            interactúan con un sistema,</span> producto o entorno. Garantiza <span>interacciones intuitivas, 
-            eficientes y gratificantes.</span><br>
-            <span>UI, define la forma, función, utilidad, ergonomía, imagen de marca</span> y otros aspectos 
-            que impactan la apariencia de interfaces en sistemas. <span>Crea interfaces atractivas, 
-              funcionales y coherentes,</span> facilitando la interacción del usuario con el producto o 
-            servicio. <span>Combina con UX para una experiencia completa y satisfactoria.</span>
-          </p>
-          <!-- <p class="_info"><span>UX</span> - 
-            Se llama <span>experiencia de usuario,</span> por su enfoque, a la <span>relación sistema humano/máquina.</span> 
-            Aparece como una evolución de la ergonomía, manteniendo al diseño en el papel protagónico
-            para la <span>búsqueda de satisfacción en las personas que interactúan con un sistema, producto o entorno.</span></p>
-          <p class="_info"><span>UI</span> - El <span>diseño de interfaz de usuario</span> 
-            es el resultado de definir la <span>forma, función, utilidad, ergonomía, imagen de marca</span>
-            y otros aspectos que afectan a la apariencia externa de las interfaces en sistemas de todo tipo.
-          </p> -->
+          <!-- <hr class="_hr"> -->
+          <div class="_scroll">
+            <p class="_info">
+              <span>UX, se enfoca en la relación humano/máquina.</span> Evolución de la ergonomía, 
+              el diseño juega un papel protagónico <span>buscando la satisfacción de quienes 
+              interactúan con un sistema,</span> producto o entorno. Garantiza <span>interacciones intuitivas, 
+              eficientes y gratificantes.</span><br>
+              <span>UI, define la forma, función, utilidad, ergonomía, imagen de marca</span> y otros aspectos 
+              que impactan la apariencia de interfaces en sistemas. <span>Crea interfaces atractivas, 
+                funcionales y coherentes,</span> facilitando la interacción del usuario con el producto o 
+              servicio. <span>Combina con UX para una experiencia completa y satisfactoria.</span>
+            </p>
+            <!-- <p class="_info"><span>UX</span> - 
+              Se llama <span>experiencia de usuario,</span> por su enfoque, a la <span>relación sistema humano/máquina.</span> 
+              Aparece como una evolución de la ergonomía, manteniendo al diseño en el papel protagónico
+              para la <span>búsqueda de satisfacción en las personas que interactúan con un sistema, producto o entorno.</span></p>
+            <p class="_info"><span>UI</span> - El <span>diseño de interfaz de usuario</span> 
+              es el resultado de definir la <span>forma, función, utilidad, ergonomía, imagen de marca</span>
+              y otros aspectos que afectan a la apariencia externa de las interfaces en sistemas de todo tipo.
+            </p> -->
+          </div>
         </article>
         <div class="_container_button" *ngIf="visibleUx_Ui">
           <button class="_close" (click)="OpenClose('ux_ui')">cerrar</button>
@@ -48,22 +50,23 @@
           <app-brands-buttons 
             [brands]="brands_graph">
           </app-brands-buttons>
-          <hr class="_hr">
-          <p class="_info">Profesión que <span>proyecta comunicación visual para transmitir 
-            mensajes</span> específicos a grupos sociales con objetivos determinados. 
-            <span>Genera identidad visual en productos o servicios,</span> creando un discurso 
-            de marca homogéneo. Desde <span>logos y branding hasta diseño editorial y publicitario,</span> 
-            el diseño gráfico es esencial para establecer <span>conexiones emocionales y destacar en 
-            un mercado competitivo.</span> Utiliza la creatividad y estética para contar historias, 
-            <span>comunicar ideas y construir la imagen de una marca.</span> En el mundo digital actual, 
-            abarca áreas empresariales, artísticas y culturales, influyendo en la 
-            percepción del público.</p>
-          <!-- <p class="_info"><span>Diseño Gráfico </span> - Profesión y disciplina académica 
-            cuya actividad consiste en <span>proyectar comunicación visual</span> destinada a 
-            <span>transmitir mensajes</span> específicos a grupos sociales con <span>objetivos 
-            determinados. Se aplica para producir un discurso de marca homogéneo generando 
-            identidad visual</span> a personas, productos o servicios.
-          </p> -->
+          <!-- <hr class="_hr"> -->
+          <div class="_scroll">
+            <p class="_info">Profesión que <span>proyecta comunicación visual para transmitir 
+              mensajes</span> específicos a grupos sociales con objetivos determinados. 
+              <span>Genera identidad visual en productos o servicios,</span> creando un discurso 
+              de marca homogéneo. Desde <span>logos y branding hasta diseño editorial y publicitario,</span> 
+              el diseño gráfico es esencial para establecer <span>conexiones emocionales y destacar en 
+              un mercado competitivo.</span> Utiliza la creatividad y estética para contar historias, 
+              <span>comunicar ideas y construir la imagen de una marca.</span> Abarca áreas empresariales,
+               artísticas y culturales.</p>
+            <!-- <p class="_info"><span>Diseño Gráfico </span> - Profesión y disciplina académica 
+              cuya actividad consiste en <span>proyectar comunicación visual</span> destinada a 
+              <span>transmitir mensajes</span> específicos a grupos sociales con <span>objetivos 
+              determinados. Se aplica para producir un discurso de marca homogéneo generando 
+              identidad visual</span> a personas, productos o servicios.
+            </p> -->
+          </div>
         </article>
         <div class="_container_button" *ngIf="visibleGraphic">
           <button class="_close" (click)="OpenClose('graphic')">cerrar</button>
@@ -77,7 +80,7 @@
           </h2>
         </section>
         <!-- <p class="_item_disabled">in progress</p> -->
-        <article class="_container_info" [hidden]="!visibleExperimental">
+        <article class="_container_info" [hidden]="true">
           <p class="_info">
             El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
             Por experimentación se entiende la <span>indagación fundada a partir de la provocación voluntaria </span>  
