@@ -4,7 +4,9 @@
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
-
+  // div._scroll {
+  //   height: auto;       
+  // }
 /*---------- SELECTOR ----------*/
   select._dropdown {
     font-size: 1rem;
@@ -73,8 +75,6 @@
   div._container_title {
     margin-bottom: 1rem;
   }  
-  div._scroll {
-    height: 23.5rem;
-  } 
+
 }  
 
