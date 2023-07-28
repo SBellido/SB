@@ -10,9 +10,15 @@
     }
 
 /*--------SCROLL---------*/
+    div._scroll_small,
     div._scroll {
-        height: 175px;
         overflow-x: auto;
+    }
+    div._scroll {
+        height: auto;       
+    }
+    div._scroll_small {
+        height: 175px;
     }
 
     article._container_all {
@@ -90,7 +96,7 @@
         text-align: center;
         display: block;
         margin-block-start: 0em;
-        margin-block-end: 0em;
+        margin-block-end: 1em;
         font-weight: bold;
     }
     p._p_card {
@@ -169,35 +175,35 @@
 
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
-  
-    ._gallery {
-      margin-right: 1rem;
-    }
-  
+
+    // ._gallery {
+    //     margin-right: 1rem;
+    // }
     article._container_all {
-      padding: 0;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      flex-direction: row;
-    }
-    
+        padding: 0;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 0 10rem;
+    }  
     div._container_info {
-      width: 32vw;
-      margin-top: 0;
-      padding: 1.7rem;
-      margin-left: 3rem;
+        width: 25vw;
+        margin-top: 0;
+        padding: 1.7rem;
     }
+
   
     /*------------ GALLERY ------------*/
     div._container_mobile {
-      top: 220px;
-      left: 5.4rem;  
+      top: 215px;
+      width: 26rem;
+      left: 7.7rem;  
     }
-    div._container_title {
-      margin-bottom: 0rem;
+    div._scroll {
+        height: 24rem;
     }
-  
+
   }
   
   /* SCREEN 1440px */
@@ -205,17 +211,17 @@
     
     /*------------ GALLERY ------------*/
     div._container_mobile {
-      left: 17.2rem;  
+      left: 17.7rem;  
     }
   
     div._container_info {
-      width: 25vw;
+      width: 23.7vw;
       padding: 2.5rem 2rem;
     }
   
   }
   
-  /* SCREEN 1680px */
+  /* SCREEN 1500px */
   @media (min-width: 1500px) {
     
     /*------------ GALLERY ------------*/
