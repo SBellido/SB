@@ -29,7 +29,9 @@ export class BiographyComponent implements OnInit {
   public area: string = 'perfil';
   public icon: string = 'fingerprint';
 
-  constructor() { }
+  constructor() {
+    this.checkScreenSize();
+   }
 
   ngOnInit(): void {  
     this.topFunction();

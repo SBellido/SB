@@ -103,7 +103,7 @@ export class DevelopmentComponent implements OnInit {
         this.visibleJavaScript = !this.visibleJavaScript;
         break;
     }
-    this.allCardsClosed = !this.visibleAngular && !this.visibleBootstrap && !this.visibleJavaScript;
+    this.allCardsClosed = !this.visibleAngular && !this.visibleBootstrap;
     if (this.allCardsClosed) {
       this.topFunction();
     }

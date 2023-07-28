@@ -47,12 +47,22 @@
 
 }
 
-  /* SCREEN 1680px */
-  @media (min-width: 1500px) {
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+
+  div._container_title {
+    margin-bottom: 1rem;
+  }  
+
+}  
+
+
+  // /* SCREEN 1680px */
+  // @media (min-width: 1500px) {
     
-    /*------------ GALLERY ------------*/
-    div._container_mobile {
-      left: 21.3rem;  
-    }
+  //   /*------------ GALLERY ------------*/
+  //   div._container_mobile {
+  //     left: 21.3rem;  
+  //   }
   
-  }
+  // }

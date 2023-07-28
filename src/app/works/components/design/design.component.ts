@@ -96,7 +96,7 @@ export class DesignComponent implements OnInit {
         this.visibleExperimental = !this.visibleExperimental;
         break;
     }
-    this.allCardsClosed = !this.visibleUx_Ui && !this.visibleGraphic && !this.visibleExperimental;
+    this.allCardsClosed = !this.visibleUx_Ui && !this.visibleGraphic;
     if (this.allCardsClosed) {
       this.topFunction();
     }
@@ -105,7 +105,7 @@ export class DesignComponent implements OnInit {
   checkScreenSize() {
     this.visibleUx_Ui = window.innerWidth >= 1024;
     this.visibleGraphic = window.innerWidth >= 1024;
-    this.visibleExperimental = window.innerWidth >= 1024;
+    // this.visibleExperimental = window.innerWidth >= 1024;
   }
 
 }

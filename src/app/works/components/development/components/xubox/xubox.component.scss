@@ -1,10 +1,9 @@
-@import '../../../../../global/global.component.scss';
 @import '../../../gallery/gallery.component.scss';
 @import '../../development.component.scss';
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
-  
+
   /*-------- BUTTON BACK --------*/
   div._container_button_back {
     position: absolute;
@@ -46,13 +45,11 @@
   /*------------------------*/
 }
 
-  /* SCREEN 1680px */
-  @media (min-width: 1500px) {
-    
-    /*------------ GALLERY ------------*/
-    div._container_mobile {
-      left: 21.3rem;  
-    }
-  
-  }
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
 
+  div._container_title {
+    margin-bottom: 1rem;
+  }  
+
+}  
