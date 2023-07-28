@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button } from '../../../models/models';
 
@@ -10,13 +10,19 @@ import { Button } from '../../../models/models';
 
 export class DesignComponent implements OnInit {
 
+  /*--------VARIABLES -------*/ 
+  @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+      this.checkScreenSize();
+  }
+
   public area: string = 'diseño';
   public icon: string = 'local_florist';
   
-  allCardsClosed: boolean = false;
-  visibleUx_Ui: boolean = true;
-  visibleGraphic: boolean = true;
-  visibleExperimental: boolean = true;
+  allCardsClosed: boolean | undefined;
+  visibleUx_Ui: boolean | undefined;
+  visibleGraphic: boolean | undefined;
+  visibleExperimental: boolean | undefined;
 
   brands_ux_ui: Button[] = [
     {
@@ -59,7 +65,9 @@ export class DesignComponent implements OnInit {
     },
   ]
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.checkScreenSize();
+  }
 
   ngOnInit(): void {  
     this.topFunction();
@@ -92,6 +100,12 @@ export class DesignComponent implements OnInit {
     if (this.allCardsClosed) {
       this.topFunction();
     }
+  }
+
+  checkScreenSize() {
+    this.visibleUx_Ui = window.innerWidth >= 1024;
+    this.visibleGraphic = window.innerWidth >= 1024;
+    this.visibleExperimental = window.innerWidth >= 1024;
   }
 
 }

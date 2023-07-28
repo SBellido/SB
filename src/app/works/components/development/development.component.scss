@@ -1,7 +1,19 @@
 @import '../biography/biography.component.scss';
 
+
 /* SCREEN 0px */
 @media (min-width: 0px) {
+    
+    p._info {
+        text-align: left;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+/*--------SCROLL---------*/
+    div._scroll {
+        height: 175px;
+        overflow-x: auto;
+    }
 
     article._container_all {
         padding-top: 3.5rem;
@@ -10,8 +22,11 @@
         align-items: center;
         flex-direction: column;
     }
+    article._container_all_ {
+        padding-top: 0;
+    }
 
-    /*------------INFO------------*/
+/*------------INFO------------*/
     section._container {
         height: auto;
         padding-top: 0rem;
@@ -43,7 +58,7 @@
         padding: .5rem 1rem;
     }
 
-    /*------------ GALLERY ------------*/
+/*------------ GALLERY ------------*/
     div._container_mobile {
         display: flex;
         justify-content: center;
@@ -60,7 +75,7 @@
         margin-bottom: 4rem;
     }
     
-    /*-------------INFO-----------*/
+/*------------INFO------------*/
     div._container_info {
         perspective: 800px;
         background-color: #f9f9f9;
@@ -87,7 +102,7 @@
         font-weight: 700;
     }
       
-    /*-------TECNOLOGIES ----------*/
+/*-------TECNOLOGIES ----------*/
     h4._title_tecno {
         color: $first_color;
         margin-block-end: 0;
@@ -121,7 +136,7 @@
         transform: scale(1.2);
     }
 
-    /*---------MORE WORKS----------*/
+/*---------MORE WORKS----------*/
     section._container_info_tecno {
         display: flex;
         flex-direction: column;
@@ -144,7 +159,7 @@
         border-bottom: solid .5px $third_color;
     }
 
-    /*--------SCROLL---------*/
+/*--------SCROLL---------*/
     div._scroll {
         height: 175px;
         overflow-x: auto;
@@ -166,6 +181,7 @@
       justify-content: center;
       flex-direction: row;
     }
+    
     div._container_info {
       width: 32vw;
       margin-top: 0;
@@ -179,7 +195,7 @@
       left: 5.4rem;  
     }
     div._container_title {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0rem;
     }
   
   }
