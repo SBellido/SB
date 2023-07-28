@@ -1,24 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button } from '../../../models/models';
-
+ 
 @Component({
   selector: 'app-development',
   templateUrl: './development.component.html',
   styleUrls: ['./development.component.scss']
 })
 
-export class
- DevelopmentComponent implements OnInit {
+export class DevelopmentComponent implements OnInit {
 
 /*--------VARIABLES -------*/ 
+  @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+      this.checkScreenSize();
+  }
+
   public area: string = 'desarrollo';
   public icon: string = 'developer_mode';
 
-  allCardsClosed: boolean = false;
-  visibleAngular: boolean = true;
-  visibleBootstrap: boolean = true;
-  visibleJavaScript: boolean = true;
+  allCardsClosed: boolean | undefined;
+  visibleAngular: boolean | undefined;
+  visibleBootstrap: boolean | undefined;
+  visibleJavaScript: boolean | undefined;
 
   brands_angular: Button[] = [
     {
@@ -62,12 +66,19 @@ export class
     }
   ]
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+    this.checkScreenSize();
+  }
 
   ngOnInit(): void {  
     this.topFunction();
   }
 
+  checkScreenSize() {
+    this.visibleAngular = window.innerWidth >= 1024;
+    this.visibleBootstrap = window.innerWidth >= 1024;
+    this.visibleJavaScript = window.innerWidth >= 1024;
+  }
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

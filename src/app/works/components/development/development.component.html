@@ -1,4 +1,4 @@
-<article class="_container_all">
+<article class="_container_all_">
   <section class="_container">
     <div class="_container_title">
       <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
@@ -58,8 +58,7 @@
            javascript
           </h2>
         </section>
-        <!-- <p class="_item_disabled">in progress</p> -->
-        <div class="_container_info" [hidden]="true">
+        <article class="_container_info" [hidden]="true">
           <div class="_scroll">
             <p class="_info">
               El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
@@ -73,12 +72,7 @@
               <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
             </button>
           </div>
-          <figure class="_container_realizations">
-          </figure>
-        </div>  
-        <div class="_container_button" *ngIf="!visibleJavaScript">
-          <button class="_close">cerrar</button>
-        </div>
+        </article>
       </article>
     </div>
 

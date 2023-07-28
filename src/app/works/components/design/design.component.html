@@ -1,4 +1,4 @@
-<article class="_container_all">
+<article class="_container_all_">
   <section class="_container">
     <div class="_container_title">
       <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
@@ -14,7 +14,6 @@
           <app-brands-buttons 
             [brands]="brands_ux_ui">
           </app-brands-buttons>
-          <!-- <hr class="_hr"> -->
           <div class="_scroll">
             <p class="_info">
               <span>UX, se enfoca en la relación humano/máquina.</span> Evolución de la ergonomía, 
@@ -44,13 +43,11 @@
       <article class="_container_section">
         <section class="_container_item" (click)="OpenClose('graphic')">
           <h2 class="_item">gráfico</h2> 
-          <!-- concursos, marcas, publicacioens -->
         </section>
         <article class="_container_info" [hidden]="!visibleGraphic">
           <app-brands-buttons 
             [brands]="brands_graph">
           </app-brands-buttons>
-          <!-- <hr class="_hr"> -->
           <div class="_scroll">
             <p class="_info">Profesión que <span>proyecta comunicación visual para transmitir 
               mensajes</span> específicos a grupos sociales con objetivos determinados. 
@@ -79,21 +76,20 @@
            experimental
           </h2>
         </section>
-        <!-- <p class="_item_disabled">in progress</p> -->
         <article class="_container_info" [hidden]="true">
-          <p class="_info">
-            El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
-            Por experimentación se entiende la <span>indagación fundada a partir de la provocación voluntaria </span>  
-            de ciertos fenómenos para confirmar alguna hipótesis. 
-            La experimentación es la <span>observación dirigida </span> que completa la <span> observación espontánea.</span>
-          </p>
+          <div class="_scroll">
+            <p class="_info">
+              El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
+              Por experimentación se entiende la <span>indagación fundada a partir de la provocación voluntaria </span>  
+              de ciertos fenómenos para confirmar alguna hipótesis. 
+              La experimentación es la <span>observación dirigida </span> que completa la <span> observación espontánea.</span>
+            </p>
+          </div>
           <div class="_container_button">
             <button class="_button_more" routerLink="illustration-sketch">
               <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
             </button>
           </div>
-          <figure class="_container_realizations">
-          </figure>
         </article>  
       </article>
     </div>

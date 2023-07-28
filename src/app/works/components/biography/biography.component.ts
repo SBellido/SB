@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ItemSection } from 'src/app/models/models';
 
 @Component({
@@ -6,12 +6,18 @@ import { ItemSection } from 'src/app/models/models';
   templateUrl: './biography.component.html',
   styleUrls: ['./biography.component.scss']
 })
+
 export class BiographyComponent implements OnInit {
 
-  allCardsClosed: boolean = false;
-  visibleLabor: boolean = true;
-  visibleAcademic: boolean = true;
-  visiblePersonal: boolean = true;
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.checkScreenSize();
+}
+
+  allCardsClosed: boolean | undefined;
+  visibleLabor: boolean | undefined;
+  visibleAcademic: boolean | undefined;
+  visiblePersonal: boolean | undefined;
   
   item: ItemSection = {
     id:  0,
@@ -50,6 +56,12 @@ export class BiographyComponent implements OnInit {
     if (this.allCardsClosed) {
       this.topFunction();
     }
+  }
+
+  checkScreenSize() {
+    this.visiblePersonal = window.innerWidth >= 1024;
+    this.visibleAcademic = window.innerWidth >= 1024;
+    this.visibleLabor = window.innerWidth >= 1024;
   }
 
 }
