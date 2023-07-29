@@ -6,12 +6,12 @@
 
 /*------------ GALLERY ------------*/
   ._gallery {
-    margin-bottom: 6rem;
+    margin-bottom: 2rem;
   }
   ._container_image {
     padding-top: 0;
     width: 14rem;
-    // margin-right: 0.2rem
+    margin-bottom: 0;
   }
   ._image_gallery {
     width: 111%;
@@ -29,11 +29,14 @@
 @media (min-width: 1024px) {
 
   ._container_image {
-    width: 22rem;
-    margin-top: 0.7rem
+    width: 22.2rem;
+    margin-top: 1rem
   }
   ._container_title {
     margin-bottom: 1rem;
+  }
+  div._container_count {
+    margin-top: 3.7rem;
   }
   
 

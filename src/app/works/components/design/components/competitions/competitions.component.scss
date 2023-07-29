@@ -1,5 +1,5 @@
 @import '../../../../../global/global.component.scss';
-@import '../../../gallery/gallery.component.scss';
+@import '../../../gallery-desptop/gallery-desptop.component.scss';
 @import '../../design.component.scss';
 
 /* SCREEN 0px */
@@ -130,6 +130,7 @@
       margin-block-start: 0em;
       margin-block-end: 0em;
       font-weight: bold;
+      padding-bottom: 1rem;
     }
     p._p_card {
       font-size: .9rem;
@@ -141,9 +142,27 @@
     }
 
 /*---------MORE WORKS----------*/
-    div._container_more_works {
-        width: 13.5rem;
-    }
+section._container_info_tecno {
+  display: flex;
+  flex-direction: column;
+}
+h4._title {
+  color: $third_color;
+  margin-block-end: 0;
+  text-align: center;
+  font-weight: 200;
+}
+div._container_more_works {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 19rem;
+  margin: auto;
+}
+div._container_text_more_works {
+  padding-bottom: .5rem;
+  border-bottom: solid .5px $third_color;
+}
 
 /*---------SCROLL----------*/
     div._scroll {
@@ -153,19 +172,41 @@
 
 }
 
-/* SCREEN 375px */
-@media (min-width: 375px) {
 
+ 
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+
+/*-----------------------*/
+  article._container_all {
+    padding: 0;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  div._container_info {
+    width: 33.2vw;
+    margin: auto;
+    padding: .8rem 1rem 1.5rem 1rem;
+  }
+  div._container_polaroid {
+    left: 10rem;
+  }
+  img._polaroid {
+    width: 21.7rem;
+    left: 3rem;
+  }
+  ._container_image {
+    margin-top: 0.5rem;
+  }
+  img._desktop {
+    border-radius: 30px;
+  }
+  /*---------SCROLL----------*/
+  div._scroll {
+      height: 15rem;
+      overflow-x: auto;
+  }
 
 }
 
-/* SCREEN 1024px */
-@media (min-width: 1024px) {
-/*---------SCROLL----------*/
-
-    div._scroll {
-        height: 12rem;
-        overflow-x: auto;
-    }
-
-}    

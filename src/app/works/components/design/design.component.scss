@@ -4,6 +4,10 @@
 /* SCREEN 0px */
 @media (min-width: 0px) {
     
+/*--------SCROLL---------*/
+    div._scroll {
+        height: auto;
+    }
     p._info {
         text-align: left;
         padding: 0 1rem 1rem 1rem;
@@ -206,8 +210,8 @@
         top: 214px;
         left: 7.9rem;
     }
-    /*--------SCROLL---------*/
-        div._scroll {
+/*--------SCROLL---------*/
+    div._scroll {
         height: 19rem;
         overflow-x: auto;
     }

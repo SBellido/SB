@@ -55,7 +55,7 @@
     height: auto;
   }
   ._message {
-    color: $accent_color;
+    color: $first_color_lighter;
     text-align: center;
   }
   section._container_contact {
@@ -67,7 +67,7 @@
     align-items: center;
   }
   ._icon_contact {
-    color: $accent_color;
+    color: $first_color_lighter;
   }
   ._button_contact { 
     color: $accent_color;
@@ -117,8 +117,11 @@
     text-align: center;
   }
   p._copyright {
+    color: $first_color_lighter;
     font-weight: 300;
     line-height: 1.5;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
   }
   p>span {
     font-weight: 500;

@@ -44,7 +44,6 @@
     transform-origin: 0 50%;
   }
   ._container_all {
-    perspective: 800px;
     display: flex;
     justify-content: center; 
     margin-bottom: 54rem;
@@ -107,4 +106,14 @@
     padding-top: 0rem;
   }
   
+}
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+
+  ._container_all {
+    padding: 0;
+    margin-bottom: 25rem;
+  }
+
 }

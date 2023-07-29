@@ -150,6 +150,9 @@
     margin-block-start: .5em;
     margin-block-end: .5em;
   }
+  a {
+    color: $fifth_color;
+  }
   div._show_more {
     display: flex;
     justify-content: center;
