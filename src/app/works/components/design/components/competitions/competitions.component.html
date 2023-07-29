@@ -2,17 +2,20 @@
   <button mat-button class="_button_back" title="Volver" routerLink="../">
     <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
   </button>
-  <div class="_container_title" routerLink="../">
+  <div class="_container_title">
     <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
     <h1 class="_title">{{ area }}</h1>
   </div> 
 
   <select class="_dropdown" (change)="onChange($event)">
     <option value="imagesList">
-      <span class="icon"></span>vista 1
+      <span class="icon"></span>opción 1
     </option>
     <option value="imagesList2">
-      <span class="icon"></span>vista 2
+      <span class="icon"></span>opción 2
+    </option>
+    <option value="imagesList3">
+      <span class="icon"></span>opción 3
     </option>
   </select>
 
@@ -25,20 +28,34 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery>
-    <div class="_container_info">
-      <h4 class="_title_product">Hunt | Landing Page</h4>
-      <p class="_p_card"><span>Sitio web desarrollado en 2021 por Sebastián utilizando Bootstrap y JavaScript</span> 
-         Hunt es un producto desarrollado en Angular, del cual también formó parte como Desarrollador Frontend, pero no hay registro visual de ello.
-         En este producto <span>se encargó de trabajar el concepto, crear la nomenclatura del producto, diseñar logotipo, imagen corporativa
-         y desarrollo de Landing Page con animaciones CSS3 en todas las imágenes del home.</span>
-         el sitio muestra de manera sintética y clara los servicios que ofrece el producto, 
-         la posibilidad de contactar al proveedor y solicitar una demo una demo. Fue desarrollado para Stormtech SL.
-      </p>
-    </div>
-    <div class="_container_more_works">
-      <div class="_container_text_more_works">
-        <h4 class="_title">Más trabajos de diseño UX/UI</h4>
+    <section class="_container_info_tecno">
+      <div class="_container_info">
+        <div class="_scroll">
+          <h4 class="_title_product">eyeka! | Consursos</h4>
+          <p class="_p_card">Participar en <span>concursos internacionales </span>puede ser una excelente manera de adquirir experiencia trabajando en el 
+            <span>diseño para grandes marcas.</span> Además, puedes expresar tu creatividad, practicar tus habilidades. 
+            También obtener retroalimentación sobre el trabajo de las marcas y aprender de otros participantes.
+            <span>eYeka es una comunidad global de creadores talentosos</span> que aman resolver los desafíos de las marcas con ideas frescas, 
+            creativas y contenido compartible. Los creadores en eYeka <span>compiten para resolver problemas comerciales reales de las marcas 
+            más grandes del mundo</span> para ganar fama y fortuna, mientras se divierten.
+          </p>
+        </div>
+        <h4 class="_title_tecno">Herramientas utilizadas</h4><hr class="_hr">
+        <figure class="_container_tecno">
+          <a href="https://www.adobe.com/la/products/photoshop/free-trial-download.html" target="_blank">
+            <img class="_logo_tecno" src="../assets/images/tecnologies/photoshop.png" title="Adobe Photoshop" alt="Logo de Adobe Photoshop">
+          </a>
+          <a href="https://www.adobe.com/es/products/illustrator/free-trial-download.html" target="_blank">
+            <img class="_logo_tecno" src="../assets/images/tecnologies/illustrator.png" title="Adobe Illustrator" alt="Logo de Adobe Illustrator">
+          </a>        
+        </figure>
       </div>
-      <app-brands-buttons [brands]="brands"></app-brands-buttons>
+    </section>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de diseño gráfico</h4>
     </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
 </article>

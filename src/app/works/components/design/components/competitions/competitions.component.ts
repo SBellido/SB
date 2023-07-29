@@ -54,39 +54,47 @@ export class CompetitionsComponent implements OnInit {
       this.loadImages();
     } else if (selectedValue === 'imagesList2') {
       this.loadImages2();
+    } else if (selectedValue === 'imagesList3') {
+      this.loadImages3();
     }
   }
 
   loadImages() {
     this.imagesList = [
-      { src: '../assets/images/competitions/nescafe/patient/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/6.png', position: 6, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/7.png', position: 7, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/8.png', position: 8, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/9.png', position: 9, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/10.png', position: 10, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/nescafe/patient/11.png', position: 11, alt: 'string', first: false, last: true },
+      { src: '../assets/images/competitions/nescafe/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/competitions/nescafe/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/6.png', position: 6, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/7.png', position: 7, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/8.png', position: 8, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/9.png', position: 9, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/10.png', position: 10, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/nescafe/11.png', position: 11, alt: 'string', first: false, last: true },
     ];
     this.imgGallery = this.imagesList[0].src;
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/v-life/professional/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/6.png', position: 6, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/7.png', position: 7, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/8.png', position: 8, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/9.png', position: 9, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/10.png', position: 10, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/competitions/doritos/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/6.png', position: 6, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/7.png', position: 7, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/8.png', position: 8, alt: 'string', first: false, last: false },
+      { src: '../assets/images/competitions/doritos/9.png', position: 9, alt: 'string', first: false, last: true },
+    ];
+    this.imgGallery = this.imagesList[0].src;
+  }
+  loadImages3() {
+    this.imagesList = [
+      { src: '../assets/images/competitions/sweetart/0.png', position: 0, alt: 'string', first: true, last: false },   
+      { src: '../assets/images/competitions/sweetart/1.png', position: 1, alt: 'string', first: false, last: true },
     ];
     this.imgGallery = this.imagesList[0].src;
   }
