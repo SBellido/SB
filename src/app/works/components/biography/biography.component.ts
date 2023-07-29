@@ -9,15 +9,15 @@ import { ItemSection } from 'src/app/models/models';
 
 export class BiographyComponent implements OnInit {
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkScreenSize();
-}
+//   @HostListener('window:resize', ['$event'])
+//   onResize(event: any) {
+//     this.checkScreenSize();
+// }
 
-  allCardsClosed: boolean | undefined;
-  visibleLabor: boolean | undefined;
-  visibleAcademic: boolean | undefined;
-  visiblePersonal: boolean | undefined;
+  allCardsClosed: boolean = true;
+  visibleLabor: boolean = false;
+  visibleAcademic: boolean = false;
+  visiblePersonal: boolean = false;
   
   item: ItemSection = {
     id:  0,
@@ -30,7 +30,7 @@ export class BiographyComponent implements OnInit {
   public icon: string = 'fingerprint';
 
   constructor() {
-    this.checkScreenSize();
+    // this.checkScreenSize();
    }
 
   ngOnInit(): void {  
@@ -60,10 +60,10 @@ export class BiographyComponent implements OnInit {
     }
   }
 
-  checkScreenSize() {
-    this.visiblePersonal = window.innerWidth >= 1024;
-    this.visibleAcademic = window.innerWidth >= 1024;
-    this.visibleLabor = window.innerWidth >= 1024;
-  }
+  // checkScreenSize() {
+  //   this.visiblePersonal = window.innerWidth >= 1024;
+  //   this.visibleAcademic = window.innerWidth >= 1024;
+  //   this.visibleLabor = window.innerWidth >= 1024;
+  // }
 
 }

@@ -11,10 +11,10 @@ import { Button } from '../../../models/models';
 export class DesignComponent implements OnInit {
 
   /*--------VARIABLES -------*/ 
-  @HostListener('window:resize', ['$event'])
-    onResize(event: any) {
-      this.checkScreenSize();
-  }
+  // @HostListener('window:resize', ['$event'])
+  //   onResize(event: any) {
+  //     this.checkScreenSize();
+  // }
 
   public area: string = 'diseño';
   public icon: string = 'local_florist';
@@ -66,7 +66,7 @@ export class DesignComponent implements OnInit {
   ]
 
   constructor(private router: Router) { 
-    this.checkScreenSize();
+    // this.checkScreenSize();
   }
 
   ngOnInit(): void {  
@@ -102,10 +102,10 @@ export class DesignComponent implements OnInit {
     }
   }
 
-  checkScreenSize() {
-    this.visibleUx_Ui = window.innerWidth >= 1024;
-    this.visibleGraphic = window.innerWidth >= 1024;
-    // this.visibleExperimental = window.innerWidth >= 1024;
-  }
+  // checkScreenSize() {
+  //   this.visibleUx_Ui = window.innerWidth >= 1024;
+  //   this.visibleGraphic = window.innerWidth >= 1024;
+  //   // this.visibleExperimental = window.innerWidth >= 1024;
+  // }
 
 }
