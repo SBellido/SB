@@ -113,7 +113,6 @@
   }
 
   div._container_info {
-    perspective: 800px;
     background-color: #f9f9f9;
     width: 85vw;
     height: auto;
@@ -188,4 +187,56 @@
     border: 0 0 .5px 5 solid $accent_color;
   }
   
+/*---------MORE WORKS----------*/
+  section._container_info_tecno {
+    display: flex;
+    flex-direction: column;
+  }
+  h4._title {
+    color: $third_color;
+    margin-block-end: 0;
+    text-align: center;
+    font-weight: 200;
+  }
+  div._container_more_works {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 17rem;
+    margin: auto;
+  }
+  div._container_text_more_works {
+    padding-bottom: .5rem;
+    border-bottom: solid .5px $third_color;
+  }
+    
+}
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+
+  /*-----------------------*/
+  article._container_all {
+    padding-top: 0;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+  div._container_info {
+    width: 35.2vw;
+    margin: auto;
+    padding: .8rem 1rem 1.5rem 1rem;
+  }
+  div._container_desktop {
+    top: 156px;
+    left: 1rem;
+    width: 30.5rem;
+  }
+  ._container_image {
+    margin-top: 0.5rem;
+  }
+  img._desktop {
+    border-radius: 30px;
+  }
+
 }

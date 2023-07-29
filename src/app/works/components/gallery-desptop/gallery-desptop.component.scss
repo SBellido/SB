@@ -24,3 +24,17 @@
   }
 
 }
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+
+  ._container_image {
+    width: 22rem;
+    margin-top: 0.7rem
+  }
+  ._container_title {
+    margin-bottom: 1rem;
+  }
+  
+
+}

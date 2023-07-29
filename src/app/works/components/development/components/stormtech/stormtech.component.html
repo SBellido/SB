@@ -1,5 +1,4 @@
 <article>
-  <section>  
     <button mat-button class="_button_back" title="Volver" routerLink="../">
       <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
     </button>
@@ -7,16 +6,20 @@
       <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
       <h1 class="_title">{{ area }}</h1>
     </div>
+
+    <article class="_container_all">  
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
-    <article class="_container_all">
       <app-gallery-desptop
         [imagesList]="imagesList" 
         [imgGallery]="imgGallery">
       </app-gallery-desptop> 
+      <section class="_container_info_tecno">
+
       <div class="_container_info">
         <h4 class="_title_product">Stormtech SL | Landing Page</h4>
+        <div class="_scroll">
         <p class="_p_card">
           Durante los <span>años 2020, 2021 y 2022</span>, Sebastián <span>integra el equipo de desarrollo de Stormtech SL.</span> 
           Participó en varios proyectos <span>como Desarrollador Frontend y Diseñador UX/UI.</span>Una de las tareas asignadas fue
@@ -25,6 +28,7 @@
           Es una <span>Landing Page mobile first,</span> simple y ordenada que muestra los servicios que ofrece, los clientes con los que 
           ha trabajado y un formulario de contacto.
         </p> 
+      </div>   
         <h4 class="_title_tecno">Herramientas utilizadas</h4><hr class="_hr">
         <figure class="_container_tecno">
           <a href="https://getbootstrap.com/" target="_blank">
@@ -40,10 +44,14 @@
             <img class="_logo_tecno" src="../assets/images/tecnologies/js.png" title="JavaScript" alt="Logo de JavaScript">
           </a>
         </figure>
-      </div>
-      <h4 class="_title">Más trabajos desarrollados en Bootstrap</h4><hr>
-      <app-brands-buttons [brands]="brands"></app-brands-buttons>
-    </article>
-  </section>
+      </div>     
+    </section>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos desarrollados en Angular</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
 </article>
   

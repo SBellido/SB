@@ -170,9 +170,6 @@
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
 
-    // ._gallery {
-    //     margin-right: 1rem;
-    // }
     article._container_all {
         padding: 0;
         display: flex;
@@ -186,18 +183,18 @@
         margin-top: 0;
         padding: 1.7rem;
     }
-
   
-    /*------------ GALLERY ------------*/
+/*------------ GALLERY ------------*/
     div._container_mobile {
       top: 215px;
       width: 26rem;
       left: 7.7rem;  
     }
+    /*--------SCROLL---------*/
     div._scroll {
-        height: 21.5rem;
+        height: 19rem;
+        overflow-x: auto;
     }
-
   }
   
   /* SCREEN 1440px */
