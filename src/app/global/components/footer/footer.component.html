@@ -1,16 +1,5 @@
 <article class="_container_footer">
 
-  <section class="_header_footer">
-    <div class="_container_ornament">
-      <img class="_ornament" src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
-    </div>  
-    <div class="_container_me">
-      <img class="_img_sb" src="../../../../assets/images/footer/azulejo_yo.png" alt="Firma de Sebastián Bellido">
-    </div>
-    <div class="_container_ornament">
-      <img class="_ornament" src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
-    </div>   
-  </section>
   <p class="_message">Contáctame!</p>
   <section class="_container_contact">     
     <div class="_container_social_networks"
@@ -24,6 +13,7 @@
       </a>
     </div>
   </section>
+  
   <section class="_container_social_networks">
     <div class="_container_logo_socialnet" 
     *ngFor="let btn of btnSN">
@@ -32,6 +22,18 @@
         src="{{ btn.img }}" alt="{{ btn.text }}">
       </a>
     </div>
+  </section>
+
+  <section class="_header_footer">
+    <div class="_container_ornament">
+      <img class="_ornament" src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
+    </div>  
+    <div class="_container_me">
+      <img class="_img_sb" src="../../../../assets/images/footer/azulejo_yo.png" alt="Firma de Sebastián Bellido">
+    </div>
+    <div class="_container_ornament">
+      <img class="_ornament" src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
+    </div>   
   </section>
 
   <div class="_footer_bottom"> 

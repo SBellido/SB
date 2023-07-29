@@ -6,12 +6,12 @@
     <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
     <h1 class="_title">{{ area }}</h1>
   </div> 
-}
+
   <article class="_container_all">  
     <div class="_container_mobile">
       <img class="_mobile" src="../assets/images/mobile_dark.png" alt="">
     </div>
-    <app-gallery
+    <app-gallery class="_gallery"
         [imagesList]="imagesList" 
         [imgGallery]="imgGallery">
     </app-gallery>

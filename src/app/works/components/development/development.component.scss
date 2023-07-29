@@ -8,19 +8,6 @@
         text-align: left;
         padding: 0 1rem 1rem 1rem;
     }
-
-/*--------SCROLL---------*/
-    div._scroll_small,
-    div._scroll {
-        overflow-x: auto;
-    }
-    div._scroll {
-        height: auto;       
-    }
-    div._scroll_small {
-        height: 175px;
-    }
-
     article._container_all {
         padding-top: 3.5rem;
         display: flex;
@@ -63,25 +50,6 @@
         text-align: left;
         padding: .5rem 1rem;
     }
-
-/*------------ GALLERY ------------*/
-    div._container_mobile {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        top: 220px;
-        z-index: -1;  
-    }
-    img._mobile {   
-        width: 68%;
-    }
-    img._image_gallery {
-        width: 111%;
-        z-index: -2;  
-        margin-bottom: 4rem;
-    }
-    
-/*------------INFO------------*/
     div._container_info {
         perspective: 800px;
         background-color: #f9f9f9;
@@ -105,6 +73,23 @@
     }
     span {
         font-weight: 700;
+    }
+
+/*------------ GALLERY ------------*/
+    div._container_mobile {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 220px;
+        z-index: -1;  
+    }
+    img._mobile {   
+        width: 68%;
+    }
+    img._image_gallery {
+        width: 111%;
+        z-index: -2;  
+        margin-bottom: 4rem;
     }
       
 /*-------TECNOLOGIES ----------*/
@@ -163,13 +148,23 @@
         padding-bottom: .5rem;
         border-bottom: solid .5px $third_color;
     }
-
-/*--------SCROLL---------*/
-    div._scroll {
-        height: 175px;
-        overflow-x: auto;
-    }
-
+// /*--------SCROLL---------*/
+//     div._scroll_small,
+//     div._scroll {
+//         overflow-x: auto;
+//     }
+//     div._scroll {
+//         height: auto;       
+//     }
+//     div._scroll_small {
+//         height: 175px;
+//     }
+//     div._scroll {
+//         height: 175px;
+//         overflow-x: auto;
+//     }
+// /*----------------------*/
+    
 }
 
 /* SCREEN 1024px */
