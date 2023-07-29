@@ -192,22 +192,24 @@
         justify-content: space-between;
         flex-direction: row;
         padding: 0 10rem;
-    }   
+    }  
+
     div._container_info {
         width: 25vw;
         margin-top: 0;
         padding: 2.5rem 2rem;
         margin-left: 0;
     }
-/*--------SCROLL---------*/
-    div._scroll {
-        height: 19rem;
-        overflow-x: auto;
-    }
+
 /*------------ GALLERY ------------*/
     div._container_mobile {
         top: 214px;
         left: 7.9rem;
+    }
+    /*--------SCROLL---------*/
+        div._scroll {
+        height: 19rem;
+        overflow-x: auto;
     }
     div._container_title {
       margin-bottom: 0rem;
