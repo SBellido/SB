@@ -1,6 +1,6 @@
 @import '../../../../../global/global.component.scss';
 @import '../../../gallery/gallery.component.scss';
-
+@import '../../design.component.scss';
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
@@ -31,6 +31,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      padding-top: 0;
     }
   // TITTLE
     section._container {
@@ -61,7 +62,7 @@
       display: flex;
       justify-content: center;
       position: absolute;
-      top: 220px;
+      top: 224px;
       z-index: -1;
       width: 12rem; 
     }
@@ -72,7 +73,7 @@
       -webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
       -moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
       box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75); 
-      width: 13rem;
+      width: 13.7rem;
       z-index: -2;  
       margin-bottom: 5rem;
     }
@@ -116,7 +117,6 @@
       margin-right: 0;
     }
     div._container_info {
-      perspective: 800px;
       background-color: #f9f9f9;
       width: 85vw;
       height: auto;
@@ -139,6 +139,27 @@
     span {
       font-weight: 700;
     }
-    
-  }
 
+/*---------MORE WORKS----------*/
+    div._container_more_works {
+        width: 13.5rem;
+    }
+
+/*---------SCROLL----------*/
+    div._scroll {
+        height: auto;
+        overflow-x: auto;
+    }
+
+}
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+/*---------SCROLL----------*/
+
+    div._scroll {
+        height: 12rem;
+        overflow-x: auto;
+    }
+
+}    
