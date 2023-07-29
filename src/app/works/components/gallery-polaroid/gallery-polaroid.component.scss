@@ -1,12 +1,23 @@
 @import '../../../global/global.component.scss';
+@import '../gallery/gallery.component.scss';
+@import '../design/design.component.scss';
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
+}
 
+/* SCREEN 1024px */
+@media (min-width: 1024px) {
+
+    div._container_image {
+        margin-top: .5rem;
+        padding-top: 0;
+        width: 18rem;
+    }
 /*------------ GALLERY ------------*/
 //   ._gallery {
 //     display: flex;
-//     flex-direction: row;
+//     flex-direction: column;
 //     justify-content: space-around;
 //     align-items: center;
 //     margin-bottom: 0;
