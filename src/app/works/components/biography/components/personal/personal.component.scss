@@ -11,7 +11,7 @@
     border-radius: 50%;
   }
   div._scroll {
-    height: 335px;
+    height: 500;
   }
   ul {
     padding-inline-start: 1.5rem;
@@ -32,3 +32,13 @@
   }
 
 }  
+
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) { 
+
+  div._scroll {
+    height: 10.8rem;
+  }
+
+}

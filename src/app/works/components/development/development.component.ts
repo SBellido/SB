@@ -11,10 +11,10 @@ import { Button } from '../../../models/models';
 export class DevelopmentComponent implements OnInit {
 
 /*--------VARIABLES -------*/ 
-  @HostListener('window:resize', ['$event'])
-    onResize(event: any) {
-      this.checkScreenSize();
-  }
+  // @HostListener('window:resize', ['$event'])
+  //   onResize(event: any) {
+  //     this.checkScreenSize();
+  // }
 
   public area: string = 'desarrollo';
   public icon: string = 'developer_mode';
@@ -67,17 +67,11 @@ export class DevelopmentComponent implements OnInit {
   ]
 
   constructor(private router: Router) {
-    this.checkScreenSize();
+    // this.checkScreenSize();
   }
 
   ngOnInit(): void {  
     this.topFunction();
-  }
-
-  checkScreenSize() {
-    this.visibleAngular = window.innerWidth >= 1024;
-    this.visibleBootstrap = window.innerWidth >= 1024;
-    this.visibleJavaScript = window.innerWidth >= 1024;
   }
   topFunction() {
     document.body.scrollTop = 0;
@@ -108,6 +102,12 @@ export class DevelopmentComponent implements OnInit {
       this.topFunction();
     }
   }
+
+  // checkScreenSize() {
+  //   this.visibleAngular = window.innerWidth >= 1024;
+  //   this.visibleBootstrap = window.innerWidth >= 1024;
+  //   this.visibleJavaScript = window.innerWidth >= 1024;
+  // }
 
 }
 

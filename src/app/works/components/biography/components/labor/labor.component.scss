@@ -1,6 +1,29 @@
 @import '../../biography.component.scss';
 
-article._container_info {
-    height: 507px;
-    overflow-x: auto;
+
+/* SCREEN 0px */
+@media (min-width: 0px) { 
+    
+    article._container_info {
+        height: 507px;
+        overflow-x: auto;
+    }
+
+    div._scroll {
+        height: 500;
+    }  
+
+}
+
+/* SCREEN 1024px */
+@media (min-width: 1024px) { 
+
+    div._scroll {
+        height: 21.5rem;
+    }
+    article._container_info {
+        height: 21.5rem;
+        overflow-x: auto;
+    }
+    
 }
