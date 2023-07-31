@@ -96,8 +96,20 @@
   }
 }
 
+/* SCREEN 425px */
+@media (min-width: 425px) {
+
+  article._container_all {
+    margin-bottom: 44rem;
+  }
+
+}
 /* SCREEN 768px */
 @media (min-width: 768px) {
+
+  article._container_all {
+    margin-bottom: 35rem;
+  }
 
   ._container_concepts {
     width: 70vw;
@@ -111,9 +123,28 @@
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
 
-  ._container_all {
+  article._container_all {
     padding: 0;
     margin-bottom: 25rem;
+  }
+
+}
+
+/* SCREEN 1440px */
+@media (min-width: 1440px) {
+
+  article._container_all {
+    padding-top: 1rem;
+    margin-bottom: 18rem;
+  }
+
+}
+
+/* SCREEN 1500px */
+@media (min-width: 1500px) {
+
+  article._container_all {
+    margin-bottom: 13rem;
   }
 
 }

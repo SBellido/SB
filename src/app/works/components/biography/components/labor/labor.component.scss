@@ -18,12 +18,31 @@
 /* SCREEN 1024px */
 @media (min-width: 1024px) { 
 
+/*--------SCROLL---------*/
     div._scroll {
-        height: 21.5rem;
-    }
-    article._container_info {
-        height: 21.5rem;
+        height: 19.5rem;
         overflow-x: auto;
     }
+    article._container_info {
+        height: 20rem;
+    }
     
+}
+
+/* SCREEN 1440px */
+@media (min-width: 1440px) { 
+
+    img._logo {
+      width: 13vw;
+    }
+  
+}
+
+/* SCREEN 1920px */
+@media (min-width: 1920px) { 
+
+    img._logo {
+      width: 10vw;
+    }
+  
 }
