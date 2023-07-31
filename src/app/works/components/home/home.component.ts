@@ -59,9 +59,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {   
     this.mixArrayContent();
+    this.topFunction();
   }
 
-  mixArrayContent() {    
+  /*------------MÉTODOS--------------*/
+   topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
+  mixArrayContent() {   
+    this.topFunction(); 
     this.concepts.sort(()=> Math.random() - 0.5); 
   }
 

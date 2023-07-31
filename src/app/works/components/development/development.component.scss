@@ -148,22 +148,49 @@
         padding-bottom: .5rem;
         border-bottom: solid .5px $third_color;
     }
-// /*--------SCROLL---------*/
-//     div._scroll_small,
-//     div._scroll {
-//         overflow-x: auto;
-//     }
-//     div._scroll {
-//         height: auto;       
-//     }
-//     div._scroll_small {
-//         height: 175px;
-//     }
-//     div._scroll {
-//         height: 175px;
-//         overflow-x: auto;
-//     }
-// /*----------------------*/
+/*--------SCROLL---------*/
+    div._scroll {
+        height: 100px;
+        overflow-x: auto;
+    }
+/* Tamaño del scroll */
+    div._scroll_small::-webkit-scrollbar,
+    div._scroll::-webkit-scrollbar {
+        width: 4px;
+    }
+
+/* Estilos barra (thumb) de scroll */
+    div._scroll_small::-webkit-scrollbar-thumb,
+    div._scroll::-webkit-scrollbar-thumb {
+        background: #ccc;
+        border-radius: 4px;
+    }
+
+    div._scroll_small::-webkit-scrollbar-thumb:active,
+    div._scroll::-webkit-scrollbar-thumb:active {
+        background-color: #999999;
+    }
+
+    div._scroll_small::-webkit-scrollbar-thumb:hover,
+    div._scroll::-webkit-scrollbar-thumb:hover {
+        background: #b3b3b3;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+/* Estilos track de scroll */
+    div._scroll_small::-webkit-scrollbar-track,
+    div._scroll::-webkit-scrollbar-track {
+        background: #e1e1e1;
+        border-radius: 4px;
+    }
+
+    div._scroll_small::-webkit-scrollbar-track:hover, 
+    div._scrollsmall::-webkit-scrollbar-track:active,
+    div._scroll::-webkit-scrollbar-track:hover, 
+    div._scroll::-webkit-scrollbar-track:active {
+        background: #d4d4d4;
+    }
+  /*------------------------*/
     
 }
 
@@ -190,12 +217,16 @@
       width: 26rem;
       left: 7.7rem;  
     }
-    /*--------SCROLL---------*/
+/*--------SCROLL---------*/
     div._scroll {
-        height: 21.7rem;
+        height: 13.5rem;
         overflow-x: auto;
     }
-  }
+    div._container_title {
+      margin-bottom: 0rem;
+    }
+
+}
   
   /* SCREEN 1440px */
   @media (min-width: 1440px) {
