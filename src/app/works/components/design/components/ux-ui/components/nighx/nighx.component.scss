@@ -1,6 +1,6 @@
 @import '../../../../../../../global/global.component.scss';
 @import '../../../../../gallery/gallery.component.scss';
-@import '../../../../design.component.scss';
+@import '../../../../../development/development.component.scss';
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
@@ -64,17 +64,24 @@
     margin-right: 0;
   }
   /*----------------------------*/
+  div._container_more_works {
+    width: 13rem;
+  }
     
 }
 
 /* SCREEN 1024px */
-@media (min-width: 1024px) {   
- 
+@media (min-width: 1024px) {
+
+  div._scroll {
+    height: 21.5rem;
+  }
   div._container_title {
     margin-bottom: 1rem;
-  }
+  }  
 
-}
+}  
+
 
 
 
