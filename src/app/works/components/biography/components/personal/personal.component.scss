@@ -10,9 +10,6 @@
     border: solid $second_color 3px;
     border-radius: 50%;
   }
-  p._year {
-    text-align: center;
-  }
   p._info {
     text-align: left;
     padding: 0 1rem 1rem 1rem;
@@ -53,7 +50,7 @@
   li {
     font-size: .9rem;
   }
-  li._year, p._year {
+  li._year {
     color: $first_color;
     margin: 0 0 .5rem 0;
   }
@@ -67,7 +64,7 @@
 /* SCREEN 1024px */
 @media (min-width: 1024px) { 
   div._scroll {
-    height: 9.2rem;
+    height: 11.5rem;
   }
   // div._scroll {
   //   height: 19.5rem;
@@ -80,7 +77,7 @@
 /* SCREEN 1500px */
 @media (min-width: 1500px) { 
   div._scroll {
-      height: 14.6rem;
+      height: 14rem;
   }
 }
 
