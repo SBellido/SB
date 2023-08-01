@@ -10,7 +10,7 @@
         <section class="_container_item" (click)="OpenClose('angular')">
           <h2 class="_item">angular</h2>
         </section>
-        <article class="_container_info" [hidden]="!visibleAngular">
+        <div class="_container_info" [hidden]="!visibleAngular">
           <app-brands-buttons 
             [brands]="brands_angular">
           </app-brands-buttons>
@@ -24,7 +24,7 @@
               en 2012</span> y la ha mantenido desde entonces.
             </p>
           </div>
-        </article>
+        </div>
         <div class="_container_button" *ngIf="visibleAngular">
           <button class="_close" (click)="OpenClose('angular')">cerrar</button>
         </div>
@@ -34,7 +34,7 @@
         <section class="_container_item" (click)="OpenClose('bootstrap')">
           <h2 class="_item">bootstrap</h2>
         </section>
-        <article class="_container_info" [hidden]="!visibleBootstrap">
+        <div class="_container_info" [hidden]="!visibleBootstrap">
           <app-brands-buttons 
             [brands]="brands_botstrap">
           </app-brands-buttons>
@@ -46,7 +46,7 @@
               para facilitar la visualización de imágenes, barra de navegación, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. 
             </p>
           </div>
-        </article>
+        </div>
         <div class="_container_button" *ngIf="visibleBootstrap">
           <button class="_close" (click)="OpenClose('bootstrap')">cerrar</button>
         </div>

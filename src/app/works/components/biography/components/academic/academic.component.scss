@@ -3,7 +3,7 @@
 /* SCREEN 0px */
 @media (min-width: 0px) { 
     
-    article._container_info {
+    div._container_info {
         height: auto;
         overflow-x: auto;
     }
@@ -20,6 +20,7 @@
     }
     article._container_info {
         height: 20rem;
+        width: 23vw;
     }
         
 }
