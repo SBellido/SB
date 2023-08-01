@@ -2,7 +2,7 @@
 /* SCREEN 0px */
 @media (min-width: 0px) {
   article._container_all {
-    padding-top: 7.5rem;
+    padding-top: 8rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,6 @@
     margin: -1rem 0 1rem;
     padding: 1.5rem .5rem;
     border-bottom: .5px solid $first_color_lighter;
-    overflow-x: auto;
   }
   section._container {
     height: auto;
@@ -129,12 +128,16 @@
   span {
     font-weight: 700;
   }
-
-  h3._title  {
+  h3._title, h3._name  {
     color: $first_color;
-    margin: 1rem 0 0 0;
-    margin-block-start: 0;
     text-align: center; 
+  }
+  h3._title {
+    margin: 0;
+  }
+  h3._name  {
+    margin-block-start: 0em;
+    margin-block-end: .5em;
   }
   div._container_logo {
     display: flex;

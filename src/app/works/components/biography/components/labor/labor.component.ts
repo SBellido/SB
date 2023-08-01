@@ -17,7 +17,7 @@ export class LaborComponent implements OnInit {
       description_img: 'Logo de Coderhouse',
       acronyms_career: 'Docente',
       year: '2021 | en curso',
-      name_career: 'Curso de Desarrollo Web online multitudinario a través de la plataforma digital',
+      name_career: 'Dictado de Curso de Desarrollo Web online para principientes a través de la plataforma digital',
       link: 'https://www.coderhouse.es/nosotros',
       description_link: 'empresa'
     },
