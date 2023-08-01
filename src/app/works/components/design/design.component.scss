@@ -225,6 +225,14 @@
 
 }
 
+/* SCREEN 768px */
+@media (min-width: 768px) {
+    div._container_info {
+        width: 55vw;
+    }
+
+}
+
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
   
@@ -241,6 +249,7 @@
         width: 23vw;
         margin-top: 0;
     }
+    
     // div._container_info {
     //     margin-top: 0;
     //     padding: 2.5rem 2rem;
