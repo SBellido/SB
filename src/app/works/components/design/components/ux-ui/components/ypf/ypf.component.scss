@@ -110,8 +110,8 @@
   }
   img._desktop {   
     width: 100%;
+    border-radius: 30px;
   }
-
   div._container_info {
     background-color: #f9f9f9;
     width: 85vw;
@@ -211,6 +211,17 @@
   }
     
 }
+/* SCREEN 768px */
+@media (min-width: 768px) {
+
+  div._container_info {
+    width: 49vw;
+
+  }
+
+}
+
+
 
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
