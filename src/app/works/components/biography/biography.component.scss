@@ -6,7 +6,7 @@
 
 /*------GENERAL------*/
 
-  article._container_info {
+  div._container_info {
     background-color: $accent_color;
     width: 85vw;
     height: auto;
@@ -129,7 +129,7 @@
 /* SCREEN 768px */
 @media (min-width: 768px) { 
   /*------GENERAL------*/
-  article._container_info {
+  div._container_info {
     width: 55vw;
   }
   img._logo {
@@ -161,7 +161,7 @@
 /* SCREEN 1440px */
 @media (min-width: 1440px) { 
   /*------GENERAL------*/
-  article._container_info {
+  div._container_info {
     width: 21vw;
     margin: -1rem .5rem .5rem .5rem
   }

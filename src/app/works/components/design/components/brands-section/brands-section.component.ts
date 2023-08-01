@@ -18,17 +18,7 @@ export class BrandsSectionComponent implements OnInit {
   public icon: string = 'local_florist';
 
   imgGallery = '../assets/images/brands/0.png';
-  imagesList : GalleryImage[] = [
-    { src: '../assets/images/brands/0.png', position: 0, alt: 'string', first: true, last: false },
-    { src: '../assets/images/brands/1.png', position: 1, alt: 'string', first: false, last: false },
-    { src: '../assets/images/brands/2.png', position: 2, alt: 'string', first: false, last: false },
-    { src: '../assets/images/brands/3.png', position: 3, alt: 'string', first: false, last: false },
-    { src: '../assets/images/brands/4.png', position: 4, alt: 'string', first: false, last: false },
-    { src: '../assets/images/brands/5.png', position: 5, alt: 'string', first: false, last: false },
-    { src: '../assets/images/brands/6.png', position: 6, alt: 'string', first: false, last: false },
-    { src: '../assets/images/brands/7.png', position: 7, alt: 'string', first: false, last: false },
-    { src: '../assets/images/brands/8.png', position: 8, alt: 'string', first: false, last: true }
-  ] 
+  imagesList : GalleryImage[] = [];
 
   brands : Button[] = [
     {
@@ -60,31 +50,24 @@ export class BrandsSectionComponent implements OnInit {
 
   loadImages() {
     this.imagesList = [
-      
+      { src: '../assets/images/brands/0.png', position: 0, alt: 'string', first: true, last: false },
+      { src: '../assets/images/brands/1.png', position: 1, alt: 'string', first: false, last: false },
+      { src: '../assets/images/brands/2.png', position: 2, alt: 'string', first: false, last: false },
+      { src: '../assets/images/brands/3.png', position: 3, alt: 'string', first: false, last: false },
+      { src: '../assets/images/brands/4.png', position: 4, alt: 'string', first: false, last: false },
+      { src: '../assets/images/brands/5.png', position: 5, alt: 'string', first: false, last: false },
+      { src: '../assets/images/brands/6.png', position: 6, alt: 'string', first: false, last: false },
+      { src: '../assets/images/brands/7.png', position: 7, alt: 'string', first: false, last: false },
+      { src: '../assets/images/brands/8.png', position: 8, alt: 'string', first: false, last: true }
     ];
     this.imgGallery = this.imagesList[0].src;
   }
-  loadImages2() {
-    this.imagesList = [
-      { src: '../assets/images/competitions/doritos/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/competitions/doritos/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/6.png', position: 6, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/7.png', position: 7, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/8.png', position: 8, alt: 'string', first: false, last: false },
-      { src: '../assets/images/competitions/doritos/9.png', position: 9, alt: 'string', first: false, last: true },
-    ];
-    this.imgGallery = this.imagesList[0].src;
-  }
-  loadImages3() {
-    this.imagesList = [
-      { src: '../assets/images/competitions/sweetart/0.png', position: 0, alt: 'string', first: true, last: false },   
-      { src: '../assets/images/competitions/sweetart/1.png', position: 1, alt: 'string', first: false, last: true },
-    ];
-    this.imgGallery = this.imagesList[0].src;
+  
+  onChange(event: Event) {
+    const selectedValue = (event.target as HTMLSelectElement).value;
+    if (selectedValue === 'imagesList') {
+      this.loadImages();
+    } 
   }
 
 }

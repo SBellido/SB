@@ -10,7 +10,7 @@
         <section class="_container_item" (click)="OpenClose('ux_ui')">
           <h2 class="_item" >ux | ui</h2>
         </section>
-        <article class="_container_info" [hidden]="!visibleUx_Ui">
+        <div class="_container_info" [hidden]="!visibleUx_Ui">
           <app-brands-buttons 
             [brands]="brands_ux_ui">
           </app-brands-buttons>
@@ -34,7 +34,7 @@
               y otros aspectos que afectan a la apariencia externa de las interfaces en sistemas de todo tipo.
             </p> -->
           </div>
-        </article>
+        </div>
         <div class="_container_button" *ngIf="visibleUx_Ui">
           <button class="_close" (click)="OpenClose('ux_ui')">cerrar</button>
         </div>
@@ -44,7 +44,7 @@
         <section class="_container_item" (click)="OpenClose('graphic')">
           <h2 class="_item">gráfico</h2> 
         </section>
-        <article class="_container_info" [hidden]="!visibleGraphic">
+        <div class="_container_info" [hidden]="!visibleGraphic">
           <app-brands-buttons 
             [brands]="brands_graph">
           </app-brands-buttons>
@@ -64,7 +64,7 @@
               identidad visual</span> a personas, productos o servicios.
             </p> -->
           </div>
-        </article>
+        </div>
         <div class="_container_button" *ngIf="visibleGraphic">
           <button class="_close" (click)="OpenClose('graphic')">cerrar</button>
         </div>
@@ -76,7 +76,7 @@
            experimental
           </h2>
         </section>
-        <article class="_container_info" [hidden]="true">
+        <div class="_container_info" [hidden]="true">
           <div class="_scroll">
             <p class="_info">
               El término experimentación, su aplicación y su finalidad nacen en el <span>mundo de la ciencia.</span> 
@@ -90,7 +90,7 @@
               <mat-icon class="_icon_button">work_outline</mat-icon>portafolio
             </button>
           </div>
-        </article>  
+        </div>  
       </article>
     </div>
 

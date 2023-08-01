@@ -1,37 +1,16 @@
 @import '../../../../../global/global.component.scss';
-@import '../../../gallery-desptop/gallery-desptop.component.scss';
+@import '../../../gallery-polaroid/gallery-polaroid.component.scss';
 @import '../../design.component.scss';
 
 /* SCREEN 0px */
 @media (min-width: 0px) {
-
-/*---------- SELECTOR ----------*/
-  select._dropdown {
-    font-size: 1rem;
-    position: absolute;
-    right: .8rem;
-    top: 11.4rem;
-    background: none;
-    padding: 0;
-    border: none;
-    border-left: solid .5px $third_color;
-    color:  $third_color;;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0 .5rem;
-  }
-  select._dropdown:hover {
-    color: $fifth_color;
-    cursor: pointer;
-  }
-/*-------------------------------*/
 
     article._container_all {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      padding: 0 0;
+      padding-top: 0;
     }
   // TITTLE
     section._container {
@@ -58,6 +37,7 @@
     }
   
   /*------------ GALLERY ------------*/
+
     div._container_polaroid {
       display: flex;
       justify-content: center;
@@ -66,22 +46,18 @@
       z-index: -1;
       width: 12rem; 
     }
-    // img._polaroid {   
-    //   width: 68%;
-    // }
     img._polaroid {
       -webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
       -moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
       box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75); 
-      width: 13.7rem;
+      width: 17rem;
       z-index: -2;  
-      margin-bottom: 5rem;
     }
     
     /*-------- BUTTON BACK --------*/
     div._container_button_back {
       position: absolute;
-      top:15rem;
+      top: 15rem;
       right: 5rem;
       display: flex;
       justify-content: center;
@@ -121,7 +97,7 @@
       width: 85vw;
       height: auto;
       border-radius: 33px;
-      margin: 2rem 0 1rem;
+      margin: 2rem 0 1rem 0;
       padding: .8rem 1rem 1.5rem 1rem;
     }
     h4._title_product {
@@ -141,6 +117,7 @@
       font-weight: 700;
     }
 
+
 /*---------SCROLL----------*/
     div._scroll {
         height: auto;
@@ -150,30 +127,57 @@
 }
 
 
- 
+/* SCREEN 375px */
+@media (min-width: 375px) {
+
+  img._polaroid {
+    width: 21rem;
+  }
+
+}
+
+/* SCREEN 720px */
+@media (min-width: 720px) {
+
+  div._container_info {
+    width: 42vw
+  }
+
+}
+
+/* SCREEN 768px */
+@media (min-width: 768px) {
+
+  div._container_info {
+    width: 39vw
+  }
+
+}
+
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
 
-/*-----------------------*/
   article._container_all {
-    padding: 0;
-    justify-content: space-around;
+    padding: 0 9rem;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
   }
   div._container_info {
-    width: 33.2vw;
+    width: 31vw;
     margin: auto;
     padding: .8rem 1rem 1.5rem 1rem;
+    height: 23rem;
   }
   div._container_polaroid {
-    left: 10rem;
+    left: 14.5rem;
+    top: 230px;
   }
   img._polaroid {
     width: 21.7rem;
     left: 3rem;
   }
-  ._container_image {
+  div._container_image {
     margin-top: 0.5rem;
   }
   img._desktop {
@@ -181,9 +185,72 @@
   }
   /*---------SCROLL----------*/
   div._scroll {
-      height: 13rem;
+      height: 15rem;
       overflow-x: auto;
   }
 
+}
+
+
+
+/* SCREEN 1440px */
+@media (min-width: 1440px) {
+
+  article._container_all {
+    padding: 0 20rem;
+  }
+  div._container_info {
+    width: 24vw;
+    height: 26rem;
+  }
+  
+  img._polaroid {
+    position: inherit;
+    width: 24rem;
+    left: 5rem;
+  }
+
+}
+
+
+/* SCREEN 1500px */
+@media (min-width: 1500px) {
+
+  div._container_info {
+    width: 23vw;
+  }
+
+}
+
+/* SCREEN 1920px */
+@media (min-width: 1920px) {
+
+  article._container_all {
+    padding: 0 35rem;
+  }
+  img._polaroid {
+    width: 24.5rem;
+    left: 20rem;
+  }
+  div._container_info {
+    width: 18vw;
+  }
+  
+}
+
+/* SCREEN 2560px */
+@media (min-width: 2560px) {
+
+  article._container_all {
+    padding: 0 55rem;
+  }
+  img._polaroid {
+    // width: 24.5rem;
+    left: 39.7rem;
+  }
+  div._container_info {
+    width: 13vw;
+  }
+  
 }
 
