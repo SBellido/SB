@@ -4,13 +4,9 @@
 @media (min-width: 0px) { 
     
     article._container_info {
-        height: 507px;
+        height: auto;
         overflow-x: auto;
     }
-
-    div._scroll {
-        height: 500;
-    }  
 
 }
 
@@ -46,6 +42,11 @@
     section._container_career {
         padding: 0 4.5rem 1rem 4.5rem
     }
-    
+    /*--------SCROLL---------*/
+    div._scroll {
+        height: 13.5rem;
+        overflow-x: auto;
+    }
 }
+
   

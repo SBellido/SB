@@ -141,29 +141,6 @@
       font-weight: 700;
     }
 
-/*---------MORE WORKS----------*/
-section._container_info_tecno {
-  display: flex;
-  flex-direction: column;
-}
-h4._title {
-  color: $third_color;
-  margin-block-end: 0;
-  text-align: center;
-  font-weight: 200;
-}
-div._container_more_works {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 19rem;
-  margin: auto;
-}
-div._container_text_more_works {
-  padding-bottom: .5rem;
-  border-bottom: solid .5px $third_color;
-}
-
 /*---------SCROLL----------*/
     div._scroll {
         height: auto;

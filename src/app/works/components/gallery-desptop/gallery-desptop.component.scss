@@ -8,18 +8,18 @@
   ._gallery {
     margin-bottom: 2rem;
   }
-  ._container_image {
+  div._container_image {
     padding-top: 0;
     width: 14rem;
     margin-bottom: 0;
   }
-  ._image_gallery {
+  img._image_gallery {
     width: 111%;
     z-index: -2;  
     margin-bottom: 4rem;
   }
-  ._inactive_button,
-  ._active_button {
+  button._inactive_button,
+  button._active_button {
     margin-bottom: 3rem;
   }
   div._container_count {
@@ -32,7 +32,7 @@
 @media (min-width: 375px) {
 
 /*------------ GALLERY ------------*/
-  ._container_image {
+  div._container_image {
     padding-top: .5rem;
     width: 16rem;
   }
@@ -46,7 +46,7 @@
 @media (min-width: 425px) {
 
 /*------------ GALLERY ------------*/
-  ._container_image {
+  div._container_image {
     padding-top: .8rem;
     width: 18rem;
   }
@@ -58,7 +58,7 @@
 
 /* SCREEN 768px */
 @media (min-width: 768px) {
-  ._container_image {
+  div._container_image {
     width: 18rem;
   }
   div._container_count {
@@ -69,11 +69,11 @@
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
 
-  ._container_image {
+  div._container_image {
     width: 23rem;
     margin-top: 0;
   }
-  ._container_title {
+  div._container_title {
     margin-bottom: 1rem;
   }
   div._container_count {
@@ -89,7 +89,7 @@
   div._container_count {
     margin-top: 2.3rem;
   } 
-  ._container_image {
+  div._container_image {
     width: 21.2rem;
   }
 
@@ -98,19 +98,19 @@
 /* SCREEN 1500px */
 @media (min-width: 1500px) {
 
-  ._container_image {
+  div._container_image {
     margin-top: .3rem;
   }
   div._container_count {
     margin-top: 2.8rem;
   } 
 
-}
+ }
 
 /* SCREEN 1920px */
 @media (min-width: 1920px) {
 
-  ._container_image {
+  div._container_image {
     margin-top: 0;
   }
 

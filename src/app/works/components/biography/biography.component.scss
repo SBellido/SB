@@ -82,7 +82,7 @@
   }
 /*--------SCROLL---------*/
   div._scroll {
-    height: 507px;
+    height: auto;
     overflow-x: auto;
   }
   /* Tamaño del scroll */
@@ -143,6 +143,7 @@
 
 /* SCREEN 1024px */
 @media (min-width: 1024px) { 
+
   /*------GENERAL------*/
   article._container_info {
     width: 23vw;
