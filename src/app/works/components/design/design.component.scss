@@ -52,7 +52,7 @@
         padding: 0 1rem 1rem 1rem;
     }
     article._container_all {
-        padding-top: 3.5rem;
+        padding-top: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -236,7 +236,7 @@
         flex-direction: row;
         padding: 0 10rem;
     }  
-    article._container_info {
+    div._container_info {
         height: 20rem;
     }
     // div._container_info {
