@@ -34,7 +34,6 @@ import { BrandsSectionComponent } from './components/design/components/brands-se
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
 import { DownloadComponent } from './components/download/download.component';
-import { SectionComponent } from './components/section/section.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +61,6 @@ import { SectionComponent } from './components/section/section.component';
     CompetitionsComponent,
     QxComponent,
     DownloadComponent,
-    SectionComponent
   ],
   imports: [
     CommonModule,
