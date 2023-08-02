@@ -166,13 +166,13 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 17rem;
+    width: 16.5rem;
     margin: auto;
   }
   div._container_text_more_works {
     padding-bottom: .5rem;
     border-bottom: solid .5px $third_color;
-  }
+  }	
 }
 @media (min-width: 768px) {
   div._container_info {
