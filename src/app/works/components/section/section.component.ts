@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { GalleryImage, ItemSection, Section } from 'src/app/models/models';
+import { Button, ItemsSection } from 'src/app/models/models';
 
 @Component({
   selector: 'app-section',
@@ -8,16 +8,22 @@ import { GalleryImage, ItemSection, Section } from 'src/app/models/models';
 })
 
 export class SectionComponent implements OnInit {
-  
-  @Input() area: string | undefined;
-  @Input() imagesList: GalleryImage[] = [];
-  @Input() imgGallery: string = ''; 
-  @Input() totalImages: number | undefined;
-  @Input() brands: string[] | undefined;
 
+  @Input() sections: ItemsSection[] = [];
+  @Input() brands: Button[] = [];
+  
   constructor() { }  
 
   ngOnInit(): void {  
   }
   
+  OpenClose(sectionTitle: string) {
+    const section = this.sections.find(
+      (item) => item.title === sectionTitle);
+    if (section && !section.disabled) {
+      section.visible = !section.visible;
+    }
+  }
+
+
 }

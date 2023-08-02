@@ -11,7 +11,6 @@ import { Button } from 'src/app/models/models';
 export class BrandsButtonsComponent implements OnInit {
 
 @Input() brands: Button[] = []
-
   
   constructor(private router: Router) { }
 

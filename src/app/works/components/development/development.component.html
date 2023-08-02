@@ -6,7 +6,10 @@
     </div>
 
     <div class="_container_cards">
-      <article class="_container_section">
+      <app-section
+        [sections]="sections">
+      </app-section>
+      <!-- <article class="_container_section">
         <section class="_container_item" (click)="OpenClose('angular')">
           <h2 class="_item">angular</h2>
         </section>
@@ -28,9 +31,9 @@
         <div class="_container_button" *ngIf="visibleAngular">
           <button class="_close" (click)="OpenClose('angular')">cerrar</button>
         </div>
-      </article>
+      </article> -->
 
-      <article class="_container_section">
+      <!-- <article class="_container_section">
         <section class="_container_item" (click)="OpenClose('bootstrap')">
           <h2 class="_item">bootstrap</h2>
         </section>
@@ -73,7 +76,7 @@
             </button>
           </div>
         </div>
-      </article>
+      </article> -->
     </div>
 
   </section>
