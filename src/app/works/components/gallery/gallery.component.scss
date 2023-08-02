@@ -4,13 +4,13 @@
 @media (min-width: 0px) {
 
 /*------------ GALLERY ------------*/
-article._container_gallery {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-  ._gallery {
+  article._container_gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  section._gallery {
     display: flex;
     flex-direction: row;
     justify-content: space-around;

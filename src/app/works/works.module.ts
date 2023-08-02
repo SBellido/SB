@@ -15,7 +15,6 @@ import { HomeComponent } from './components/home/home.component';
 import { DesignComponent } from './components/design/design.component';
 import { DevelopmentComponent } from './components/development/development.component';
 import { BiographyComponent } from './components/biography/biography.component';
-import { ExperimentalComponent } from './components/design/components/experimental/experimental';
 import { AcademicComponent } from './components/biography/components/academic/academic.component';
 import { LaborComponent } from './components/biography/components/labor/labor.component';
 import { PersonalComponent } from './components/biography/components/personal/personal.component';
@@ -44,7 +43,6 @@ import { SectionComponent } from './components/section/section.component';
     DesignComponent,
     DevelopmentComponent,
     BiographyComponent,
-    ExperimentalComponent,
     AcademicComponent,
     LaborComponent,
     PersonalComponent,

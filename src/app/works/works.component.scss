@@ -91,6 +91,62 @@
     font-size: 1.3rem;
     font-weight: 500;
   }
+  h4._title_tecno {	  
+    color: $first_color;	      
+    margin-block-end: 0;	      
+    text-align: center;	  
+  }
+  figure._container_tecno {	      
+    display: flex;
+    align-items: center;	
+    justify-content: space-around;	
+    flex-direction: row;	
+  }	
+  img._logo_tecno {	
+      width: 3rem;	
+      margin: 0 .5rem;	
+      filter: grayscale(100%);	
+      opacity: 60%;	
+      cursor: pointer;	
+      -webkit-transition:-webkit-transform 0.5s ease-out;	
+      -moz-transition:-moz-transform 0.5s ease-out;	
+      -o-transition:-o-transform 0.5s ease-out;	
+      -ms-transition:-ms-transform 0.5s ease-out;	
+      transition:transform 0.5s ease-out;	
+  }	
+  img._logo_tecno:hover {  	
+      filter: none;	
+      opacity: 100%;	
+      -moz-transform: scale(1.2);	
+      -webkit-transform: scale(1.2);	
+      -o-transform: scale(1.2);	
+      -ms-transform: scale(1.2);	
+      transform: scale(1.2);	
+  }	
+
+  /*---------MORE WORKS----------*/	
+  section._container_info_tecno {	
+      display: flex;	
+      flex-direction: column;	
+  }	
+  h4._title {	
+      color: $third_color;	
+      margin-block-end: 0;	
+      text-align: center;	
+      font-weight: 200;	
+  }	
+  div._container_more_works {	
+      display: flex;	
+      justify-content: center;	
+      flex-direction: column;	
+      width: 16rem;	
+      margin: auto;	
+  }	
+  div._container_text_more_works {	
+      padding-bottom: .5rem;	
+      border-bottom: solid .5px $third_color;	
+  }
+
   ._icon_button {
     margin-right: .5rem;
     color: $first_color;
@@ -167,6 +223,7 @@
   button._close:hover {
     background: $fifth_color_light;    
   }
+  
   // h4._title_product {
   //     color: $first_color;
   //     text-align: center;
@@ -175,6 +232,7 @@
   //     margin-block-end: 1em;
   //     font-weight: bold;
   // }
+  
 }
 
 
