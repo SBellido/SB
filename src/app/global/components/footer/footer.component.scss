@@ -220,6 +220,12 @@
 }
 /* SCREEN 2560px*/
 @media (min-width: 2560px) { 
+  section._header_footer {
+    padding: 0 43rem;
+  }
+  img._ornament {
+    width: 13vw;
+  }
   section._container_contact {
     padding: 0 76rem;
   }
