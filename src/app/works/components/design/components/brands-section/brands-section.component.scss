@@ -1,10 +1,7 @@
-@import '../../../../../global/global.component.scss';
 @import '../../../gallery-polaroid/gallery-polaroid.component.scss';
 @import '../../design.component.scss';
-
 /* SCREEN 0px */
 @media (min-width: 0px) {
-
     article._container_all {
       display: flex;
       justify-content: center;
@@ -12,7 +9,6 @@
       flex-direction: column;
       padding-top: 0;
     }
-  // TITTLE
     section._container {
       height: auto;
       padding-top: 0rem;
@@ -35,9 +31,6 @@
       margin-block-start: 0em;
       margin-block-end: 0em;
     }
-  
-  /*------------ GALLERY ------------*/
-
     div._container_polaroid {
       display: flex;
       justify-content: center;
@@ -53,8 +46,6 @@
       width: 17rem;
       z-index: -2;  
     }
-    
-    /*-------- BUTTON BACK --------*/
     div._container_button_back {
       position: absolute;
       top: 15rem;
@@ -73,7 +64,6 @@
       flex-direction: row;
       width: auto;
       padding: 0;
-      // border: solid .8px $third_color;
       background: $first_color;
       border-radius: 50px;
     }
@@ -116,47 +106,33 @@
     span {
       font-weight: 700;
     }
-
-
-/*---------SCROLL----------*/
     div._scroll {
         height: auto;
         overflow-x: auto;
     }
-
 }
-
-
 /* SCREEN 375px */
 @media (min-width: 375px) {
 
   img._polaroid {
     width: 21rem;
   }
-
 }
-
 /* SCREEN 720px */
 @media (min-width: 720px) {
-
   div._container_info {
     width: 42vw
   }
 
 }
-
 /* SCREEN 768px */
 @media (min-width: 768px) {
-
   div._container_info {
     width: 39vw
   }
-
 }
-
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
-
   article._container_all {
     padding: 0 9rem;
     justify-content: space-between;
@@ -188,40 +164,28 @@
       height: 15rem;
       overflow-x: auto;
   }
-
 }
-
-
-
 /* SCREEN 1440px */
 @media (min-width: 1440px) {
-
   article._container_all {
     padding: 0 20rem;
   }
   div._container_info {
     width: 24vw;
-    height: 26rem;
+    height: 25rem;
   }
-  
   img._polaroid {
     position: inherit;
-    width: 24rem;
+    width: 23rem;
     left: 5rem;
   }
-
 }
-
-
 /* SCREEN 1500px */
 @media (min-width: 1500px) {
-
   div._container_info {
     width: 23vw;
   }
-
 }
-
 /* SCREEN 1920px */
 @media (min-width: 1920px) {
 
@@ -234,23 +198,19 @@
   }
   div._container_info {
     width: 18vw;
+    height: 26.5rem;
   }
-  
 }
-
 /* SCREEN 2560px */
 @media (min-width: 2560px) {
-
   article._container_all {
     padding: 0 55rem;
   }
   img._polaroid {
-    // width: 24.5rem;
     left: 39.7rem;
   }
   div._container_info {
     width: 13vw;
   }
-  
 }
 
