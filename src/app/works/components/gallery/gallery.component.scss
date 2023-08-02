@@ -1,7 +1,5 @@
 @import '../../../global/global.component.scss';
-/* SCREEN 0px */
 @media (min-width: 0px) {
-/*------------ GALLERY ------------*/
   article._container_gallery {
     display: flex;
     flex-direction: column;
@@ -62,7 +60,6 @@
     color: $first_color;
     opacity: 0.5;
   }
-  /*--------COUNTER----------*/
   div._container_count {
     display: flex;
     flex-direction: row;
@@ -80,7 +77,6 @@
     color: $first_color_light;
   }
 }
-/* SCREEN 375px */
 @media (min-width: 375px) {
   div._container_image {
     padding-top: .5rem;
@@ -96,7 +92,6 @@
     margin-left: 1rem;
   }
 }
-/* SCREEN 768px */
 @media (min-width: 768px) { 
   div._container_image {
     margin-bottom: -3.7rem;
@@ -105,7 +100,6 @@
     margin-bottom: 3.7rem;
   }
 }
-/* SCREEN 1024px */
 @media (min-width: 1024px) {
   div._container_image {
     margin-top: .7rem;
