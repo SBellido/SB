@@ -9,22 +9,22 @@
 
   <select class="_dropdown" (change)="onChange($event)">
     <option value="imagesList1">
-      <span class="icon"></span>vista 1
+      <span class="icon"></span>elegir
     </option>
     <option value="imagesList2">
-      <span class="icon"></span>vista 2
+      <span class="icon"></span>elegir
     </option>
     <option value="imagesList3">
-      <span class="icon"></span>vista 3
+      <span class="icon"></span>elegir
     </option>
     <option value="imagesList4">
-      <span class="icon"></span>vista 4
+      <span class="icon"></span>elegir
     </option>
     <option value="imagesList5">
-      <span class="icon"></span>vista 5
+      <span class="icon"></span>elegir
     </option>
     <option value="imagesList6">
-      <span class="icon"></span>vista 6
+      <span class="icon"></span>elegir
     </option>
   </select>
 
@@ -32,7 +32,7 @@
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
-    <app-gallery-desptop
+    <app-gallery-desptop class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">

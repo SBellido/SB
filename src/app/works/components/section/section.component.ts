@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemSection, Section } from 'src/app/models/models';
+import { Component, Input, OnInit } from '@angular/core';
+import { GalleryImage, ItemSection, Section } from 'src/app/models/models';
 
 @Component({
   selector: 'app-section',
@@ -9,16 +9,11 @@ import { ItemSection, Section } from 'src/app/models/models';
 
 export class SectionComponent implements OnInit {
   
-  section: Section = {
-    items: [],
-    allClosed: true,
-  }
-  item: ItemSection = {
-    id:  0,
-    title: '',
-    active: false,
-    value: ''
-  }
+  @Input() area: string | undefined;
+  @Input() imagesList: GalleryImage[] = [];
+  @Input() imgGallery: string = ''; 
+  @Input() totalImages: number | undefined;
+  @Input() brands: string[] | undefined;
 
   constructor() { }  
 
