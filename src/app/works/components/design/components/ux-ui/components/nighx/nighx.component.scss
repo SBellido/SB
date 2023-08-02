@@ -1,7 +1,6 @@
 @import '../../../../../gallery/gallery.component.scss';
 @import '../../../../../design/design.component.scss';
 @import '../../../../../../../global/global_gallery_mobile.scss';
-/* SCREEN 0px */
 @media (min-width: 0px) {
   select._dropdown {
     font-size: 1rem;
@@ -78,7 +77,6 @@
     width: 13rem;
   }
 }
-/* SCREEN 1024px */
 @media (min-width: 1024px) {
   article._container_all {
     padding-top: 0;
