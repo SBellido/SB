@@ -1,9 +1,5 @@
 @import '../../../global/global.component.scss';
-
-/* SCREEN 0px */
 @media (min-width: 0px) {
-
-  /* ---------- BRANDS ------------ */
   div._container_brands {
     display: flex;
     flex-direction: row;
@@ -41,23 +37,14 @@
     margin-block-start: .5em;
     margin-block-end: .5em;
   }
-
 }
-
-/* SCREEN 1024px */
 @media (min-width: 1024px) {
-
   img._logo_realization {
     width: 2.3rem;
   }
-
 }
-
-/* SCREEN 1440px */
 @media (min-width: 1440px) {
-
   img._logo_realization {
     width: 3rem;
   }
-
 }

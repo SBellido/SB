@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { ItemSection } from 'src/app/models/models';
+import { ItemsSection } from 'src/app/models/models';
 
 @Component({
   selector: 'app-biography',
@@ -19,12 +19,12 @@ export class BiographyComponent implements OnInit {
   visibleAcademic: boolean = false;
   visiblePersonal: boolean = false;
   
-  item: ItemSection = {
-    id:  0,
-    title: '',
-    active: false,
-    value: ''
-  }
+  // item: ItemSection = {
+  //   id:  0,
+  //   title: '',
+  //   active: false,
+  //   value: ''
+  // }
 
   public area: string = 'perfil';
   public icon: string = 'fingerprint';

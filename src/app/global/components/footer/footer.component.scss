@@ -149,6 +149,18 @@
     width: 60vw;
   }
 }
+/* SCREEN 620px */
+@media (min-width: 620px) { 
+  img._ornament {
+    width: 40vw;
+  }
+  section._container_contact {
+    padding: 0 15rem;
+  }
+  section._container_social_networks {
+    padding: 0 10rem;
+  }
+}
 /* SCREEN 768px */
 @media (min-width: 768px) { 
   img._ornament {
