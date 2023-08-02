@@ -1,8 +1,6 @@
 @import '../../../global/global.component.scss';
-
 /* SCREEN 0px */
 @media (min-width: 0px) {
-
 /*------------ GALLERY ------------*/
   article._container_gallery {
     display: flex;
@@ -22,14 +20,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-top: .3rem;
-    width: 11rem;
-    margin-bottom: -3rem;
+    padding-top: 0;
+    width: 13rem;
+    margin-bottom: 0;
   }
   img._image_gallery {
     width: 111%;
     z-index: -2;  
-    margin-bottom: 3rem;
+    margin-bottom: .6rem;
   }
   button._inactive_button,
   button._active_button {
@@ -54,7 +52,6 @@
       circle, $third_color_lighter 9%, 
       $third_color 100%
     );
-    
   }
   button._inactive_button {
     cursor: default;
@@ -65,7 +62,6 @@
     color: $first_color;
     opacity: 0.5;
   }
-
   /*--------COUNTER----------*/
   div._container_count {
     display: flex;
@@ -78,21 +74,20 @@
     width: 9rem;
     margin-top: -.1rem;
   }
-
   div._image_counter {
     font-size: 1.5rem;
     font-weight: 100;
     color: $first_color_light;
   }
-
 }
-
 /* SCREEN 375px */
 @media (min-width: 375px) {
-  
   div._container_image {
-    padding-top: .8rem;
-    width: 13rem;
+    padding-top: .5rem;
+    width: 14rem;
+  }
+  img._image_gallery {
+    margin-bottom: 0rem;
   }
   #left_btn {
     margin-right: 1rem;
@@ -100,48 +95,31 @@
   #right_btn {
     margin-left: 1rem;
   }
-
-}
-/* SCREEN 425px */
-@media (min-width: 425px) {
-  
-  div._container_image {
-    width: 14rem;
-    margin-bottom: -2.7rem;
-  } 
-  
- 
-
 }
 /* SCREEN 768px */
-@media (min-width: 768px) {
-  
+@media (min-width: 768px) { 
   div._container_image {
     margin-bottom: -3.7rem;
   } 
   img._image_gallery {  
-    margin-bottom: 4rem;
+    margin-bottom: 3.7rem;
   }
-  
-
 }
-
 /* SCREEN 1024px */
 @media (min-width: 1024px) {
-
   div._container_image {
     margin-top: .7rem;
     width: 14.2rem;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     margin-bottom: -2.3rem;
   }
   img._image_gallery {
-    margin-bottom: 3rem;
+    margin-bottom: 2.3rem;
   }
-    /*--------COUNTER----------*/
-    div._container_count {
-      margin-top: -.2rem;
-    }
-  
-
+  div._container_count {
+    margin-top: -.2rem;
+  }
+  article._container_gallery {
+    margin-right: 2rem;
+  }
 }
