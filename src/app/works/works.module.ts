@@ -38,6 +38,7 @@ import { SectionComponent } from './components/section/section.component';
 import { HighlightDirective } from '../directives/highlight.directive'; 
 import { InfoComponent } from './components/info/info.component';
 import { TecnologiesComponent } from './components/tecnologies/tecnologies.component';
+import { HeaderSectionComponent } from './components/header-section/header-section.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { TecnologiesComponent } from './components/tecnologies/tecnologies.compo
     SectionComponent,
     HighlightDirective,
     InfoComponent,
-    TecnologiesComponent
+    TecnologiesComponent,
+    HeaderSectionComponent
   ],
   imports: [
     CommonModule,
