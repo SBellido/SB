@@ -1,30 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage, Information } from 'src/app/models/models';
-import { GalleryDesptopComponent } from '../../../../../gallery-desptop/gallery-desptop.component';
+import { Button, GalleryImage, HeaderSection, Information } from 'src/app/models/models';
 
 @Component({
   selector: 'app-ypf',
   templateUrl: './ypf.component.html',
   styleUrls: ['./ypf.component.scss']
 })
+
 export class YpfComponent implements OnInit {
   
   public list: string = 'list';
-  public area: string = 'diseño/ux|ui';
-  public icon: string = 'local_florist';
-
   imgGallery: string = '';
-  
   currentImageIndex: number = 0;
   imagesCount: number = 0;
   imagesList : GalleryImage[] = [];
+
+  header: HeaderSection[] = [
+    {
+     area: 'diseño/ux|ui',
+     icon: 'local_florist'
+    }
+  ];
 
   information: Information[] = [
     {
       title: 'Gestión de Inversiones | Web App',
       text: 'Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. <span>Diseñada como herramienta para que YPF gestione sus inversiones de negocio de manera ordenada y coherente. En el año 2022, Sebastián fue encargado de realizar entrevistas con usuarios, análisis de problema, diseño UX | UI, flujo de interacción, diseño de prototipos y presentaciones al cliente. El trabajo fue realizado para Tsoft ocupando el rol de UX/UI Sr. Participó durante un año en el proyecto, diseñó la aplicación y llegó a ocupar el rol de Analista Funcional y Product Owner, por el conocimiento adquirido de la lógica del negocio. El diseño de la app se entregó completo y el proyecto aún se encuenta en etapa de desarrollo.',
-      subtitle: 'Tecnologías utilizadas',
+      subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {
           href: 'https://www.scrum.org/resources/blog/que-es-scrum',

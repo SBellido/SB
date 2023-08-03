@@ -53,3 +53,7 @@ export interface Tecnologies {
   title: string
   alt: string,
 }
+export interface HeaderSection {
+  icon: string,
+  area: string,
+}

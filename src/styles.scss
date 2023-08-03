@@ -1,20 +1,14 @@
 @import './app/global/global.component.scss';
-
 body {
   margin: 0px;
   background-color: $first_color;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-body::-webkit-scrollbar {
-  width: .05em;
-}
-
+body::-webkit-scrollbar { width: .05em; }
 body::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: $first_color_light;
   outline: none;

@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage, Information } from 'src/app/models/models';
+import { Button, GalleryImage, HeaderSection, Information } from 'src/app/models/models';
 
 @Component({
   selector: 'app-stormtech',
   templateUrl: './stormtech.component.html',
   styleUrls: ['./stormtech.component.scss']
 })
+
 export class StormtechComponent implements OnInit {
 
   currentImageNumber: number = 1;
-  public area: string = 'desarrollo/bootstrap';
-  public icon: string = 'developer_mode';
+  header: HeaderSection[] = [
+    {
+     area: 'desarrollo/bootstrap',
+     icon: 'developer_mode'
+    }
+  ];
   imgGallery: string = '../assets/images/dev/stormtech/desktop/0.png';
-
   imagesList : GalleryImage[] = [
     { src: '../assets/images/dev/stormtech/desktop/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/dev/stormtech/desktop/1.png', position: 1, alt: 'string', first: false, last: false },
