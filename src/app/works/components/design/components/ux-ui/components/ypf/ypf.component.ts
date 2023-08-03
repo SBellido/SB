@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage } from 'src/app/models/models';
+import { Button, GalleryImage, Information } from 'src/app/models/models';
 import { GalleryDesptopComponent } from '../../../../../gallery-desptop/gallery-desptop.component';
 
 @Component({
@@ -19,6 +19,34 @@ export class YpfComponent implements OnInit {
   currentImageIndex: number = 0;
   imagesCount: number = 0;
   imagesList : GalleryImage[] = [];
+
+  information: Information[] = [
+    {
+      title: 'Gestión de Inversiones | Web App',
+      text: 'Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. <span>Diseñada como herramienta para que YPF gestione sus inversiones de negocio de manera ordenada y coherente. En el año 2022, Sebastián fue encargado de realizar entrevistas con usuarios, análisis de problema, diseño UX | UI, flujo de interacción, diseño de prototipos y presentaciones al cliente. El trabajo fue realizado para Tsoft ocupando el rol de UX/UI Sr. Participó durante un año en el proyecto, diseñó la aplicación y llegó a ocupar el rol de Analista Funcional y Product Owner, por el conocimiento adquirido de la lógica del negocio. El diseño de la app se entregó completo y el proyecto aún se encuenta en etapa de desarrollo.',
+      subtitle: 'Tecnologías utilizadas',
+      tecnologies: [
+        {
+          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
+          src: '../assets/images/tecnologies/scrum.png',
+          title: 'Scrum',
+          alt: 'Logo de Scrum',
+        },
+        {
+          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          src: '../assets/images/tecnologies/azure.png',
+          title: 'Azure',
+          alt: 'Logo de Azure',
+        },
+        {
+          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          src: '../assets/images/tecnologies/xd.png',
+          title: 'Adobe Xd',
+          alt: 'Logo de Adobe Xd',
+        }
+      ],
+    },
+  ];
 
   brands : Button[] = [
     {
