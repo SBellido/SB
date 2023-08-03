@@ -25,19 +25,19 @@ export class DevelopmentComponent implements OnInit {
         {
           route: 'works/development/investigar',
           img: '../assets/images/dev/investigar/logo_investigar.png',
-          title: 'InventigAr',
+          name: 'InventigAr',
           text: 'Logo de InventigAr',
         },
         {
           route: 'works/development/xubox',
           img: '../assets/images/dev/xubox/logo/xubox_logo.png',
-          title: 'Logística',
+          name: 'Logística',
           text: 'Logo de Xubox',
         },
         {
           route: 'works/development/qx',
           img: '../assets/images/dev/qx/qx_logo.png',
-          title: 'Logística',
+          name: 'Logística',
           text: 'Logo de QX Logística',
         }
       ],
@@ -52,13 +52,13 @@ export class DevelopmentComponent implements OnInit {
         {
           route: 'works/development/stormtech',
           img: '../assets/images/dev/stormtech/stormtech_logo.png',
-          title: 'Stormtech',
+          name: 'Stormtech',
           text: 'Logo de Stormtech',
         },
         {
           route: 'works/development/hunt',
           img: '../assets/images/dev/hunt/hunt_logo.png',
-          title: 'Hunt',
+          name: 'Hunt',
           text: 'Logo de Hunt',
         }
       ]

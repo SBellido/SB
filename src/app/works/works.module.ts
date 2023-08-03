@@ -36,6 +36,7 @@ import { QxComponent } from './components/development/components/qx/qx.component
 import { DownloadComponent } from './components/download/download.component';
 import { SectionComponent } from './components/section/section.component';
 import { HighlightDirective } from '../directives/highlight.directive'; 
+import { InfoComponent } from './components/info/info.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { HighlightDirective } from '../directives/highlight.directive';
     QxComponent,
     DownloadComponent,
     SectionComponent,
-    HighlightDirective
+    HighlightDirective,
+    InfoComponent
   ],
   imports: [
     CommonModule,

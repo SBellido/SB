@@ -24,7 +24,7 @@ export class BrandsSectionComponent implements OnInit {
     {
       route: 'works/design/competitions',
       img: '../assets/images/graph/eyeka_logo.png',
-      title: 'Marcas',
+      name: 'Marcas',
       text: 'Logo de Marca Registrada',
     },
   ]

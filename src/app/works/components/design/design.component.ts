@@ -30,25 +30,25 @@ export class DesignComponent implements OnInit {
         {
           route: 'works/design/ux-ui/ypf',
           img: '../assets/images/ux_ui/ypf/YPF_logo.png',
-          title: 'YPF',
+          name: 'YPF',
           text: 'Logo de YPF',
         },
         {
           route: 'works/design/ux-ui/v-life',
           img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
-          title: 'V-Life',
+          name: 'V-Life',
           text: 'Logo V-Life',
         },
         {
           route: 'works/design/ux-ui/nighx',
           img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
-          title: 'Nighx',
+          name: 'Nighx',
           text: 'Logo de Nighx',
         },
         {
           route: 'works/design/ux-ui/travel-log',
           img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
-          title: 'TravelLog',
+          name: 'TravelLog',
           text: 'Logo de TravelLog',
         },
       ],
@@ -63,13 +63,13 @@ export class DesignComponent implements OnInit {
         {
           route: 'works/design/brands',
           img: '../assets/images/graph/brands.png',
-          title: 'Marcas',
+          name: 'Marcas',
           text: 'Logo de Marca Registrada',
         },
         {
           route: 'works/design/competitions',
           img: '../assets/images/graph/eyeka_logo.png',
-          title: 'Concursos',
+          name: 'Concursos',
           text: 'Logo de Eyeka',
         },
       ]

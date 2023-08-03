@@ -44,13 +44,13 @@ brands: Button[] = [
   {
     route: 'works/development/investigar',
     img: '../assets/images/dev/investigar/logo_investigar.png',
-    title: 'InventigAr',
+    name: 'InventigAr',
     text: 'Logo de InventigAr',
   },
   {
     route: 'works/development/xubox',
     img: '../assets/images/dev/xubox/logo/xubox_logo.png',
-    title: 'Xubox',
+    name: 'Xubox',
     text: 'Logo Xubox',
   },
 ]

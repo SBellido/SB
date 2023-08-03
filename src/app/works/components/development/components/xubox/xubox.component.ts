@@ -35,7 +35,7 @@ brands: Button[] = [
   {
     route: 'works/development/investigar',
     img: '../assets/images/dev/investigar/logo_investigar.png',
-    title: 'InventigAr',
+    name: 'InventigAr',
     text: 'Logo de InventigAr',
   },
   // {
@@ -47,7 +47,7 @@ brands: Button[] = [
   {
     route: 'works/development/qx',
     img: '../assets/images/dev/qx/qx_logo.png',
-    title: 'Logística',
+    name: 'Logística',
     text: 'Logo de QX Logística',
   }
 ]

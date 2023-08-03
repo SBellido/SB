@@ -10,8 +10,9 @@ import { Button } from 'src/app/models/models';
 
 export class BrandsButtonsComponent implements OnInit {
 
-@Input() brands: Button[] = []
-  
+  @Input() brands: Button[] = []
+  title: string = '';
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {

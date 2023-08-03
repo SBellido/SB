@@ -24,19 +24,19 @@ export class YpfComponent implements OnInit {
     {
       route: 'works/design/ux-ui/v-life',
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
-      title: 'V-Life',
+      name: 'V-Life',
       text: 'Logo V-Life',
     },
     {
       route: 'works/design/ux-ui/nighx',
       img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
-      title: 'Nighx',
+      name: 'Nighx',
       text: 'Logo de Nighx',
     },
     {
       route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
-      title: 'TravelLog',
+      name: 'TravelLog',
       text: 'Logo de TravelLog',
     },
   ]

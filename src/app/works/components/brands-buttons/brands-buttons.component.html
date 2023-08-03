@@ -1,10 +1,10 @@
 <div class="_container_brands">
-    <h3 class="_works">Trabajos realizados</h3>
+    <h3 class="_works">{{ title }}</h3>
     <div class="_container_figure">
         <figure class="_container_realizations" *ngFor="let btn of brands">   
             <div class="_realization" (click)="routeTo(btn.route)">
                 <img class="_logo_realization" src="{{ btn.img }}" alt="{{ btn.text }}">
-                <p class="_name_realization">{{ btn.title }}</p>
+                <p class="_name_realization">{{ btn.name }}</p>
             </div>
         </figure>
     </div>

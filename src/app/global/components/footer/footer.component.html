@@ -1,12 +1,13 @@
 <article class="_container_footer">
 
   <p class="_message">Contáctame!</p>
+
   <section class="_container_contact">     
     <div class="_container_social_networks"
     *ngFor="let btn of btnContact">
       <a target="_blank" href="{{ btn.route }}">
         <div class="">  
-          <button class="_button_contact" title="{{btn.title}}" id="icon_email" mat-menu-item>
+          <button class="_button_contact" title="{{btn.name}}" id="icon_email" mat-menu-item>
             <mat-icon class="_icon_contact">{{ btn.img }}</mat-icon>
           </button>
         </div>
@@ -18,7 +19,7 @@
     <div class="_container_logo_socialnet" 
     *ngFor="let btn of btnSN">
       <a href="{{ btn.route }}" target="_blank">
-        <img class="_logo_socialnet" title="{{ btn.title}}" 
+        <img class="_logo_socialnet" title="{{ btn.name}}" 
         src="{{ btn.img }}" alt="{{ btn.text }}">
       </a>
     </div>

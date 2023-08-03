@@ -54,13 +54,13 @@ brands: Button[] = [
   {
     route: 'works/development/xubox',
     img: '../assets/images/dev/xubox/logo/xubox_logo.png',
-    title: 'Xubox',
+    name: 'Xubox',
     text: 'Logo Xubox',
   },
   {
     route: 'works/development/qx',
     img: '../assets/images/dev/qx/qx_logo.png',
-    title: 'Logística',
+    name: 'Logística',
     text: 'Logo de QX Logística',
   }
 ]

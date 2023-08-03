@@ -23,7 +23,7 @@ export class CompetitionsComponent implements OnInit {
     {
       route: 'works/design/brands',
       img: '../assets/images/graph/brands.png',
-      title: 'Marcas',
+      name: 'Marcas',
       text: 'Logo de Marca Registrada',
     },
   ]
