@@ -30,7 +30,6 @@
         <section class="_container_item" (click)="OpenClose('laboral')">
           <h2 class="_item">profesional</h2>
         </section>
-        <!-- <p class="_item_disabled">in progress</p> -->
         <app-labor [hidden]="!visibleLabor"></app-labor>
         <div class="_container_button" *ngIf="visibleLabor">
             <button class="_close" (click)="OpenClose('laboral')">cerrar</button>

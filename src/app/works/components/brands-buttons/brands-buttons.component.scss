@@ -2,10 +2,21 @@
 @media (min-width: 0px) {
   div._container_brands {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h3._works {
+    color: $first_color;
+    text-align: center;
+    font-size: 1em;
+    margin-block-start: 0em;
+    margin-block-end: 1em;
+    font-weight: 700;
+  }
+  div._container_figure {
+    display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 1rem auto;
-    width: 100%;
   }
   figure._container_realizations {
     margin: 0 .75rem;
@@ -45,6 +56,6 @@
 }
 @media (min-width: 1440px) {
   img._logo_realization {
-    width: 3rem;
+    width: 2.8rem;
   }
 }
