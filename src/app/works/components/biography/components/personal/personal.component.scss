@@ -1,5 +1,4 @@
-@import '../../biography.component.scss';
-/* SCREEN 0px */
+@import '../../../biography/biography.component.scss';
 @media (min-width: 0px) { 
   div._container_img_personal {
     display: flex;
@@ -10,39 +9,15 @@
     border: solid $second_color 3px;
     border-radius: 50%;
   }
-  p._info {
-    text-align: left;
-    padding: 0 1rem 1rem 1rem;
-  } 
-  div._scroll {
-    height: auto;
-    overflow-x: auto;
+  h3._name {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: $first_color;
+    margin-block-start: 0em;
+    margin-block-end: .5em;
+    font-weight: 700;
   }
-  div._scroll::-webkit-scrollbar {
-      width: 4px;
-  }
-  div._scroll::-webkit-scrollbar-thumb {
-      background: #ccc;
-      border-radius: 4px;
-  }
-  div._scroll::-webkit-scrollbar-thumb:active {
-      background-color: #999999;
-  }
-  div._scroll::-webkit-scrollbar-thumb:hover {
-      background: #b3b3b3;
-      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  }
-  div._scroll::-webkit-scrollbar-track {
-      background: #e1e1e1;
-      border-radius: 4px;
-  }
-  div._scroll::-webkit-scrollbar-track:hover, 
-  div._scroll::-webkit-scrollbar-track:active {
-      background: #d4d4d4;
-  }
-  // div._scroll {
-  //   height: 500;
-  // }
   ul {
     padding-inline-start: 1.5rem;
     padding-inline-end: 1.5rem;
@@ -60,12 +35,15 @@
     margin: .5rem 0;
     text-align: left;
   }
+  span {
+    font-weight: 700;
+  }
 }  
 /* SCREEN 1024px */
-@media (min-width: 1024px) { 
-  div._scroll {
-    height: 11.5rem;
-  }
+//@media (min-width: 1024px) { 
+  // div._scroll {
+  //   height: 11.5rem;
+  // }
   // div._scroll {
   //   height: 19.5rem;
   //   overflow-x: auto;
@@ -73,11 +51,11 @@
   // div._container_info {
   //   height: 19.5rem;
   // }
-}
-/* SCREEN 1500px */
-@media (min-width: 1500px) { 
-  div._scroll {
-      height: 14rem;
-  }
-}
+//}
+// /* SCREEN 1500px */
+// @media (min-width: 1500px) { 
+//   div._scroll {
+//       height: 14rem;
+//   }
+// }
 
