@@ -1,1 +1,30 @@
-@import '../../biography.component.scss';  
+@import '../../biography.component.scss';
+@media (min-width: 0px) { 
+    img._logo {
+        width: 11rem;
+    }
+    p._info {
+        text-align: center;
+        margin-block-start: 0em;
+        margin-block-end: .5em;
+        padding: 0 4rem;
+    }
+    p._info>span {
+        font-weight: 700;
+    }
+    a._link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        text-decoration: none;
+        color: $first_color;
+    }
+    a._link:hover {
+        color: $fifth_color;
+    }
+    p._p_link {
+        margin-block-start: 0em;
+        margin-block-end: .3em;
+    }
+}
