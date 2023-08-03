@@ -5,9 +5,12 @@
             <p class="_p_card">{{ info.text }}</p> 
         </div> 
         <h4 class="_title_tecno">{{ info.subtitle }}</h4><hr class="_hr">
-        <app-tecnologies 
-            [tecnologies]="info.tecnologies">
-        </app-tecnologies>
+        
+        <div class="_container_tecno">
+            <app-tecnologies class="_tecno"
+                [tecnologies]="info.tecnologies">
+            </app-tecnologies>
+        </div>
         <!-- <div class="_container_figure_tecno">     
             <figure class="_container_tecno">
             <a href="{{ info.tecnologies.href }}" target="_blank">

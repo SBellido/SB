@@ -19,26 +19,6 @@ $fifth_color_light: #b28cff;
 $fifth_color_lighter: #e9dffd;
 $accent_color: #f9f9f9;
 
-
-// $first_color: #000000;
-// $first_color_medium: #333333;
-// $first_color_light: #5b5b5b;
-
-// $first_color_lighter: #cfcfcf;
-// $first_color_hover: #1a1a1a;
-// $second_color: #03caff;
-// $second_color_light: #7ae3ff;
-// $second_color_lighter: #beeefa;
-// // $third_color: #b1ff57;
-// $third_color: #ffdd57;
-// $third_color_light: #fbe27e;
-// $third_color_lighter: #fbecb1;
-// $quarter_color: #f89af3;
-// $quarter_color_light: #f8cbf6;
-// $fifth_color: #8F57FF;
-// $fifth_color_light: #C5A9FE;
-// $accent_color: #f9f9f9;
-
 /* ------------ TIPOGRAPHIES ------------ */
 $font-weight-light: 200;
 
@@ -46,3 +26,32 @@ $font-weight-light: 200;
 $height_md: 37px;
 $height_lg: 50px;
 $height_xl: 70px;
+
+@media (min-width: 0px) {
+    div._scroll {
+        height: auto;
+        overflow-x: auto;
+      }
+      div._scroll::-webkit-scrollbar {
+          width: 4px;
+      }
+      div._scroll::-webkit-scrollbar-thumb {
+          background: #ccc;
+          border-radius: 4px;
+      }
+      div._scroll::-webkit-scrollbar-thumb:active {
+          background-color: #999999;
+      }
+      div._scroll::-webkit-scrollbar-thumb:hover {
+          background: #b3b3b3;
+          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+      }
+      div._scroll::-webkit-scrollbar-track {
+          background: #e1e1e1;
+          border-radius: 4px;
+        }
+      div._scroll::-webkit-scrollbar-track:hover, 
+      div._scroll::-webkit-scrollbar-track:active {
+          background: #d4d4d4;
+      } 
+}
