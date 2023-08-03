@@ -1,4 +1,3 @@
-@import '../../../global/global.component.scss';
 @import '../section/section.component.scss';
 
 @media (min-width: 0px) {
@@ -30,6 +29,48 @@
     display: flex;
     flex-direction: column;
   }
+  section._container_career {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  img._logo {
+    width: 11rem;
+  }
+  p._info {
+    text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: .5em;
+    padding: 0 4rem;
+  }
+  p._info>span {
+    font-weight: 700;
+  }
+  a._link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: $first_color;
+  }
+  a._link:hover {
+    color: $fifth_color;
+  }
+  p._p_link {
+    margin-block-start: 0em;
+    margin-block-end: .3em;
+  }
+  h3._name, h3._title {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    color: $first_color;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-weight: 700;
+  }
 }
 @media (min-width: 1024px) { 
   ._container_cards {
@@ -37,5 +78,11 @@
     flex-direction: row;
     align-items: flex-start;
     width: 55rem;
+  }
+  div._scroll {
+    height: 20rem;
+  }
+  p._info {
+    padding: 0 .5rem;
   }
 }

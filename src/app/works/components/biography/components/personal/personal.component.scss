@@ -9,15 +9,6 @@
     border: solid $second_color 3px;
     border-radius: 50%;
   }
-  h3._name {
-    display: block;
-    text-align: center;
-    font-size: 1em;
-    color: $first_color;
-    margin-block-start: 0em;
-    margin-block-end: .5em;
-    font-weight: 700;
-  }
   ul {
     padding-inline-start: 1.5rem;
     padding-inline-end: 1.5rem;
@@ -39,23 +30,13 @@
     font-weight: 700;
   }
 }  
-/* SCREEN 1024px */
-//@media (min-width: 1024px) { 
-  // div._scroll {
-  //   height: 11.5rem;
-  // }
-  // div._scroll {
-  //   height: 19.5rem;
-  //   overflow-x: auto;
-  // }
-  // div._container_info {
-  //   height: 19.5rem;
-  // }
-//}
-// /* SCREEN 1500px */
-// @media (min-width: 1500px) { 
-//   div._scroll {
-//       height: 14rem;
-//   }
-// }
-
+@media (min-width: 1024px) { 
+  div._scroll {
+    height: 11.5rem;
+  }
+}
+@media (min-width: 1500px) { 
+  div._container_info {
+    height: 20rem;
+  }
+}

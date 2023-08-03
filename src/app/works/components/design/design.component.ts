@@ -75,7 +75,7 @@ export class DesignComponent implements OnInit {
       ]
     },
     {
-      title: 'javascript',
+      title: 'experimental',
       visible: false,
       text: '',
       disabled: true,
