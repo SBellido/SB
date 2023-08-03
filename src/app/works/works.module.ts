@@ -37,6 +37,7 @@ import { DownloadComponent } from './components/download/download.component';
 import { SectionComponent } from './components/section/section.component';
 import { HighlightDirective } from '../directives/highlight.directive'; 
 import { InfoComponent } from './components/info/info.component';
+import { TecnologiesComponent } from './components/tecnologies/tecnologies.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { InfoComponent } from './components/info/info.component';
     DownloadComponent,
     SectionComponent,
     HighlightDirective,
-    InfoComponent
+    InfoComponent,
+    TecnologiesComponent
   ],
   imports: [
     CommonModule,

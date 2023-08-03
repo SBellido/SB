@@ -41,3 +41,15 @@ export interface ItemsSection {
   wordsToHighlight: string[],
   brandsData: Button[],
 }
+export interface Information {
+  title: string,
+  text: string,
+  subtitle: string,
+  tecnologies: Tecnologies[],
+}
+export interface Tecnologies {
+  href: string,
+  src: string,
+  title: string
+  alt: string,
+}

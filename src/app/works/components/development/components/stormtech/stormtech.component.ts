@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage } from 'src/app/models/models';
+import { Button, GalleryImage, Information } from 'src/app/models/models';
 
 @Component({
   selector: 'app-stormtech',
@@ -9,7 +9,6 @@ import { Button, GalleryImage } from 'src/app/models/models';
 })
 export class StormtechComponent implements OnInit {
 
- 
   currentImageNumber: number = 1;
   public area: string = 'desarrollo/bootstrap';
   public icon: string = 'developer_mode';
@@ -28,6 +27,53 @@ export class StormtechComponent implements OnInit {
     { src: '../assets/images/dev/stormtech/desktop/9.png', position: 9, alt: 'string', first: false, last: true }
   ];
   
+  information: Information[] = [
+    {
+      title: 'angular',
+      text: 'Framework de ingeniería de software de código abierto que se utiliza para crear aplicaciones web de una sola página. Los desarrolladores también lo utilizan para crear menús animados para páginas web HTML. El framework es una creación de los ingenieros de Google, Misko Hevery y Adam Abrons. Google lanzó oficialmente la primera versión, AngularJS, en 2012 y la ha mantenido desde entonces.',
+      subtitle: 'false',
+      tecnologies: [
+        {
+          href: 'works/development/investigar',
+          src: '../assets/images/dev/investigar/logo_investigar.png',
+          title: 'InventigAr',
+          alt: 'Logo de InventigAr',
+        },
+        {
+          href: 'works/development/xubox',
+          src: '../assets/images/dev/xubox/logo/xubox_logo.png',
+          title: 'Logística',
+          alt: 'Logo de Xubox',
+        },
+        {
+          href: 'works/development/qx',
+          src: '../assets/images/dev/qx/qx_logo.png',
+          title: 'Logística',
+          alt: 'Logo de QX Logística',
+        }
+      ],
+    },
+    // {
+    //   title: 'bootstrap',
+    //   text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, barra de navegación, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',
+    //   subtitle: 'false',
+    //   tecnologies: [
+    //     {
+    //       href: 'works/development/stormtech',
+    //       src: '../assets/images/dev/stormtech/stormtech_logo.png',
+    //       title: 'Stormtech',
+    //       alt: 'Logo de Stormtech',
+    //     },
+    //     {
+    //       href: 'works/development/hunt',
+    //       src: '../assets/images/dev/hunt/hunt_logo.png',
+    //       title: 'Hunt',
+    //       alt: 'Logo de Hunt',
+    //     }
+    //   ]
+    // }
+  ];
+
   brands : Button[] = [
     {
       route: 'works/development/hunt',
