@@ -29,30 +29,37 @@ export class StormtechComponent implements OnInit {
   
   information: Information[] = [
     {
-      title: 'angular',
-      text: 'Framework de ingeniería de software de código abierto que se utiliza para crear aplicaciones web de una sola página. Los desarrolladores también lo utilizan para crear menús animados para páginas web HTML. El framework es una creación de los ingenieros de Google, Misko Hevery y Adam Abrons. Google lanzó oficialmente la primera versión, AngularJS, en 2012 y la ha mantenido desde entonces.',
-      subtitle: 'false',
+      title: 'Stormtech | Landing Page',
+      text: '  Durante los años 2020, 2021 y 2022, Sebastián integra el equipo de desarrollo de Stormtech SL. Participó en varios proyectos como Desarrollador Frontend y Diseñador UX/UI. Una de las tareas asignadas fue rediseñar el sitio oficial de la compañia. Se definieron tecnologías como Bootstrap y JavaScript por la simplicidad del proyecto, la velocidad con la que se lo necesitaba activo y por no ser un producto que requiera gran escalabilidad. Es una Landing Page mobile first, simple y ordenada que muestra los servicios que ofrece la compañía, los clientes con los que ha trabajado, las tecnologías que utilizan en sus desarrollos y un formulario de contacto.',
+      subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
-          href: 'works/development/investigar',
-          src: '../assets/images/dev/investigar/logo_investigar.png',
-          title: 'InventigAr',
-          alt: 'Logo de InventigAr',
+          href: 'https://getbootstrap.com/',
+          src: '../assets/images/tecnologies/bootstrap.png',
+          title: 'Bootstrap',
+          alt: '"Logo de Boostrap',
         },
         {
-          href: 'works/development/xubox',
-          src: '../assets/images/dev/xubox/logo/xubox_logo.png',
-          title: 'Logística',
-          alt: 'Logo de Xubox',
+          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          src: '../assets/images/tecnologies/html.png',
+          title: 'HTML5',
+          alt: 'Logo de HTML5',
         },
         {
-          href: 'works/development/qx',
-          src: '../assets/images/dev/qx/qx_logo.png',
-          title: 'Logística',
-          alt: 'Logo de QX Logística',
+          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          src: '../assets/images/tecnologies/css.png',
+          title: 'CSS3',
+          alt: 'Logo de CSS3',
+        },
+        {
+          href: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+          src: '../assets/images/tecnologies/js.png',
+          title: 'JavaScript',
+          alt: 'Logo de JavaScript',
         }
       ],
     },
+
     // {
     //   title: 'bootstrap',
     //   text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, barra de navegación, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',

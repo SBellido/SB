@@ -77,32 +77,6 @@
   button._close:hover {
     background: $fifth_color_light;    
   }
-  div._scroll {
-    height: auto;
-    overflow-x: auto;
-  }
-  div._scroll::-webkit-scrollbar {
-      width: 4px;
-  }
-  div._scroll::-webkit-scrollbar-thumb {
-      background: #ccc;
-      border-radius: 4px;
-  }
-  div._scroll::-webkit-scrollbar-thumb:active {
-      background-color: #999999;
-  }
-  div._scroll::-webkit-scrollbar-thumb:hover {
-      background: #b3b3b3;
-      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
-  }
-  div._scroll::-webkit-scrollbar-track {
-      background: #e1e1e1;
-      border-radius: 4px;
-    }
-  div._scroll::-webkit-scrollbar-track:hover, 
-  div._scroll::-webkit-scrollbar-track:active {
-      background: #d4d4d4;
-  } 
 }
 @media (min-width: 768px) {
   section._container_item {
