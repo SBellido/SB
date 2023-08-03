@@ -1,10 +1,5 @@
 @import '../../../gallery-desptop/gallery-desptop.component.scss';
 @media (min-width: 0px) {
-  ._hr {
-    height: 0;
-    width: 80%;
-    border: 0 0 .5px 5 solid $first_color;
-  }
   article._container_all {
     padding-top: 0;
     display: flex;
@@ -23,17 +18,6 @@
     width: 100%;
     border-radius: 30px;
   }
-  hr {
-    height: 0;
-    width: 89%;
-    border: 0 0 .5px 5 solid $accent_color;
-  }
-  h4._title {
-    color: $third_color;
-    margin-block-end: 0;
-    text-align: center;
-    font-weight: 200;
-  }
   div._container_more_works {
     display: flex;
     justify-content: center;
@@ -45,6 +29,12 @@
     padding-bottom: .5rem;
     border-bottom: solid .5px $third_color;
   }	
+  h4._title {
+    color: $third_color;
+    margin-block-end: 0;
+    text-align: center;
+    font-weight: 200;
+  }
 }
 @media (min-width: 1024px) {
   article._container_all {
