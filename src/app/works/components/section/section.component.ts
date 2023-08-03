@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Button, ItemsSection } from 'src/app/models/models';
+import { ItemsSection } from 'src/app/models/models';
 
 @Component({
   selector: 'app-section',
@@ -9,9 +9,7 @@ import { Button, ItemsSection } from 'src/app/models/models';
 
 export class SectionComponent implements OnInit {
 
-  @Input() sections: ItemsSection[] = [];
-  @Input() brands: Button[] = [];
-  
+  @Input() sections: ItemsSection[] = [];  
   constructor() { }  
 
   ngOnInit(): void {  
