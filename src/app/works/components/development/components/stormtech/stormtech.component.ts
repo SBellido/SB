@@ -26,13 +26,13 @@ export class StormtechComponent implements OnInit {
     { src: '../assets/images/dev/stormtech/desktop/8.png', position: 7, alt: 'string', first: false, last: false },
     { src: '../assets/images/dev/stormtech/desktop/7.png', position: 8, alt: 'string', first: false, last: false },
     { src: '../assets/images/dev/stormtech/desktop/9.png', position: 9, alt: 'string', first: false, last: true }
-  ] 
-
+  ];
+  
   brands : Button[] = [
     {
       route: 'works/development/hunt',
       img: '../assets/images/dev/hunt/hunt_logo.png',
-      title: 'Hunt',
+      name: 'Hunt',
       text: 'Logo de Hunt',
     }
   ]

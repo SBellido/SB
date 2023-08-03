@@ -37,7 +37,7 @@ brands: Button[] = [
   {
     route: 'works/development/stormtech',
     img: '../assets/images/dev/stormtech/stormtech_logo.png',
-    title: 'Stormtech',
+    name: 'Stormtech',
     text: 'Logo de Stormtech',
   },
 ]

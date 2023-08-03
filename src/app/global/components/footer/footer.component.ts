@@ -26,19 +26,19 @@ export class FooterComponent implements OnInit {
     {  
       route: 'https://www.linkedin.com/in/sebastian-bellido-9a0a6681/', 
       img: '../../../../assets/images/social_network/linkeding/logo_social_network_linkedin.svg',
-      title: 'Sebastián en Linkedin', 
+      name: 'Sebastián en Linkedin', 
       text:'logo de linkedin' 
     },
     {  
       route: 'https://www.behance.net/sebastianba389', 
       img: '../../../../assets/images/social_network/behance/logo_social_network_behance.svg',
-      title: 'Sebastián en Behance', 
+      name: 'Sebastián en Behance', 
       text:'logo de Behance' 
     },
     {  
       route: 'https://github.com/SBellido', 
       img: '../../../../assets/images/social_network/github/logo_social_network_github.svg',
-      title: 'Sebastián en Github', 
+      name: 'Sebastián en Github', 
       text:'logo de github' 
     },
   ]
@@ -46,13 +46,13 @@ export class FooterComponent implements OnInit {
     {  
       route: 'mailto:sebastianbellidodg@gmail.com?subject=Hola Seba!&body=¿Qué propones?.', 
       img: 'alternate_email',
-      title: 'Envía un email', 
+      name: 'Envía un email', 
       text: 'Email' 
     },
     {  
       route: 'https://wa.me/541121580848', 
       img: 'perm_phone_msg',
-      title: 'Usa WhatsApp', 
+      name: 'Usa WhatsApp', 
       text: '* WhatsApp' 
     },
   ]

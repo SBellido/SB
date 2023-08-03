@@ -21,19 +21,19 @@ export class TravelLogComponent implements OnInit {
     {
       route: 'works/design/ux-ui/ypf',
       img: '../assets/images/ux_ui/ypf/YPF_logo.png',
-      title: 'YPF',
+      name: 'YPF',
       text: 'Logo de YPF',
     },
     {
       route: 'works/design/ux-ui/v-life',
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
-      title: 'V-Life',
+      name: 'V-Life',
       text: 'Logo V-Life',
     },
     {
       route: 'works/design/ux-ui/nighx',
       img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
-      title: 'Nighx',
+      name: 'Nighx',
       text: 'Logo de Nighx',
     },
   ]
