@@ -1,25 +1,9 @@
 @import '../../../../../gallery-desptop/gallery-desptop.component.scss';
 @media (min-width: 0px) {
-  select._dropdown {
-    font-size: 1rem;
-    position: absolute;
-    right: .8rem;
-    top: 11.4rem;
-    background: none;
-    padding: 0;
-    border: none;
-    border-left: solid .5px $third_color;
-    color:  $third_color;;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 0 .5rem;
+  section._container {
+    height: auto;
+    padding-top: 0rem;
   }
-  select._dropdown:hover {
-    color: $fifth_color;
-    cursor: pointer;
-  }
- 
-  /*///////////////////////////////////////////////////////////////////////////////*/
   ._hr {
     height: 0;
     width: 80%;

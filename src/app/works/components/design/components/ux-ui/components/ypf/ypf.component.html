@@ -1,27 +1,9 @@
 <article>
   <app-header-section 
-    [header]="header">
+    [routerLink]="routerLink"
+    [header]="header"
+    [isImagesListEmpty]="isImagesListEmpty">
   </app-header-section>
-  <select class="_dropdown" (change)="onChange($event)">
-    <option value="imagesList1">
-      <span class="icon"></span>elegir
-    </option>
-    <option value="imagesList2">
-      <span class="icon"></span>elegir
-    </option>
-    <option value="imagesList3">
-      <span class="icon"></span>elegir
-    </option>
-    <option value="imagesList4">
-      <span class="icon"></span>elegir
-    </option>
-    <option value="imagesList5">
-      <span class="icon"></span>elegir
-    </option>
-    <option value="imagesList6">
-      <span class="icon"></span>elegir
-    </option>
-  </select>
   <article class="_container_all">
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">

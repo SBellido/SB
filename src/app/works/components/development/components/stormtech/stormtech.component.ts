@@ -10,11 +10,12 @@ import { Button, GalleryImage, HeaderSection, Information } from 'src/app/models
 
 export class StormtechComponent implements OnInit {
 
+  routerLink: string = '../';
   currentImageNumber: number = 1;
   header: HeaderSection[] = [
     {
      area: 'desarrollo/bootstrap',
-     icon: 'developer_mode'
+     icon: 'developer_mode',
     }
   ];
   imgGallery: string = '../assets/images/dev/stormtech/desktop/0.png';

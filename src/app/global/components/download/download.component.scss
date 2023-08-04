@@ -5,7 +5,7 @@ div._container_donwload {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1rem;
+    margin-top: 2.5rem;
 }
 a._donwload {
     color: $third_color;
@@ -13,6 +13,6 @@ a._donwload {
     cursor: pointer;
 }
 a._donwload:hover {
-    color: $fifth_color_light;
+    color: $accent_color;
 }
 
