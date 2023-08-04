@@ -1,11 +1,10 @@
 /* Angular */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 /* Components */
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { DownloadComponent } from './components/download/download.component';
 /* Modules */
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,10 +18,12 @@ import { MatDividerModule } from '@angular/material/divider';
   exports: [
     NavbarComponent,
     FooterComponent,
+    DownloadComponent
   ],
   declarations: [ 
     NavbarComponent, 
     FooterComponent, 
+    DownloadComponent
   ],
   imports: [
     CommonModule,

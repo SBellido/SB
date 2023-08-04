@@ -101,6 +101,9 @@
   }
 }
 @media (min-width: 1024px) {
+  article._container_gallery {
+    margin-right: 2rem;
+  }
   div._container_image {
     margin-top: .7rem;
     width: 14.2rem;
@@ -112,8 +115,5 @@
   }
   div._container_count {
     margin-top: -.2rem;
-  }
-  article._container_gallery {
-    margin-right: 2rem;
   }
 }

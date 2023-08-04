@@ -33,7 +33,6 @@ import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
-import { DownloadComponent } from './components/download/download.component';
 import { SectionComponent } from './components/section/section.component';
 import { HighlightDirective } from '../directives/highlight.directive'; 
 import { InfoComponent } from './components/info/info.component';
@@ -65,7 +64,6 @@ import { HeaderSectionComponent } from './components/header-section/header-secti
     BrandsSectionComponent,
     CompetitionsComponent,
     QxComponent,
-    DownloadComponent,
     SectionComponent,
     HighlightDirective,
     InfoComponent,

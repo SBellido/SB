@@ -24,19 +24,19 @@ export class VLifeComponent implements OnInit {
     {
       route: 'works/design/ux-ui/ypf',
       img: '../assets/images/ux_ui/ypf/YPF_logo.png',
-      name: 'YPF',
+      name: '',
       text: 'Logo de YPF',
     },
     {
       route: 'works/design/ux-ui/nighx',
       img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
-      name: 'Nighx',
+      name: '',
       text: 'Logo de Nighx',
     },
     {
       route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
-      name: 'TravelLog',
+      name: '',
       text: 'Logo de TravelLog',
     },
   ]

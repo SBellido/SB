@@ -9,20 +9,22 @@ import { Button, GalleryImage, HeaderSection, Information } from 'src/app/models
 })
 
 export class YpfComponent implements OnInit {
-  
-  public list: string = 'list';
-  imgGallery: string = '';
-  currentImageIndex: number = 0;
-  imagesCount: number = 0;
-  imagesList : GalleryImage[] = [];
 
+  routerLink: string = '../../';
+  imagesList : GalleryImage[] = [
+    { src: '../assets/images/ux_ui/ypf/0/0.png', position: 0, alt: 'string', first: true, last: false },
+    { src: '../assets/images/ux_ui/ypf/0/1.png', position: 1, alt: 'string', first: false, last: false },
+    { src: '../assets/images/ux_ui/ypf/0/2.png', position: 2, alt: 'string', first: false, last: false },
+    { src: '../assets/images/ux_ui/ypf/0/3.png', position: 3, alt: 'string', first: false, last: true }
+  ];
+  imgGallery: string = '';
+  isImagesListEmpty: boolean = false;
   header: HeaderSection[] = [
     {
      area: 'diseño/ux|ui',
-     icon: 'local_florist'
+     icon: 'local_florist',
     }
   ];
-
   information: Information[] = [
     {
       title: 'Gestión de Inversiones | Web App',
@@ -50,24 +52,23 @@ export class YpfComponent implements OnInit {
       ],
     },
   ];
-
   brands : Button[] = [
     {
       route: 'works/design/ux-ui/v-life',
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
-      name: 'V-Life',
+      name: '',
       text: 'Logo V-Life',
     },
     {
       route: 'works/design/ux-ui/nighx',
       img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
-      name: 'Nighx',
+      name: '',
       text: 'Logo de Nighx',
     },
     {
       route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
-      name: 'TravelLog',
+      name: '',
       text: 'Logo de TravelLog',
     },
   ]
@@ -75,8 +76,10 @@ export class YpfComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.topFunction();
+    this.topFunction();  
     this.loadImages0(); 
+    this.imgGallery = this.imagesList[0].src;
+    this.isImagesListEmpty = this.imagesList.length === 0;
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -89,23 +92,6 @@ export class YpfComponent implements OnInit {
   }
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
-  }
-
-  onChange(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    if (selectedValue === 'imagesList1') {
-      this.loadImages0();
-    } else if (selectedValue === 'imagesList2') {
-      this.loadImages1();
-    } else if (selectedValue === 'imagesList3') {
-      this.loadImages2();
-    } else if (selectedValue === 'imagesList4') {
-      this.loadImages3();
-    } else if (selectedValue === 'imagesList5') {
-      this.loadImages4();
-    } else if (selectedValue === 'imagesList6') {
-      this.loadImages5();
-    }
   }
 
   loadImages0() {

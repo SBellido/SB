@@ -5,7 +5,9 @@
         margin: 0;
     }
     div._container_tecnologies {
-        display: inline-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     img._logo_tecno {
         width: 2.5rem;
