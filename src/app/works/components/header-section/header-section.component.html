@@ -1,35 +1,7 @@
-<article class="_header_section">
-    <div class="_container_btn_back">
-        <button mat-button class="_button_back" title="Atrás" routerLink="{{ routerLink }}">
-            <mat-icon class="_icon_back">keyboard_backspace</mat-icon>volver
-        </button>
-    </div>
-    <div class="_container_title" *ngFor="let header of header">
-        <mat-icon class="_icon_title">{{ header.icon }}</mat-icon>
-        <h1 class="_title">{{ header.area }}</h1>
-    </div>
-    <div class="_container_select">
-        <select class="_dropdown" (change)="onChange($event)" title="Opciones"
-            [ngClass]="{'_dropdown-disabled': isImagesListEmpty}" 
-            [disabled]="isImagesListEmpty">
-            <option value="imagesList1">
-              <span class="icon"></span>elegir
-            </option>
-            <option value="imagesList2">
-              <span class="icon"></span>elegir
-            </option>
-            <option value="imagesList3">
-              <span class="icon"></span>elegir
-            </option>
-            <option value="imagesList4">
-              <span class="icon"></span>elegir
-            </option>
-            <option value="imagesList5">
-              <span class="icon"></span>elegir
-            </option>
-            <option value="imagesList6">
-              <span class="icon"></span>elegir
-            </option>
-        </select>
-    </div>
+
+<article class="_header_section" *ngFor="let section of header">
+  <div class="_container_title">
+    <mat-icon class="_icon_title">{{ section.icon }}</mat-icon>
+    <h1 class="_title">{{ section.area }}</h1>
+  </div> 
 </article>

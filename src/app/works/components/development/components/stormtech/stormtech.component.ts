@@ -16,7 +16,18 @@ export class StormtechComponent implements OnInit {
     {
      area: 'desarrollo/bootstrap',
      icon: 'developer_mode',
+     routerLink: '../',
+     isFlows: true,
+     isSubSection: true
     }
+  ];
+  options: { value: string, label: string }[] = [
+    { value: 'imagesList1', label: 'flujo 1' },
+    { value: 'imagesList2', label: 'flujo 2' },
+    { value: 'imagesList3', label: 'flujo 3' },
+    { value: 'imagesList4', label: 'flujo 4' },
+    { value: 'imagesList5', label: 'flujo 5' },
+    { value: 'imagesList6', label: 'flujo 6' },
   ];
   imgGallery: string = '../assets/images/dev/stormtech/desktop/0.png';
   imagesList : GalleryImage[] = [
@@ -64,26 +75,6 @@ export class StormtechComponent implements OnInit {
         }
       ],
     },
-
-    // {
-    //   title: 'bootstrap',
-    //   text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, barra de navegación, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',
-    //   subtitle: 'false',
-    //   tecnologies: [
-    //     {
-    //       href: 'works/development/stormtech',
-    //       src: '../assets/images/dev/stormtech/stormtech_logo.png',
-    //       title: 'Stormtech',
-    //       alt: 'Logo de Stormtech',
-    //     },
-    //     {
-    //       href: 'works/development/hunt',
-    //       src: '../assets/images/dev/hunt/hunt_logo.png',
-    //       title: 'Hunt',
-    //       alt: 'Logo de Hunt',
-    //     }
-    //   ]
-    // }
   ];
 
   brands : Button[] = [
@@ -95,7 +86,7 @@ export class StormtechComponent implements OnInit {
     }
   ]
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.topFunction();

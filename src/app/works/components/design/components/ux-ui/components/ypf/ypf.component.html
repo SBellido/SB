@@ -1,9 +1,7 @@
+<app-header-section
+  [header]="header">
+</app-header-section>
 <article>
-  <app-header-section 
-    [routerLink]="routerLink"
-    [header]="header"
-    [isImagesListEmpty]="isImagesListEmpty">
-  </app-header-section>
   <article class="_container_all">
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
@@ -13,15 +11,48 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery-desptop>
+    <div class="_container_selector">
+      <label class="_label">Selector de flujos</label>
+      <select class="_dropdown" (change)="onChange($event)" title="Opciones"
+          [ngClass]="{'_dropdown-disabled': isImagesListEmpty}" 
+          [disabled]="isImagesListEmpty">
+          <option value="imagesList1">
+            &nbsp; Nuevo Caso 
+          <option value="imagesList2">
+            <span class="icon"></span>Crear Caso
+          </option>
+          <option value="imagesList3">
+            <span class="icon"></span>Asignar Comité
+          </option>
+          <option value="imagesList4">
+            <span class="icon"></span>Cortar Cadena
+          </option>
+          <option value="imagesList5">
+            <span class="icon"></span>Admin 1
+          </option>
+          <option value="imagesList6">
+            <span class="icon"></span>Admin 2
+          </option>
+      </select>
+    </div>
     <app-info
       [information]="information">
     </app-info>
-    </article>
-    <div class="_container_more_works">
-      <div class="_container_text_more_works">
-        <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
-      </div>
-      <app-brands-buttons [brands]="brands"></app-brands-buttons>
-    </div>
   </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
+
+
+<!-- <section class="_container_btn_header">
+  <div class="_container_btn_back">
+    <button mat-button class="_button_back" title="Atrás" [routerLink]="section.routerLink">
+      <mat-icon class="_icon_back">keyboard_backspace</mat-icon>volver
+    </button>
+  </div>
+</section> -->
   

@@ -10,7 +10,14 @@ import { Button, GalleryImage, HeaderSection, Information } from 'src/app/models
 
 export class YpfComponent implements OnInit {
 
+  numOptions: number = 1;
+  optionsArray: any[] = [];
   routerLink: string = '../../';
+
+  public imagesList1: string[] = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
+  public imagesList2: string[] = ['image4.jpg', 'image5.jpg', 'image6.jpg'];
+  public selectedOption: string = '';
+  
   imagesList : GalleryImage[] = [
     { src: '../assets/images/ux_ui/ypf/0/0.png', position: 0, alt: 'string', first: true, last: false },
     { src: '../assets/images/ux_ui/ypf/0/1.png', position: 1, alt: 'string', first: false, last: false },
@@ -23,7 +30,19 @@ export class YpfComponent implements OnInit {
     {
      area: 'diseño/ux|ui',
      icon: 'local_florist',
+     routerLink: '../../',
+     isFlows: true,
+     isSubSection: true
     }
+  ];
+
+  options: { value: string, label: string }[] = [
+    { value: 'imagesList1', label: 'flujo 1' },
+    { value: 'imagesList2', label: 'flujo 2' },
+    { value: 'imagesList3', label: 'flujo 3' },
+    { value: 'imagesList4', label: 'flujo 4' },
+    { value: 'imagesList5', label: 'flujo 5' },
+    { value: 'imagesList6', label: 'flujo 6' },
   ];
   information: Information[] = [
     {
@@ -76,10 +95,12 @@ export class YpfComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.optionsArray = this.options;
     this.topFunction();  
     this.loadImages0(); 
     this.imgGallery = this.imagesList[0].src;
     this.isImagesListEmpty = this.imagesList.length === 0;
+    this.optionsArray = this.options;
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -87,9 +108,9 @@ export class YpfComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  routeBack() {    
-    this.router.navigateByUrl('works/design/ux-ui')
-  }
+  // routeBack() {    
+  //   this.router.navigateByUrl('works/design/ux-ui')
+  // }
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
@@ -154,6 +175,21 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
   }
-
+  onChange(event: Event) {  
+    const selectedValue = (event.target as HTMLSelectElement).value;
+    if (selectedValue === 'imagesList1') {
+      this.loadImages0();
+    } else if (selectedValue === 'imagesList2') {
+      this.loadImages1();
+    } else if (selectedValue === 'imagesList3') {
+      this.loadImages2();
+    } else if (selectedValue === 'imagesList4') {
+      this.loadImages3();
+    } else if (selectedValue === 'imagesList5') {
+      this.loadImages4();
+    } else if (selectedValue === 'imagesList6') {
+      this.loadImages5();
+    }
+  }
 }
 
