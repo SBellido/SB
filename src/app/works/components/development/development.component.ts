@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { ItemsSection } from '../../../models/models';
+import { HeaderSection, ItemsSection } from '../../../models/models';
  
 @Component({
   selector: 'app-development',
@@ -11,8 +11,15 @@ import { ItemsSection } from '../../../models/models';
 export class DevelopmentComponent implements OnInit {
 
 /*--------VARIABLES -------*/ 
-  public area: string = 'desarrollo';
-  public icon: string = 'developer_mode';
+  header: HeaderSection[] = [
+    {
+    area: 'desarrollo',
+    icon: 'developer_mode',
+    routerLink: '',
+    isFlows: false,
+    isSubSection: false
+    }
+  ];
 
   sections: ItemsSection[] = [
     {

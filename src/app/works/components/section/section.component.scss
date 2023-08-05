@@ -21,7 +21,7 @@
     padding: .7rem 0rem;
     width: 65vw;
     border-radius: 50px;
-    margin: 1.3rem auto .5rem auto;
+    margin: 0 auto 1.5rem auto;
     cursor: pointer;
     background: linear-gradient(
       0deg, $third_color 33%, 
@@ -54,6 +54,7 @@
     border-radius: 33px;
     margin: 0 auto .5rem auto;
     padding: 1rem;
+    margin-top: -1rem;
   }
   p._info {
     font-size: .9rem;

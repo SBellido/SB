@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { ItemsSection } from '../../../models/models';
+import { HeaderSection, ItemsSection } from '../../../models/models';
  
 @Component({
   selector: 'app-design',
@@ -11,10 +11,15 @@ import { ItemsSection } from '../../../models/models';
 export class DesignComponent implements OnInit {
 
   /*--------VARIABLES -------*/ 
-  // @HostListener('window:resize', ['$event'])
-  //   onResize(event: any) {
-  //     this.checkScreenSize();
-  // }
+  header: HeaderSection[] = [
+    {
+     area: 'diseño',
+     icon: 'local_florist',
+     routerLink: '',
+     isFlows: false,
+     isSubSection: false
+    }
+  ];
 
   public area: string = 'diseño';
   public icon: string = 'local_florist';
