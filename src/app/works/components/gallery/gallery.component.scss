@@ -41,24 +41,22 @@
   button._active_button {
     cursor: pointer;
     background: radial-gradient(
-      circle, $third_color_lighter 9%, 
-      $third_color 100%
+      circle, white 10% $first_color_lighter 50%, 
+      $first_color_light 100%
     );
   }
   button._active_button:hover {
-    background-color: radial-gradient(
-      circle, $third_color_lighter 9%, 
-      $third_color 100%
-    );
+    background-color: white;
   }
-  button._inactive_button {
+  button._inactive_button,
+  button._inactive_button:hover {
     cursor: default;
     background-color: radial-gradient(
       circle, $third_color_lighter 9%, 
       $third_color 100%
     );
     color: $first_color;
-    opacity: 0.5;
+    opacity: 0.2;
   }
   div._container_count {
     display: flex;

@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-import { ItemsSection } from 'src/app/models/models';
+import { HeaderSection, ItemsSection } from 'src/app/models/models';
 
 @Component({
   selector: 'app-biography',
@@ -19,15 +19,16 @@ export class BiographyComponent implements OnInit {
   visibleAcademic: boolean = false;
   visiblePersonal: boolean = false;
   
-  // item: ItemSection = {
-  //   id:  0,
-  //   title: '',
-  //   active: false,
-  //   value: ''
-  // }
-
-  public area: string = 'perfil';
-  public icon: string = 'fingerprint';
+  /*--------VARIABLES -------*/ 
+  header: HeaderSection[] = [
+    {
+     area: 'perfil',
+     icon: 'fingerprint',
+     routerLink: '',
+     isFlows: false,
+     isSubSection: false
+    }
+  ];
 
   constructor() {
     // this.checkScreenSize();

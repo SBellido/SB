@@ -56,4 +56,7 @@ export interface Tecnologies {
 export interface HeaderSection {
   icon: string,
   area: string,
+  isFlows: boolean,
+  routerLink: string,
+  isSubSection: boolean,
 }
