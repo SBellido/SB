@@ -8,6 +8,7 @@ import { WorksRoutingModule } from './works-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule } from '@angular/forms'; // Importa FormsModule
 
 /* Components */
 import { WorksComponent } from './works.component';
@@ -77,6 +78,7 @@ import { HeaderSectionComponent } from './components/header-section/header-secti
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+    FormsModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
