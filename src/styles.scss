@@ -13,3 +13,6 @@ body::-webkit-scrollbar-thumb {
   background-color: $first_color_light;
   outline: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

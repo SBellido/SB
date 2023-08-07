@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage } from 'src/app/models/models';
+import { Button } from 'src/app/models/models';
 import { GalleryComponent } from 'src/app/works/components/gallery/gallery.component';
 
 @Component({
@@ -17,7 +17,7 @@ export class NighxComponent implements OnInit {
   public icon: string = 'local_florist';
 
   imgGallery = '';
-  imagesList : GalleryImage[] = [] 
+  imagesList : string[] = [] 
 
   brands : Button[] = [
     {
@@ -70,29 +70,29 @@ export class NighxComponent implements OnInit {
 
   loadImages() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/nighx/inicio/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio/6.png', position: 6, alt: 'string', first: false, last: false }
+       '../assets/images/ux_ui/nighx/inicio/0.png',
+       '../assets/images/ux_ui/nighx/inicio/1.png',
+       '../assets/images/ux_ui/nighx/inicio/2.png',
+       '../assets/images/ux_ui/nighx/inicio/3.png',
+       '../assets/images/ux_ui/nighx/inicio/4.png',
+       '../assets/images/ux_ui/nighx/inicio/5.png',
+       '../assets/images/ux_ui/nighx/inicio/6.png',
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/6.png', position: 6, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/8.png', position: 7, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/nighx/inicio_sesion/9.png', position: 8, alt: 'string', first: false, last: false },
+       '../assets/images/ux_ui/nighx/inicio_sesion/0.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/1.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/2.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/3.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/4.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/5.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/6.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/8.png',
+       '../assets/images/ux_ui/nighx/inicio_sesion/9.png',
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
 
 }

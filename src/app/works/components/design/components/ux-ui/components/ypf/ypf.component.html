@@ -11,30 +11,14 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery-desptop>
-    <div class="_container_selector">
-      <label class="_label">Selector de flujos</label>
-      <select class="_dropdown" (change)="onChange($event)" title="Opciones"
-          [ngClass]="{'_dropdown-disabled': isImagesListEmpty}" 
-          [disabled]="isImagesListEmpty">
-          <option value="imagesList1">
-            <span class="icon"></span>Nuevo Caso 
-          <option value="imagesList2">
-            <span class="icon"></span>Crear Caso
-          </option>
-          <option value="imagesList3">
-            <span class="icon"></span>Asignar Comité
-          </option>
-          <option value="imagesList4">
-            <span class="icon"></span>Cortar Cadena
-          </option>
-          <option value="imagesList5">
-            <span class="icon"></span>Admin 1
-          </option>
-          <option value="imagesList6">
-            <span class="icon"></span>Admin 2
-          </option>
-      </select>
-    </div>
+    <mat-form-field>
+      <mat-label>Selector de flujos</mat-label>
+      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+        <mat-option *ngFor="let item of options" [value]="item.value">
+          {{item.view_Text}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
     <app-info
       [information]="information">
     </app-info>
@@ -54,36 +38,21 @@
     </div>
     <app-gallery-desptop class="_gallery"
       [imagesList]="imagesList" 
-      [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
+      [imgGallery]="imgGallery">
     </app-gallery-desptop>
     <app-info
       [information]="information">
     </app-info>
   </article>
   <div class="_container_selector">
-    <label class="_label">Selector de flujos</label>
-    <select class="_dropdown" (change)="onChange($event)" title="Opciones"
-        [ngClass]="{'_dropdown-disabled': isImagesListEmpty}" 
-        [disabled]="isImagesListEmpty">
-        <option value="imagesList1">
-          &nbsp; Nuevo Caso 
-        <option value="imagesList2">
-          <span class="icon"></span>Crear Caso
-        </option>
-        <option value="imagesList3">
-          <span class="icon"></span>Asignar Comité
-        </option>
-        <option value="imagesList4">
-          <span class="icon"></span>Cortar Cadena
-        </option>
-        <option value="imagesList5">
-          <span class="icon"></span>Admin 1
-        </option>
-        <option value="imagesList6">
-          <span class="icon"></span>Admin 2
-        </option>
-    </select>
+    <mat-form-field>
+      <mat-label>Selector de flujos</mat-label>
+      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+        <mat-option *ngFor="let item of options" [value]="item.value">
+          {{item.view_Text}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
   <div class="_container_more_works">
     <div class="_container_text_more_works">

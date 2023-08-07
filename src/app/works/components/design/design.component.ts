@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { HeaderSection, ItemsSection } from '../../../models/models';
+import { HeaderSection, ItemsSection, OptionSelect } from '../../../models/models';
  
 @Component({
   selector: 'app-design',
@@ -10,17 +10,17 @@ import { HeaderSection, ItemsSection } from '../../../models/models';
 
 export class DesignComponent implements OnInit {
 
-  /*--------VARIABLES -------*/ 
   header: HeaderSection[] = [
     {
-     area: 'diseño',
-     icon: 'local_florist',
-     routerLink: '',
-     isFlows: false,
-     isSubSection: false
+      area: 'diseño',
+      icon: 'local_florist',
+      routerLink: '',
+      isFlows: false,
+      isSubSection: false
     }
   ];
-
+  
+  /*--------VARIABLES -------*/ 
   public area: string = 'diseño';
   public icon: string = 'local_florist';
 

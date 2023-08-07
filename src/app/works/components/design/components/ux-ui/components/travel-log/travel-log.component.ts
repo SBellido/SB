@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage } from 'src/app/models/models';
+import { Button, OptionSelect } from 'src/app/models/models';
 
 @Component({
   selector: 'app-travel-log',
@@ -9,13 +9,16 @@ import { Button, GalleryImage } from 'src/app/models/models';
 })
 
 export class TravelLogComponent implements OnInit {
-     
+  // options: OptionSelect[] = [
+  //   {value: 'imagesList1', view_Text: 'Paciente'},
+  //   {value: 'imagesList2', view_Text: 'Prof. de Salud'},
+  // ];
   /*--------VARIABLES -------*/ 
   public area: string = 'diseño/ux|ui';
   public icon: string = 'local_florist';
 
   imgGallery = '';
-  imagesList : GalleryImage[] = [] 
+  imagesList : string[] = [] 
 
   brands : Button[] = [
     {
@@ -67,27 +70,27 @@ export class TravelLogComponent implements OnInit {
   }
 
   loadImages() {
-    this.imagesList = [
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/5.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/6.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/7.png', position: 6, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/8.png', position: 7, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/9.png', position: 8, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/10.png', position: 9, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/travel_log/flujo_1/11.png', position: 10, alt: 'string', first: false, last: false },
+    this.imagesList = [ 
+      '../assets/images/ux_ui/travel_log/flujo_1/0.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/1.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/2.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/3.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/5.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/6.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/7.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/8.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/9.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/10.png',
+      '../assets/images/ux_ui/travel_log/flujo_1/11.png',
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/asignarComite/2.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/yo.png', position: 1, alt: 'string', first: false, last: true }
+      '../assets/images/ux_ui/ypf/asignarComite/2.png',
+      '../assets/images/yo.png',
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
 
 }
