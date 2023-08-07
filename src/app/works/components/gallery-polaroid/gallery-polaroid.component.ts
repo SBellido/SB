@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-gallery-polaroid',
@@ -6,8 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./gallery-polaroid.component.scss']
 })
 export class GalleryPolaroidComponent implements OnInit {
-
-  /*--------VARIABLES -------*/ 
+/*--------VARIABLES -------*/ 
   currentImageNumber: number = 1;
   activeNext: boolean = false;
   activeBefore: boolean = false;
@@ -16,7 +15,7 @@ export class GalleryPolaroidComponent implements OnInit {
   constructor() { 
     this.updateButtonStatus();
   }
-  
+ 
   @Input() imagesList: string[] = [];
   @Input() imgGallery: string = '';
 
@@ -29,8 +28,7 @@ export class GalleryPolaroidComponent implements OnInit {
   updateButtonStatus() {
     this.activeNext = this.currentImageIndex < this.imagesList.length - 1;
     this.activeBefore = this.currentImageIndex > 0;
-  }
-  
+  } 
   nextImg() {
     if (this.currentImageIndex < this.imagesList.length - 1) {
       this.currentImageIndex++;
@@ -38,14 +36,20 @@ export class GalleryPolaroidComponent implements OnInit {
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
     }
-  }
-  
+  } 
   beforeImg() {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
       this.imgGallery = this.imagesList[this.currentImageIndex];
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
+    }
+  }
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['imagesList']) { // Detectamos cambios en la lista de imágenes y actualizamos el contador
+      this.currentImageIndex = 0; // Reiniciamos el índice para mostrar la primera imagen
+      this.currentImageNumber = 1; // Reiniciamos el contador para mostrar "1 / N"
+      this.updateButtonStatus(); // Actualizamos los botones de navegación
     }
   }
 }

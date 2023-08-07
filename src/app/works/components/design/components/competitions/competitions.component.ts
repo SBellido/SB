@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, OptionSelect } from 'src/app/models/models';
-import { GalleryComponent } from '../../../gallery/gallery.component';
+import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
 
 @Component({
   selector: 'app-competitions',
@@ -10,18 +9,46 @@ import { GalleryComponent } from '../../../gallery/gallery.component';
 })
 
 export class CompetitionsComponent implements OnInit {
-  @ViewChild('galleryComponent') galleryComponent!: GalleryComponent;
+/*--------VARIABLES--------*/ 
+  public imagesList: string[] = [];
+  public selectedOption: string = '';
+  public imgGallery: string = '';
+/*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
-    {value: 'imagesList1', view_Text: 'Paciente'},
-    {value: 'imagesList2', view_Text: 'Prof. de Salud'},
+    {value: 'imagesList', view_Text: 'Nescafé'},
+    {value: 'imagesList1', view_Text: 'Doritos'},
+    {value: 'imagesList2', view_Text: 'SweetTart'},
   ];
-  /*--------VARIABLES -------*/ 
-  public area: string = 'diseño/gráfico';
-  public icon: string = 'local_florist';
-
-  imgGallery = '';
-  imagesList : string[] = [] 
-
+  information: Information[] = [
+    {
+      title: 'eYeka! | Concursos Internacionales',
+      text: 'Participar en concursos internacionales puede ser una excelente manera de adquirir experiencia trabajando en el diseño para grandes marcas. Además, puedes expresar tu creatividad, practicar tus habilidades. También obtener retroalimentación sobre el trabajo de las marcas y aprender de otros participantes. eYeka es una comunidad global de creadores talentosos que aman resolver los desafíos de las marcas con ideas frescas, creativas y contenido compartible. Los creadores en eYeka <compiten para resolver problemas comerciales reales de las marcas más grandes del mundo para ganar fama y fortuna, mientras se divierten.',
+      subtitle: 'Tecnologías utilizadas',
+      tecnologies: [
+        {
+          href: 'https://www.adobe.com/la/products/photoshop/free-trial-download.html',
+          src: '../assets/images/tecnologies/photoshop.png',
+          title: 'Photoshop',
+          alt: 'Logo de Photoshop',
+        },
+        {
+          href: 'https://www.adobe.com/es/products/illustrator/free-trial-download.html',
+          src: '../assets/images/tecnologies/illustrator.png',
+          title: 'Illustrator',
+          alt: 'Logo de Illustrator',
+        }
+      ],
+    },
+  ];
+  header: HeaderSection[] = [
+    {
+    area: 'diseño/ux|ui',
+    icon: 'local_florist',
+    routerLink: '../../',
+    isFlows: true,
+    isSubSection: true
+    }
+  ];
   brands : Button[] = [
     {
       route: 'works/design/brands',
@@ -32,7 +59,6 @@ export class CompetitionsComponent implements OnInit {
   ]
 
   constructor(private router: Router) { }
-
   ngOnInit(): void {
     this.topFunction();
     this.loadImages(); 
@@ -49,18 +75,6 @@ export class CompetitionsComponent implements OnInit {
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
-
-  onChange(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    if (selectedValue === 'imagesList') {
-      this.loadImages();
-    } else if (selectedValue === 'imagesList2') {
-      this.loadImages2();
-    } else if (selectedValue === 'imagesList3') {
-      this.loadImages3();
-    }
-  }
-
   loadImages() {
     this.imagesList = [
       '../assets/images/competitions/nescafe/0.png',
@@ -78,7 +92,7 @@ export class CompetitionsComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0];
   }
-  loadImages2() {
+  loadImages1() {
     this.imagesList = [
         '../assets/images/competitions/doritos/0.png',
         '../assets/images/competitions/doritos/1.png',
@@ -93,12 +107,30 @@ export class CompetitionsComponent implements OnInit {
       ];
       this.imgGallery = this.imagesList[0];
     }
-    loadImages3() {
+    loadImages2() {
       this.imagesList = [
         '../assets/images/competitions/sweetart/0.png',   
         '../assets/images/competitions/sweetart/1.png',
     ];
       this.imgGallery = this.imagesList[0];
+    }
+
+    onChange(event: any) {
+      this.selectedOption = event.value;    
+      switch (this.selectedOption) {
+        case 'imagesList':
+          this.loadImages();
+          break;
+        case 'imagesList1':
+          this.loadImages1();
+          break;
+        case 'imagesList2':
+          this.loadImages2();
+          break;
+        default:
+          // Lógica para el caso por defecto (opcional)
+          break;
+      }
     }
   }
 
