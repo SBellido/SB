@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { GalleryImage, HeaderSection } from 'src/app/models/models'; 
+import { HeaderSection } from 'src/app/models/models'; 
 
 @Component({
   selector: 'app-header-section',
