@@ -1,0 +1,35 @@
+@import '../info/info.component.scss';
+@media (min-width: 768px) {
+  div._container_info {
+    width: 30vw;
+  }
+  ._tecno {
+      width: 14rem;
+  }
+}
+@media (min-width: 1024px) {
+  div._container_info {
+      width: 24vw;
+      height: 29.5rem;
+      margin-top: 1.7rem;
+  }
+  p._p_card {
+    height: 19rem;
+  }
+}
+@media (min-width: 1440px) {
+  div._container_info {
+      width: 17vw;
+  }
+}
+@media (min-width: 1500px) {
+  div._container_info {
+    height: 29.4rem;
+  }
+}
+@media (min-width: 1920px) {
+  div._container_info {
+    width: 15rem;
+  }
+}
+

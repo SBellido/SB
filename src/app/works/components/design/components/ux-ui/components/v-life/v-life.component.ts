@@ -9,10 +9,14 @@ import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models
 })
 
 export class VLifeComponent implements OnInit {
+  /*--------VARIABLES--------*/ 
+  public imagesList: string[] = [];
+  public selectedOption: string = '';
+  public imgGallery: string = '';
   /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
-    {value: 'imagesList1', view_Text: 'Paciente'},
-    {value: 'imagesList2', view_Text: 'Prof. de Salud'},
+    {value: 'imagesList1', view_Text: 'Usuario Paciente'},
+    {value: 'imagesList2', view_Text: 'Usuario Médico'}
   ];
   information: Information[] = [
     {
@@ -41,7 +45,6 @@ export class VLifeComponent implements OnInit {
       ],
     },
   ];
-/*--------VARIABLES -------*/ 
   header: HeaderSection[] = [
     {
     area: 'diseño/ux|ui',
@@ -51,12 +54,6 @@ export class VLifeComponent implements OnInit {
     isSubSection: true
     }
   ];
-
-  imgGallery: string = '../assets/images/ux_ui/ypf/asignarComite/0.png';
-  currentImageIndex: number = 0;
-  imagesCount: number = 0;
-  imagesList : string[] = [];
-
   brands : Button[] = [
     {
       route: 'works/design/ux-ui/ypf',
@@ -76,13 +73,12 @@ export class VLifeComponent implements OnInit {
       name: '',
       text: 'Logo de TravelLog',
     },
-  ]
+  ];
 
   constructor(private router: Router) { }
-
   ngOnInit(): void {
     this.topFunction();
-    this.loadImages(); 
+    this.loadImages0(); 
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -96,17 +92,7 @@ export class VLifeComponent implements OnInit {
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
-
-  onChange(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    if (selectedValue === 'imagesList') {
-      this.loadImages();
-    } else if (selectedValue === 'imagesList2') {
-      this.loadImages2();
-    }
-  }
-
-  loadImages() {
+  loadImages0() {
     this.imagesList = [
       '../assets/images/ux_ui/v-life/patient/0.png',
       '../assets/images/ux_ui/v-life/patient/1.png',
@@ -146,7 +132,7 @@ export class VLifeComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0];
   }
-  loadImages2() {
+  loadImages1() {
     this.imagesList = [
        '../assets/images/ux_ui/v-life/professional/0.png',
        '../assets/images/ux_ui/v-life/professional/1.png',
@@ -161,6 +147,20 @@ export class VLifeComponent implements OnInit {
        '../assets/images/ux_ui/v-life/professional/10.png',
     ];
     this.imgGallery = this.imagesList[0];
+  }
+  onChange(event: any) {
+    this.selectedOption = event.value;    
+    switch (this.selectedOption) {
+      case 'imagesList1':
+        this.loadImages0();
+        break;
+      case 'imagesList2':
+        this.loadImages1();
+        break;
+      default:
+        // Lógica para el caso por defecto (opcional)
+        break;
+    }
   }
 }
 

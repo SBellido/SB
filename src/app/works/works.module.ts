@@ -40,6 +40,7 @@ import { HighlightDirective } from '../directives/highlight.directive';
 import { InfoComponent } from './components/info/info.component';
 import { TecnologiesComponent } from './components/tecnologies/tecnologies.component';
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
+import { InfoMobileComponent } from './components/info-mobile/info-mobile.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { HeaderSectionComponent } from './components/header-section/header-secti
     HighlightDirective,
     InfoComponent,
     TecnologiesComponent,
-    HeaderSectionComponent
+    HeaderSectionComponent,
+    InfoMobileComponent
   ],
   imports: [
     CommonModule,
