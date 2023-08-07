@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button } from 'src/app/models/models';
-import { GalleryComponent } from 'src/app/works/components/gallery/gallery.component';
+import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
 
 @Component({
   selector: 'app-nighx',
@@ -10,15 +9,51 @@ import { GalleryComponent } from 'src/app/works/components/gallery/gallery.compo
 })
 
 export class NighxComponent implements OnInit {
-  @ViewChild('galleryComponent') galleryComponent!: GalleryComponent;
-
-  /*--------VARIABLES -------*/ 
-  public area: string = 'diseño/ux|ui';
-  public icon: string = 'local_florist';
-
-  imgGallery = '';
-  imagesList : string[] = [] 
-
+  /*--------VARIABLES--------*/ 
+  public imagesList: string[] = [];
+  public selectedOption: string = '';
+  public imgGallery: string = '';
+  /*--------INTERFACES-------*/ 
+  options: OptionSelect[] = [
+    {value: 'imagesList1', view_Text: 'Página de inicio'},
+    {value: 'imagesList2', view_Text: 'Inicio de Sesión'}
+  ];
+  information: Information[] = [
+    {
+      title: 'V-LIFE | App Mobile',
+      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacciónen baja definición, test con usuarios y armado de prototiposen alta definición, utilizando Adobe Xdy componentes UI Ionic.El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020en Argentina.',
+      subtitle: 'Metodología | Tecnologías',
+      tecnologies: [
+        {
+          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
+          src: '../assets/images/tecnologies/scrum.png',
+          title: 'Scrum',
+          alt: 'Logo de Scrum',
+        },
+        {
+          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          src: '../assets/images/tecnologies/azure.png',
+          title: 'Azure',
+          alt: 'Logo de Azure',
+        },
+        {
+          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          src: '../assets/images/tecnologies/xd.png',
+          title: 'Adobe Xd',
+          alt: 'Logo de Adobe Xd',
+        }
+      ],
+    },
+  ];
+  header: HeaderSection[] = [
+    {
+    area: 'diseño/ux|ui',
+    icon: 'local_florist',
+    routerLink: '../../',
+    isFlows: true,
+    isSubSection: true
+    }
+  ];
   brands : Button[] = [
     {
       route: 'works/design/ux-ui/ypf',
@@ -58,16 +93,6 @@ export class NighxComponent implements OnInit {
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
-
-  onChange(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    if (selectedValue === 'imagesList') {
-      this.loadImages();
-    } else if (selectedValue === 'imagesList2') {
-      this.loadImages2();
-    }
-  }
-
   loadImages() {
     this.imagesList = [
        '../assets/images/ux_ui/nighx/inicio/0.png',
@@ -93,6 +118,20 @@ export class NighxComponent implements OnInit {
        '../assets/images/ux_ui/nighx/inicio_sesion/9.png',
     ];
     this.imgGallery = this.imagesList[0];
+  }
+  onChange(event: any) {
+    this.selectedOption = event.value;    
+    switch (this.selectedOption) {
+      case 'imagesList1':
+        this.loadImages();
+        break;
+      case 'imagesList2':
+        this.loadImages2();
+        break;
+      default:
+        // Lógica para el caso por defecto (opcional)
+        break;
+    }
   }
 
 }

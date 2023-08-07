@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, HeaderSection } from 'src/app/models/models';
+import { Button, HeaderSection, Information } from 'src/app/models/models';
 
 @Component({
   selector: 'app-hunt',
@@ -8,8 +8,43 @@ import { Button, HeaderSection } from 'src/app/models/models';
   styleUrls: ['./hunt.component.scss']
 })
 export class HuntComponent implements OnInit {
-
-/*--------VARIABLES -------*/ 
+/*--------VARIABLES -------*/  
+  imgGallery = '';
+  imagesList : string[] = [];
+/*--------INTERFACES-------*/ 
+  information: Information[] = [
+    {
+      title: 'Hunt | Landing Page',
+      text: 'Sitio web desarrollado en 2021 por Sebastián utilizando Bootstrap y JavaScript Hunt es un producto desarrollado en Angular, del cual también formó parte como Desarrollador Frontend, pero no hay registro visual de ello. En este producto se encargó de trabajar el concepto de marca, crear la nomenclatura del producto, diseñar logotipo, imagen corporativa y desarrollo de Landing Page first mobile, con animaciones CSS3 en todas las imágenes del home. Es un sitio estático que muestra los servicios que ofrece, la posibilidad de contactar al proveedor y solicitar una demo a partir del uso de un formulario. Fue diseñado y desarrollado para Stormtech SL.',
+      subtitle: 'Metodología | Tecnologías',
+      tecnologies: [
+        {
+          href: 'https://getbootstrap.com/',
+          src: '../assets/images/tecnologies/bootstrap.png',
+          title: 'Bootstrap',
+          alt: 'Logo de Bootstrap',
+        },
+        {
+          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          src: '../assets/images/tecnologies/html.png',
+          title: 'HTML5',
+          alt: 'Logo de HTML5',
+        },
+        {
+          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          src: '../assets/images/tecnologies/css.png',
+          title: 'CSS3',
+          alt: 'Logo de CSS3',
+        },
+        {
+          href: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+          src: '../assets/images/tecnologies/js.png',
+          title: 'JavaScript',
+          alt: 'Logo de JavaScript',
+        }
+      ],
+    },
+  ];
   header: HeaderSection[] = [
     {
     area: 'desarrollo/bootstrap',
@@ -19,8 +54,33 @@ export class HuntComponent implements OnInit {
     isSubSection: true
     }
   ];
-  imgGallery = '../assets/images/dev/hunt/mobile/0.png';
-  imagesList : string[] = [
+  brands: Button[] = [
+    {
+      route: 'works/development/stormtech',
+      img: '../assets/images/dev/stormtech/stormtech_logo.png',
+      name: 'Stormtech',
+      text: 'Logo de Stormtech',
+    },
+  ]
+  
+    constructor(private router: Router) {}
+
+    ngOnInit(): void {
+      this.topFunction();
+      this.loadImages(); 
+    }
+    
+  /* ----------- MÉTODOS ----------- */
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  
+  routeBack() {    
+    this.router.navigateByUrl('works/design/ux-ui')
+  }
+  loadImages() {
+    this.imagesList = [ 
       '../assets/images/dev/hunt/mobile/0.png',
       '../assets/images/dev/hunt/mobile/1.png',
       '../assets/images/dev/hunt/mobile/2.png',
@@ -36,30 +96,8 @@ export class HuntComponent implements OnInit {
       '../assets/images/dev/hunt/mobile/12.png',
       '../assets/images/dev/hunt/mobile/13.png',
       '../assets/images/dev/hunt/mobile/14.png',
-  ];
-  brands: Button[] = [
-    {
-      route: 'works/development/stormtech',
-      img: '../assets/images/dev/stormtech/stormtech_logo.png',
-      name: 'Stormtech',
-      text: 'Logo de Stormtech',
-    },
-  ]
-  
-    constructor(private router: Router) {}
-
-    ngOnInit() {
-      this.topFunction();
-    }
-    
-  /* ----------- MÉTODOS ----------- */
-  topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-  }
-  
-  routeBack() {    
-    this.router.navigateByUrl('works/design/ux-ui')
+    ];
+    this.imgGallery = this.imagesList[0];
   }
 
  

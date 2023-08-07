@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, OptionSelect } from 'src/app/models/models';
+import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
 
 @Component({
   selector: 'app-travel-log',
@@ -9,17 +9,52 @@ import { Button, OptionSelect } from 'src/app/models/models';
 })
 
 export class TravelLogComponent implements OnInit {
-  // options: OptionSelect[] = [
-  //   {value: 'imagesList1', view_Text: 'Paciente'},
-  //   {value: 'imagesList2', view_Text: 'Prof. de Salud'},
-  // ];
-  /*--------VARIABLES -------*/ 
-  public area: string = 'diseño/ux|ui';
-  public icon: string = 'local_florist';
-
+  /*--------VARIABLES--------*/ 
   imgGallery = '';
   imagesList : string[] = [] 
-
+  /*--------INTERFACES-------*/ 
+  information: Information[] = [
+    {
+      title: 'Travel Log | Web App',
+      text: ' Web App que permite <span>crear viajes y planes</span> entre otras funcionalidades extra. En el <span>año 2020</span> fue realizado este trabajo en el marco de la Cátedra Introducción a las Metodologías Ágiles del Software (TUDAI/FCEx/UniCen), junto a un grupo de compañeros.  Sebastián fue encargado de realizar diseño de prototipos, flujos de interacción, diseño de logo, diseño UX | UI, presentación en público y se desempeñó como Scrum Master dentro del equipo. El diseño y desarrollo, incluído, Diagrama de Clases y de Entidad y Relación, se realizó a partir de un texto que simulaba ser un diálogo con el cliente. El objetivo del trabajo era captura rrequerimientos y trabajar <span>aplicando Scrum y diseñar una app que cumpla con las espectativas del cliente.',
+      subtitle: 'Metodología | Tecnologías',
+      tecnologies: [
+        {
+          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
+          src: '../assets/images/tecnologies/scrum.png',
+          title: 'Scrum',
+          alt: 'Logo de Scrum',
+        },
+        {
+          href: 'https://www.invisionapp.com/',
+          src: '../assets/images/tecnologies/invision.png',
+          title: 'InVision',
+          alt: 'Logo de InVision',
+        },
+        {
+          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          src: '../assets/images/tecnologies/html.png',
+          title: 'HTML5',
+          alt: 'Logo de HTML5',
+        },
+        {
+          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          src: '../assets/images/tecnologies/css.png',
+          title: 'CSS3',
+          alt: 'Logo de CSS3',
+        }
+      ],
+    },
+  ];
+  header: HeaderSection[] = [
+    {
+    area: 'diseño/ux|ui',
+    icon: 'local_florist',
+    routerLink: '../../',
+    isFlows: true,
+    isSubSection: true
+    }
+  ];
   brands : Button[] = [
     {
       route: 'works/design/ux-ui/ypf',
