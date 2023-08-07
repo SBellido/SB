@@ -6,8 +6,15 @@
     <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
     <h1 class="_title">{{ area }}</h1>
   </div> 
-
-  <select class="_dropdown" (change)="onChange($event)">
+  <mat-form-field>
+    <mat-label>Selector de flujos</mat-label>
+    <mat-select (change)="onChange($event)">
+      <mat-option *ngFor="let item of options" [value]="item.value">
+        {{item.view_Text}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- <select class="_dropdown" (change)="onChange($event)">
     <option value="imagesList">
       <span class="icon"></span>elegir
     </option>
@@ -17,7 +24,7 @@
     <option value="imagesList3">
       <span class="icon"></span>elegir
     </option>
-  </select>
+  </select> -->
 
   <article class="_container_all">  
     <div class="_container_polaroid">

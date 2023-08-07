@@ -1,10 +1,10 @@
-export interface GalleryImage {
-  src: string,
-  position: number,
-  alt: string,
-  first: boolean,
-  last: boolean,
-}
+// export interface GalleryImage {
+//   src: string,
+//   position: number,
+//   alt: string,
+//   first: boolean,
+//   last: boolean,
+// }
 export interface ItemNavBar {
   id: number,
   icon: string,
@@ -59,4 +59,8 @@ export interface HeaderSection {
   isFlows: boolean,
   routerLink: string,
   isSubSection: boolean,
+}
+export interface OptionSelect {
+  value: string,
+  view_Text: string,
 }

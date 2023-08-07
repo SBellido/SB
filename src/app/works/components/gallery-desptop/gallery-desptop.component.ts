@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
-import { GalleryImage } from 'src/app/models/models';
 
 @Component({
   selector: 'app-gallery-desptop',
@@ -19,7 +18,7 @@ export class GalleryDesptopComponent implements OnInit {
     this.updateButtonStatus();
   }
 
-  @Input() imagesList: GalleryImage[] = [];
+  @Input() imagesList: string[] = [];
   @Input() imgGallery: string = '';
   @Input() totalImages: number = 0;
 
@@ -39,7 +38,7 @@ export class GalleryDesptopComponent implements OnInit {
   nextImg() {
     if (this.currentImageIndex < this.imagesList.length - 1) {
       this.currentImageIndex++;
-      this.imgGallery = this.imagesList[this.currentImageIndex].src;
+      this.imgGallery = this.imagesList[this.currentImageIndex];
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
     }
@@ -48,7 +47,7 @@ export class GalleryDesptopComponent implements OnInit {
   beforeImg() {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
-      this.imgGallery = this.imagesList[this.currentImageIndex].src;
+      this.imgGallery = this.imagesList[this.currentImageIndex];
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
     }

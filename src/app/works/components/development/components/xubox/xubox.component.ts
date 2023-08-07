@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage } from 'src/app/models/models';
+import { Button } from 'src/app/models/models';
 
 @Component({
   selector: 'app-xubox',
@@ -16,44 +16,36 @@ export class XuboxComponent implements OnInit {
 //  public isMobile: boolean = false;
 
  imgGallery = '../assets/images/dev/xubox/mobile/0.png';
- imagesList : GalleryImage[] = [
-   { src: '../assets/images/dev/xubox/mobile/0.png', position: 0, alt: 'string', first: true, last: false },
-   { src: '../assets/images/dev/xubox/mobile/1.png', position: 1, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/2.png', position: 2, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/3.png', position: 3, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/4.png', position: 4, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/5.png', position: 5, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/6.png', position: 6, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/7.png', position: 7, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/8.png', position: 8, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/9.png', position: 9, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/10.png', position: 10, alt: 'string', first: false, last: false },
-   { src: '../assets/images/dev/xubox/mobile/11.png', position: 11, alt: 'string', first: false, last: true },
- ] 
-
-brands: Button[] = [
-  {
-    route: 'works/development/investigar',
-    img: '../assets/images/dev/investigar/logo_investigar.png',
-    name: 'InventigAr',
-    text: 'Logo de InventigAr',
-  },
-  // {
-  //   route: 'works/development/xubox',
-  //   img: '../assets/images/dev/xubox/logo/xubox_logo.png',
-  //   title: 'Xubox',
-  //   text: 'Logo Xubox',
-  // },
-  {
-    route: 'works/development/qx',
-    img: '../assets/images/dev/qx/qx_logo.png',
-    name: 'Logística',
-    text: 'Logo de QX Logística',
-  }
-]
+ imagesList : string[] = [
+  '../assets/images/dev/xubox/mobile/0.png',     
+  '../assets/images/dev/xubox/mobile/1.png',
+  '../assets/images/dev/xubox/mobile/2.png',
+  '../assets/images/dev/xubox/mobile/3.png',
+  '../assets/images/dev/xubox/mobile/4.png',
+  '../assets/images/dev/xubox/mobile/5.png',
+  '../assets/images/dev/xubox/mobile/6.png',
+  '../assets/images/dev/xubox/mobile/7.png',
+  '../assets/images/dev/xubox/mobile/8.png',
+  '../assets/images/dev/xubox/mobile/9.png',
+  '../assets/images/dev/xubox/mobile/10.png',
+  '../assets/images/dev/xubox/mobile/11.png',
+ ];
+  brands: Button[] = [
+    {
+      route: 'works/development/investigar',
+      img: '../assets/images/dev/investigar/logo_investigar.png',
+      name: 'InventigAr',
+      text: 'Logo de InventigAr',
+    },
+    {
+      route: 'works/development/qx',
+      img: '../assets/images/dev/qx/qx_logo.png',
+      name: 'Logística',
+      text: 'Logo de QX Logística',
+    }
+  ]
  
   constructor(private router: Router) {}
-
   ngOnInit() {
     this.topFunction();
   }

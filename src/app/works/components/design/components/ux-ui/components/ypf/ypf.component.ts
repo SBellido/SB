@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage, HeaderSection, Information } from 'src/app/models/models';
+import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
 
 @Component({
   selector: 'app-ypf',
@@ -9,21 +9,25 @@ import { Button, GalleryImage, HeaderSection, Information } from 'src/app/models
 })
 
 export class YpfComponent implements OnInit {
-
+  
+  /*--------VARIABLES--------*/ 
   numOptions: number = 1;
   optionsArray: any[] = [];
   routerLink: string = '../../';
 
-  public imagesList1: string[] = ['image1.jpg', 'image2.jpg', 'image3.jpg'];
-  public imagesList2: string[] = ['image4.jpg', 'image5.jpg', 'image6.jpg'];
+  imagesList: string[] = [];
   public selectedOption: string = '';
   
-  imagesList : GalleryImage[] = [
-    { src: '../assets/images/ux_ui/ypf/0/0.png', position: 0, alt: 'string', first: true, last: false },
-    { src: '../assets/images/ux_ui/ypf/0/1.png', position: 1, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/ypf/0/2.png', position: 2, alt: 'string', first: false, last: false },
-    { src: '../assets/images/ux_ui/ypf/0/3.png', position: 3, alt: 'string', first: false, last: true }
+  /*--------INTERFACES-------*/ 
+  options: OptionSelect[] = [
+    {value: 'imagesList1', view_Text: 'Nuevo Caso'},
+    {value: 'imagesList2', view_Text: 'Crear Caso'},
+    {value: 'imagesList3', view_Text: 'Asignar Comité'},
+    {value: 'imagesList4', view_Text: 'Cortar Cadena'},
+    {value: 'imagesList5', view_Text: 'Admin 1'},
+    {value: 'imagesList6', view_Text: 'Admin 2'},
   ];
+  
   imgGallery: string = '';
   isImagesListEmpty: boolean = false;
   header: HeaderSection[] = [
@@ -35,19 +39,10 @@ export class YpfComponent implements OnInit {
      isSubSection: true
     }
   ];
-
-  options: { value: string, label: string }[] = [
-    { value: 'imagesList1', label: 'flujo 1' },
-    { value: 'imagesList2', label: 'flujo 2' },
-    { value: 'imagesList3', label: 'flujo 3' },
-    { value: 'imagesList4', label: 'flujo 4' },
-    { value: 'imagesList5', label: 'flujo 5' },
-    { value: 'imagesList6', label: 'flujo 6' },
-  ];
   information: Information[] = [
     {
       title: 'Gestión de Inversiones | Web App',
-      text: 'Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. <span>Diseñada como herramienta para que YPF gestione sus inversiones de negocio de manera ordenada y coherente. En el año 2022, Sebastián fue encargado de realizar entrevistas con usuarios, análisis de problema, diseño UX | UI, flujo de interacción, diseño de prototipos y presentaciones al cliente. El trabajo fue realizado para Tsoft ocupando el rol de UX/UI Sr. Participó durante un año en el proyecto, diseñó la aplicación y llegó a ocupar el rol de Analista Funcional y Product Owner, por el conocimiento adquirido de la lógica del negocio. El diseño de la app se entregó completo y el proyecto aún se encuenta en etapa de desarrollo.',
+      text: 'Este diseño corresponde a una Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. Diseñada como herramienta para que YPF gestione sus inversiones de negocio de manera ordenada y coherente. En el año 2022, Sebastián fue encargado de realizar entrevistas con usuarios, análisis de problema, diseño UX | UI, flujo de interacción, diseño de prototipos y presentaciones al cliente. El trabajo fue realizado para Tsoft ocupando el rol de UX/UI Sr. Participó durante un año en el proyecto, diseñó la aplicación y llegó a ocupar el rol de Analista Funcional y Product Owner, por el conocimiento adquirido de la lógica del negocio. El diseño de la app se entregó completo y el proyecto aún se encuenta en etapa de desarrollo.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {
@@ -95,12 +90,10 @@ export class YpfComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.optionsArray = this.options;
     this.topFunction();  
     this.loadImages0(); 
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
     this.isImagesListEmpty = this.imagesList.length === 0;
-    this.optionsArray = this.options;
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -117,79 +110,91 @@ export class YpfComponent implements OnInit {
 
   loadImages0() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/0/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/0/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/0/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/0/3.png', position: 3, alt: 'string', first: false, last: true }
+      '../assets/images/ux_ui/ypf/0/0.png', 
+      '../assets/images/ux_ui/ypf/0/1.png', 
+      '../assets/images/ux_ui/ypf/0/2.png', 
+      '../assets/images/ux_ui/ypf/0/3.png',
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
   loadImages1() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/1/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/1/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/1/2.png', position: 2, alt: 'string', first: false, last: false },
+      '../assets/images/ux_ui/ypf/1/0.png',
+      '../assets/images/ux_ui/ypf/1/1.png', 
+      '../assets/images/ux_ui/ypf/1/2.png', 
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/2/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/2/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/2/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/2/3.png', position: 3, alt: 'string', first: false, last: true },
-    ];
-    this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
+      '../assets/images/ux_ui/ypf/2/0.png',
+      '../assets/images/ux_ui/ypf/2/1.png',
+      '../assets/images/ux_ui/ypf/2/2.png',
+      '../assets/images/ux_ui/ypf/2/3.png',
+    ]
+    this.imgGallery = this.imagesList[0]; 
   }
   loadImages3() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/3/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/3/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/3/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/3/3.png', position: 3, alt: 'string', first: false, last: true },
-      { src: '../assets/images/ux_ui/ypf/3/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/3/5.png', position: 5, alt: 'string', first: false, last: true },
+      '../assets/images/ux_ui/ypf/3/0.png',
+      '../assets/images/ux_ui/ypf/3/1.png',
+      '../assets/images/ux_ui/ypf/3/2.png',
+      '../assets/images/ux_ui/ypf/3/3.png',
+      '../assets/images/ux_ui/ypf/3/4.png',
+      '../assets/images/ux_ui/ypf/3/5.png',
     ];
-    this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
+    this.imgGallery = this.imagesList[0];
   }
   loadImages4() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/4/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/4/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/4/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/4/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/4/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/4/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/4/6.png', position: 6, alt: 'string', first: false, last: true },
+      '../assets/images/ux_ui/ypf/4/0.png',
+      '../assets/images/ux_ui/ypf/4/1.png',
+      '../assets/images/ux_ui/ypf/4/2.png',
+      '../assets/images/ux_ui/ypf/4/3.png',
+      '../assets/images/ux_ui/ypf/4/4.png',
+      '../assets/images/ux_ui/ypf/4/5.png',
+      '../assets/images/ux_ui/ypf/4/6.png',
     ];
-    this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
+    this.imgGallery = this.imagesList[0];
   }
   loadImages5() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/ypf/5/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/ypf/5/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/5/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/5/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/5/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/ypf/5/5.png', position: 5, alt: 'string', first: false, last: true },
+      '../assets/images/ux_ui/ypf/5/0.png',
+      '../assets/images/ux_ui/ypf/5/1.png',
+      '../assets/images/ux_ui/ypf/5/2.png',
+      '../assets/images/ux_ui/ypf/5/3.png',
+      '../assets/images/ux_ui/ypf/5/4.png',
+      '../assets/images/ux_ui/ypf/5/5.png',
     ];
-    this.imgGallery = this.imagesList[0].src; // Asigna la primera imagen del arreglo
-  }
-  onChange(event: Event) {  
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    if (selectedValue === 'imagesList1') {
-      this.loadImages0();
-    } else if (selectedValue === 'imagesList2') {
-      this.loadImages1();
-    } else if (selectedValue === 'imagesList3') {
-      this.loadImages2();
-    } else if (selectedValue === 'imagesList4') {
-      this.loadImages3();
-    } else if (selectedValue === 'imagesList5') {
-      this.loadImages4();
-    } else if (selectedValue === 'imagesList6') {
-      this.loadImages5();
+    this.imgGallery = this.imagesList[0]; 
+  } 
+  onChange(event: any) {
+    this.selectedOption = event.value;    
+    switch (this.selectedOption) {
+      case 'imagesList1':
+        this.loadImages0();
+        break;
+      case 'imagesList2':
+        this.loadImages1();
+        break;
+      case 'imagesList3':
+        this.loadImages2();
+        break;
+      case 'imagesList4':
+        this.loadImages3();
+        break;
+      case 'imagesList5':
+        this.loadImages4();
+        break;
+      case 'imagesList6':
+        this.loadImages5();
+        break;
+      default:
+        // Lógica para el caso por defecto (opcional)
+        break;
     }
   }
+  
+  
 }
 

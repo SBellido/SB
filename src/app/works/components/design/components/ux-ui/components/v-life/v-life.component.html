@@ -1,12 +1,53 @@
-<article>
-  <button mat-button class="_button_back" title="Volver" routerLink="../../">
-    <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
-  </button>
-  <div class="_container_title">
-    <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
-    <h1 class="_title">{{ area }}</h1>
-  </div>
 
+<app-header-section
+  [header]="header">
+</app-header-section>
+<article class="_mobile_version">
+  <article class="_container_all">
+    <div class="_container_desktop">
+      <img class="_desktop" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
+    </div>
+    <app-gallery-desptop class="_gallery"
+      [imagesList]="imagesList" 
+      [imgGallery]="imgGallery"
+      [totalImages]="imagesList.length">
+    </app-gallery-desptop>
+    <mat-form-field>
+      <mat-label>Selector de flujos</mat-label>
+      <mat-select (change)="onChange($event)">
+        <mat-option *ngFor="let item of options" [value]="item.value">
+          {{item.view_Text}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- <div class="_container_selector">
+      <label class="_label">Selector de flujos</label>
+      <select class="_dropdown" (change)="onChange($event)" title="Opciones">
+          <option value="imagesList1">
+            <span class="icon"></span>Paciente
+          <option value="imagesList2">
+            <span class="icon"></span>Profesional
+          </option>
+      </select>
+    </div> -->
+    <app-info
+      [information]="information">
+    </app-info>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
+
+
+
+
+
+<!-- 
+<article>
   <select class="_dropdown" (change)="onChange($event)">
     <option value="imagesList">
       <span class="icon"></span>vista 1
@@ -29,11 +70,7 @@
       <div class="_container_info">
         <h4 class="_title_product">V-LIFE App Mobile</h4>
         <div class="_scroll">
-          <p class="_p_card">App mobile que <span>conecta pacientes con profesionales de la salud.</span> 
-            En el <span>año 2019, Sebastián</span> fue encargado de realizar <span>rediseño de marca, diseño UX | UI, 
-            flujo de interacción</span> en baja definición, <span>test con usuarios y armado de prototipos</span> en alta definición,
-            utilizando <span>Adobe Xd</span> y componentes <span>UI Ionic.</span> El trabajo fue realizado para Trenda Software ocupando el rol de <span>UX Design Lead.</span> 
-            La app fue <span>lanzada en 2020</span> en Argentina.
+          <p class="_p_card">
           </p>
         </div>
         <h4 class="_title_tecno">Herramientas utilizadas</h4><hr class="_hr">
@@ -47,11 +84,11 @@
         </figure>
       </div>
     </section>
-  </article>
+  </article> 
   <div class="_container_more_works">
     <div class="_container_text_more_works">
       <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
     </div>
     <app-brands-buttons [brands]="brands"></app-brands-buttons>
   </div>
-</article>
+</article> -->

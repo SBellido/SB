@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { GalleryImage } from 'src/app/models/models';
 
 @Component({
   selector: 'app-gallery-polaroid',
@@ -18,7 +17,7 @@ export class GalleryPolaroidComponent implements OnInit {
     this.updateButtonStatus();
   }
   
-  @Input() imagesList: GalleryImage[] = [];
+  @Input() imagesList: string[] = [];
   @Input() imgGallery: string = '';
 
   ngOnInit(): void {
@@ -35,7 +34,7 @@ export class GalleryPolaroidComponent implements OnInit {
   nextImg() {
     if (this.currentImageIndex < this.imagesList.length - 1) {
       this.currentImageIndex++;
-      this.imgGallery = this.imagesList[this.currentImageIndex].src;
+      this.imgGallery = this.imagesList[this.currentImageIndex];
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
     }
@@ -44,7 +43,7 @@ export class GalleryPolaroidComponent implements OnInit {
   beforeImg() {
     if (this.currentImageIndex > 0) {
       this.currentImageIndex--;
-      this.imgGallery = this.imagesList[this.currentImageIndex].src;
+      this.imgGallery = this.imagesList[this.currentImageIndex];
       this.updateButtonStatus();
       this.currentImageNumber = this.currentImageIndex + 1;
     }

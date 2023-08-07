@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button, GalleryImage } from 'src/app/models/models';
+import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
 
 @Component({
   selector: 'app-v-life',
@@ -9,16 +9,53 @@ import { Button, GalleryImage } from 'src/app/models/models';
 })
 
 export class VLifeComponent implements OnInit {
-  
-  /*--------VARIABLES -------*/ 
-  public area: string = 'diseño/ux|ui';
-  public icon: string = 'local_florist';
+  /*--------INTERFACES-------*/ 
+  options: OptionSelect[] = [
+    {value: 'imagesList1', view_Text: 'Paciente'},
+    {value: 'imagesList2', view_Text: 'Prof. de Salud'},
+  ];
+  information: Information[] = [
+    {
+      title: 'V-LIFE | App Mobile',
+      text: 'App mobile que <span>conecta pacientes con profesionales de la salud. En el año 2019, Sebastiánfue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacciónen baja definición, test con usuarios y armado de prototiposen alta definición, utilizando Adobe Xdy componentes UI Ionic.El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020en Argentina.',
+      subtitle: 'Metodología | Tecnologías',
+      tecnologies: [
+        {
+          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
+          src: '../assets/images/tecnologies/scrum.png',
+          title: 'Scrum',
+          alt: 'Logo de Scrum',
+        },
+        {
+          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          src: '../assets/images/tecnologies/azure.png',
+          title: 'Azure',
+          alt: 'Logo de Azure',
+        },
+        {
+          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          src: '../assets/images/tecnologies/xd.png',
+          title: 'Adobe Xd',
+          alt: 'Logo de Adobe Xd',
+        }
+      ],
+    },
+  ];
+/*--------VARIABLES -------*/ 
+  header: HeaderSection[] = [
+    {
+    area: 'diseño/ux|ui',
+    icon: 'local_florist',
+    routerLink: '../../',
+    isFlows: true,
+    isSubSection: true
+    }
+  ];
 
   imgGallery: string = '../assets/images/ux_ui/ypf/asignarComite/0.png';
-  
   currentImageIndex: number = 0;
   imagesCount: number = 0;
-  imagesList : GalleryImage[] = [];
+  imagesList : string[] = [];
 
   brands : Button[] = [
     {
@@ -71,61 +108,59 @@ export class VLifeComponent implements OnInit {
 
   loadImages() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/v-life/patient/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/6.png', position: 6, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/7.png', position: 7, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/8.png', position: 8, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/8_.png', position: 9, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/9.png', position: 10, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/10.png', position: 11, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/12.png', position: 12, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/14.png', position: 13, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/13.png', position: 14, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/15.png', position: 15, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/16.png', position: 16, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/13.png', position: 17, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/17.png', position: 18, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/18.png', position: 19, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/19.png', position: 20, alt: 'string', first: false, last: true },
-      { src: '../assets/images/ux_ui/v-life/patient/13.png', position: 21, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/20.png', position: 22, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/21.png', position: 23, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/22.png', position: 24, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/23.png', position: 25, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/24.png', position: 26, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/25.png', position: 27, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/26.png', position: 28, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/20.png', position: 29, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/27.png', position: 30, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/28.png', position: 31, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/29.png', position: 32,  alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/30.png', position: 33, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/patient/31.png', position: 34, alt: 'string', first: false, last: false },
+      '../assets/images/ux_ui/v-life/patient/0.png',
+      '../assets/images/ux_ui/v-life/patient/1.png',
+      '../assets/images/ux_ui/v-life/patient/2.png',
+      '../assets/images/ux_ui/v-life/patient/3.png',
+      '../assets/images/ux_ui/v-life/patient/4.png',
+      '../assets/images/ux_ui/v-life/patient/5.png',
+      '../assets/images/ux_ui/v-life/patient/6.png',
+      '../assets/images/ux_ui/v-life/patient/7.png',
+      '../assets/images/ux_ui/v-life/patient/8.png',
+      '../assets/images/ux_ui/v-life/patient/8_.png',
+      '../assets/images/ux_ui/v-life/patient/9.png',
+      '../assets/images/ux_ui/v-life/patient/10.png',
+      '../assets/images/ux_ui/v-life/patient/12.png',
+      '../assets/images/ux_ui/v-life/patient/14.png',
+      '../assets/images/ux_ui/v-life/patient/13.png',
+      '../assets/images/ux_ui/v-life/patient/15.png',
+      '../assets/images/ux_ui/v-life/patient/16.png',
+      '../assets/images/ux_ui/v-life/patient/13.png',
+      '../assets/images/ux_ui/v-life/patient/17.png',
+      '../assets/images/ux_ui/v-life/patient/18.png',
+      '../assets/images/ux_ui/v-life/patient/19.png',
+      '../assets/images/ux_ui/v-life/patient/13.png',
+      '../assets/images/ux_ui/v-life/patient/20.png', 
+      '../assets/images/ux_ui/v-life/patient/21.png',
+      '../assets/images/ux_ui/v-life/patient/22.png',
+      '../assets/images/ux_ui/v-life/patient/23.png', 
+      '../assets/images/ux_ui/v-life/patient/24.png',
+      '../assets/images/ux_ui/v-life/patient/25.png', 
+      '../assets/images/ux_ui/v-life/patient/26.png',
+      '../assets/images/ux_ui/v-life/patient/20.png',
+      '../assets/images/ux_ui/v-life/patient/27.png',
+      '../assets/images/ux_ui/v-life/patient/28.png',
+      '../assets/images/ux_ui/v-life/patient/29.png',
+      '../assets/images/ux_ui/v-life/patient/30.png',
+      '../assets/images/ux_ui/v-life/patient/31.png',
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
   loadImages2() {
     this.imagesList = [
-      { src: '../assets/images/ux_ui/v-life/professional/0.png', position: 0, alt: 'string', first: true, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/1.png', position: 1, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/2.png', position: 2, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/3.png', position: 3, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/4.png', position: 4, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/5.png', position: 5, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/6.png', position: 6, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/7.png', position: 7, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/8.png', position: 8, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/9.png', position: 9, alt: 'string', first: false, last: false },
-      { src: '../assets/images/ux_ui/v-life/professional/10.png', position: 10, alt: 'string', first: false, last: false },
+       '../assets/images/ux_ui/v-life/professional/0.png',
+       '../assets/images/ux_ui/v-life/professional/1.png',
+       '../assets/images/ux_ui/v-life/professional/2.png',
+       '../assets/images/ux_ui/v-life/professional/3.png',
+       '../assets/images/ux_ui/v-life/professional/4.png',
+       '../assets/images/ux_ui/v-life/professional/5.png',
+       '../assets/images/ux_ui/v-life/professional/6.png',
+       '../assets/images/ux_ui/v-life/professional/7.png',
+       '../assets/images/ux_ui/v-life/professional/8.png',
+       '../assets/images/ux_ui/v-life/professional/9.png',
+       '../assets/images/ux_ui/v-life/professional/10.png',
     ];
-    this.imgGallery = this.imagesList[0].src;
+    this.imgGallery = this.imagesList[0];
   }
-
 }
-
 
