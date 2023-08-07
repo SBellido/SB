@@ -81,9 +81,12 @@
     width: 100%;
     border-radius: 30px;
   }
-  h4._title {
-    color: $third_color;
+  h4._title_ {
+    margin-block-start: 0;
+  }
+  h4._title, h4._title_ {
     margin-block-end: 0;
+    color: $third_color;
     text-align: center;
     font-weight: 200;
   }

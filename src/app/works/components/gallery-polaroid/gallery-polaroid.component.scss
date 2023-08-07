@@ -31,9 +31,12 @@
     }
 }
 @media (min-width: 1024px) {
+    article._container_gallery {
+        margin-bottom: 3rem;
+    }
     div._container_image {
         margin-top: 0;
-        padding-top: 2rem;
+        padding-top: 2.3rem;
         margin-bottom: -2.3rem;
     }
     section._gallery {

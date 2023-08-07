@@ -21,26 +21,32 @@ export class NighxComponent implements OnInit {
   information: Information[] = [
     {
       title: 'V-LIFE | App Mobile',
-      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacciónen baja definición, test con usuarios y armado de prototiposen alta definición, utilizando Adobe Xdy componentes UI Ionic.El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020en Argentina.',
+      text: 'Nighx es un servicio de streaming que ofrece ver series y películas en un dispositivo con conexión a internet. En el año 2019, Sebastián fue encargado de realizar diseño de marca y prototipos, flujos de interacción, aplicación de patrones de diseño, diseño UX | UI y presentación en público. Trabajo realizado en el marco de la Cátedra Interfaces de Usuario e Interacción (TUDAI/FCEx/UniCen), junto a Germán Wivaux y Pablo Santa María. Durante 2020 y 2021, tras ser convocado y ganar concurso, se desempeñó como ayudante alumno en dicha Cátedra.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
-        {
-          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
-          src: '../assets/images/tecnologies/scrum.png',
-          title: 'Scrum',
-          alt: 'Logo de Scrum',
-        },
-        {
-          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
-          src: '../assets/images/tecnologies/azure.png',
-          title: 'Azure',
-          alt: 'Logo de Azure',
-        },
         {
           href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
           src: '../assets/images/tecnologies/xd.png',
           title: 'Adobe Xd',
           alt: 'Logo de Adobe Xd',
+        },
+        {
+          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          src: '../assets/images/tecnologies/html.png',
+          title: 'HTML5',
+          alt: 'Logo de HTML5',
+        },
+        {
+          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          src: '../assets/images/tecnologies/css.png',
+          title: 'CSS3',
+          alt: 'Logo de CSS3',
+        },
+        {
+          href: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+          src: '../assets/images/tecnologies/js.png',
+          title: 'JavaScript',
+          alt: 'Logo de JavaScript',
         }
       ],
     },
