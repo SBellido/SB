@@ -12,14 +12,19 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery-polaroid>
-    <mat-form-field>
-      <mat-label>Selector de flujos</mat-label>
-      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
-        <mat-option *ngFor="let item of options" [value]="item.value">
-          {{item.view_Text}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+    <div class="_container_selector">
+      <div class="_container_text_more_works">
+        <h4 class="_title_">Galería de imágenes</h4>
+      </div>
+      <mat-form-field>
+        <mat-label>Opciones</mat-label>
+        <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+          <mat-option *ngFor="let item of options" [value]="item.value">
+            {{item.view_Text}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
     <app-info-polaroid
       [information]="information">
     </app-info-polaroid>
@@ -37,87 +42,38 @@
     <div class="_container_polaroid">
       <img class="_polaroid" src="../assets/images/polaroid.png" alt="marco de foto polaroid">
     </div>
-    <app-gallery-polaroid class="_gallery"
-      [imagesList]="imagesList" 
-      [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
-    </app-gallery-polaroid>
-    <app-info-polaroid
-      [information]="information">
-    </app-info-polaroid>
-  </article>
-  <div class="_container_selector">
-    <mat-form-field>
-      <mat-label>Selector de flujos</mat-label>
-      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
-        <mat-option *ngFor="let item of options" [value]="item.value">
-          {{item.view_Text}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="_container_more_works">
-    <div class="_container_text_more_works">
-      <h4 class="_title">Más trabajos de diseño/gráfico</h4>
-    </div>
-    <app-brands-buttons [brands]="brands"></app-brands-buttons>
-  </div>
-</article>
-
-
-<!-- <article>
-  <button mat-button class="_button_back" title="Volver" routerLink="../">
-    <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
-  </button>
-  <div class="_container_title">
-    <mat-icon class="_icon_nav">{{ icon }}</mat-icon>
-    <h1 class="_title">{{ area }}</h1>
-  </div> 
-  <mat-form-field>
-    <mat-label>Selector de flujos</mat-label>
-    <mat-select (change)="onChange($event)">
-      <mat-option *ngFor="let item of options" [value]="item.value">
-        {{item.view_Text}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <article class="_container_all">  
-    <div class="_container_polaroid">
-      <img class="_polaroid" src="../assets/images/polaroid.png" alt="marco de foto polaroid">
-    </div>
-    <app-gallery-polaroid class="_gallery"
-      [imagesList]="imagesList" 
-      [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
-    </app-gallery-polaroid>
-    <section class="_container_info_tecno">
-      <div class="_container_info">
-        <h4 class="_title_product">eyeka! | Consursos</h4>
-        <div class="_scroll">
-          <p class="_p_card">Participar en <span>concursos internacionales </span>puede ser una excelente manera de adquirir experiencia trabajando en el 
-            <span>diseño para grandes marcas.</span> Además, puedes expresar tu creatividad, practicar tus habilidades. 
-            También obtener retroalimentación sobre el trabajo de las marcas y aprender de otros participantes.
-            <span>eYeka es una comunidad global de creadores talentosos</span> que aman resolver los desafíos de las marcas con ideas frescas, 
-            creativas y contenido compartible. Los creadores en eYeka <span>compiten para resolver problemas comerciales reales de las marcas 
-            más grandes del mundo</span> para ganar fama y fortuna, mientras se divierten.
-          </p>
+    <div class="_container_gallery_selector">
+      <app-gallery-polaroid class="_gallery"
+        [imagesList]="imagesList" 
+        [imgGallery]="imgGallery"
+        [totalImages]="imagesList.length">
+      </app-gallery-polaroid>
+      <div class="_container_selector">
+        <div class="_container_text_selector">
+          <h4 class="_title_">Galería de imágenes</h4>
         </div>
-        <h4 class="_title_tecno">Herramientas utilizadas</h4><hr class="_hr">
-        <figure class="_container_tecno">
-          <a href="https://www.adobe.com/la/products/photoshop/free-trial-download.html" target="_blank">
-            <img class="_logo_tecno" src="../assets/images/tecnologies/photoshop.png" title="Adobe Photoshop" alt="Logo de Adobe Photoshop">
-          </a>
-          <a href="https://www.adobe.com/es/products/illustrator/free-trial-download.html" target="_blank">
-            <img class="_logo_tecno" src="../assets/images/tecnologies/illustrator.png" title="Adobe Illustrator" alt="Logo de Adobe Illustrator">
-          </a>        
-        </figure>
+        <mat-form-field>
+          <mat-label>Opciones</mat-label>
+          <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+            <mat-option *ngFor="let item of options" [value]="item.value">
+              {{item.view_Text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
-    </section>
-  </article>
-  <div class="_container_more_works">
-    <div class="_container_text_more_works">
-      <h4 class="_title">Más trabajos de diseño/gráfico</h4>
     </div>
-    <app-brands-buttons [brands]="brands"></app-brands-buttons>
-  </div>
-</article> -->
+    <div class="_container_info_works">
+      <app-info-polaroid
+        [information]="information">
+      </app-info-polaroid>
+      <div class="_container_selector_works">
+        <div class="_container_more_works">
+          <div class="_container_text_more_works">
+            <h4 class="_title">Más trabajos de diseño/gráfico</h4>
+          </div>
+          <app-brands-buttons [brands]="brands"></app-brands-buttons>
+        </div>
+      </div>
+    </div>
+  </article>
+</article>

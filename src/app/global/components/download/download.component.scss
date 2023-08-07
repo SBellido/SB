@@ -5,14 +5,30 @@ div._container_donwload {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+div._btn {
+   margin: auto;
+   background-color: $first_color;
+   border-top: solid 1px grey;
+   border-left: solid 1px grey;
+   border-right: solid 1px black;
+   border-bottom: solid 1px black;
+   padding: .5rem .5rem;
+   cursor: pointer;
+}
+div._btn:hover {
+    background-color: $third_color;
+    a._donwload {
+        color: $first_color;
+    }
 }
 a._donwload {
+    padding: 0 2rem;
     color: $first_color_lighter;
     text-decoration: underline;
-    cursor: pointer;
+    text-decoration: none;
 }
-a._donwload:hover {
-    color: $third_color_light;
-}
+
 

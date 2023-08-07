@@ -11,14 +11,19 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery-desptop>
-    <mat-form-field>
-      <mat-label>Seleccionar flujo</mat-label>
-      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
-        <mat-option *ngFor="let item of options" [value]="item.value">
-          {{item.view_Text}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
+    <div class="_container_selector">
+      <div class="_container_text_more_works">
+        <h4 class="_title_">Selector de flujos</h4>
+      </div>
+      <mat-form-field>
+        <mat-label>Elegir opción</mat-label>
+        <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+          <mat-option *ngFor="let item of options" [value]="item.value">
+            {{item.view_Text}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
     <app-info
       [information]="information">
     </app-info>
@@ -45,8 +50,11 @@
     </app-info>
   </article>
   <div class="_container_selector">
+    <div class="_container_text_more_works">
+      <h4 class="_title_">Selector de flujos</h4>
+    </div>
     <mat-form-field>
-      <mat-label>Seleccionar flujo</mat-label>
+      <mat-label>Elegir opción</mat-label>
       <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
         <mat-option *ngFor="let item of options" [value]="item.value">
           {{item.view_Text}}

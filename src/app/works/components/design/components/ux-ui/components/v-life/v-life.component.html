@@ -12,8 +12,11 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery>
+    <div class="_container_text_more_works">
+      <h4 class="_title_">Selector de flujos</h4>
+    </div>
     <mat-form-field>
-      <mat-label>Selector de flujos</mat-label>
+      <mat-label>Elegir una opción</mat-label>
       <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
         <mat-option *ngFor="let item of options" [value]="item.value">
           {{item.view_Text}}
@@ -47,8 +50,11 @@
     </app-info-mobile>
   </article>
   <div class="_container_selector">
+    <div class="_container_text_more_works">
+      <h4 class="_title_">Selector de flujos</h4>
+    </div>
     <mat-form-field>
-      <mat-label>Selector de flujos</mat-label>
+      <mat-label>Elegir una opción</mat-label>
       <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
         <mat-option *ngFor="let item of options" [value]="item.value">
           {{item.view_Text}}
