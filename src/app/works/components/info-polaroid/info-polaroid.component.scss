@@ -6,15 +6,23 @@
     margin-top: 1.7rem;
     margin-left: 2rem;
   }  
+  p._p_card {
+    height: 16rem;
+  }
+  ._tecno {
+      width: 22rem;
+  }
 }
 @media (min-width: 1440px) {
   div._container_info {
     width: 23rem;
     margin-left: 3rem;
   }  
-  p._p_card {
-    height: 16rem;
-  }
+}
+@media (min-width: 1500px) {
+  div._container_info {
+    height: 26.4rem;
+  }  
 }
 @media (min-width: 1920px) {
   div._container_info {
