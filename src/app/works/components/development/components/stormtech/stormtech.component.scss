@@ -139,6 +139,13 @@
     padding: 10rem 2rem 1.3rem 2rem;
   }
 }
+  div._container_desktop {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 11.5rem;
+    z-index: -1;
+  }
 @media (min-width: 425px) {
   h1._title {
     padding: 0 1.5rem;
@@ -160,7 +167,7 @@
     flex-direction: row;
   }
   div._container_desktop {
-    top: 11rem;
+    top: 10.8rem;
     left: -.5rem;
     width: 32.5rem;
   }
@@ -173,7 +180,7 @@
     justify-content: center;
   }
   div._container_desktop {
-    top: 11.7rem;
+    top: 11.2rem;
     left: 17.1rem;
     width: 29.2rem;
   }
@@ -183,7 +190,7 @@
     padding: 10rem 38rem 1.2rem 38rem;
   }
   div._container_desktop {
-    top: 11.7rem;
+    top: 11rem;
     left: 19rem;
     width: 30rem;
   }
@@ -196,7 +203,7 @@
     padding: 10rem 50rem 1.5rem 50rem;
   }
   div._container_desktop {
-    top: 12rem;
+    top: 11.5rem;
     left: 31.5rem;
   }
 }

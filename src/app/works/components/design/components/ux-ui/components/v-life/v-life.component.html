@@ -4,35 +4,25 @@
 </app-header-section>
 <article class="_mobile_version">
   <article class="_container_all">
-    <div class="_container_desktop">
-      <img class="_desktop" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
+    <div class="_container_mobile">
+      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
     </div>
-    <app-gallery-desptop class="_gallery"
+    <app-gallery class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
-    </app-gallery-desptop>
+    </app-gallery>
     <mat-form-field>
       <mat-label>Selector de flujos</mat-label>
-      <mat-select (change)="onChange($event)">
+      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
         <mat-option *ngFor="let item of options" [value]="item.value">
           {{item.view_Text}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <!-- <div class="_container_selector">
-      <label class="_label">Selector de flujos</label>
-      <select class="_dropdown" (change)="onChange($event)" title="Opciones">
-          <option value="imagesList1">
-            <span class="icon"></span>Paciente
-          <option value="imagesList2">
-            <span class="icon"></span>Profesional
-          </option>
-      </select>
-    </div> -->
-    <app-info
+    <app-info-mobile
       [information]="information">
-    </app-info>
+    </app-info-mobile>
   </article>
   <div class="_container_more_works">
     <div class="_container_text_more_works">
@@ -42,53 +32,34 @@
   </div>
 </article>
 
-
-
-
-
-<!-- 
-<article>
-  <select class="_dropdown" (change)="onChange($event)">
-    <option value="imagesList">
-      <span class="icon"></span>vista 1
-    </option>
-    <option value="imagesList2">
-      <span class="icon"></span>vista 2
-    </option>
-  </select>
-
-  <article class="_container_all">  
+<article class="_desktop_version">
+  <article class="_container_all">
     <div class="_container_mobile">
-      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="">
+      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
     </div>
     <app-gallery class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery>
-    <section class="_container_info_tecno">
-      <div class="_container_info">
-        <h4 class="_title_product">V-LIFE App Mobile</h4>
-        <div class="_scroll">
-          <p class="_p_card">
-          </p>
-        </div>
-        <h4 class="_title_tecno">Herramientas utilizadas</h4><hr class="_hr">
-        <figure class="_container_tecno">
-          <a href="https://www.scrum.org/resources/blog/que-es-scrum" target="_blank">
-            <img class="_logo_tecno" src="../assets/images/tecnologies/scrum.png" title="Scrum" alt="Logo de Scrum">
-          </a>
-          <a href="https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html" target="_blank">
-            <img class="_logo_tecno" src="../assets/images/tecnologies/xd.png" title="Adobe Xd" alt="Logo de Adobe Xd">
-          </a>
-        </figure>
-      </div>
-    </section>
-  </article> 
+    <app-info-mobile
+      [information]="information">
+    </app-info-mobile>
+  </article>
+  <div class="_container_selector">
+    <mat-form-field>
+      <mat-label>Selector de flujos</mat-label>
+      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+        <mat-option *ngFor="let item of options" [value]="item.value">
+          {{item.view_Text}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
   <div class="_container_more_works">
     <div class="_container_text_more_works">
       <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
     </div>
     <app-brands-buttons [brands]="brands"></app-brands-buttons>
   </div>
-</article> -->
+</article>

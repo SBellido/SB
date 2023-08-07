@@ -11,12 +11,9 @@ import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models
 export class YpfComponent implements OnInit {
   
   /*--------VARIABLES--------*/ 
-  numOptions: number = 1;
-  optionsArray: any[] = [];
-  routerLink: string = '../../';
-
-  imagesList: string[] = [];
+  public imagesList: string[] = [];
   public selectedOption: string = '';
+  public imgGallery: string = '';
   
   /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
@@ -28,8 +25,6 @@ export class YpfComponent implements OnInit {
     {value: 'imagesList6', view_Text: 'Admin 2'},
   ];
   
-  imgGallery: string = '';
-  isImagesListEmpty: boolean = false;
   header: HeaderSection[] = [
     {
      area: 'diseño/ux|ui',
@@ -88,12 +83,10 @@ export class YpfComponent implements OnInit {
   ]
 
   constructor(private router: Router) { }
-
   ngOnInit(): void {
     this.topFunction();  
     this.loadImages0(); 
     this.imgGallery = this.imagesList[0];
-    this.isImagesListEmpty = this.imagesList.length === 0;
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -101,9 +94,6 @@ export class YpfComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  // routeBack() {    
-  //   this.router.navigateByUrl('works/design/ux-ui')
-  // }
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
@@ -194,7 +184,6 @@ export class YpfComponent implements OnInit {
         break;
     }
   }
-  
-  
+
 }
 
