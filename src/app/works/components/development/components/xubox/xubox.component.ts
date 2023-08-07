@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button } from 'src/app/models/models';
+import { Button, HeaderSection, Information } from 'src/app/models/models';
 
 @Component({
   selector: 'app-xubox',
@@ -9,27 +9,46 @@ import { Button } from 'src/app/models/models';
 })
 
 export class XuboxComponent implements OnInit {
-
- /*--------VARIABLES -------*/ 
- public area: string = 'desarrollo/angular';
- public icon: string = 'developer_mode';
-//  public isMobile: boolean = false;
-
- imgGallery = '../assets/images/dev/xubox/mobile/0.png';
- imagesList : string[] = [
-  '../assets/images/dev/xubox/mobile/0.png',     
-  '../assets/images/dev/xubox/mobile/1.png',
-  '../assets/images/dev/xubox/mobile/2.png',
-  '../assets/images/dev/xubox/mobile/3.png',
-  '../assets/images/dev/xubox/mobile/4.png',
-  '../assets/images/dev/xubox/mobile/5.png',
-  '../assets/images/dev/xubox/mobile/6.png',
-  '../assets/images/dev/xubox/mobile/7.png',
-  '../assets/images/dev/xubox/mobile/8.png',
-  '../assets/images/dev/xubox/mobile/9.png',
-  '../assets/images/dev/xubox/mobile/10.png',
-  '../assets/images/dev/xubox/mobile/11.png',
- ];
+/*--------VARIABLES -------*/  
+  imgGallery = '';
+  imagesList : string[] = [];
+/*--------INTERFACES-------*/
+  information: Information[] = [
+    {
+      title: 'InvestigAr | Web App',
+      text: 'Plataforma interactiva que permite gestionar envíos postales, dando la posibilidad de personalizarlos de acuerdo a las necesidades del usuario. Una herramienta flexible y adaptada a los servicios que ofrece la empresa. Consta de un formulario complejo, en cuanto a su implementación, que va guardando los datos cargados y plantea el flujo en una serie de pasos. Los datos a cargar varian de acuerdo a la información cargada hasta el momento. Sebastián se desempeñó como desarrollador Frontend e implementó el alta de perfiles de usuario, cambio de contraseña, login y todo el proceso de carga de datos. El trabajo fue hecho para Stormtech SL en el año 2021 bajo la supervisión del equpo técnico de la empresa. Se implementó de forma paralela con Xubox, trabajando misma lógica y diferentes estilos.',
+      subtitle: 'Metodología | Tecnologías',
+      tecnologies: [
+        {
+          href: 'https://angular.io/',
+          src: '../assets/images/tecnologies/angular.png',
+          title: 'Angular',
+          alt: 'Logo de Angular',
+        },
+        {
+          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          src: '../assets/images/tecnologies/html.png',
+          title: 'HTML5',
+          alt: 'Logo de HTML5',
+        },
+        {
+          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          src: '../assets/images/tecnologies/css.png',
+          title: 'CSS3',
+          alt: 'Logo de CSS3',
+        },
+      ],
+    },
+  ];
+  header: HeaderSection[] = [
+    {
+    area: 'desarrollo/angular',
+    icon: 'developer_mode',
+    routerLink: '../../',
+    isFlows: true,
+    isSubSection: true
+    }
+  ]; 
   brands: Button[] = [
     {
       route: 'works/development/investigar',
@@ -48,6 +67,7 @@ export class XuboxComponent implements OnInit {
   constructor(private router: Router) {}
   ngOnInit() {
     this.topFunction();
+    this.loadImages();
   }
    
  /* ----------- MÉTODOS ----------- */
@@ -60,6 +80,23 @@ export class XuboxComponent implements OnInit {
    this.router.navigateByUrl('works/design/ux-ui')
  }
 
- 
+ loadImages() {
+    this.imagesList = [ 
+      '../assets/images/dev/xubox/mobile/0.png',     
+      '../assets/images/dev/xubox/mobile/1.png',
+      '../assets/images/dev/xubox/mobile/2.png',
+      '../assets/images/dev/xubox/mobile/3.png',
+      '../assets/images/dev/xubox/mobile/4.png',
+      '../assets/images/dev/xubox/mobile/5.png',
+      '../assets/images/dev/xubox/mobile/6.png',
+      '../assets/images/dev/xubox/mobile/7.png',
+      '../assets/images/dev/xubox/mobile/8.png',
+      '../assets/images/dev/xubox/mobile/9.png',
+      '../assets/images/dev/xubox/mobile/10.png',
+      '../assets/images/dev/xubox/mobile/11.png',
+    ];
+    this.imgGallery = this.imagesList[0];
+  }
+  
 
 }

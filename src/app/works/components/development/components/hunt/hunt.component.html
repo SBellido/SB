@@ -1,4 +1,52 @@
+
 <app-header-section
+  [header]="header">
+</app-header-section>
+<article class="_mobile_version">
+  <article class="_container_all">
+    <div class="_container_mobile">
+      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
+    </div>
+    <app-gallery class="_gallery"
+      [imagesList]="imagesList" 
+      [imgGallery]="imgGallery"
+      [totalImages]="imagesList.length">
+    </app-gallery>
+    <app-info-mobile
+      [information]="information">
+    </app-info-mobile>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
+
+<article class="_desktop_version">
+  <article class="_container_all">
+    <div class="_container_mobile">
+      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de Hunt">
+    </div>
+    <app-gallery class="_gallery"
+      [imagesList]="imagesList" 
+      [imgGallery]="imgGallery"
+      [totalImages]="imagesList.length">
+    </app-gallery>
+    <app-info-mobile
+      [information]="information">
+    </app-info-mobile>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de desarrollo/bootstrap</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
+   
+<!-- <app-header-section
   [header]="header">
 </app-header-section>
 <article>
@@ -47,4 +95,4 @@
   <app-brands-buttons [brands]="brands"></app-brands-buttons>
   </div>
 </article>
-  
+   -->
