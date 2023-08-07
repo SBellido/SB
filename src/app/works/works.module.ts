@@ -41,6 +41,7 @@ import { InfoComponent } from './components/info/info.component';
 import { TecnologiesComponent } from './components/tecnologies/tecnologies.component';
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
 import { InfoMobileComponent } from './components/info-mobile/info-mobile.component';
+import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { InfoMobileComponent } from './components/info-mobile/info-mobile.compon
     InfoComponent,
     TecnologiesComponent,
     HeaderSectionComponent,
-    InfoMobileComponent
+    InfoMobileComponent,
+    InfoPolaroidComponent
   ],
   imports: [
     CommonModule,

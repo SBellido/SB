@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { Button } from 'src/app/models/models';
-import { GalleryComponent } from '../../../gallery/gallery.component';
+import { Button, HeaderSection, Information } from 'src/app/models/models';
 
 @Component({
   selector: 'app-brands-section',
@@ -10,16 +9,41 @@ import { GalleryComponent } from '../../../gallery/gallery.component';
 })
 
 export class BrandsSectionComponent implements OnInit {
-
-  @ViewChild('galleryComponent') galleryComponent!: GalleryComponent;
-
-  /*--------VARIABLES -------*/ 
-  public area: string = 'diseño/gráfico';
-  public icon: string = 'local_florist';
-
-  imgGallery = '../assets/images/brands/0.png';
-  imagesList : string[] = [];
-
+/*--------VARIABLES--------*/ 
+  public imagesList: string[] = [];
+  public selectedOption: string = '';
+  public imgGallery: string = '';
+/*--------INTERFACES-------*/ 
+  information: Information[] = [
+    {
+      title: 'V-LIFE | App Mobile',
+      text: 'El diseño de una marca desempeña un papel fundamental en la creación de identidad y confianza para cualquier negocio o empresa. Desde la perspectiva del diseño gráfico y la comunicación visual, este proceso va más allá de simplemente crear un logotipo atractivo. Se trata de construir una imagen que comunique los valores, la personalidad y la esencia de la marca de manera coherente y sólida. Una marca bien diseñada establece una conexión emocional con su audiencia, permitiéndoles identificarse con ella y recordarla fácilmente en un mercado competitivo. Un logotipo único y memorable, acompañado de una paleta de colores y tipografía cuidadosamente seleccionadas, se convierte en el rostro de la marca, transmitiendo su propósito y propuesta de valor. La consistencia en el diseño refuerza la identidad de la marca en todos los puntos de contacto con el público, ya sea en su sitio web, redes sociales, material impreso o productos. Esta cohesión visual genera una sensación de profesionalismo y confianza, lo que es fundamental para establecer relaciones duraderas con los clientes. El diseño de marca bien pensado también comunica la credibilidad y la calidad del producto o servicio que ofrece la empresa. Un diseño de alta calidad y estéticamente agradable sugiere que la marca se preocupa por los detalles y se esfuerza por brindar una experiencia excepcional al cliente. En un mundo cada vez más visual, la comunicación efectiva a través del diseño es clave para destacar entre la multitud y crear una impresión duradera en la mente del consumidor. Una marca sólida y bien diseñada no solo atrae a nuevos clientes, sino que también fomenta la lealtad y el reconocimiento de marca a largo plazo. En resumen, el diseño de una marca es esencial para generar identidad y confianza en el mercado. Desde el enfoque del diseño gráfico y la comunicación visual, cada elemento visual debe ser cuidadosamente considerado para transmitir el mensaje y los valores de la marca de manera coherente y poderosa. Una marca bien diseñada no solo establece una conexión emocional con el público, sino que también refuerza la credibilidad y calidad percibida, generando una impresión duradera en la mente de los consumidores.',
+      subtitle: 'Metodología | Tecnologías',
+      tecnologies: [
+        {
+          href: 'https://www.adobe.com/la/products/photoshop/free-trial-download.html',
+          src: '../assets/images/tecnologies/photoshop.png',
+          title: 'Photoshop',
+          alt: 'Logo de Photoshop',
+        },
+        {
+          href: 'https://www.adobe.com/es/products/illustrator/free-trial-download.html',
+          src: '../assets/images/tecnologies/illustrator.png',
+          title: 'Illustrator',
+          alt: 'Logo de Illustrator',
+        }
+      ],
+    },
+  ];
+  header: HeaderSection[] = [
+    {
+    area: 'diseño/gráfico',
+    icon: 'local_florist',
+    routerLink: '../../',
+    isFlows: false,
+    isSubSection: true
+    }
+  ];
   brands : Button[] = [
     {
       route: 'works/design/competitions',
@@ -30,7 +54,6 @@ export class BrandsSectionComponent implements OnInit {
   ]
  
   constructor(private router: Router) { }
-
   ngOnInit(): void {
     this.topFunction();
     this.loadImages(); 
@@ -61,11 +84,5 @@ export class BrandsSectionComponent implements OnInit {
         '../assets/images/brands/8.png',
       ];
       this.imgGallery = this.imagesList[0];
-    }
-    onChange(event: Event) {
-      const selectedValue = (event.target as HTMLSelectElement).value;
-      if (selectedValue === 'imagesList') {
-        this.loadImages();
-      } 
     }
   }

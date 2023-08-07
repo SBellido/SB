@@ -7,7 +7,7 @@
         <div class="_container_image">
             <img class="_image_gallery" alt="First slide"
             [src]="imgGallery">
-            <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+            <!-- <div class="mask rgba-black-light waves-light" mdbWavesEffect></div> -->
         </div> 
         <button id="right_btn" title="Siguiente" class="_active_button" (click)="nextImg()"
             [ngClass]="currentImageIndex === imagesList.length - 1 ? '_inactive_button' : '_active_button'">

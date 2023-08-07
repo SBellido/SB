@@ -1,4 +1,51 @@
-<article>
+<app-header-section
+  [header]="header">
+</app-header-section>
+<article class="_mobile_version">
+  <article class="_container_all">
+    <div class="_container_polaroid">
+      <img class="_polaroid" src="../assets/images/polaroid.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
+    </div>
+    <app-gallery-polaroid class="_gallery"
+      [imagesList]="imagesList" 
+      [imgGallery]="imgGallery"
+      [totalImages]="imagesList.length">
+    </app-gallery-polaroid>
+    <app-info-polaroid
+      [information]="information">
+    </app-info-polaroid>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
+
+<article class="_desktop_version">
+  <article class="_container_all">
+    <div class="_container_polaroid">
+      <img class="_polaroid" src="../assets/images/polaroid.png" alt="un teléfono móbil muestra imágenes de la galería de Nighx">
+    </div>
+    <app-gallery-polaroid class="_gallery"
+      [imagesList]="imagesList" 
+      [imgGallery]="imgGallery"
+      [totalImages]="imagesList.length">
+    </app-gallery-polaroid>
+    <app-info-polaroid
+      [information]="information">
+    </app-info-polaroid>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
+
+<!-- <article>
   <button mat-button class="_button_back" title="Volver" routerLink="../">
     <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
   </button>
@@ -47,4 +94,4 @@
     </div>
     <app-brands-buttons [brands]="brands"></app-brands-buttons>
   </div>
-</article>
+</article> -->
