@@ -1,0 +1,28 @@
+@import '../info/info.component.scss';
+@media (min-width: 1024px) {
+  div._container_info {
+    width: 34vw;
+    height: 26rem;
+    margin-top: 1.7rem;
+    margin-left: 2rem;
+  }  
+}
+@media (min-width: 1440px) {
+  div._container_info {
+    width: 23rem;
+    margin-left: 3rem;
+  }  
+  p._p_card {
+    height: 16rem;
+  }
+}
+@media (min-width: 1920px) {
+  div._container_info {
+    height: 26.2rem;
+  }  
+}
+@media (min-width: 2560px) {
+  div._container_info {
+    margin-left: 4rem;
+  }  
+}

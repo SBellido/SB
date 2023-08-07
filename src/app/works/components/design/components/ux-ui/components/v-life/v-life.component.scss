@@ -14,43 +14,6 @@
     padding: 1rem auto;
     margin-bottom: 0
   }
-  div._container_selector {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 5rem;
-  }
-  label._label {
-    color: $first_color_light;
-    border-bottom: .5px solid $first_color_light;
-    padding-bottom: .5rem;
-    text-align: center;
-  }
-  select._dropdown {
-    text-align: center;
-    font-size: .9rem;
-    background: none;
-    border: none;
-    color:  $first_color_light;
-    font-size: 0.9rem;
-    font-weight: 200;
-    width: auto;
-    padding: .5rem;
-    margin-bottom: 2rem;
-    border-radius: solid 5px $first_color_light;
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-  option {
-    color: $first_color;
-    padding: .3rem .5rem;
-    width: 4rem;
-  }
   ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
     background-color: $first_color_lighter;
     padding: .5rem;
