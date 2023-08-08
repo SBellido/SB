@@ -12,7 +12,7 @@
       [totalImages]="imagesList.length">
     </app-gallery-desptop>
     <div class="_container_selector">
-      <div class="_container_text_more_works">
+      <div class="_container_text_selector">
         <h4 class="_title_">Selector de flujos</h4>
       </div>
       <mat-form-field>
@@ -41,41 +41,35 @@
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
-    <app-gallery-desptop class="_gallery"
-      [imagesList]="imagesList" 
-      [imgGallery]="imgGallery">
-    </app-gallery-desptop>
-    <app-info
-      [information]="information">
-    </app-info>
+    <div class="_container_gallery_selector">
+      <app-gallery-desptop class="_gallery"
+        [imagesList]="imagesList" 
+        [imgGallery]="imgGallery">
+      </app-gallery-desptop>
+      <div class="_container_selector">
+        <div class="_container_text_selector">
+          <h4 class="_title_">Selector de flujos</h4>
+        </div>
+        <mat-form-field>
+          <mat-label>Elegir opción</mat-label>
+          <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+            <mat-option *ngFor="let item of options" [value]="item.value">
+              {{item.view_Text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="_container_info_works">
+      <app-info
+        [information]="information">
+      </app-info>
+      <div class="_container_more_works">
+        <div class="_container_text_more_works">
+          <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+        </div>
+        <app-brands-buttons [brands]="brands"></app-brands-buttons>
+      </div>
+    </div>
   </article>
-  <div class="_container_selector">
-    <div class="_container_text_more_works">
-      <h4 class="_title_">Selector de flujos</h4>
-    </div>
-    <mat-form-field>
-      <mat-label>Elegir opción</mat-label>
-      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
-        <mat-option *ngFor="let item of options" [value]="item.value">
-          {{item.view_Text}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="_container_more_works">
-    <div class="_container_text_more_works">
-      <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
-    </div>
-    <app-brands-buttons [brands]="brands"></app-brands-buttons>
-  </div>
 </article>
-
-
-<!-- <section class="_container_btn_header">
-  <div class="_container_btn_back">
-    <button mat-button class="_button_back" title="Atrás" [routerLink]="section.routerLink">
-      <mat-icon class="_icon_back">keyboard_backspace</mat-icon>volver
-    </button>
-  </div>
-</section> -->
-  

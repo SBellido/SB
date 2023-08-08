@@ -1,7 +1,9 @@
 @import '../gallery/gallery.component.scss';
 @media (min-width: 0px) {
-  
-  div._container_image {
+  article._container_gallery {
+    margin-bottom: 1.5rem;
+  }
+   div._container_image {
     padding-top: 0;
     width: 14rem;
     margin-bottom: 0;
@@ -22,7 +24,7 @@
 }
 @media (min-width: 375px) {
   div._container_image {
-    width: 16rem;
+    width: 17rem;
     margin-top: 2rem;
   }
   div._container_count {
@@ -32,7 +34,7 @@
 @media (min-width: 425px) {
   div._container_image {
     padding-top: 1.3rem;
-    width: 18rem;
+    width: 19rem;
     margin-top: .8rem;
   }
   div._container_count {
@@ -41,10 +43,11 @@
 }
 @media (min-width: 768px) {
   div._container_image {
-    width: 18rem;
+    width: 21rem;
+    margin-top: 1.5rem;
   }
   div._container_count {
-    margin-top: 3.5rem;
+    margin-top: 5.5rem;
   }
 }
 @media (min-width: 1024px) {
@@ -54,13 +57,16 @@
     padding-top: 2.2rem;
   }
   div._container_count {
-    margin-top: 5.5rem;
+    margin-top: 6rem;
   }
   article._container_gallery {
     margin: 0;
   }
 }
 @media (min-width: 1440px) {
+  div._container_image {
+    margin-top: .5rem;
+  }
   div._container_count {
     margin-top: 4.3rem;
   } 
