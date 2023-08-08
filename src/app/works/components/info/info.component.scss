@@ -65,7 +65,7 @@
 }
 @media (min-width: 768px) {
     div._container_info {
-      width: 49vw;
+      width: 56vw;
     }
     ._tecno {
         width: 24rem;
@@ -73,7 +73,7 @@
 }
 @media (min-width: 1024px) {
     div._container_info {
-      width: 41vw;
+      width: 39vw;
       height: 25.5rem;
       margin-top: 1.7rem;
     }
@@ -88,13 +88,10 @@
     div._container_info {
       width: 23vw;
       margin-left: 3rem;
-      height: 22.5rem;
+      height: 23rem;
     }
     p._p_card {
         height: 13rem;
-    }
-    div._container_info {
-        height: 22.5rem;
     }
     ._tecno {
         width: 20rem;
@@ -114,6 +111,9 @@
 }
 @media (min-width: 1920px) {
     div._container_info {
+        width: 21rem;
+    }
+    ._tecno {
         width: 21rem;
     }
 }

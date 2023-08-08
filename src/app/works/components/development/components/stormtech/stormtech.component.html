@@ -1,50 +1,7 @@
-<!-- <article>
-  <app-header-section 
-    [routerLink]="routerLink"
-    [header]="header">
-  </app-header-section>
-  <article class="_container_all">  
-    <div class="_container_desktop">
-      <img class="_desktop" src="../assets/images/desktop.png" alt="Pc de escritorio e última generación">
-    </div>
-    <app-gallery-desptop class="_gallery"
-      [imagesList]="imagesList" 
-      [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
-    </app-gallery-desptop> 
-    <app-info
-      [information]="information">
-    </app-info>
-  </article>
-  <div class="_container_more_works">
-    <div class="_container_text_more_works">
-      <h4 class="_title">Más trabajos de desarrollo/bootstrap</h4>
-    </div>
-    <app-brands-buttons [brands]="brands"></app-brands-buttons>
-  </div>
-</article> -->
-<article>
-  <!-- <article class="_header_section">
-    <div class="_container_btns_header">
-      <div class="_container_btn_back">
-          <button mat-button class="_button_back" title="Atrás" routerLink="{{ routerLink }}">
-              <mat-icon class="_icon_back">keyboard_backspace</mat-icon>volver
-          </button>
-      </div>
-      <select class="_dropdown" title="Opciones">
-          <option value="imagesList1">
-            <span class="icon"></span>flujo 1
-          </option>
-      </select>
-    </div>
-    <div class="_container_title" *ngFor="let header of header">
-      <mat-icon class="_icon_title">{{ header.icon }}</mat-icon>
-      <h1 class="_title">{{ header.area }}</h1>
-    </div>
-  </article> -->
-  <app-header-section
-    [header]="header">
-  </app-header-section>
+<app-header-section
+  [header]="header">
+</app-header-section>
+<article class="_mobile_version">
   <article class="_container_all">
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
@@ -54,6 +11,19 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery-desptop>
+    <div class="_container_selector">
+      <!-- <div class="_container_text_selector">
+        <h4 class="_title_">Selector de flujos</h4>
+      </div>
+      <mat-form-field>
+        <mat-label>Elegir opción</mat-label>
+        <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+          <mat-option *ngFor="let item of options" [value]="item.value">
+            {{item.view_Text}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field> -->
+    </div>
     <app-info
       [information]="information">
     </app-info>
@@ -65,4 +35,41 @@
     <app-brands-buttons [brands]="brands"></app-brands-buttons>
   </div>
 </article>
-  
+
+<article class="_desktop_version">
+  <article class="_container_all">
+    <div class="_container_desktop">
+      <img class="_desktop" src="../assets/images/desktop.png" alt="">
+    </div>
+    <div class="_container_gallery_selector">
+      <app-gallery-desptop class="_gallery"
+        [imagesList]="imagesList" 
+        [imgGallery]="imgGallery">
+      </app-gallery-desptop>
+      <div class="_container_selector">
+        <!-- <div class="_container_text_selector">
+          <h4 class="_title_">Selector de flujos</h4>
+        </div>
+        <mat-form-field>
+          <mat-label>Elegir opción</mat-label>
+          <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+            <mat-option *ngFor="let item of options" [value]="item.value">
+              {{item.view_Text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field> -->
+      </div>
+    </div>
+    <div class="_container_info_works">
+      <app-info
+        [information]="information">
+      </app-info>
+    </div>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de desarrollo/bootstrap</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
