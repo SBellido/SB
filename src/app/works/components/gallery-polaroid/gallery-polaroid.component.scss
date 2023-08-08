@@ -15,7 +15,7 @@
         margin-bottom: 4rem;
     }
     div._container_image {
-        padding-top: 0;
+        padding-top: .3rem;
         width: 18rem;
     }
     img._image_gallery {
@@ -70,5 +70,8 @@
     }
     img._image_gallery {
         width: 23rem;
+    }
+    article._container_gallery {
+        margin-right: 7.5rem;
     }
 }

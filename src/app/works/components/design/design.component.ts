@@ -9,7 +9,10 @@ import { HeaderSection, ItemsSection, OptionSelect } from '../../../models/model
 })
 
 export class DesignComponent implements OnInit {
+/*--------VARIABLES-------*/ 
+public subtitle: string = 'Trabajos realizados'
 
+/*--------INTERFACES-------*/ 
   header: HeaderSection[] = [
     {
       area: 'diseño',
@@ -19,11 +22,6 @@ export class DesignComponent implements OnInit {
       isSubSection: false
     }
   ];
-  
-  /*--------VARIABLES -------*/ 
-  public area: string = 'diseño';
-  public icon: string = 'local_florist';
-
   sections: ItemsSection[] = [
     {
       title: 'ux | ui',

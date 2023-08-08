@@ -47,6 +47,16 @@
     font-size: 1.3rem;
     font-weight: 500;
   }
+  h4._subtitle {
+    color: $first_color;
+    margin-block-start: 0;
+    margin-block-end: .5em;
+    text-align: center;
+    font-weight: 500;
+  }
+  div._container_subtitle {
+    border-bottom: solid .5px $first_color_light;
+  }
   div._container_info {
     background-color: #f9f9f9;
     width: 85vw;

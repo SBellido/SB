@@ -46,14 +46,14 @@ export class FooterComponent implements OnInit {
     {  
       route: 'mailto:sebastianbellidodg@gmail.com?subject=Hola Seba!&body=¿Qué propones?.', 
       img: 'alternate_email',
-      name: 'Envía un email', 
+      name: 'Vía email', 
       text: 'Email' 
     },
     {  
       route: 'https://wa.me/541121580848', 
       img: 'perm_phone_msg',
-      name: 'Usa WhatsApp', 
-      text: '* WhatsApp' 
+      name: 'Vía WhatsApp', 
+      text: 'WhatsApp' 
     },
   ]
 

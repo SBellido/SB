@@ -8,10 +8,10 @@ import { ItemsSection } from 'src/app/models/models';
 })
 
 export class SectionComponent implements OnInit {
-
   @Input() sections: ItemsSection[] = [];  
-  constructor() { }  
+  @Input() subtitle: string = 'Trabajos realizados';
 
+  constructor() { }  
   ngOnInit(): void {  
   }
   
@@ -22,6 +22,4 @@ export class SectionComponent implements OnInit {
       section.visible = !section.visible;
     }
   }
-
-
 }

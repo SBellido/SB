@@ -14,12 +14,25 @@
     padding: 1rem auto;
     margin-bottom: 0
   }
+  div._container_selector {
+    margin-bottom: 1rem;
+  }
   ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
-    background-color: $first_color_light;
+    background-color: $first_color_lighter;
     padding: .5rem;
     border-radius: 25px;
     margin-top: 0;
     text-align: center;
+    width: 15.5rem;
+  }
+  ::ng-deep .mat-select-value-text {
+    margin-left: 1rem;
+  }
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix:hover {
+    background-color: $accent_color;
+  }
+  ::ng-deep .mat-label {
+    margin-left: 1rem;
   }
   section._container {
     height: auto;
@@ -45,6 +58,7 @@
   }
   h4._title_ {
     margin-block-start: 0;
+    border-bottom: none;
   }
   h4._title, h4._title_ {
     margin-block-end: 0;
@@ -74,7 +88,12 @@
   img._polaroid {
     width: 22rem;
   }
-
+  h4._title_ {
+    margin-block-start: -1.5em;
+  }
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+    width: 20rem;
+  }
 }
 @media (min-width: 425px) {
   h1._title {
@@ -83,13 +102,28 @@
   img._polaroid {
     width: 25rem;
   }
+  ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+    width: 24rem;
+  }
 }
 @media (min-width: 768px) {
     div._container_selector {
       padding: 2rem 12rem;
     }
+    h4._title_ {
+      margin-block-start: -3em;
+    }
+    ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
+      width: 23rem;
+    }
+    div._container_selector {
+      margin-bottom: 1.5rem;
+    }
 }
 @media (min-width: 1024px) {
+  h4._title_ {
+    margin-block-start: 0;
+  }
   ::ng-deep .mat-form-field-appearance-legacy {
       width: 24rem;
   }
@@ -172,20 +206,21 @@
   }
   div._container_polaroid {
     top: 14.6rem;
-    left: 29.3rem;
+    left: 27rem;
   }
   div._container_selector {
-    padding: 1rem 52rem;
+    padding: 0;
+    margin-right: 7rem;
+  }
+  div._container_more_works {
+    margin-left: 3rem;
   }
 }
 @media (min-width: 2560px) {
   article._header_section {
     padding: 10rem 70rem 1.5rem 71rem;
   }
-  div._container_selector {
-    padding: 1rem 72rem;
-  }
   div._container_polaroid {
-    left: 49rem;
+    left: 46.3rem;
   }
 }
