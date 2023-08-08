@@ -116,3 +116,13 @@
     margin-top: -.5rem;
   }
 }
+@media (min-width: 1920px) {
+  div._container_selector {
+    padding: 0;
+    margin-right: 3.5rem;
+  }
+  article._container_gallery {
+    margin-right: 7.5rem;
+  }
+
+}

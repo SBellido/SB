@@ -5,6 +5,9 @@
         <h2 class="_item">{{ item.title }}</h2>
       </section>
       <div class="_container_info" [hidden]="!item.visible">
+        <div class="_container_subtitle">
+          <h4 class="_subtitle">{{ subtitle }}</h4>
+        </div>
         <app-brands-buttons 
           [brands]="item.brandsData">
         </app-brands-buttons>

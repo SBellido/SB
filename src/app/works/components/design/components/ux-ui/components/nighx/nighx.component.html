@@ -1,29 +1,29 @@
-
-
 <app-header-section
   [header]="header">
 </app-header-section>
 <article class="_mobile_version">
   <article class="_container_all">
     <div class="_container_mobile">
-      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de Nighx">
+      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
     </div>
     <app-gallery class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery>
-    <div class="_container_text_more_works">
-      <h4 class="_title_">Selector de flujos</h4>
+    <div class="_container_selector">
+      <div class="_container_text_selector">
+        <h4 class="_title_">Galería de imágenes</h4>
+      </div>
+      <mat-form-field>
+        <mat-label>Opciones</mat-label>
+        <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+          <mat-option *ngFor="let item of options" [value]="item.value">
+            {{item.view_Text}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
     </div>
-    <mat-form-field>
-      <mat-label>Elegir una opción</mat-label>
-      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
-        <mat-option *ngFor="let item of options" [value]="item.value">
-          {{item.view_Text}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
     <app-info-mobile
       [information]="information">
     </app-info-mobile>
@@ -39,34 +39,43 @@
 <article class="_desktop_version">
   <article class="_container_all">
     <div class="_container_mobile">
-      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de Nighx">
+      <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
     </div>
-    <app-gallery class="_gallery"
-      [imagesList]="imagesList" 
-      [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
-    </app-gallery>
-    <app-info-mobile
-      [information]="information">
-    </app-info-mobile>
+    <div class="_container_gallery_selector">
+      <app-gallery class="_gallery"
+        [imagesList]="imagesList" 
+        [imgGallery]="imgGallery"
+        [totalImages]="imagesList.length">
+      </app-gallery>
+      <div class="_container_selector">
+        <div class="_container_text_selector">
+          <h4 class="_title_">Galería de imágenes</h4>
+        </div>
+        <mat-form-field>
+          <mat-label>Opciones</mat-label>
+          <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+            <mat-option *ngFor="let item of options" [value]="item.value">
+              {{item.view_Text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="_container_info_works">
+      <app-info-mobile
+        [information]="information">
+      </app-info-mobile> 
+      <div class="_container_more_works">
+        <div class="_container_text_more_works">
+          <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+        </div>
+        <app-brands-buttons [brands]="brands"></app-brands-buttons>
+      </div>
+    </div>
   </article>
-  <div class="_container_selector">
-    <mat-form-field>
-      <mat-label>Selector de flujos</mat-label>
-      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
-        <mat-option *ngFor="let item of options" [value]="item.value">
-          {{item.view_Text}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
-  <div class="_container_more_works">
-    <div class="_container_text_more_works">
-      <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
-    </div>
-    <app-brands-buttons [brands]="brands"></app-brands-buttons>
-  </div>
-</article><!-- <article>
+</article>
+
+<!-- <article>
   <button mat-button class="_button_back" title="Volver" routerLink="../../">
     <mat-icon class="_icon_button">keyboard_backspace</mat-icon>
   </button>

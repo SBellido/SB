@@ -22,7 +22,7 @@ export class CompetitionsComponent implements OnInit {
   information: Information[] = [
     {
       title: 'eYeka! | Concursos Internacionales',
-      text: 'Participar en concursos internacionales puede ser una excelente manera de adquirir experiencia trabajando en el diseño para grandes marcas. Además, puedes expresar tu creatividad, practicar tus habilidades. También obtener retroalimentación sobre el trabajo de las marcas y aprender de otros participantes. eYeka es una comunidad global de creadores talentosos que aman resolver los desafíos de las marcas con ideas frescas, creativas y contenido compartible. Los creadores en eYeka <compiten para resolver problemas comerciales reales de las marcas más grandes del mundo para ganar fama y fortuna, mientras se divierten.',
+      text: 'Participar en concursos internacionales puede ser una excelente manera de adquirir experiencia trabajando en el diseño para grandes marcas. Además, de expresar creatividad y practicar habilidades. También para obtener retroalimentación sobre el trabajo por parte de las marcas y aprender de otros participantes. eYeka es una comunidad global de creadores talentosos que aman resolver los desafíos de las marcas con ideas frescas, creativas y contenido compartible. Los creadores en eYeka compiten para resolver problemas comerciales reales de las marcas más grandes del mundo para ganar fama y fortuna, mientras se divierten.',
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
