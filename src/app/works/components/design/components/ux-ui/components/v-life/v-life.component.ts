@@ -21,7 +21,7 @@ export class VLifeComponent implements OnInit {
   information: Information[] = [
     {
       title: 'V-LIFE | App Mobile',
-      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacciónen baja definición, test con usuarios y armado de prototiposen alta definición, utilizando Adobe Xdy componentes UI Ionic.El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020en Argentina.',
+      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacción en baja definición, test con usuarios y armado de prototipos en alta definición, utilizando Adobe Xd y componentes UI Ionic. El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020 en Argentina.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {

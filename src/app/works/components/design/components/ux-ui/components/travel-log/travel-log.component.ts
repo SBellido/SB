@@ -16,7 +16,7 @@ export class TravelLogComponent implements OnInit {
   information: Information[] = [
     {
       title: 'Travel Log | Web App',
-      text: ' Web App que permite <span>crear viajes y planes</span> entre otras funcionalidades extra. En el <span>año 2020</span> fue realizado este trabajo en el marco de la Cátedra Introducción a las Metodologías Ágiles del Software (TUDAI/FCEx/UniCen), junto a un grupo de compañeros.  Sebastián fue encargado de realizar diseño de prototipos, flujos de interacción, diseño de logo, diseño UX | UI, presentación en público y se desempeñó como Scrum Master dentro del equipo. El diseño y desarrollo, incluído, Diagrama de Clases y de Entidad y Relación, se realizó a partir de un texto que simulaba ser un diálogo con el cliente. El objetivo del trabajo era captura rrequerimientos y trabajar <span>aplicando Scrum y diseñar una app que cumpla con las espectativas del cliente.',
+      text: ' Web App que permite crear viajes y planes entre otras funcionalidades extra. En el año 2020 fue realizado este trabajo en el marco de la Cátedra Introducción a las Metodologías Ágiles del Software (TUDAI/FCEx/UniCen), junto a un grupo de compañeros. Sebastián fue encargado de realizar diseño de prototipos, flujos de interacción, diseño de logo, diseño UX | UI, presentación en público y se desempeñó como Scrum Master dentro del equipo. El diseño y desarrollo, incluído, Diagrama de Clases y de Entidad/Relación, se realizó a partir de un texto que simulaba ser un diálogo con el cliente. El objetivo del trabajo era captura requerimientos, trabajar aplicando la metodología ágil Scrum y diseñar una app que cumpla con las expectativas del cliente.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {
@@ -24,6 +24,12 @@ export class TravelLogComponent implements OnInit {
           src: '../assets/images/tecnologies/scrum.png',
           title: 'Scrum',
           alt: 'Logo de Scrum',
+        },
+        {
+          href: 'https://www.atlassian.com/es/software/jira',
+          src: '../assets/images/tecnologies/jira.png',
+          title: 'Jira',
+          alt: 'Logo de Jira',
         },
         {
           href: 'https://www.invisionapp.com/',
@@ -42,7 +48,7 @@ export class TravelLogComponent implements OnInit {
           src: '../assets/images/tecnologies/css.png',
           title: 'CSS3',
           alt: 'Logo de CSS3',
-        }
+        },
       ],
     },
   ];

@@ -52,7 +52,7 @@ export class DevelopmentComponent implements OnInit {
     {
       title: 'bootstrap',
       visible: false,
-      text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, barra de navegación, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',
+      text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',
       disabled: false,
       wordsToHighlight: ['Lorem ipsum dolor', 'adipisicing elit', 'asperiores'],
       brandsData: [
