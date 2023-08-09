@@ -16,7 +16,7 @@
         <h4 class="_title_">Selector de flujos</h4>
       </div>
       <mat-form-field>
-        <mat-label>Elegir opción</mat-label>
+        <mat-label>Opciones disponibles</mat-label>
         <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
           <mat-option *ngFor="let item of options" [value]="item.value">
             {{item.view_Text}}
@@ -51,7 +51,7 @@
           <h4 class="_title_">Selector de flujos</h4>
         </div>
         <mat-form-field>
-          <mat-label>Elegir opción</mat-label>
+          <mat-label>Opciones disponibles</mat-label>
           <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
             <mat-option *ngFor="let item of options" [value]="item.value">
               {{item.view_Text}}
