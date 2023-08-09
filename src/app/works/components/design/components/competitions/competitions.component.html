@@ -14,10 +14,10 @@
     </app-gallery-polaroid>
     <div class="_container_selector">
       <div class="_container_text_selector">
-        <h4 class="_title_">Galería de imágenes</h4>
+        <h4 class="_title_">Más participaciones en Consursos</h4>
       </div>
       <mat-form-field>
-        <mat-label>Opciones</mat-label>
+        <mat-label>Opciones disponibles</mat-label>
         <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
           <mat-option *ngFor="let item of options" [value]="item.value">
             {{item.view_Text}}
@@ -50,10 +50,10 @@
       </app-gallery-polaroid>
       <div class="_container_selector">
         <div class="_container_text_selector">
-          <h4 class="_title_">Galería de imágenes</h4>
+          <h4 class="_title_">Más participaciones en Consursos</h4>
         </div>
         <mat-form-field>
-          <mat-label>Opciones</mat-label>
+          <mat-label>Opciones disponibles</mat-label>
           <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
             <mat-option *ngFor="let item of options" [value]="item.value">
               {{item.view_Text}}
