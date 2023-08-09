@@ -12,6 +12,7 @@ export class AcademicComponent implements OnInit {
   items: ItemProfile[] = [ 
     {
       img: '../../../../assets/images/biography/academic/exactas.jpg',
+      href: 'https://exa.unicen.edu.ar/',
       description_img: 'Logo de la Facultad de Ciencias Exactas',
       acronyms_career: 'TUDAI',
       year: '2017 | 2022',
@@ -21,6 +22,7 @@ export class AcademicComponent implements OnInit {
     },
     {
       img: '../../../../assets/images/biography/academic/uxdi.jpg',
+      href: 'https://uxdi.org/',
       description_img: 'Logo de Formación UXDI',
       acronyms_career: 'UXDI',
       year: '2018',
@@ -30,6 +32,7 @@ export class AcademicComponent implements OnInit {
     },
     {
       img: '../../../../assets/images/biography/academic/logo_vocacion_docente.png',
+      href: 'https://www.vocaciondocente.com/',
       description_img: 'Instituto Superior de Formación, Capacitación y Actualización Docente Continua Vocación Docente',
       acronyms_career: 'Tramo Pedagógico',
       year: '2015 | 2016',
@@ -39,6 +42,7 @@ export class AcademicComponent implements OnInit {
     },
     {
       img: '../../../../assets/images/biography/academic/fda_unlp.jpg',
+      href: 'https://fba.unlp.edu.ar/',
       description_img: 'Logo de la Facultad de Bellas Artes',
       acronyms_career: 'DCV',
       year: '1998 | 2007',
