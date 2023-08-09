@@ -26,6 +26,7 @@ export interface Button {
 }
 export interface ItemProfile {
   img: string,
+  href: string,
   description_img: string,
   acronyms_career: string,
   year: string,

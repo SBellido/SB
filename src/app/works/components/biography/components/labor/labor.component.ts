@@ -14,6 +14,7 @@ export class LaborComponent implements OnInit {
   items: ItemProfile[] = [ 
     {
       img: '../../../../assets/images/biography/profetional/coderhouse.png',
+      href: 'https://www.coderhouse.es/nosotros',
       description_img: 'Logo de Coderhouse',
       acronyms_career: 'Docente',
       year: '2021 | en curso',
@@ -23,6 +24,7 @@ export class LaborComponent implements OnInit {
     },
     {
       img: '../../../../assets/images/biography/profetional/tsoft.png',
+      href: 'https://www.tsoftglobal.com/',
       description_img: 'Logo de la Tsoft',
       acronyms_career: 'UX/UI Sr.',
       year: '2022 | 2023',
@@ -32,6 +34,7 @@ export class LaborComponent implements OnInit {
     },
     {
       img: '../../../../assets/images/biography/profetional/stormtech.png',
+      href: 'https://stormtechlabs.com/#container-home',
       description_img: 'Logo de la Stormtech',
       acronyms_career: 'UX/UI & Frontend Dev',
       year: '2020 | 2022',
@@ -41,6 +44,7 @@ export class LaborComponent implements OnInit {
     },
     {
       img: '../../../../assets/images/biography/profetional/medialab.png',
+      href: 'https://medialab.com.ar/',
       description_img: 'Logo de MediaLab',
       acronyms_career: 'Desarrollador Web',
       year: '2020 | 2021',
@@ -50,6 +54,7 @@ export class LaborComponent implements OnInit {
     },
     {
       img: '../../../../assets/images/biography/profetional/trenda.png',
+      href: 'http://trendasoftware.com/',
       description_img: 'Logo de la Trenda Software',
       acronyms_career: 'Lead UX/UI',
       year: '2019 | 2020',

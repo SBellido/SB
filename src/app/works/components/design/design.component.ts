@@ -87,7 +87,7 @@ public subtitle: string = 'Trabajos realizados'
     },
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit(): void {  
     this.topFunction();
@@ -103,11 +103,5 @@ public subtitle: string = 'Trabajos realizados'
   }
 
 }
-
-  // checkScreenSize() {
-  //   this.visibleUx_Ui = window.innerWidth >= 1024;
-  //   this.visibleGraphic = window.innerWidth >= 1024;
-  //   // this.visibleExperimental = window.innerWidth >= 1024;
-  // }
 
 

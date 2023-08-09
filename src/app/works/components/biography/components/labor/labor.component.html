@@ -3,8 +3,10 @@
         <article  *ngFor="let item of items">
             <section class="_container_career">   
                 <div class="_container_logo">
-                    <img class="_logo" src="{{ item.img }}" 
-                    alt="{{ item.description_img }}">
+                    <a href="{{ item.href }}">
+                        <img class="_logo" src="{{ item.img }}" 
+                        alt="{{ item.description_img }}">
+                    </a>
                 </div>
                 <h3 class="_title">{{ item.acronyms_career }}</h3>
                 <p class="_info"><span>{{ item.year }}</span></p>

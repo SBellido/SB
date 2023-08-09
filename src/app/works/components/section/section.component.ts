@@ -12,7 +12,8 @@ export class SectionComponent implements OnInit {
   @Input() subtitle: string = 'Trabajos realizados';
 
   constructor() { }  
-  ngOnInit(): void {  
+  ngOnInit(): void { 
+    this.topFunction(); 
   }
   
   OpenClose(sectionTitle: string) {
@@ -20,6 +21,16 @@ export class SectionComponent implements OnInit {
       (item) => item.title === sectionTitle);
     if (section && !section.disabled) {
       section.visible = !section.visible;
+
+      // Check if all items are closed
+      const allClosed = this.sections.every(item => !item.visible);
+      if (allClosed) {
+        this.topFunction(); // Call the topFunction when all items are closed
+      }
     }
+  }
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   }
 }
