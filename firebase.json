@@ -1,12 +1,7 @@
 {
   "hosting": {
-    "source": "**/*.@(ico|png|jpg|jpeg|gif|js|css)",
-    "headers": [
-      {
-        "key": "Cache-Control",
-        "value": "public, max-age=300, s-maxage=600"
-      }
-    ],
+    "framework": "angular",
+    "source": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
