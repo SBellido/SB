@@ -1,3 +1,71 @@
+$design_color: #aeff57;
+$design_color_light: #cafa96;
+$design_color_lighter: #cafa96;
+$profile_color: #67deff;
+$profile_color_light: #b2eeff;
+$profile_color_lighter: #beeefa;
+$dev_color: #ffdd57;
+$dev_color_light: #fbe27e;
+$dev_color_lighter: #fbecb1;
+/////////////////////////////////////////
+// $second_color: #d5d5d5;
+// $second_color_light: #ebebeb;
+// $second_color_lighter: white;
+$profile_color_gradient:  
+    linear-gradient(
+        0deg, $profile_color 33%, 
+        $profile_color_light 100%
+    );
+$profile_color_gradient_hover:  
+    linear-gradient(
+        0deg, $profile_color_light 33%, 
+        $profile_color_lighter 100%
+    );
+$dev_color_gradient: 
+    linear-gradient(
+        0deg, $dev_color 33%, 
+        $dev_color_light 100%
+    );
+$dev_color_gradient_hover: 
+    linear-gradient(
+        0deg, $dev_color_light 33%, 
+        $dev_color_lighter 100%
+    );
+$design_color_gradient: 
+    linear-gradient(
+        0deg, $design_color 33%, 
+        $design_color_light 100%
+    );
+$design_color_gradient_hover: 
+    linear-gradient(
+        0deg, $design_color_light 33%, 
+        $design_color_lighter 100%
+    );
+._dev-background-color {
+    background-color: #ffdd57;
+}
+._dev-color {
+    color: #ffdd57;
+}
+._design-background-color {
+    background-color: #aeff57;
+}
+._design-color {
+    color: #aeff57;
+}
+._profile-background-color {
+    background-color: #67deff;
+}
+._profile-color {
+    color: #67deff;
+}
+.home-background-color {
+    background-color: #e3e2e2;
+}
+.home-color {
+    color: #e3e2e2;
+}
+
 $first_color: #333333;
 $first_color_medium: #5b5b5b;
 $first_color_light: #b4b2b2;

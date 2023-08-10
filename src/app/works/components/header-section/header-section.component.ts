@@ -10,7 +10,7 @@ import { HeaderSection } from 'src/app/models/models';
 export class HeaderSectionComponent implements OnInit {
   
   @Input() header: HeaderSection[] = [];;
-
+  @Input() dev_color: string = '';
   onSelectChange(event: Event) {}
 
   constructor() {}

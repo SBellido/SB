@@ -1,7 +1,9 @@
 
 <article class="_header_section" *ngFor="let section of header">
   <div class="_container_title">
-    <mat-icon class="_icon_title">{{ section.icon }}</mat-icon>
-    <h1 class="_title">{{ section.area }}</h1>
+    <mat-icon class="_icon_title" [ngClass]="section.color">
+      {{ section.icon }}
+    </mat-icon>
+    <h1 class="_title"[ngClass]="section.color">{{ section.area }}</h1>
   </div> 
 </article>

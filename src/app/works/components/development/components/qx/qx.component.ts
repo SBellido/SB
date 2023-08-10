@@ -46,7 +46,8 @@ header: HeaderSection[] = [
   icon: 'developer_mode',
   routerLink: '../../',
   isFlows: true,
-  isSubSection: true
+  isSubSection: true,
+  color: '$dev_color'
   }
 ]; 
   brands: Button[] = [

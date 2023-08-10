@@ -80,14 +80,14 @@
     padding: .5rem .5rem;
   }
   ._button_contact:hover { 
-    background-color: $third_color;
+    background-color: $first_color_lighter;
     ._icon_contact {
       color: $first_color;
     }
   }
-  ._active_button {
-    background: $third_color; 
-  }
+  // ._active_button {
+  //   background: $third_color; 
+  // }
   ._inactive_button {
     background: radial-gradient(
       circle, $second_color_lighter 9%, 

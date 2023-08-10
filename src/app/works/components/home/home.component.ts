@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { HeaderSection } from 'src/app/models/models';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +9,17 @@ import { Router } from '@angular/router';
 })
 
 export class HomeComponent implements OnInit {
-  
+  /*--------INTERFACES-------*/ 
+  header: HeaderSection[] = [
+    {
+      area: 'Sebastián Bellido',
+      icon: '../assets/images/sb/logo_sb.svg',
+      routerLink: '',
+      isFlows: false,
+      isSubSection: false,
+      color: '$first_color_light'
+    }
+  ];
   concepts: string[] = [
    // 'learning', 'overcoming', 'openness', 'perseverance', 'reading',
     // 'creativity', 'experience', 'respect', 'balance', 'study',

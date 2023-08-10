@@ -5,20 +5,21 @@ import { Button, HeaderSection, Information } from 'src/app/models/models';
 @Component({
   selector: 'app-stormtech',
   templateUrl: './stormtech.component.html',
-  styleUrls: ['./stormtech.component.scss']
+  styleUrls: ['./stormtech.component.scss','../../../../../global/global.component.scss']
 })
 
 export class StormtechComponent implements OnInit {
-
+  dev_color: string = '#ffdd57';
   routerLink: string = '../';
   currentImageNumber: number = 1;
   header: HeaderSection[] = [
     {
-     area: 'desarrollo/bootstrap',
-     icon: 'developer_mode',
-     routerLink: '../',
-     isFlows: true,
-     isSubSection: true
+      area: 'desarrollo/bootstrap',
+      icon: 'developer_mode',
+      routerLink: '../',
+      isFlows: true,
+      isSubSection: true,
+      color: '_dev-color'
     }
   ];
   options: { value: string, label: string }[] = [

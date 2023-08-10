@@ -42,11 +42,12 @@ export class CompetitionsComponent implements OnInit {
   ];
   header: HeaderSection[] = [
     {
-    area: 'diseño/ux|ui',
-    icon: 'local_florist',
-    routerLink: '../../',
-    isFlows: true,
-    isSubSection: true
+      area: 'diseño/ux|ui',
+      icon: 'local_florist',
+      routerLink: '../../',
+      isFlows: true,
+      isSubSection: true,
+      color: '$design_color'
     }
   ];
   brands : Button[] = [

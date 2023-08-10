@@ -13,21 +13,26 @@ export class DevelopmentComponent implements OnInit {
 /*--------VARIABLES -------*/ 
   header: HeaderSection[] = [
     {
-    area: 'desarrollo',
-    icon: 'developer_mode',
-    routerLink: '',
-    isFlows: false,
-    isSubSection: false
+      area: 'desarrollo',
+      icon: 'developer_mode',
+      routerLink: '',
+      isFlows: false,
+      isSubSection: false,
+      color: '_dev-color'
     }
   ];
 
   sections: ItemsSection[] = [
     {
+      color: '$dev_color',
+      fill: '$dev_color_gradient',
+      fill_hover: '$dev_color_gradient_hover',
       title: 'angular',
       visible: false,
       text: 'Framework de ingeniería de software de código abierto que se utiliza para crear aplicaciones web de una sola página. Los desarrolladores también lo utilizan para crear menús animados para páginas web HTML. El framework es una creación de los ingenieros de Google, Misko Hevery y Adam Abrons. Google lanzó oficialmente la primera versión, AngularJS, en 2012 y la ha mantenido desde entonces.',
       disabled: false,
       wordsToHighlight: ['Framework', 'de código abierto', 'para crear aplicaciones web'],
+      isHovered: false,
       brandsData: [
         {
           route: 'works/development/investigar',
@@ -50,10 +55,14 @@ export class DevelopmentComponent implements OnInit {
       ],
     },
     {
+      color: '$dev_color',
+      fill: '$dev_color_gradient',
+      fill_hover: '$dev_color_gradient_hover',
       title: 'bootstrap',
       visible: false,
       text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',
       disabled: false,
+      isHovered: false,
       wordsToHighlight: ['Lorem ipsum dolor', 'adipisicing elit', 'asperiores'],
       brandsData: [
         {
@@ -71,10 +80,14 @@ export class DevelopmentComponent implements OnInit {
       ]
     },
     {
+      color: '$dev_color',
+      fill: '$dev_color_gradient',
+      fill_hover: '$dev_color_gradient_hover',
       title: 'javascript',
       visible: false,
       text: '',
       disabled: true,
+      isHovered: false,
       wordsToHighlight: [],
       brandsData: [],
     },
