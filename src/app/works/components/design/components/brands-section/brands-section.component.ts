@@ -37,11 +37,12 @@ export class BrandsSectionComponent implements OnInit {
   ];
   header: HeaderSection[] = [
     {
-    area: 'diseño/gráfico',
-    icon: 'local_florist',
-    routerLink: '../../',
-    isFlows: false,
-    isSubSection: true
+      area: 'diseño/gráfico',
+      icon: 'local_florist',
+      routerLink: '../../',
+      isFlows: false,
+      isSubSection: true,
+      color: '$design_color'
     }
   ];
   brands : Button[] = [

@@ -10,9 +10,9 @@ import { HeaderSection, ItemsSection } from 'src/app/models/models';
 export class BiographyComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.checkScreenSize();
-}
+    onResize(event: any) {
+      this.checkScreenSize();
+  }
 
   allCardsClosed: boolean = true;
   visibleLabor: boolean = false;
@@ -26,7 +26,8 @@ export class BiographyComponent implements OnInit {
      icon: 'fingerprint',
      routerLink: '',
      isFlows: false,
-     isSubSection: false
+     isSubSection: false,
+     color: '_profile-color'
     }
   ];
 

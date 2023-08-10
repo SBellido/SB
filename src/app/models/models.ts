@@ -35,11 +35,15 @@ export interface ItemProfile {
   description_link: string,
 }
 export interface ItemsSection {
+  color: string,
+  fill: string,
+  fill_hover: string,
   title: string,
   visible: boolean,
   text: string,
   disabled: boolean,
   wordsToHighlight: string[],
+  isHovered: boolean,
   brandsData: Button[],
 }
 export interface Information {
@@ -60,6 +64,7 @@ export interface HeaderSection {
   isFlows: boolean,
   routerLink: string,
   isSubSection: boolean,
+  color: string,
 }
 export interface OptionSelect {
   value: string,

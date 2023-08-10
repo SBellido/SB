@@ -27,6 +27,18 @@
     display: flex;
     flex-direction: column;
   }
+  section._container_item {
+    background: linear-gradient(
+      0deg, $profile_color 33%, 
+      $profile_color_light 100%
+    );
+  }
+  section._container_item:hover { 
+    background: linear-gradient(
+      0deg, $profile_color_light 33%, 
+      $profile_color_lighter 100%
+    );
+  }
   section._container_career {
     display: flex;
     align-items: center;

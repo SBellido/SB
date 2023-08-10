@@ -57,7 +57,8 @@ export class NighxComponent implements OnInit {
     icon: 'local_florist',
     routerLink: '../../',
     isFlows: true,
-    isSubSection: true
+    isSubSection: true,
+    color: '$design_color'
     }
   ];
   brands : Button[] = [

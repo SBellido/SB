@@ -15,7 +15,7 @@ export class XuboxComponent implements OnInit {
 /*--------INTERFACES-------*/
   information: Information[] = [
     {
-      title: 'InvestigAr | Web App',
+      title: 'Xubox | Web App',
       text: 'Plataforma interactiva que permite gestionar envíos postales, dando la posibilidad de personalizarlos de acuerdo a las necesidades del usuario. Una herramienta flexible y adaptada a los servicios que ofrece la empresa. Consta de un formulario complejo, en cuanto a su implementación, que va guardando los datos cargados y plantea el flujo en una serie de pasos. Los datos a cargar varian de acuerdo a la información cargada hasta el momento. Sebastián se desempeñó como desarrollador Frontend e implementó el alta de perfiles de usuario, cambio de contraseña, login y todo el proceso de carga de datos. El trabajo fue hecho para Stormtech SL en el año 2021 bajo la supervisión del equpo técnico de la empresa. Se implementó de forma paralela con Xubox, trabajando misma lógica y diferentes estilos.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
@@ -42,11 +42,12 @@ export class XuboxComponent implements OnInit {
   ];
   header: HeaderSection[] = [
     {
-    area: 'desarrollo/angular',
-    icon: 'developer_mode',
-    routerLink: '../../',
-    isFlows: true,
-    isSubSection: true
+      area: 'desarrollo/angular',
+      icon: 'developer_mode',
+      routerLink: '../../',
+      isFlows: true,
+      isSubSection: true,
+      color: '$dev_color'
     }
   ]; 
   brands: Button[] = [

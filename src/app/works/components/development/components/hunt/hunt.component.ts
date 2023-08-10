@@ -51,7 +51,8 @@ export class HuntComponent implements OnInit {
     icon: 'developer_mode',
     routerLink: '../../',
     isFlows: true,
-    isSubSection: true
+    isSubSection: true,
+    color: '$dev_color'
     }
   ];
   brands: Button[] = [

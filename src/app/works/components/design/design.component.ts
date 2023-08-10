@@ -19,16 +19,22 @@ public subtitle: string = 'Trabajos realizados'
       icon: 'local_florist',
       routerLink: '',
       isFlows: false,
-      isSubSection: false
+      isSubSection: false,
+      color: '_design-color'
+
     }
   ];
   sections: ItemsSection[] = [
     {
+      color: '$design_color',
+      fill: '$design__color_gradient',
+      fill_hover: '$design_color_gradient_hover',
       title: 'ux | ui',
       visible: false,
       text: 'UX, se denomina a la disciplina Diseño de Experiencia de Usuario y se enfoca en la relación humano/máquina. Evolución de la ergonomía, el diseño juega un papel protagónico buscando la satisfacción de quienes interactúan con un sistema, producto o entorno. Garantiza interacciones intuitivas, eficientes y gratificantes. UI refiere al Diseño de Interfaces de Usuario y define la forma, función, utilidad, ergonomía, imagen de marca y otros aspectos que impactan la apariencia de interfaces en sistemas. Crea interfaces atractivas, funcionales y coherentes, facilitando la interacción del usuario con el producto o servicio. Combina con UX para una experiencia completa y satisfactoria.',
       disabled: false,
       wordsToHighlight: ['Framework', 'de código abierto', 'para crear aplicaciones web'],
+      isHovered: false,
       brandsData: [
         {
           route: 'works/design/ux-ui/ypf',
@@ -57,11 +63,15 @@ public subtitle: string = 'Trabajos realizados'
       ],
     },
     {
+      color: '$design_color',
+      fill: '$design__color_gradient',
+      fill_hover: '$design_color_gradient_hover',
       title: 'gráfico',
       visible: false,
       text: 'Profesión que proyecta comunicación visual para transmitir mensajes específicos a grupos sociales con objetivos determinados. Genera identidad visual en productos o servicios, creando un discurso de marca homogéneo. Desde logos y branding hasta diseño editorial y publicitario, el diseño gráfico es esencial para establecer conexiones emocionales y destacar en un mercado competitivo. Utiliza la creatividad y estética para contar historias, comunicar ideas y construir la imagen de una marca. Abarca áreas empresariales, artísticas y culturales.',
       disabled: false,
       wordsToHighlight: ['Lorem ipsum dolor', 'adipisicing elit', 'asperiores'],
+      isHovered: false,
       brandsData: [
         {
           route: 'works/design/brands',
@@ -78,10 +88,14 @@ public subtitle: string = 'Trabajos realizados'
       ]
     },
     {
+      color: '$design_color',
+      fill: '$design__color_gradient',
+      fill_hover: '$design_color_gradient_hover',
       title: 'experimental',
       visible: false,
       text: '',
       disabled: true,
+      isHovered: false,
       wordsToHighlight: [],
       brandsData: [],
     },
