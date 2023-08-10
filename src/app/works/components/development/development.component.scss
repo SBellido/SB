@@ -27,6 +27,13 @@
     display: flex;
     flex-direction: column;
   }
+  p._construction {
+    color: $first_color_light; 
+    font-size: .8rem; 
+    text-align: center; 
+    margin-top: -1.3rem;
+    opacity: .7;
+  }
 }
 @media (min-width: 1024px) { 
   ._container_cards {
