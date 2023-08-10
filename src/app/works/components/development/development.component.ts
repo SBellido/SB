@@ -9,6 +9,8 @@ import { HeaderSection, ItemsSection } from '../../../models/models';
 })
 
 export class DevelopmentComponent implements OnInit {
+  parentColor: string = 'linear-gradient(0deg, #ffdd57 33%, #fbe27e 100%)';
+  parentColorHover: string = 'linear-gradient(0deg, #fbe27e 33%, #fbecb1 50%)';
 
 /*--------VARIABLES -------*/ 
   header: HeaderSection[] = [
@@ -18,15 +20,15 @@ export class DevelopmentComponent implements OnInit {
       routerLink: '',
       isFlows: false,
       isSubSection: false,
-      color: '_dev-color'
+      color: '_dev_color'
     }
   ];
 
   sections: ItemsSection[] = [
     {
-      color: '$dev_color',
-      fill: '$dev_color_gradient',
-      fill_hover: '$dev_color_gradient_hover',
+      color: '_dev_color',
+      fill: '._dev_background_color',
+      fill_hover: '_dev_color_gradient_hover',
       title: 'angular',
       visible: false,
       text: 'Framework de ingeniería de software de código abierto que se utiliza para crear aplicaciones web de una sola página. Los desarrolladores también lo utilizan para crear menús animados para páginas web HTML. El framework es una creación de los ingenieros de Google, Misko Hevery y Adam Abrons. Google lanzó oficialmente la primera versión, AngularJS, en 2012 y la ha mantenido desde entonces.',
@@ -55,9 +57,9 @@ export class DevelopmentComponent implements OnInit {
       ],
     },
     {
-      color: '$dev_color',
-      fill: '$dev_color_gradient',
-      fill_hover: '$dev_color_gradient_hover',
+      color: '_dev_color',
+      fill: '_dev_color_gradient',
+      fill_hover: '_dev_color_gradient_hover',
       title: 'bootstrap',
       visible: false,
       text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',
@@ -80,9 +82,9 @@ export class DevelopmentComponent implements OnInit {
       ]
     },
     {
-      color: '$dev_color',
-      fill: '$dev_color_gradient',
-      fill_hover: '$dev_color_gradient_hover',
+      color: '_dev_color',
+      fill: '_dev_color_gradient',
+      fill_hover: '_dev_color_gradient_hover',
       title: 'javascript',
       visible: false,
       text: '',

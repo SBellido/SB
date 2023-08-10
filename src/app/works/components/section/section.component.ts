@@ -10,6 +10,8 @@ import { ItemsSection } from 'src/app/models/models';
 export class SectionComponent implements OnInit {
   @Input() sections: ItemsSection[] = [];  
   @Input() subtitle: string = 'Trabajos realizados';
+  @Input() parentColor: string = '';
+  @Input() parentColorHover: string = '';
 
   constructor() { }  
   ngOnInit(): void { 

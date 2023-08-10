@@ -18,7 +18,7 @@
     margin-bottom: 1rem;
   }
   ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
-    background-color: $third_color;
+    background-color: $design_color;
     padding: .5rem;
     border-radius: 25px;
     margin-top: 0;
@@ -62,7 +62,7 @@
   }
   h4._title, h4._title_ {
     margin-block-end: 0;
-    color: $third_color;
+    color: $design_color;
     text-align: center;
     font-weight: 200;
   }
@@ -75,7 +75,7 @@
   }
   div._container_text_more_works {
     padding-bottom: .5rem;
-    border-bottom: solid .5px $third_color;
+    border-bottom: solid .5px $design_color;
   }
   div._container_text_selector {
     padding-bottom: .5rem;

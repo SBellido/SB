@@ -52,7 +52,7 @@ export class VLifeComponent implements OnInit {
     routerLink: '../../',
     isFlows: true,
     isSubSection: true,
-    color: '$design_color'
+    color: '_design_color'
     }
   ];
   brands : Button[] = [

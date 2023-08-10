@@ -8,12 +8,22 @@
   <section class="_container_buttons">
     <div class="_container_button" *ngFor="let btn of btnNavBar">
       <mat-button class="_button"
-                  [id]="btn.id"
-                  [ngClass]="btn.active ? '_active_button' : '_inactive_button'"
-                  (click)="navigateBtnTo(btn)">
+        [id]="btn.id"
+        [ngClass]="{
+          '_profile': btn.styleClass === '_profile',
+          '_dev': btn.styleClass === '_dev',
+          '_design': btn.styleClass === '_design',
+          '_active_button': btn.active,
+          '_inactive_button': !btn.active,
+          '_hover_button': hoverStates[btn.id]
+        }"
+        [style.background]="hoverStates[btn.id] ? btn.hoverColor : ''"
+        (click)="navigateBtnTo(btn)"
+        (mouseenter)="onButtonMouseEnter(btn)"
+        (mouseleave)="onButtonMouseLeave(btn)">
         <mat-icon class="_icon_nav">{{ btn.icon }}</mat-icon>
       </mat-button>
-      <p class="_text_button _text_button_footer">{{ btn.tittle }}</p>
+      <p class="_text_button _text_button_footer">{{ btn.title }}</p>
     </div>
   </section>
 </header>

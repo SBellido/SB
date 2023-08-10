@@ -1,16 +1,13 @@
-$design_color: #aeff57;
-$design_color_light: #cafa96;
-$design_color_lighter: #cafa96;
 $profile_color: #67deff;
 $profile_color_light: #b2eeff;
 $profile_color_lighter: #beeefa;
 $dev_color: #ffdd57;
 $dev_color_light: #fbe27e;
 $dev_color_lighter: #fbecb1;
-/////////////////////////////////////////
-// $second_color: #d5d5d5;
-// $second_color_light: #ebebeb;
-// $second_color_lighter: white;
+$design_color: #bafe71;
+$design_color_light: #cafa96;
+$design_color_lighter: #ddffb9;
+
 $profile_color_gradient:  
     linear-gradient(
         0deg, $profile_color 33%, 
@@ -41,28 +38,64 @@ $design_color_gradient_hover:
         0deg, $design_color_light 33%, 
         $design_color_lighter 100%
     );
-._dev-background-color {
-    background-color: #ffdd57;
+._dev_background_color_gradient {
+   background: linear_gradient(
+      0deg, $dev_color 33%, 
+      $dev_color_light 100%
+    ); 
 }
-._dev-color {
-    color: #ffdd57;
+._dev_background_color_gradient:hover {
+   background: linear-gradient(
+      0deg, $dev_color_light 33%, 
+      $dev_color_lighter 100%
+    ); 
 }
-._design-background-color {
-    background-color: #aeff57;
+._dev_background_color {
+    background-color: $dev_color;
 }
-._design-color {
-    color: #aeff57;
+._dev_color {
+    color: $dev_color;
 }
-._profile-background-color {
-    background-color: #67deff;
+._design_background_color_gradient {
+    background: linear-gradient(
+       0deg, $design_color 33%, 
+       $design_color_light 100%
+     ); 
+ }
+ ._design_background_color_gradient:hover {
+    background: linear-gradient(
+       0deg, $design_color_light 33%, 
+       $design_color_lighter 100%
+     ); 
+ }
+._design_background_color {
+    background-color: $design_color;
 }
-._profile-color {
-    color: #67deff;
+._design_color {
+    color: $design_color;
 }
-.home-background-color {
+._profile_background_color {
+    background-color: $profile_color;
+}
+._profile_color {
+    color: $profile_color;
+}
+._design_background_color_gradient {
+    background: linear-gradient(
+       0deg, $design_color 33%, 
+       $design_color_light 100%
+     ); 
+ }
+ ._dev_background_color_gradient:hover {
+    background: linear-gradient(
+       0deg, $design_color_light 33%, 
+       $design_color_lighter 100%
+     ); 
+ }
+.home_background_color {
     background-color: #e3e2e2;
 }
-.home-color {
+.home_color {
     color: #e3e2e2;
 }
 

@@ -42,7 +42,7 @@ export class BrandsSectionComponent implements OnInit {
       routerLink: '../../',
       isFlows: false,
       isSubSection: true,
-      color: '$design_color'
+      color: '_design_color'
     }
   ];
   brands : Button[] = [

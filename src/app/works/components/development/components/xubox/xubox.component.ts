@@ -47,7 +47,7 @@ export class XuboxComponent implements OnInit {
       routerLink: '../../',
       isFlows: true,
       isSubSection: true,
-      color: '$dev_color'
+      color: '_dev_color'
     }
   ]; 
   brands: Button[] = [

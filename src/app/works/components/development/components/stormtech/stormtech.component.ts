@@ -19,7 +19,7 @@ export class StormtechComponent implements OnInit {
       routerLink: '../',
       isFlows: true,
       isSubSection: true,
-      color: '_dev-color'
+      color: '_dev_color'
     }
   ];
   options: { value: string, label: string }[] = [

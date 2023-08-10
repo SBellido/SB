@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HeaderSection } from 'src/app/models/models'; 
 
 @Component({
@@ -8,9 +8,7 @@ import { HeaderSection } from 'src/app/models/models';
 })
 
 export class HeaderSectionComponent implements OnInit {
-  
-  @Input() header: HeaderSection[] = [];;
-  @Input() dev_color: string = '';
+  @Input() header: HeaderSection[] = [];
   onSelectChange(event: Event) {}
 
   constructor() {}
