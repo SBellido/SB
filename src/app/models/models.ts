@@ -8,14 +8,17 @@
 export interface ItemNavBar {
   id: number,
   icon: string,
-  tittle: string,
+  title: string,
   active: boolean,
+  hover: boolean, 
+  styleClass: string,
   router: string,
+  hoverColor: string,
 }
 export interface ItemContact {
   id: number,
   icon: string,
-  tittle: string,
+  title: string,
   active: boolean,
 }
 export interface Button {

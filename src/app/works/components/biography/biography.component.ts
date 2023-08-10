@@ -27,7 +27,7 @@ export class BiographyComponent implements OnInit {
      routerLink: '',
      isFlows: false,
      isSubSection: false,
-     color: '_profile-color'
+     color: '_profile_color'
     }
   ];
 

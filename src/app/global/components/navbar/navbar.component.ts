@@ -1,5 +1,5 @@
 /* Angular */
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { ItemNavBar, ItemContact} from '../../../models/models';
 
@@ -10,28 +10,39 @@ import { ItemNavBar, ItemContact} from '../../../models/models';
 })
 
 export class NavbarComponent implements OnInit {
-  
+  hoverStates: { [id: string]: boolean } = {};
   btnNavBar: ItemNavBar[] = [
     { 
       id: 1, 
       icon: 'fingerprint',
-      tittle: 'perfil', 
+      title: 'perfil', 
       active: false, 
-      router:'works/biography' 
+      hover: false, 
+      styleClass: '_profile',
+      router:'works/biography',
+      hoverColor: 'radial-gradient(circle, #beeefa 3%, #67deff 100%)'
     },
     { 
       id: 2, 
       icon: 'developer_mode', 
-      tittle: 'desarrollo', 
+      title: 'desarrollo', 
+      hover: false, 
+      styleClass: '_dev', 
       active: false, 
-      router:'works/development' 
+      router:'works/development',
+      hoverColor: 'radial-gradient(circle, #fbecb1 3%, #ffdd57 100%)'
+
     },
     { 
       id: 3, 
       icon: 'local_florist', 
-      tittle: 'diseño', 
+      title: 'diseño', 
+      hover: false, 
+      styleClass: '_design', 
       active: false, 
-      router:'works/design' 
+      router:'works/design',
+      hoverColor: 'radial-gradient(circle, #ddffb9 3%, #bafe71 100%)'
+
     },
   ]
 
@@ -39,12 +50,12 @@ export class NavbarComponent implements OnInit {
     { 
       id: 1, 
       icon: 'perm_phone_msg', 
-      tittle: 'llámame', 
+      title: 'llámame', 
       active: false 
     },
     { id: 2, 
       icon: 'alternate_email', 
-      tittle: 'escríbeme', 
+      title: 'escríbeme', 
       active: false 
     }
   ]
@@ -70,6 +81,13 @@ export class NavbarComponent implements OnInit {
     for (const btn of this.btnNavBar) {
       btn.active = btn.id === id;
     }
+  }
+  onButtonMouseEnter(btn: any) {
+    this.hoverStates[btn.id] = true;
+  }
+  
+  onButtonMouseLeave(btn: any) {
+    this.hoverStates[btn.id] = false;
   }
   
 }

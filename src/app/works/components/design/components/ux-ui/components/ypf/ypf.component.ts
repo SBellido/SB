@@ -32,7 +32,7 @@ export class YpfComponent implements OnInit {
      routerLink: '../../',
      isFlows: true,
      isSubSection: true,
-     color: '$design_color'
+     color: '_design_color'
     }
   ];
   information: Information[] = [
