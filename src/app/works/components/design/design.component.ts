@@ -10,10 +10,11 @@ import { HeaderSection, ItemsSection, OptionSelect } from '../../../models/model
 
 export class DesignComponent implements OnInit {
 /*--------VARIABLES-------*/ 
-parentColor: string = 'linear-gradient(0deg, #bafe71 33%, #cafa96 100%)'; 
-  parentColorHover: string = 'linear-gradient(0deg, #cafa96 33%, #ddffb9 50%)';
+parentColor: string = 'linear-gradient(0deg, #c499ff 33%, #ddc5ff 100%)'; 
 public subtitle: string = 'Trabajos realizados'
-
+// $design_color: #c499ff;
+// $design_color_light: #d5b8fd;
+// $design_color_lighter: #ddc5ff;
 /*--------INTERFACES-------*/ 
   header: HeaderSection[] = [
     {
@@ -23,14 +24,10 @@ public subtitle: string = 'Trabajos realizados'
       isFlows: false,
       isSubSection: false,
       color: '_design_color'
-
     }
   ];
   sections: ItemsSection[] = [
     {
-      color: '_design_color',
-      fill: '_design_color',
-      fill_hover: '_design_color',
       title: 'ux | ui',
       visible: false,
       text: 'UX, se denomina a la disciplina Diseño de Experiencia de Usuario y se enfoca en la relación humano/máquina. Evolución de la ergonomía, el diseño juega un papel protagónico buscando la satisfacción de quienes interactúan con un sistema, producto o entorno. Garantiza interacciones intuitivas, eficientes y gratificantes. UI refiere al Diseño de Interfaces de Usuario y define la forma, función, utilidad, ergonomía, imagen de marca y otros aspectos que impactan la apariencia de interfaces en sistemas. Crea interfaces atractivas, funcionales y coherentes, facilitando la interacción del usuario con el producto o servicio. Combina con UX para una experiencia completa y satisfactoria.',
@@ -65,9 +62,6 @@ public subtitle: string = 'Trabajos realizados'
       ],
     },
     {
-      color: '_design_color',
-      fill: '_design_color_gradient',
-      fill_hover: '_design_color_gradient_hover',
       title: 'gráfico',
       visible: false,
       text: 'Profesión que proyecta comunicación visual para transmitir mensajes específicos a grupos sociales con objetivos determinados. Genera identidad visual en productos o servicios, creando un discurso de marca homogéneo. Desde logos y branding hasta diseño editorial y publicitario, el diseño gráfico es esencial para establecer conexiones emocionales y destacar en un mercado competitivo. Utiliza la creatividad y estética para contar historias, comunicar ideas y construir la imagen de una marca. Abarca áreas empresariales, artísticas y culturales.',
@@ -90,9 +84,6 @@ public subtitle: string = 'Trabajos realizados'
       ]
     },
     {
-      color: '_design_color',
-      fill: '_design_color_gradient',
-      fill_hover: '_design_color_gradient_hover',
       title: 'experimental',
       visible: false,
       text: '',

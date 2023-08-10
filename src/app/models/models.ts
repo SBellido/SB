@@ -38,9 +38,6 @@ export interface ItemProfile {
   description_link: string,
 }
 export interface ItemsSection {
-  color: string,
-  fill: string,
-  fill_hover: string,
   title: string,
   visible: boolean,
   text: string,

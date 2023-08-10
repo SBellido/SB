@@ -19,13 +19,16 @@
     padding: .5rem 0
   }
   ._profile._active_button {
-    background: radial-gradient(circle, #beeefa 3%, #67deff 100%);
+    background: radial-gradient(circle, $profile_color_lighter 3%, $profile_color 100%);
+    cursor: default;
   }
   ._dev._active_button {
-    background: radial-gradient(circle, #fbecb1 3%, #ffdd57 100%);
+    background: radial-gradient(circle, $dev_color_lighter 3%, $dev_color 100%);
+    cursor: default;
   }
   ._design._active_button {
-    background: radial-gradient(circle, #ddffb9 3%, #bafe71 100%);
+    background: radial-gradient(circle, $design_color 3%, $design_color_lighter 100%);
+    cursor: default;
   }
 /* ------------NAVBAR LOGO---------------*/
   ._container_logo {

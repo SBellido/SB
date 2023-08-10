@@ -9,11 +9,6 @@ import { HeaderSection, ItemsSection } from 'src/app/models/models';
 
 export class BiographyComponent implements OnInit {
 
-  @HostListener('window:resize', ['$event'])
-    onResize(event: any) {
-      this.checkScreenSize();
-  }
-
   allCardsClosed: boolean = true;
   visibleLabor: boolean = false;
   visibleAcademic: boolean = false;
@@ -31,9 +26,7 @@ export class BiographyComponent implements OnInit {
     }
   ];
 
-  constructor() {
-    this.checkScreenSize();
-   }
+  constructor() {}
 
   ngOnInit(): void {  
     this.topFunction();
@@ -60,12 +53,6 @@ export class BiographyComponent implements OnInit {
     if (this.allCardsClosed) {
       this.topFunction();
     }
-  }
-
-  checkScreenSize() {
-    this.visiblePersonal = window.innerWidth >= 1024;
-    this.visibleAcademic = window.innerWidth >= 1024;
-    this.visibleLabor = window.innerWidth >= 1024;
   }
 
 }
