@@ -20,9 +20,9 @@ export class NighxComponent implements OnInit {
   ];
   information: Information[] = [
     {
-      title: 'V-LIFE | App Mobile',
+      title: 'Nighx | App Mobile',
       text: 'Nighx es un servicio de streaming que ofrece ver series y películas en un dispositivo con conexión a internet. En el año 2019, Sebastián fue encargado de realizar diseño de marca y prototipos, flujos de interacción, aplicación de patrones de diseño, diseño UX | UI y presentación en público. Trabajo realizado en el marco de la Cátedra Interfaces de Usuario e Interacción (TUDAI/FCEx/UniCen), junto a Germán Wivaux y Pablo Santa María. Durante 2020 y 2021, tras ser convocado y ganar concurso, se desempeñó como ayudante alumno en dicha Cátedra.',
-      subtitle: 'Metodología | Tecnologías',
+      subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
           href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
