@@ -30,7 +30,7 @@ export class NavbarComponent implements OnInit {
       styleClass: '_dev', 
       active: false, 
       router:'works/development',
-      hoverColor: 'radial-gradient(circle, #fff7d8 3%, #ffe476 100%)'
+      hoverColor: 'radial-gradient(circle, #fff7d8 3%, #ffdc51 100%)'
     },
     { 
       id: 3, 
@@ -40,7 +40,7 @@ export class NavbarComponent implements OnInit {
       styleClass: '_design', 
       active: false, 
       router:'works/design',
-      hoverColor: 'radial-gradient(circle, #ddc5ff 3%, #c499ff 100%)'
+      hoverColor: 'radial-gradient(circle, #eee3ff 3%, #ceadfd 100%)'
 
     },
   ]
