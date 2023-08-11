@@ -8,27 +8,39 @@ div._container_donwload {
     margin-top: 1.5rem;
     margin-bottom: 3rem;
 }
-div._btn {
-   margin: auto;
-   background-color: $first_color;
-   border-top: solid 1px grey;
-   border-left: solid 1px grey;
-   border-right: solid 1px black;
-   border-bottom: solid 1px black;
-   padding: .5rem .5rem;
-   cursor: pointer;
+button._btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    background-color: $first_color;
+    border-top: solid 1px grey;
+    border-left: solid 1px grey;
+    border-right: solid 1px black;
+    border-bottom: solid 1px black;
+    cursor: pointer;
 }
-div._btn:hover {
+button._btn:hover {
     background-color: $first_color_lighter;
-    a._donwload {
+    p._donwload, 
+    ._icon_download {
         color: $first_color;
+        font-weight: 600;
     }
 }
-a._donwload {
+p._donwload {
     padding: 0 2rem;
     color: $first_color_lighter;
     text-decoration: underline;
     text-decoration: none;
+    padding-right: 4rem;
+    font-size: 1rem;
+    margin-block-start: .5em;
+    margin-block-end: .5em;
+}
+._icon_download {
+    color: $first_color_lighter;
+    padding-left: .5rem;
 }
 
 

@@ -1,0 +1,48 @@
+@import '../../global.component.scss';
+::ng-deep .mat-dialog-container {
+  padding: 1rem;
+}
+div._header_modal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+div._container_close_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+h4._title_modal {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  color: $first_color;
+  font-weight: 600;
+}
+div._container_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem 0;
+}
+._icon_check {
+  color: #bafe71;
+  width: auto;
+  font-size: 2.4rem;
+  margin: 1rem;
+}
+p._text_modal,
+span._text_modal {
+  color: $first_color;
+}
+span._text_modal {
+  font-weight: 600;
+}
+div._container_close_btn {
+  width: 2rem;
+  height: 2rem;
+}
+div._container_close_btn:hover {
+  background-color: $first_color_lighter;
+}
