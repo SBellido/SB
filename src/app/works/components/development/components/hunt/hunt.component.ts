@@ -16,7 +16,7 @@ export class HuntComponent implements OnInit {
     {
       title: 'Hunt | Landing Page',
       text: 'Sitio web desarrollado en 2021 por Sebastián utilizando Bootstrap y JavaScript Hunt es un producto desarrollado en Angular, del cual también formó parte como Desarrollador Frontend, pero no hay registro visual de ello. En este producto se encargó de trabajar el concepto de marca, crear la nomenclatura del producto, diseñar logotipo, imagen corporativa y desarrollo de Landing Page first mobile, con animaciones CSS3 en todas las imágenes del home. Es un sitio estático que muestra los servicios que ofrece, la posibilidad de contactar al proveedor y solicitar una demo a partir del uso de un formulario. Fue diseñado y desarrollado para Stormtech SL.',
-      subtitle: 'Metodología | Tecnologías',
+      subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
           href: 'https://getbootstrap.com/',
