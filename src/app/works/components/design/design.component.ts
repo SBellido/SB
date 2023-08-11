@@ -10,11 +10,11 @@ import { HeaderSection, ItemsSection, OptionSelect } from '../../../models/model
 
 export class DesignComponent implements OnInit {
 /*--------VARIABLES-------*/ 
-parentColor: string = 'linear-gradient(0deg, #c499ff 33%, #ddc5ff 100%)'; 
+parentColor: string = 'linear-gradient(0deg, #c499ff 33%, #eee3ff 100%)'; 
 public subtitle: string = 'Trabajos realizados'
 // $design_color: #c499ff;
 // $design_color_light: #d5b8fd;
-// $design_color_lighter: #ddc5ff;
+// $design_color_lighter: #eee3ff;
 /*--------INTERFACES-------*/ 
   header: HeaderSection[] = [
     {
