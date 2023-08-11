@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DownloadModalComponent } from '../download-modal/download-modal.component'; // Ajusta la ruta
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-download',
@@ -7,13 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DownloadComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) {}
 
   ngOnInit(): void {
   } 
 
   /*----------MÉTODOS-----------*/
-  descargarPDF() {
+  // downloadCV() {
+  //   const url = '../../../../assets/images/biography/SebastianBellido_CV2023_ok.pdf';
+  //   fetch(url)
+  //     .then(response => response.blob())
+  //     .then(blob => {
+  //       const blobUrl = URL.createObjectURL(blob);
+  //       const link = document.createElement('a');
+  //       link.href = blobUrl;
+  //       link.download = 'CV_Sebastian_Bellido.pdf';
+  //       link.click();
+  //       URL.revokeObjectURL(blobUrl);
+  //     });
+  // }
+  downloadCV() {
     const url = '../../../../assets/images/biography/SebastianBellido_CV2023_ok.pdf';
     fetch(url)
       .then(response => response.blob())
@@ -24,7 +39,16 @@ export class DownloadComponent implements OnInit {
         link.download = 'CV_Sebastian_Bellido.pdf';
         link.click();
         URL.revokeObjectURL(blobUrl);
+
+        this.showDownloadModal(); // Llama al método para mostrar el modal
       });
   }
-
+  showDownloadModal() {
+    this.dialog.open(DownloadModalComponent, {
+      width: '400px',
+      data: {
+        message: 'El archivo se ha descargado exitosamente.'
+      }
+    });
+  }
 }
