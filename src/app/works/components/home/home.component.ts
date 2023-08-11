@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   header: HeaderSection[] = [
     {
       area: 'Sebastián Bellido',
-      icon: '../assets/images/sb/logo_sb.svg',
+      icon: '../assets/images/sb/logo_sb__.svg',
       routerLink: '',
       isFlows: false,
       isSubSection: false,
