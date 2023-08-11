@@ -43,12 +43,21 @@ export class DownloadComponent implements OnInit {
         this.showDownloadModal(); // Llama al método para mostrar el modal
       });
   }
+  // showDownloadModal() {
+  //   this.dialog.open(DownloadModalComponent, {
+  //     width: '400px',
+  //     data: {
+  //       message: 'El archivo se ha descargado exitosamente.'
+  //     }
+  //   });
+  // }
   showDownloadModal() {
-    this.dialog.open(DownloadModalComponent, {
-      width: '400px',
-      data: {
-        message: 'El archivo se ha descargado exitosamente.'
-      }
+    const dialogRef = this.dialog.open(DownloadModalComponent, {
+      disableClose: true
     });
+    setTimeout(() => {
+      dialogRef.close();
+    }, 4000);
   }
+  
 }

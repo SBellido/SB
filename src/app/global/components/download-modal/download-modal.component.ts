@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-download-modal',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DownloadModalComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private dialogRef: MatDialogRef<DownloadModalComponent>) { }
   ngOnInit(): void {
   }
 
+  closeModal() {
+    this.dialogRef.close();
+  }
 }
