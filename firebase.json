@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "framework": "angular",
     "source": ".",
     "ignore": [
       "firebase.json",
