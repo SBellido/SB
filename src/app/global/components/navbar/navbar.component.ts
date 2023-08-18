@@ -40,9 +40,12 @@ export class NavbarComponent implements OnInit {
       styleClass: '_design', 
       active: false, 
       router:'works/design',
-      hoverColor: 'radial-gradient(circle, #eee3ff 3%, #ceadfd 100%)'
+      hoverColor: 'radial-gradient(circle, #fdf0f2 3%, #ffa6b6 100%)'
 
     },
+//     $design_color: #ffa6b6;
+// $design_color_light: #fecbd4;
+// $design_color_lighter: #fdf0f2;
   ]
 
   btnContact: ItemContact[] = [
