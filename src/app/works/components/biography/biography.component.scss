@@ -1,4 +1,7 @@
 @import '../section/section.component.scss';
+$section-bg-color-default: #59cdff;
+$section-bg-color-hover: #75e1ff;
+$section-bg-color-disabled: #b8f1ff; 
 @media (min-width: 0px) {
   article._container_all {
     display: flex;
@@ -14,7 +17,7 @@
     padding: 2rem .5rem 0rem .5rem;
   }
   ._icon_nav {
-    color: $third_color;
+    color: $profile_color;
   }
   h1._title {
     font-size: 1.2rem;
@@ -27,18 +30,29 @@
     display: flex;
     flex-direction: column;
   }
+
   section._container_item {
     background: linear-gradient(
       0deg, $profile_color 33%, 
       $profile_color_lighter 100%
     );
   }
-  section._container_item:hover { 
+  section._container_item:hover {
     background: linear-gradient(
       0deg, $profile_color_light 33%, 
       $profile_color_lighter 100%
     );
   }
+  // section._container_item:hover { 
+  //   background: linear-gradient(
+  //     0deg, $profile_color_light 33%, 
+  //     $profile_color_lighter 100%
+  //   );
+  //   &:hover {
+  //     -webkit-filter: saturate(50%);
+  //     filter: saturate(20%);
+  //   }
+  // }
   section._container_career {
     display: flex;
     align-items: center;

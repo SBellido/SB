@@ -10,6 +10,7 @@ import { HeaderSection, ItemsSection } from '../../../models/models';
 
 export class DevelopmentComponent implements OnInit {
   parentColor: string = 'linear-gradient(0deg, #ffdc51 33%, #fff7d8 100%)'; 
+  parentColorHover: string = 'linear-gradient(0deg, #fbe9a2 33%, #fff7d8 100%)'; 
   /*--------VARIABLES -------*/ 
 
 header: HeaderSection[] = [
