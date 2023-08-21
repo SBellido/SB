@@ -39,7 +39,7 @@
   img._logo_navbar {
     cursor: pointer;
     padding: 0rem;
-    height: 2.3rem;
+    height: 2rem;
   }
   section._container_buttons {
     display: flex;
@@ -62,7 +62,7 @@
     align-items: center;
     cursor: pointer;
     border-radius: 50px;  
-    padding: 0rem .4rem;
+    padding: .2rem .6rem;
     background: $first_color_light; 
     background: radial-gradient(
       circle, $first_color_lighter 3%, 

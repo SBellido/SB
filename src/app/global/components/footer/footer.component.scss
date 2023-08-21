@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
   }
   div._container_logo_socialnet {
     width: 2.5rem;
@@ -211,6 +211,10 @@
   }
   article._container_footer {
     width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 33rem;
   }
   section._header_footer {
     padding: 0 22rem;
