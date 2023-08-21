@@ -108,6 +108,11 @@
       padding: 2rem 12rem;
     }
 }
+@media (min-width: 1080px) {
+  div._container_mobile {
+    left: 6.5rem;
+  }
+}
 @media (min-width: 1024px) {
   article._desktop_version {
     display: flex; 
