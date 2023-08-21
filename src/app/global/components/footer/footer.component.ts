@@ -24,21 +24,33 @@ export class FooterComponent implements OnInit {
 
   btnSN: Button[] = [
     {  
+      route: 'https://wa.me/541121580848', 
+      img: '../../../../assets/images/social_network/whatsapp/logo_social_network_whatsapp.svg',
+      name: 'WhatsApp', 
+      text:'logo de WhatsApp' 
+    },
+    {  
+      route: 'mailto:sebastianbellidodg@gmail.com?subject=Hola Seba!&body=¿Qué propones?.', 
+      img: '../../../../assets/images/social_network/outlook/logo_social_network_outlook.svg',
+      name: 'OutLook', 
+      text:'logo de OutLook' 
+    },
+    {  
       route: 'https://www.linkedin.com/in/sebastian-bellido-9a0a6681/', 
       img: '../../../../assets/images/social_network/linkeding/logo_social_network_linkedin.svg',
-      name: 'Sebastián en Linkedin', 
+      name: 'LinkedIn', 
       text:'logo de linkedin' 
     },
     {  
       route: 'https://www.behance.net/sebastianba389', 
       img: '../../../../assets/images/social_network/behance/logo_social_network_behance.svg',
-      name: 'Sebastián en Behance', 
+      name: 'Behance', 
       text:'logo de Behance' 
     },
     {  
       route: 'https://github.com/SBellido', 
       img: '../../../../assets/images/social_network/github/logo_social_network_github.svg',
-      name: 'Sebastián en Github', 
+      name: 'GitHub', 
       text:'logo de github' 
     },
   ]
@@ -47,7 +59,7 @@ export class FooterComponent implements OnInit {
       route: 'mailto:sebastianbellidodg@gmail.com?subject=Hola Seba!&body=¿Qué propones?.', 
       img: 'alternate_email',
       name: 'Vía email', 
-      text: 'Email' 
+      text: 'OutLook' 
     },
     {  
       route: 'https://wa.me/541121580848', 
