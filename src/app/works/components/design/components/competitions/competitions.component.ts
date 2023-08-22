@@ -56,6 +56,8 @@ export class CompetitionsComponent implements OnInit {
       img: '../assets/images/graph/brands.png',
       name: 'Marcas',
       text: 'Logo de Marca Registrada',
+      title: 'Diseño de Marca',
+      
     },
   ]
 

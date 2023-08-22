@@ -26,6 +26,7 @@ export interface Button {
   img: string,
   name: string,
   text: string,
+  title: string,
 }
 export interface ItemProfile {
   img: string,
@@ -70,3 +71,28 @@ export interface OptionSelect {
   value: string,
   view_Text: string,
 }
+export interface ModalInfo {
+  title: string,
+  logo: string,
+  text: string,
+  text_info: string
+}
+
+// <div class="container_modal">
+//   <div class="_header_modal">
+//     <div class="_container_icon">
+//       <mat-icon class="_icon_download">cloud_download</mat-icon>
+//     </div>
+//     <h4 class="_title_modal">
+//       Descargar CV
+//     </h4>
+//     <div class="_container_close_btn" (click)="closeModal()" title="Cerrar">
+//       <mat-icon>close</mat-icon>
+//     </div>
+//   </div>
+//   <div class="_container_info">
+//     <mat-icon class="_icon_check">check_circle_outline</mat-icon>
+//     <p class="_text_modal">El CV de Sebastián fue desgargado con éxito.</p>
+//    <span class="_text_modal">Muchas gracias por tu interés.</span>
+//   </div>
+// </div>
