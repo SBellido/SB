@@ -16,7 +16,7 @@ export class XuboxComponent implements OnInit {
   information: Information[] = [
     {
       title: 'Xubox | Web App',
-      text: 'Plataforma interactiva que permite gestionar envíos postales, dando la posibilidad de personalizarlos de acuerdo a las necesidades del usuario. Una herramienta flexible y adaptada a los servicios que ofrece la empresa. Consta de un formulario complejo, en cuanto a su implementación, que va guardando los datos cargados y plantea el flujo en una serie de pasos. Los datos a cargar varian de acuerdo a la información cargada hasta el momento. Sebastián se desempeñó como desarrollador Frontend e implementó el alta de perfiles de usuario, cambio de contraseña, login y todo el proceso de carga de datos. El trabajo fue hecho para Stormtech SL en el año 2021 bajo la supervisión del equpo técnico de la empresa. Se implementó de forma paralela con Xubox, trabajando misma lógica y diferentes estilos.',
+      text: 'Plataforma interactiva que permite gestionar envíos postales, dando la posibilidad de personalizarlos de acuerdo a las necesidades del usuario. Una herramienta flexible y adaptada a los servicios que ofrece la empresa. Consta de un formulario complejo, en cuanto a su implementación, que va guardando los datos cargados y plantea el flujo en una serie de pasos. Los datos a cargar varian de acuerdo a la información cargada hasta el momento. Sebastián se desempeñó como desarrollador Frontend e implementó el alta de perfiles de usuario, cambio de contraseña, login y todo el proceso de carga de datos. El trabajo fue hecho para Stormtech SL en el año 2021 bajo la supervisión del equpo técnico de la empresa. Se implementó utilizando Angular 13, Swagger, HTML5 y CSS3. Fue desarrollado de forma paralela con Xubox, trabajando misma lógica y diferentes estilos.',
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
@@ -24,6 +24,12 @@ export class XuboxComponent implements OnInit {
           src: '../assets/images/tecnologies/angular.png',
           title: 'Angular',
           alt: 'Logo de Angular',
+        },
+        {
+          href: 'https://swagger.io/',
+          src: '../assets/images/tecnologies/swagger.png',
+          title: 'Swagger',
+          alt: 'Logo de Swagger',
         },
         {
           href: 'https://developer.mozilla.org/es/docs/Web/HTML',

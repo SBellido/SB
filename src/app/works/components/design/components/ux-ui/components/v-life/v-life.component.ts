@@ -21,7 +21,7 @@ export class VLifeComponent implements OnInit {
   information: Information[] = [
     {
       title: 'V-LIFE | App Mobile',
-      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacción en baja definición, test con usuarios y armado de prototipos en alta definición, utilizando Adobe Xd y componentes UI Ionic. El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020 en Argentina.',
+      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacción en baja definición, test con usuarios y armado de prototipos en alta definición, utilizando Adobe Xd y componentes UI Ionic bajo metodología ágil Scrum. El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020 en Argentina.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {
@@ -35,6 +35,12 @@ export class VLifeComponent implements OnInit {
           src: '../assets/images/tecnologies/azure.png',
           title: 'Azure',
           alt: 'Logo de Azure',
+        },
+        {
+          href: 'https://ionicframework.com/docs/components',
+          src: '../assets/images/tecnologies/ionic.png',
+          title: 'Ionic',
+          alt: 'Logo de Ionic',
         },
         {
           href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
