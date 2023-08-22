@@ -50,7 +50,7 @@ export class YpfComponent implements OnInit {
         {
           href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
           src: '../assets/images/tecnologies/azure.png',
-          title: 'Azure',
+          title: 'Azure DevOps',
           alt: 'Logo de Azure',
         },
         {
@@ -74,18 +74,21 @@ export class YpfComponent implements OnInit {
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
       name: '',
       text: 'Logo V-Life',
+      title: 'V-LIFE | App Mobile'
     },
     {
       route: 'works/design/ux-ui/nighx',
       img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
       name: '',
       text: 'Logo de Nighx',
+      title: 'Nighx | App Mobile'
     },
     {
       route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
       name: '',
       text: 'Logo de TravelLog',
+      title: 'TravelLog | Web App'
     },
   ]
 

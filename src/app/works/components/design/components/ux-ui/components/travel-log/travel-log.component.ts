@@ -15,7 +15,7 @@ export class TravelLogComponent implements OnInit {
   /*--------INTERFACES-------*/ 
   information: Information[] = [
     {
-      title: 'Travel Log | Web App',
+      title: 'TravelLog | Web App',
       text: ' Web App que permite crear viajes y planes entre otras funcionalidades extra. En el año 2020 fue realizado este trabajo en el marco de la Cátedra Introducción a las Metodologías Ágiles del Software (TUDAI/FCEx/UniCen), junto a un grupo de compañeros. Sebastián fue encargado de realizar diseño de prototipos, flujos de interacción, diseño de logo, diseño UX | UI, presentación en público y se desempeñó como Scrum Master dentro del equipo. El diseño y desarrollo, incluído, Diagrama de Clases y de Entidad/Relación, se realizó a partir de un texto que simulaba ser un diálogo con el cliente. El objetivo del trabajo era captura requerimientos, trabajar aplicando la metodología ágil Scrum y diseñar una app que cumpla con las expectativas del cliente.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
@@ -68,18 +68,21 @@ export class TravelLogComponent implements OnInit {
       img: '../assets/images/ux_ui/ypf/YPF_logo.png',
       name: '',
       text: 'Logo de YPF',
+      title: 'Gestión de Inversiones | Web App',
     },
     {
       route: 'works/design/ux-ui/v-life',
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
       name: '',
       text: 'Logo V-Life',
+      title: 'V-LIFE | App Mobile'
     },
     {
       route: 'works/design/ux-ui/nighx',
       img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
       name: '',
       text: 'Logo de Nighx',
+      title: 'Nighx | App Mobile'
     },
   ]
 

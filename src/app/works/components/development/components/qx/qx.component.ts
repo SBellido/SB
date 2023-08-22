@@ -62,12 +62,15 @@ header: HeaderSection[] = [
       img: '../assets/images/dev/investigar/logo_investigar.png',
       name: 'InventigAr',
       text: 'Logo de InventigAr',
+      title: 'InvestigAr | Web App',
     },
     {
       route: 'works/development/xubox',
       img: '../assets/images/dev/xubox/logo/xubox_logo.png',
       name: 'Xubox',
       text: 'Logo Xubox',
+      title: 'Xubox | Web App',
+
     },
   ]
   

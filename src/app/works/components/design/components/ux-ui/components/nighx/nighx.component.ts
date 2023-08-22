@@ -67,18 +67,21 @@ export class NighxComponent implements OnInit {
       img: '../assets/images/ux_ui/ypf/YPF_logo.png',
       name: '',
       text: 'Logo de YPF',
+      title: 'Gestión de Inversiones | Web App',
     },
     {
       route: 'works/design/ux-ui/v-life',
       img: '../assets/images/ux_ui/v-life/logo/v_life_isologo.png',
       name: '',
       text: 'Logo V-Life',
+      title: 'V-LIFE | App Mobile'
     },
     {
       route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
       name: '',
       text: 'Logo de TravelLog',
+      title: 'TravelLog | Web App'
     },
   ]
 

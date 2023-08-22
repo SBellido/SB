@@ -62,12 +62,14 @@ export class InvestigarComponent implements OnInit {
       img: '../assets/images/dev/xubox/logo/xubox_logo.png',
       name: 'Xubox',
       text: 'Logo Xubox',
+      title: 'Xubox | Web App',
     },
     {
       route: 'works/development/qx',
       img: '../assets/images/dev/qx/qx_logo.png',
       name: 'Logística',
       text: 'Logo de QX Logística',
+      title: 'QX Logística | Web App',
     }
   ]
  

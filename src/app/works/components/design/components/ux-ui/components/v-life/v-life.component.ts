@@ -39,7 +39,7 @@ export class VLifeComponent implements OnInit {
         {
           href: 'https://ionicframework.com/docs/components',
           src: '../assets/images/tecnologies/ionic.png',
-          title: 'Ionic',
+          title: 'UI Ionic',
           alt: 'Logo de Ionic',
         },
         {
@@ -73,18 +73,21 @@ export class VLifeComponent implements OnInit {
       img: '../assets/images/ux_ui/ypf/YPF_logo.png',
       name: '',
       text: 'Logo de YPF',
+      title: 'Gestión de Inversiones | Web App',
     },
     {
       route: 'works/design/ux-ui/nighx',
       img: '../assets/images/ux_ui/nighx/logo/nighx_isologo.png',
       name: '',
       text: 'Logo de Nighx',
+      title: 'Nighx | App Mobile'
     },
     {
       route: 'works/design/ux-ui/travel-log',
       img: '../assets/images/ux_ui/travel_log/logo/travelLog_isologo.png',
       name: '',
       text: 'Logo de TravelLog',
+      title: 'TravelLog | Web App'
     },
   ];
 

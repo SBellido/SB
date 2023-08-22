@@ -83,6 +83,7 @@ export class StormtechComponent implements OnInit {
       img: '../assets/images/dev/hunt/hunt_logo.png',
       name: 'Hunt',
       text: 'Logo de Hunt',
+      title: ''
     }
   ]
 
