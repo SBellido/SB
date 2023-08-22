@@ -38,7 +38,7 @@ export class YpfComponent implements OnInit {
   information: Information[] = [
     {
       title: 'Gestión de Inversiones | Web App',
-      text: 'Este diseño corresponde a una Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. Diseñada como herramienta para que YPF gestione sus inversiones de negocio de manera ordenada y coherente. En el año 2022, Sebastián fue encargado de realizar entrevistas con usuarios, análisis de problema, diseño UX | UI, flujo de interacción, diseño de prototipos y presentaciones al cliente. El trabajo fue realizado para Tsoft ocupando el rol de UX/UI Sr. Participó durante un año en el proyecto, diseñó la aplicación y llegó a ocupar el rol de Analista Funcional y Product Owner, por el conocimiento adquirido de la lógica del negocio. El diseño de la app se entregó completo y el proyecto aún se encuenta en etapa de desarrollo.',
+      text: 'Este diseño corresponde a una Web App desktop de alta complejidad, con numerosos roles de usuarios y funcionalidades. Diseñada como herramienta para que YPF gestione sus inversiones de negocio de manera ordenada y coherente. En el año 2022, Sebastián fue encargado de realizar entrevistas con usuarios, análisis de problema, diseño UX | UI, flujo de interacción, diseño de prototipos y presentaciones al cliente. El trabajo fue realizado para Tsoft ocupando el rol de UX/UI Sr. Participó durante un año en el proyecto, diseñó la aplicación y llegó a ocupar el rol de Analista Funcional y Product Owner, por el conocimiento adquirido de la lógica del negocio. El diseño de la app se entregó completo y el proyecto aún se encuentra en etapa de desarrollo.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {

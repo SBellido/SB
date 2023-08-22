@@ -33,8 +33,8 @@ export class VLifeComponent implements OnInit {
         {
           href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
           src: '../assets/images/tecnologies/azure.png',
-          title: 'Azure',
-          alt: 'Logo de Azure',
+          title: 'Azure DevOps',
+          alt: 'Logo de Azure DevOps',
         },
         {
           href: 'https://ionicframework.com/docs/components',
