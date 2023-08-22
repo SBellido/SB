@@ -28,7 +28,7 @@ header: HeaderSection[] = [
     {
       title: 'angular',
       visible: false,
-      text: 'Framework de ingeniería de software de código abierto que se utiliza para crear aplicaciones web de una sola página. Los desarrolladores también lo utilizan para crear menús animados para páginas web HTML. El framework es una creación de los ingenieros de Google, Misko Hevery y Adam Abrons. Google lanzó oficialmente la primera versión, AngularJS, en 2012 y la ha mantenido desde entonces.',
+      text: 'Angular es un framework de desarrollo front-end ampliamente utilizado que permite crear aplicaciones web dinámicas y de una sola página de manera eficiente. Basado en TypeScript, ofrece una estructura robusta y modular para construir interfaces interactivas y escalables. Angular simplifica la gestión de estados, la manipulación del DOM y la creación de componentes reutilizables. Además, facilita la interacción con servicios web y APIs, permitiendo la construcción de aplicaciones en tiempo real. Su enfoque en la arquitectura MVC (Modelo-Vista-Controlador) y la programación reactiva brindan una base sólida para desarrollar experiencias web modernas y altamente funcionales.',
       disabled: false,
       wordsToHighlight: ['Framework', 'de código abierto', 'para crear aplicaciones web'],
       isHovered: false,
@@ -56,7 +56,7 @@ header: HeaderSection[] = [
     {
       title: 'bootstrap',
       visible: false,
-      text: 'Bootstrap es un framework front-end que se adapta a la pantalla del dispositivo utilizado por el usuario. Ofrece una gran cantidad de componentes para mejorar la comunicación con el usuario. Diferentes tipos de alerta, carrusel de diapositivas para facilitar la visualización de imágenes, botones, selectores, menús de navegación, barras de progreso, paginadores entre otros. ',
+      text: 'Bootstrap es un framework front-end de código abierto que simplifica el proceso de diseño y desarrollo de sitios web y aplicaciones. Proporciona un conjunto de herramientas preestablecidas, componentes y estilos de diseño responsivo que permiten a los desarrolladores crear interfaces visuales atractivas y adaptables de manera eficiente. Al aprovechar las clases CSS y los componentes reutilizables, Bootstrap agiliza la creación de diseños consistentes y funcionales, optimizados para distintos dispositivos y tamaños de pantalla. Su enfoque en la estructura modular y la adaptabilidad lo convierte en una herramienta esencial para construir interfaces modernas y atractivas en el mundo de la programación web.',
       disabled: false,
       isHovered: false,
       wordsToHighlight: ['Lorem ipsum dolor', 'adipisicing elit', 'asperiores'],

@@ -118,10 +118,13 @@
 }
 @media (min-width: 375px) {
   div._container_text {
-    width: 25rem;
+    width: 18rem;
   }
 }
 @media (min-width: 1024px) {
+  div._container_text {
+    width: 25rem;
+  }
   article._header_section {
     padding: 10rem 1.5rem 0 1.5rem;
   }
