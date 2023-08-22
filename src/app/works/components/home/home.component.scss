@@ -1,8 +1,26 @@
 @import '../../../global/global.component.scss';
-@import '../../../global/global.component.scss';
 @media (min-width: 0px) {
-  article._container_all_ {
+  section.intro_myself {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding-top: 10rem;
+  }
+  img._img_me {
+    border-radius: 50%;
+    width: 10rem;
+    margin: .5rem auto;
+  }
+  div._container_text {
+    width: 16rem;
+    display: inherit;
+    flex-direction: inherit;
+    align-items: inherit;
+  }
+  li._little_description_myself {
+    color: $first_color_lighter;
+    margin-bottom: 1rem;
   }
   article._header_section {
     display: flex;
@@ -32,8 +50,8 @@
     width: 3rem;
   }
   h1._title {
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1.3rem;
+    font-weight: 400;
     color: $first_color_lighter;
     margin: 0;
     padding: 0 .5rem;
@@ -97,6 +115,11 @@
   //   opacity: 0.5;
   //   pointer-events: none;
   // }
+}
+@media (min-width: 375px) {
+  div._container_text {
+    width: 25rem;
+  }
 }
 @media (min-width: 1024px) {
   article._header_section {
