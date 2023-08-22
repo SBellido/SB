@@ -38,21 +38,21 @@ header: HeaderSection[] = [
           img: '../assets/images/dev/investigar/logo_investigar.png',
           name: 'InventigAr',
           text: 'Logo de InventigAr',
-          title: 'InventigAr'
+          title: ''
         },
         {
           route: 'works/development/xubox',
           img: '../assets/images/dev/xubox/logo/xubox_logo.png',
           name: 'Logística',
           text: 'Logo de Xubox',
-          title: 'Xubox'
+          title: ''
         },
         {
           route: 'works/development/qx',
           img: '../assets/images/dev/qx/qx_logo.png',
           name: 'Logística',
           text: 'Logo de QX Logística',
-          title: 'QX Logística'
+          title: ''
 
         }
       ],
@@ -70,14 +70,14 @@ header: HeaderSection[] = [
           img: '../assets/images/dev/stormtech/stormtech_logo.png',
           name: 'Stormtech',
           text: 'Logo de Stormtech',
-          title: 'Stormtech SL'
+          title: ''
         },
         {
           route: 'works/development/hunt',
           img: '../assets/images/dev/hunt/hunt_logo.png',
           name: 'Hunt',
           text: 'Logo de Hunt',
-          title: 'hunt'
+          title: ''
         }
       ]
     },
