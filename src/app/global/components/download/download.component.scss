@@ -5,7 +5,7 @@ div._container_donwload {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 1.5rem auto;
+    margin: 2rem auto;
 }
 button._btn {
     display: flex;
@@ -38,7 +38,6 @@ button._btn:hover {
     p._donwload, 
     ._icon_download {
         color: $first_color_lighter;
-        font-weight: 600;
     }
 }
 // button._btn:hover {
@@ -50,13 +49,14 @@ button._btn:hover {
 //     }
 // }
 p._donwload {
-    padding: 0px 1rem;
+    padding-left: 1.3rem;
     color: $first_color;
     text-decoration: none;
-    padding-right: 2rem;
+    padding-right: 2.3rem;
     font-size: 1rem;
-    margin-block-start: 0.5em;
-    margin-block-end: 0.5em;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
+    font-weight: 600;
 }
 // p._donwload {
 //     padding: 0px 1rem;
