@@ -20,7 +20,8 @@ export class NavbarComponent implements OnInit {
       hover: false, 
       styleClass: '_profile',
       router:'works/biography',
-      hoverColor: 'radial-gradient(circle, #beeefa 3%, #37d4ff 100%)'
+      // hoverColor: 'radial-gradient(circle, #beeefa 3%, #37d4ff 100%)'
+      hoverColor: '#37d4ff'
     },
     { 
       id: 2, 
@@ -30,7 +31,8 @@ export class NavbarComponent implements OnInit {
       styleClass: '_dev', 
       active: false, 
       router:'works/development',
-      hoverColor: 'radial-gradient(circle, #fff7d8 3%, #ffdc51 100%)'
+      // hoverColor: 'radial-gradient(circle, #fff7d8 3%, #ffdc51 100%)'
+      hoverColor: '#ffdc51'
     },
     { 
       id: 3, 
@@ -40,7 +42,8 @@ export class NavbarComponent implements OnInit {
       styleClass: '_design', 
       active: false, 
       router:'works/design',
-      hoverColor: 'radial-gradient(circle, #fdf0f2 3%, #ff97aa 100%)'
+      // hoverColor: 'radial-gradient(circle, #fdf0f2 3%, #ff97aa 100%)'
+      hoverColor: '#ff97aa'
     },
     // $design_color: #ff97aa;
     // $design_color_light: #fdd6dd;

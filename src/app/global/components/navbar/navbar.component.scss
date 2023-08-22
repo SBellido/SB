@@ -19,17 +19,29 @@
     padding: .5rem 0
   }
   ._profile._active_button {
-    background: radial-gradient(circle, $profile_color_lighter 3%, $profile_color 100%);
+    background: $profile_color;
     cursor: default;
   }
   ._dev._active_button {
-    background: radial-gradient(circle, $dev_color_lighter 3%, $dev_color 100%);
+    background: $dev_color;
     cursor: default;
   }
   ._design._active_button {
-    background: radial-gradient(circle, $design_color_lighter 3%, $design_color 100%);
+    background: $design_color;
     cursor: default;
   }
+  // ._profile._active_button {
+  //   background: radial-gradient(circle, $profile_color_lighter 3%, $profile_color 100%);
+  //   cursor: default;
+  // }
+  // ._dev._active_button {
+  //   background: radial-gradient(circle, $dev_color_lighter 3%, $dev_color 100%);
+  //   cursor: default;
+  // }
+  // ._design._active_button {
+  //   background: radial-gradient(circle, $design_color_lighter 3%, $design_color 100%);
+  //   cursor: default;
+  // }
 /* ------------NAVBAR LOGO---------------*/
   ._container_logo {
     display: flex;
@@ -63,11 +75,11 @@
     cursor: pointer;
     border-radius: 50px;  
     padding: .2rem .6rem;
-    background: $first_color_light; 
-    background: radial-gradient(
-      circle, $first_color_lighter 3%, 
-      $first_color_light 100%
-    );
+    background: $first_color_lighter; 
+    // background: radial-gradient(
+    //   circle, $first_color_lighter 3%, 
+    //   $first_color_light 100%
+    // );
   }
   // ._active_button {
   //   background: $third_color; 
