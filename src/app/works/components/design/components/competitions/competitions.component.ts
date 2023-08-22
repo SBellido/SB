@@ -42,7 +42,7 @@ export class CompetitionsComponent implements OnInit {
   ];
   header: HeaderSection[] = [
     {
-      area: 'diseño/ux|ui',
+      area: 'diseño/gráfico',
       icon: 'local_florist',
       routerLink: '../../',
       isFlows: true,

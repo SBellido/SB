@@ -31,10 +31,10 @@ export class VLifeComponent implements OnInit {
           alt: 'Logo de Scrum',
         },
         {
-          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
-          src: '../assets/images/tecnologies/azure.png',
-          title: 'Azure DevOps',
-          alt: 'Logo de Azure DevOps',
+          href: 'https://asana.com/es',
+          src: '../assets/images/tecnologies/asana.png',
+          title: 'Asana',
+          alt: 'Logo de Asana',
         },
         {
           href: 'https://ionicframework.com/docs/components',
@@ -47,6 +47,12 @@ export class VLifeComponent implements OnInit {
           src: '../assets/images/tecnologies/xd.png',
           title: 'Adobe Xd',
           alt: 'Logo de Adobe Xd',
+        },
+        {
+          href: 'https://zeplin.io/',
+          src: '../assets/images/tecnologies/zeplin.png',
+          title: 'Zeplin',
+          alt: 'Logo de Zeplin',
         }
       ],
     },

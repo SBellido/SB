@@ -58,6 +58,12 @@ export class YpfComponent implements OnInit {
           src: '../assets/images/tecnologies/xd.png',
           title: 'Adobe Xd',
           alt: 'Logo de Adobe Xd',
+        },
+        {
+          href: 'https://zeplin.io/',
+          src: '../assets/images/tecnologies/zeplin.png',
+          title: 'Zeplin',
+          alt: 'Logo de Zeplin',
         }
       ],
     },
