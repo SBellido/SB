@@ -1,32 +1,53 @@
 @import '../../biography.component.scss';
 @media (min-width: 0px) { 
   img._logo {
-      width: 11rem;
-    }
-    p._info {
-      text-align: center;
-      margin-block-start: 0em;
-      margin-block-end: .5em;
-      padding: 0 2rem;
-    }
-    p._info>span {
-      font-weight: 700;
-    }
-    a._link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: row;
-      text-decoration: none;
-      color: $first_color;
-    }
-    a._link:hover {
-      color: $fifth_color;
-    }
-    p._p_link {
-      margin-block-start: 0em;
-      margin-block-end: .3em;
-    }
+    width: 11rem;
+  }
+  h3._title_final {
+    margin-block-end: 2em;
+  }
+  p._info {
+    text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: .5em;
+    padding: 0 2rem;
+  }
+  p._info>span {
+    font-weight: 700;
+  }
+  button._see_more {
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding: .3rem 1rem;
+    margin: 0 auto 1rem auto;
+    color: $first_color;
+    background: linear-gradient(
+      0deg, $profile_color 33%, 
+      $profile_color_lighter 100%
+    );
+  }
+  button._see_more:hover {
+    background: linear-gradient(
+      0deg, $profile_color_light 33%, 
+      $profile_color_lighter 100%
+    );
+  }
+  a._link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-decoration: none;
+    color: $first_color;
+  }
+  a._link:hover {
+    color: $first_color_light;
+  }
+  p._p_link {
+    margin-block-start: 0em;
+    margin-block-end: .1em;
+  }
 }
 @media (min-width: 1024px) {
   p._info {
