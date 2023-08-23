@@ -21,11 +21,11 @@
         color: $first_color;
     }
     a._link:hover {
-        color: $fifth_color;
+        color: $first_color_light;
     }
     p._p_link {
         margin-block-start: 0em;
-        margin-block-end: .3em;
+        margin-block-end: .1em;
     }
 }
 @media (min-width: 1024px) {

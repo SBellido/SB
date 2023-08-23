@@ -29,6 +29,7 @@ export interface Button {
   title: string,
 }
 export interface ItemProfile {
+  id: number,
   img: string,
   href: string,
   description_img: string,
@@ -37,6 +38,7 @@ export interface ItemProfile {
   name_career: string,
   link: string,
   description_link: string,
+  showDetail: boolean,
 }
 export interface ItemsSection {
   title: string,
@@ -71,10 +73,22 @@ export interface OptionSelect {
   value: string,
   view_Text: string,
 }
-export interface ModalInfo {
-  title: string,
-  logo: string,
+export interface MoreInfo {
+  id: number,
+  subtitle: string,
   text: string,
+  subtitle_1: string,
+  text_1: string,
+  subtitle_2: string,
+  text_2: string,
+  subtitle_3: string,
+  text_3: string,
+  subtitle_4: string,
+  text_4: string,
+  subtitle_5: string,
+  text_5: string,
+  subtitle_6: string,
+  text_6: string,
   text_info: string
 }
 

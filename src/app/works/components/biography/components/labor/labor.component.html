@@ -10,7 +10,29 @@
                 </div>
                 <h3 class="_title">{{ item.acronyms_career }}</h3>
                 <p class="_info"><span>{{ item.year }}</span></p>
-                <p class="_info">{{ item.name_career }}</p>
+                <p class="_info">{{ item.name_career }}</p>     
+                <ng-template [ngIf]="item.showDetail">
+                    <h3 class="_title">{{ info[item.id].subtitle }}</h3>
+                    <p class="_info">{{ info[item.id].text }}</p>
+                    <h3 class="_title">{{ info[item.id].subtitle_1 }}</h3>
+                    <p class="_info">{{ info[item.id].text_1 }}</p>
+                    <h3 class="_title">{{ info[item.id].subtitle_2 }}</h3>
+                    <p class="_info">{{ info[item.id].text_2 }}</p>
+                    <h3 class="_title">{{ info[item.id].subtitle_3 }}</h3>
+                    <p class="_info">{{ info[item.id].text_3 }}</p>
+                    <h3 class="_title">{{ info[item.id].subtitle_4 }}</h3>
+                    <p class="_info">{{ info[item.id].text_4 }}</p>
+                    <h3 class="_title">{{ info[item.id].subtitle_5 }}</h3>
+                    <p class="_info">{{ info[item.id].text_5 }}</p>
+                    <h3 class="_title">{{ info[item.id].subtitle_6 }}</h3>
+                    <p class="_info">{{ info[item.id].text_6 }}</p>
+                    <h3 class="_title _title_final">{{ info[item.id].text_info }}</h3>
+                </ng-template>
+                <div class="_see_more">
+                    <button class="_see_more" (click)="toggleDetail(item)">
+                        {{ item.showDetail ? ' ocultar ' : 'ver detalle' }}
+                    </button>
+                </div>
                 <section class="_container_links">
                     <a class="_link" href="{{ item.link }}" target="_blank">
                         <mat-icon>link</mat-icon>
