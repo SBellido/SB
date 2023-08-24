@@ -1,10 +1,13 @@
 
 <!-- NAVBAR CIRCLE BUTONS -->
 <header class="_header">
-  <div class="_container_logo" (click)="navigateTo('works/home')">
-    <img class="_logo_navbar" src="../assets/images/sb/logo_sb__.svg"
-    alt="Logo de Sebastián Bellido">
+  <div class="_container_logo" [ngClass]="{'clicked': isClicked, 'home': isHomePage()}" (click)="toggleImage()">
   </div>
+  
+  <!-- <div class="_container_logo" (click)="toggleImage()" (click)="navigateTo('works/home')"> -->
+    <!-- <img class="_logo_navbar" src="../assets/images/sb/logo_sb__.svg"
+    alt="Logo de Sebastián Bellido"> 
+  </div>-->
   <section class="_container_buttons">
     <div class="_container_button" *ngFor="let btn of btnNavBar">
       <mat-button class="_button"

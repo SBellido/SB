@@ -9,6 +9,7 @@
   }
   img._img_me {
     border-radius: 50%;
+    border: solid 3px $sexth_color;
     width: 10rem;
     margin: .5rem auto;
   }
@@ -18,9 +19,28 @@
     flex-direction: inherit;
     align-items: inherit;
   }
-  li._little_description_myself {
+  ul._custom-list {
+    list-style: none;
+    padding-inline-start: .5rem;
+    // padding-left: 1em; /* Ajusta el espaciado izquierdo según tus preferencias */
+  }
+  ._custom-list li::before {
+    content: "•"; /* Usamos un punto medio como marcador */
+    color: $sexth_color; /* Cambia "red" al color que desees */
+    display: inline-block;
+    font-size: 2.5em; /* Ajusta el tamaño del marcador */
+    line-height: 0.8em; /* Ajusta el espaciado vertical del marcador */
+    margin-left: -.1em;
+  }
+  li {
     color: $first_color_lighter;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start
+  }
+  li>p {
+    margin-block-start: .3em;
+    margin-left: .5rem;
   }
   article._header_section {
     display: flex;
@@ -52,7 +72,7 @@
   h1._title {
     font-size: 1.3rem;
     font-weight: 400;
-    color: $first_color_lighter;
+    color: $sexth_color;
     margin: 0;
     padding: 0 .5rem;
     margin-block-start: 0em;
@@ -61,7 +81,7 @@
   // section._container_btn_header {
   //   display: flex;
   //   align-items: center;
-  //   flex-direction: row;    
+  //   flex-direction: row;
   //   justify-content: space-between;
   //   width: 17rem;
   // }
@@ -178,7 +198,7 @@
 //   }
 //   ._container_all {
 //     display: flex;
-//     justify-content: center; 
+//     justify-content: center;
 //     margin-bottom: 54rem;
 
 //   }
@@ -200,11 +220,11 @@
 //     animation-delay: 0s;
 //     animation-iteration-count: 1;
 //   }
-//   h1 { 
+//   h1 {
 //     margin: 0;
 //   }
 //   ._concept {
-//     padding: 0rem .1rem;  
+//     padding: 0rem .1rem;
 //     width: auto;
 //     height: auto;
 //     margin: auto;
@@ -225,7 +245,7 @@
 //     height: 60vh;
 //     max-height: 80vh;
 //     padding-top: 3rem;
-   
+
 //   }
 // }
 
@@ -250,7 +270,7 @@
 //     max-height: 80vh;
 //     padding-top: 0rem;
 //   }
-  
+
 // }
 
 // /* SCREEN 1024px */
