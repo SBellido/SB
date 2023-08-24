@@ -55,7 +55,7 @@ info: MoreInfo[] = [
     text_1: 'Scrum',
     subtitle_2: 'Tecnologías:',
     text_2: 'Adobe Xd, Trello, HTML5, CSS3, SASS, Bootstrap 5, Node.js, Angular 10 y 13, PrimeNG, Swagger, Bitbucket.',
-    subtitle_3: ':',
+    subtitle_3: '',
     text_3: '',
     subtitle_4: '',
     text_4: '',
