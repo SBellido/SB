@@ -1,5 +1,5 @@
 /* Angular */
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
 import { ItemNavBar, ItemContact} from '../../../models/models';
 
@@ -10,6 +10,8 @@ import { ItemNavBar, ItemContact} from '../../../models/models';
 })
 
 export class NavbarComponent implements OnInit {
+  @HostBinding('class.clicked') isClicked = false;
+
   hoverStates: { [id: string]: boolean } = {};
   btnNavBar: ItemNavBar[] = [
     { 
@@ -50,34 +52,42 @@ export class NavbarComponent implements OnInit {
     // $design_color_lighter: #fdf0f2;
   ]
 
-  btnContact: ItemContact[] = [
-    { 
-      id: 1, 
-      icon: 'perm_phone_msg', 
-      title: 'llámame', 
-      active: false 
-    },
-    { id: 2, 
-      icon: 'alternate_email', 
-      title: 'escríbeme', 
-      active: false 
-    }
-  ]
+  // btnContact: ItemContact[] = [
+  //   { 
+  //     id: 1, 
+  //     icon: 'perm_phone_msg', 
+  //     title: 'llámame', 
+  //     active: false 
+  //   },
+  //   { id: 2, 
+  //     icon: 'alternate_email', 
+  //     title: 'escríbeme', 
+  //     active: false 
+  //   }
+  // ]
 
   constructor(private router: Router) { 
   }
 
   ngOnInit() {
   }
-
+  isHomePage(): boolean {
+    return this.router.url === '/works/home';
+  }
+  toggleImage() {
+    this.isClicked = !this.isClicked;
+    this.navigateTo('works/home');
+  }
   navigateBtnTo(btn: ItemNavBar) {
     this.setActiveButton(btn.id); 
+    this. isHomePage();
     this.router.navigate([btn.router]);
   }
   navigateTo(destiny: string) {
     for (const btn of this.btnNavBar) {
       btn.active = false;
     }
+    this. isHomePage();
     this.router.navigate([destiny]);
   }
   

@@ -43,16 +43,32 @@
   //   cursor: default;
   // }
 /* ------------NAVBAR LOGO---------------*/
-  ._container_logo {
-    display: flex;
-    align-items: center;
-  }
+div._container_logo {
+  display: flex;
+  align-items: center;
+  height: 2.3rem;
+  width: 2.7rem;
+  cursor: pointer;
+  background-size: cover;
+  transition: background-image 0.3s ease-in-out;
+  background-image: url('../../../../assets/images/sb/logo_sb__.svg');
+}
+div._container_logo.clicked {
+  background-image: url('../../../../assets/images/sb/logo_sb__.svg');
+}
+div._container_logo.home {
+  background-image: url('../../../../assets/images/sb/logo_sb.svg');
+}
+div._container_logo:hover {
+  background-image: url('../../../../assets/images/sb/logo_sb.svg');
+}
+
 /* ------------NAVBAR CIRCLE BUTTONS---------------*/
-  img._logo_navbar {
-    cursor: pointer;
-    padding: 0rem;
-    height: 2rem;
-  }
+  // img._logo_navbar {
+  //   cursor: pointer;
+  //   padding: 0rem;
+  //   height: 2rem;
+  // }
   section._container_buttons {
     display: flex;
     flex-direction: row;
