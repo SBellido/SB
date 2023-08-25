@@ -9,7 +9,7 @@
   }
   img._img_me {
     border-radius: 50%;
-    border: solid 3px $sexth_color;
+    border: solid 3px $fifth_color_light;
     width: 10rem;
     margin: .5rem auto;
   }
@@ -26,7 +26,7 @@
   }
   ._custom-list li::before {
     content: "•"; /* Usamos un punto medio como marcador */
-    color: $sexth_color; /* Cambia "red" al color que desees */
+    color: $fifth_color_light; /* Cambia "red" al color que desees */
     display: inline-block;
     font-size: 2.5em; /* Ajusta el tamaño del marcador */
     line-height: 0.8em; /* Ajusta el espaciado vertical del marcador */
@@ -72,7 +72,7 @@
   h1._title {
     font-size: 1.3rem;
     font-weight: 400;
-    color: $sexth_color;
+    color: $fifth_color_light;
     margin: 0;
     padding: 0 .5rem;
     margin-block-start: 0em;
