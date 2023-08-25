@@ -3,6 +3,7 @@
   div._container_img_personal {
     display: flex;
     justify-content: center;
+    object-fit: contain;
   }
   img._img_personal {
     width: 6rem;
