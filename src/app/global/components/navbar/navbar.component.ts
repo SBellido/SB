@@ -22,7 +22,6 @@ export class NavbarComponent implements OnInit {
       hover: false, 
       styleClass: '_profile',
       router:'works/biography',
-      // hoverColor: 'radial-gradient(circle, #beeefa 3%, #37d4ff 100%)'
       hoverColor: '#37d4ff'
     },
     { 
@@ -33,7 +32,6 @@ export class NavbarComponent implements OnInit {
       styleClass: '_dev', 
       active: false, 
       router:'works/development',
-      // hoverColor: 'radial-gradient(circle, #fff7d8 3%, #ffdc51 100%)'
       hoverColor: '#ffdc51'
     },
     { 
@@ -44,27 +42,12 @@ export class NavbarComponent implements OnInit {
       styleClass: '_design', 
       active: false, 
       router:'works/design',
-      // hoverColor: 'radial-gradient(circle, #fdf0f2 3%, #ff97aa 100%)'
       hoverColor: '#ff97aa'
     },
     // $design_color: #ff97aa;
     // $design_color_light: #fdd6dd;
     // $design_color_lighter: #fdf0f2;
-  ]
-
-  // btnContact: ItemContact[] = [
-  //   { 
-  //     id: 1, 
-  //     icon: 'perm_phone_msg', 
-  //     title: 'llámame', 
-  //     active: false 
-  //   },
-  //   { id: 2, 
-  //     icon: 'alternate_email', 
-  //     title: 'escríbeme', 
-  //     active: false 
-  //   }
-  // ]
+  ];
 
   constructor(private router: Router) { 
   }
