@@ -53,11 +53,11 @@ div._container_logo {
   transition: background-image 0.3s ease-in-out;
   background-image: url('../../../../assets/images/sb/logo_sb__.svg');
 }
-div._container_logo.clicked {
-  height: 2.3rem;
-  width: 2.7rem;
-  background-image: url('../../../../assets/images/sb/logo_sb__.svg');
-}
+// div._container_logo.clicked {
+//   height: 2.3rem;
+//   width: 2.7rem;
+//   background-image: url('../../../../assets/images/sb/logo_sb__.svg');
+// }
 div._container_logo.home {
   height: 2.3rem;
   width: 2.7rem;
