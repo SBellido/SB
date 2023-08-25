@@ -79,6 +79,7 @@
   img._mobile {
     width: 17rem;
     border-radius: 30px;
+    object-fit: contain;
   }
   h4._title {
     color: $third_color;

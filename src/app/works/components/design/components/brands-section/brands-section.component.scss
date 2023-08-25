@@ -42,6 +42,7 @@
   img._polaroid {
     width: 17rem;
     border-radius: 15px;
+    object-fit: contain;
   }
   h4._title {
     color: $design_color;
