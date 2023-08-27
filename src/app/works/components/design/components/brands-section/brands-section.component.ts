@@ -21,16 +21,22 @@ export class BrandsSectionComponent implements OnInit {
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
-          href: 'https://www.adobe.com/la/products/photoshop/free-trial-download.html',
+          href: '',
           src: '../assets/images/tecnologies/photoshop.png',
           title: 'Photoshop',
           alt: 'Logo de Photoshop',
         },
         {
-          href: 'https://www.adobe.com/es/products/illustrator/free-trial-download.html',
+          href: '',
           src: '../assets/images/tecnologies/illustrator.png',
           title: 'Illustrator',
           alt: 'Logo de Illustrator',
+        },
+        {
+          href: '',
+          src: '../assets/images/tecnologies/procreate.png',
+          title: 'Procreate',
+          alt: 'Logo de Procreate',
         }
       ],
     },

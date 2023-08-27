@@ -19,29 +19,35 @@ export class HuntComponent implements OnInit {
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
-          href: 'https://getbootstrap.com/',
+          href: '',
           src: '../assets/images/tecnologies/bootstrap.png',
           title: 'Bootstrap',
           alt: 'Logo de Bootstrap',
         },
         {
-          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          href: '',
           src: '../assets/images/tecnologies/html.png',
           title: 'HTML5',
           alt: 'Logo de HTML5',
         },
         {
-          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          href: '',
           src: '../assets/images/tecnologies/css.png',
           title: 'CSS3',
           alt: 'Logo de CSS3',
         },
         {
-          href: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+          href: '',
           src: '../assets/images/tecnologies/js.png',
           title: 'JavaScript',
           alt: 'Logo de JavaScript',
-        }
+        },
+        {
+          href: '',
+          src: '../assets/images/tecnologies/bitbucket.png',
+          title: 'Bitbucket',
+          alt: 'Logo de Bitbucket',
+        },
       ],
     },
   ];

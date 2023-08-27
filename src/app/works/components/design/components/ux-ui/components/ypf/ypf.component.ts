@@ -42,25 +42,25 @@ export class YpfComponent implements OnInit {
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {
-          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
+          href: '',
           src: '../assets/images/tecnologies/scrum.png',
           title: 'Scrum',
           alt: 'Logo de Scrum',
         },
         {
-          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          href: '',
           src: '../assets/images/tecnologies/azure.png',
           title: 'Azure DevOps',
           alt: 'Logo de Azure',
         },
         {
-          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          href: '',
           src: '../assets/images/tecnologies/xd.png',
           title: 'Adobe Xd',
           alt: 'Logo de Adobe Xd',
         },
         {
-          href: 'https://zeplin.io/',
+          href: '',
           src: '../assets/images/tecnologies/zeplin.png',
           title: 'Zeplin',
           alt: 'Logo de Zeplin',

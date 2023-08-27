@@ -20,28 +20,34 @@ information: Information[] = [
     subtitle: 'Tecnologías utilizadas',
     tecnologies: [
       {
-        href: 'https://angular.io/',
+        href: '',
         src: '../assets/images/tecnologies/angular.png',
         title: 'Angular',
         alt: 'Logo de Angular',
       },
       {
-        href: 'https://swagger.io/',
+        href: '',
         src: '../assets/images/tecnologies/swagger.png',
         title: 'Swagger',
         alt: 'Logo de Swagger',
       },
       {
-        href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+        href: '',
         src: '../assets/images/tecnologies/html.png',
         title: 'HTML5',
         alt: 'Logo de HTML5',
       },
       {
-        href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+        href: '',
         src: '../assets/images/tecnologies/css.png',
         title: 'CSS3',
         alt: 'Logo de CSS3',
+      },
+      {
+        href: '',
+        src: '../assets/images/tecnologies/bitbucket.png',
+        title: 'Bitbucket',
+        alt: 'Logo de Bitbucket',
       },
     ],
   },

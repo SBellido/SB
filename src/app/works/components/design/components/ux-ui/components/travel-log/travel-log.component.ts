@@ -20,31 +20,31 @@ export class TravelLogComponent implements OnInit {
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {
-          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
+          href: '',
           src: '../assets/images/tecnologies/scrum.png',
           title: 'Scrum',
           alt: 'Logo de Scrum',
         },
         {
-          href: 'https://www.atlassian.com/es/software/jira',
+          href: '',
           src: '../assets/images/tecnologies/jira.png',
           title: 'Jira',
           alt: 'Logo de Jira',
         },
         {
-          href: 'https://www.invisionapp.com/',
+          href: '',
           src: '../assets/images/tecnologies/invision.png',
           title: 'InVision',
           alt: 'Logo de InVision',
         },
         {
-          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          href: '',
           src: '../assets/images/tecnologies/html.png',
           title: 'HTML5',
           alt: 'Logo de HTML5',
         },
         {
-          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          href: '',
           src: '../assets/images/tecnologies/css.png',
           title: 'CSS3',
           alt: 'Logo de CSS3',
