@@ -21,35 +21,35 @@ export class VLifeComponent implements OnInit {
   information: Information[] = [
     {
       title: 'V-LIFE | App Mobile',
-      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacción en baja definición, test con usuarios y armado de prototipos en alta definición, utilizando Adobe Xd y componentes UI Ionic bajo metodología ágil Scrum. El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020 en Argentina.',
+      text: 'App mobile que conecta pacientes con profesionales de la salud. En el año 2019, Sebastián fue encargado de realizar rediseño de marca, diseño UX | UI, flujo de interacción en baja definición, test con usuarios y armado de prototipos interactivos en alta definición, utilizando Adobe Xd y componentes UI Ionic bajo metodología ágil Scrum. El trabajo fue realizado para Trenda Software ocupando el rol de UX Design Lead. La app fue lanzada en 2020 en Argentina.',
       subtitle: 'Metodología | Tecnologías',
       tecnologies: [
         {
-          href: 'https://www.scrum.org/resources/blog/que-es-scrum',
+          href: '',
           src: '../assets/images/tecnologies/scrum.png',
           title: 'Scrum',
           alt: 'Logo de Scrum',
         },
         {
-          href: 'https://asana.com/es',
+          href: '',
           src: '../assets/images/tecnologies/asana.png',
           title: 'Asana',
           alt: 'Logo de Asana',
         },
         {
-          href: 'https://ionicframework.com/docs/components',
+          href: '',
           src: '../assets/images/tecnologies/ionic.png',
           title: 'UI Ionic',
           alt: 'Logo de Ionic',
         },
         {
-          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          href: '',
           src: '../assets/images/tecnologies/xd.png',
           title: 'Adobe Xd',
           alt: 'Logo de Adobe Xd',
         },
         {
-          href: 'https://zeplin.io/',
+          href: '',
           src: '../assets/images/tecnologies/zeplin.png',
           title: 'Zeplin',
           alt: 'Logo de Zeplin',

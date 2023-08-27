@@ -25,25 +25,25 @@ export class NighxComponent implements OnInit {
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
-          href: 'https://helpx.adobe.com/es/xd/help/adobe-xd-overview.html',
+          href: '',
           src: '../assets/images/tecnologies/xd.png',
           title: 'Adobe Xd',
           alt: 'Logo de Adobe Xd',
         },
         {
-          href: 'https://developer.mozilla.org/es/docs/Web/HTML',
+          href: '',
           src: '../assets/images/tecnologies/html.png',
           title: 'HTML5',
           alt: 'Logo de HTML5',
         },
         {
-          href: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+          href: '',
           src: '../assets/images/tecnologies/css.png',
           title: 'CSS3',
           alt: 'Logo de CSS3',
         },
         {
-          href: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+          href: '',
           src: '../assets/images/tecnologies/js.png',
           title: 'JavaScript',
           alt: 'Logo de JavaScript',

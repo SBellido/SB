@@ -108,6 +108,11 @@
     justify-content: center;
   }
 }
+@media (min-width: 1080px) {
+  div._container_polaroid {
+    left: 2.4rem;
+  }
+}
 @media (min-width: 1440px) {
   article._header_section {
     padding: 10rem 35rem .5rem 35rem;

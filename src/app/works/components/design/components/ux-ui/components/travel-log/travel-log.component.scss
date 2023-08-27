@@ -109,11 +109,6 @@
       padding: 2rem 12rem;
     }
 }
-@media (min-width: 1080px) {
-  div._container_mobile {
-    left: 6.9rem;
-  }
-}
 @media (min-width: 1024px) {
   article._desktop_version {
     display: flex; 
@@ -136,6 +131,11 @@
   div._container_selector {
     display: flex;
     justify-content: center;
+  }
+}
+@media (min-width: 1080px) {
+  div._container_mobile {
+    left: 6.9rem;
   }
 }
 @media (min-width: 1440px) {
