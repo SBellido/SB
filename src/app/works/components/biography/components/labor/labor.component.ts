@@ -152,7 +152,7 @@ info: MoreInfo[] = [
       showDetail: false,
     },
     {
-      id: 3,
+      id: 4,
       img: '../../../../assets/images/biography/profetional/trenda.png',
       href: 'http://trendasoftware.com/',
       description_img: 'Logo de la Trenda Software',
