@@ -86,7 +86,7 @@ info: MoreInfo[] = [
   {
     id: 4,
     subtitle: 'Tareas:',
-    text: ' Rediseño de marca, captura de requerimientos, flujo de interacción en baja definición, test con usuarios, diseño UX | UI, armado de prototipos interactivos en alta definición y documentación técnica del diseño para traspaso a desarrollo. Aplicación móvil que conecta pacientes con profesionales de la salud. Proyecto desarrollado en equipo, bajo metodologías ágiles y uso de tablero.',
+    text: 'Rediseño de marca, captura de requerimientos, flujo de interacción en baja definición, test con usuarios, diseño UX | UI, armado de prototipos interactivos en alta definición y documentación técnica del diseño para traspaso a desarrollo. Aplicación móvil que conecta pacientes con profesionales de la salud. Proyecto desarrollado en equipo, bajo metodologías ágiles y uso de tablero.',
     subtitle_1: 'Metodología:',
     text_1: 'Scrum',
     subtitle_2: 'Tecnologías:',

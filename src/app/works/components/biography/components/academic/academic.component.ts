@@ -42,7 +42,7 @@ export class AcademicComponent implements OnInit {
       acronyms_career: 'Tramo Pedagógico',
       year: '2015 | 2016',
       name_career: 'Tramo Pedagógico para Profesionales',
-      link: 'https://www.vocaciondocente.com/',
+      link: 'http://institutovocaciondocente.ar/postitulos.html',
       description_link: 'institución',
       showDetail: false,
     },
