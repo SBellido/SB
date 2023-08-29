@@ -29,14 +29,14 @@ export class DownloadComponent implements OnInit {
   //     });
   // }
   downloadCV() {
-    const url = '../../../../assets/images/biography/cvSBellido.pdf';
+    const url = '../../../../assets/images/biography/cvSBellido_.pdf';
     fetch(url)
       .then(response => response.blob())
       .then(blob => {
         const blobUrl = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = blobUrl;
-        link.download = 'cvSBellido.pdf';
+        link.download = 'cvSBellido_.pdf';
         link.click();
         URL.revokeObjectURL(blobUrl);
 
