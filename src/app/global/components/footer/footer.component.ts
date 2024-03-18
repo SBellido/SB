@@ -31,17 +31,24 @@ export class FooterComponent implements OnInit {
       title:'' 
     },
     {  
-      route: 'mailto:sebastianbellidodg@gmail.com?subject=Hola Seba!&body=¿Qué propones?.', 
-      img: '../../../../assets/images/social_network/outlook/logo_social_network_outlook.svg',
-      name: 'OutLook', 
-      text:'logo de OutLook',
-      title:'' 
-    },
-    {  
       route: 'https://www.linkedin.com/in/sebastian-bellido-9a0a6681/', 
       img: '../../../../assets/images/social_network/linkeding/logo_social_network_linkedin.svg',
       name: 'LinkedIn', 
       text:'logo de linkedin',
+      title:'' 
+    },
+    {  
+      route: 'https://www.instagram.com/sebellido/', 
+      img: '../../../../assets/images/social_network/instagram/logo_social_network_instagram.svg',
+      name: 'Instagram', 
+      text:'logo de Instagram',
+      title:'' 
+    },
+    {  
+      route: 'mailto:sebastianbellidodg@gmail.com?subject=Hola Seba!&body=¿Qué propones?.', 
+      img: '../../../../assets/images/social_network/outlook/logo_social_network_outlook.svg',
+      name: 'OutLook', 
+      text:'logo de OutLook',
       title:'' 
     },
     {  

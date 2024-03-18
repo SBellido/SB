@@ -13,7 +13,7 @@ export class DevelopmentComponent implements OnInit {
   parentColorHover: string = 'linear-gradient(0deg, #fbe9a2 33%, #fff7d8 100%)'; 
   /*--------VARIABLES -------*/ 
 
-header: HeaderSection[] = [
+  header: HeaderSection[] = [
     {
       area: 'desarrollo',
       icon: 'developer_mode',
@@ -26,9 +26,9 @@ header: HeaderSection[] = [
 
   sections: ItemsSection[] = [
     {
-      title: 'angular',
+      title: 'aplicaciones',
       visible: false,
-      text: 'Angular es un framework de desarrollo front-end ampliamente utilizado que permite crear aplicaciones web dinámicas y de una sola página de manera eficiente. Basado en TypeScript, ofrece una estructura robusta y modular para construir interfaces interactivas y escalables. Angular simplifica la gestión de estados, la manipulación del DOM y la creación de componentes reutilizables. Además, facilita la interacción con servicios web y APIs, permitiendo la construcción de aplicaciones en tiempo real. Su enfoque en la arquitectura MVC (Modelo-Vista-Controlador) y la programación reactiva brindan una base sólida para desarrollar experiencias web modernas y altamente funcionales.',
+      text: 'Una aplicación web es un programa informático que opera en un navegador web, accesible a través de Internet o una red local. Estas aplicaciones permiten a los usuarios interactuar mediante interfaces dinámicas, ofreciendo funcionalidades desde la visualización de información estática hasta la interacción en tiempo real con bases de datos y servicios externos. Por otro lado, una aplicación móvil es un software diseñado para ejecutarse en dispositivos móviles como smartphones y tablets. Estas aplicaciones están optimizadas para pantallas táctiles y aprovechan características como la geolocalización, la cámara y los sensores de movimiento. Tanto aplicaciones web como móviles buscan proporcionar a los usuarios experiencias intuitivas y eficientes, adaptadas a las características de cada plataforma. Para ello, los desarrolladores utilizan tecnologías como React y Angular, que les permiten crear interfaces atractivas y .',
       disabled: false,
       wordsToHighlight: ['Framework', 'de código abierto', 'para crear aplicaciones web'],
       isHovered: false,
@@ -58,7 +58,7 @@ header: HeaderSection[] = [
       ],
     },
     {
-      title: 'bootstrap',
+      title: 'webs',
       visible: false,
       text: 'Bootstrap es un framework front-end de código abierto que simplifica el proceso de diseño y desarrollo de sitios web y aplicaciones. Proporciona un conjunto de herramientas preestablecidas, componentes y estilos de diseño responsivo que permiten a los desarrolladores crear interfaces visuales atractivas y adaptables de manera eficiente. Al aprovechar las clases CSS y los componentes reutilizables, Bootstrap agiliza la creación de diseños consistentes y funcionales, optimizados para distintos dispositivos y tamaños de pantalla. Su enfoque en la estructura modular y la adaptabilidad lo convierte en una herramienta esencial para construir interfaces modernas y atractivas en el mundo de la programación web.',
       disabled: false,
@@ -82,7 +82,7 @@ header: HeaderSection[] = [
       ]
     },
     {
-      title: 'javascript',
+      title: 'experimental',
       visible: false,
       text: '',
       disabled: true,
