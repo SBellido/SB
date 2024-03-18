@@ -14,6 +14,24 @@ info: MoreInfo[] = [
   {
     id: 0,
     subtitle: 'Tareas:',
+    text: 'Diseñar interfaces de usuario y flujos de interacción, analizar funcionalidades, comprender lógica del negocio, implementar soluciones.',
+    subtitle_1: 'Metodología:',
+    text_1: 'En cascada',
+    subtitle_2: 'Tecnologías:',
+    text_2: 'React, DevExtreme, Azure Devops, GitHub.',
+    subtitle_3: 'Aptitudes:',
+    text_3: 'Diseño web adaptable, Diseño y prototipado, Comunicación, Trabajo en equipo, Desarrollo front-end, Análisis funcional, Autogestión',
+    subtitle_4: '',
+    text_4: '',
+    subtitle_5: '',
+    text_5: '',
+    subtitle_6: '',
+    text_6: '',
+    text_info: 'Período 2023 / 2024',
+  },
+  {
+    id: 1,
+    subtitle: 'Tareas:',
     text: 'Preparar clases utilizando transparencias, implementar interfaces simples como ejemplo para ejercicios y temas dados, despejar dudas a consultas, corregir entregas.',
     subtitle_1: 'Metodología:',
     text_1: 'E-learning',
@@ -30,7 +48,7 @@ info: MoreInfo[] = [
     text_info: 'Período 2021 / en curso',
   },
   {
-    id: 1,
+    id: 2,
     subtitle: 'Tareas:',
     text: 'Diseño y realización de entrevistas con usuarios, análisis del problema, estudio de lógica del negocio, diseño UX | UI, flujo de interacción y arquitectura de la información, test con usuarios finales, diseño de prototipos y presentaciones al cliente. Participó durante un año en el proyecto, diseñó la aplicación completa y llegó a ocupar el rol de Analista Funcional por el conocimiento adquirido de la lógica del negocio y luego Product Owner por la capacidad para transmitir técnicamente los requerimientos al equipo de desarrollo. El proyecto se llevó a cabo aplicando metodologías ágiles y uso de tablero.',
     subtitle_1: 'Metodología:',
@@ -48,7 +66,7 @@ info: MoreInfo[] = [
     text_info: 'Período 2022 - 2023'
   },
   {
-    id: 2,
+    id: 3,
     subtitle: 'Tareas:',
     text: 'Diseño y desarrollo de webs empresariales y aplicaciones de productos digitales para clientes y productos propios de la compañía. Diseño de interfaz, flujos de interacción, desarrollo e implementación de “Hunt (tracking future)”. Un producto digital de trackeo, despacho y recepción de envíos, armado de rutas, asignación de choferes, transporte y seguimiento del envío en tiempo real. Diseño de app de configuración de envíos postales, implementación de formularios complejos multi-step, registro de usuarios, inicio de sesión, cambio de contraseña y cambio de tema desde la configuración del proyecto (dos branding para un mismo sistema, QX Logística y XUBOX). Todos los proyectos se desarrollaron en equipo, aplicando metodologías ágiles, uso de tablero y versionado de código.',
     subtitle_1: 'Metodología:',
@@ -66,7 +84,7 @@ info: MoreInfo[] = [
     text_info: 'Período 2020 - 2022'
   },
   {
-    id: 3,
+    id: 4,
     subtitle: 'Objetivo:',
     text: 'Diseñar e implementar un sistema web que sirva como plataforma de diversas apps online. Incorporar una app dentro de la plataforma implementada, en base a un paradigma de prueba y recolección de datos. Prueba de la plataforma y de la app.',
     subtitle_1: 'Tareas:',
@@ -84,7 +102,7 @@ info: MoreInfo[] = [
     text_info: 'Período 2020'
   },
   {
-    id: 4,
+    id: 5,
     subtitle: 'Tareas:',
     text: 'Rediseño de marca, captura de requerimientos, flujo de interacción en baja definición, test con usuarios, diseño UX | UI, armado de prototipos interactivos en alta definición y documentación técnica del diseño para traspaso a desarrollo. Aplicación móvil que conecta pacientes con profesionales de la salud. Proyecto desarrollado en equipo, bajo metodologías ágiles y uso de tablero.',
     subtitle_1: 'Metodología:',
@@ -105,6 +123,18 @@ info: MoreInfo[] = [
   items: ItemProfile[] = [ 
     {
       id: 0,
+      img: '../../../../assets/images/biography/profetional/ruano.png',
+      href: 'https://www.ruano.com/',
+      description_img: 'Logo de Ruano',
+      acronyms_career: 'Desarrollador Frontend',
+      year: '2023 | 2024',
+      name_career: 'Desarrollo en React utilizando librería DevExtreme. Web App "Portal de Despachos" orientada resolver problemáticas relacionadas con la lógica de negocio de Gestorías.',
+      link: 'https://www.ruano.com/',
+      description_link: 'empresa',
+      showDetail: false,
+    },
+    {
+      id: 1,
       img: '../../../../assets/images/biography/profetional/coderhouse.png',
       href: 'https://www.coderhouse.es/nosotros',
       description_img: 'Logo de Coderhouse',
@@ -116,7 +146,7 @@ info: MoreInfo[] = [
       showDetail: false,
     },
     {
-      id: 1,
+      id: 2,
       img: '../../../../assets/images/biography/profetional/tsoft.png',
       href: 'https://www.tsoftglobal.com/',
       description_img: 'Logo de la Tsoft',
@@ -128,7 +158,7 @@ info: MoreInfo[] = [
       showDetail: false,
     },
     {
-      id: 2,
+      id: 3,
       img: '../../../../assets/images/biography/profetional/stormtech.png',
       href: 'https://stormtechlabs.com/#container-home',
       description_img: 'Logo de la Stormtech',
@@ -140,7 +170,7 @@ info: MoreInfo[] = [
       showDetail: false,
     },
     {
-      id: 3,
+      id: 4,
       img: '../../../../assets/images/biography/profetional/medialab.png',
       href: 'https://medialab.com.ar/',
       description_img: 'Logo de MediaLab',
@@ -152,7 +182,7 @@ info: MoreInfo[] = [
       showDetail: false,
     },
     {
-      id: 4,
+      id: 5,
       img: '../../../../assets/images/biography/profetional/trenda.png',
       href: 'http://trendasoftware.com/',
       description_img: 'Logo de la Trenda Software',
