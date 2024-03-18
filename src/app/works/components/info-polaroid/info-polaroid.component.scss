@@ -18,6 +18,12 @@
       width: 22rem;
   }
 }
+@media (min-width: 1080px) {
+  div._container_info {
+    width: 22rem;
+    margin-left: 3rem;
+  }  
+}
 @media (min-width: 1440px) {
   div._container_info {
     width: 23rem;
