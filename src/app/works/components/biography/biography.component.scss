@@ -43,16 +43,6 @@ $section-bg-color-disabled: #b8f1ff;
       $profile_color_lighter 100%
     );
   }
-  // section._container_item:hover { 
-  //   background: linear-gradient(
-  //     0deg, $profile_color_light 33%, 
-  //     $profile_color_lighter 100%
-  //   );
-  //   &:hover {
-  //     -webkit-filter: saturate(50%);
-  //     filter: saturate(20%);
-  //   }
-  // }
   section._container_career {
     display: flex;
     align-items: center;
@@ -82,7 +72,7 @@ $section-bg-color-disabled: #b8f1ff;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    width: 55rem;
+    width: 62rem;
   }
   div._scroll {
     height: 20rem;
