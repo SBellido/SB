@@ -34,10 +34,6 @@
       -webkit-filter: saturate(50%);
       filter: saturate(50%);
     }
-    // &._disabled {
-    //   background: $section-bg-color-disabled;
-    //   pointer-events: none;  
-    // }
   }
   article._disabled {
     opacity: .5;
@@ -108,7 +104,7 @@
   div._container_component {
     flex-direction: row;
     align-items: flex-start;
-    width: 55rem;
+    width: 62rem;
   }
   section._container_item{ 
     width: 22vw;
