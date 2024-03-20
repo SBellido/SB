@@ -6,13 +6,14 @@
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
-    <app-gallery-desptop class="_gallery"
+    <app-gallery-desktop class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
-    </app-gallery-desptop>
+    </app-gallery-desktop>
     <div class="_container_selector">
     </div>
+    <button (click)="openPopup()">Jugar</button>
     <app-info
       [information]="information">
     </app-info>
@@ -30,11 +31,12 @@
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
+    <button class="_playGame" (click)="openPopup()">Jugar</button>
     <div class="_container_gallery_selector">
-      <app-gallery-desptop class="_gallery"
+      <app-gallery-desktop class="_gallery"
         [imagesList]="imagesList" 
         [imgGallery]="imgGallery">
-      </app-gallery-desptop>
+      </app-gallery-desktop>
     </div>
     <div class="_container_info_works">
       <app-info
@@ -42,10 +44,4 @@
       </app-info>
     </div>
   </article>
-  <!-- <div class="_container_more_works">
-    <div class="_container_text_more_works">
-      <h4 class="_title">Más trabajos de desarrollo/bootstrap</h4>
-    </div>
-    <app-brands-buttons [brands]="brands"></app-brands-buttons>
-  </div> -->
 </article>

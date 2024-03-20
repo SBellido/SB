@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
+import { MatDialog } from '@angular/material/dialog';
+import { PopupComponent } from '../../../../../global/components/popup/popup.component';
 
 @Component({
   selector: 'app-game',
@@ -9,6 +11,7 @@ import { Button, HeaderSection, Information } from 'src/app/models/models';
 })
 
 export class GameComponent implements OnInit {
+  
   dev_color: string = '#ffdd57';
   routerLink: string = '../';
   currentImageNumber: number = 1;
@@ -26,11 +29,15 @@ export class GameComponent implements OnInit {
   imgGallery: string = '../assets/images/dev/game/0.png';
   imagesList : string[] = [
     '../assets/images/dev/game/0.png',    
+    '../assets/images/dev/game/1.png',    
+    '../assets/images/dev/game/2.png',    
+    '../assets/images/dev/game/3.png',    
   ];
+
   information: Information[] = [
     {
       title: 'Zombie 404 | Game Runner',
-      text: '  Durante los años 2020, 2021 y 2022, Sebastián integra el equipo de desarrollo de Stormtech SL. Participó en varios proyectos como Desarrollador Frontend y Diseñador UX/UI. Una de las tareas asignadas fue rediseñar el sitio oficial de la compañia. Se definieron tecnologías como Bootstrap y JavaScript por la simplicidad del proyecto, la velocidad con la que se lo necesitaba activo y por no ser un producto que requiera gran escalabilidad. Es una Landing Page mobile first, simple y ordenada que muestra los servicios que ofrece la compañía, los clientes con los que ha trabajado, las tecnologías que utilizan en sus desarrollos y un formulario de contacto.',
+      text: 'Video Juego desarrollado en el marco de la materia Interfaces de Usuario e Interacción de la Tecnicatura en Desarrollo de Aplicaciones Informáticas (TUDAI) de la Universidad Nacional del Centro de la Provincia de Buenos Aires (UniCen). El práctico consistió en implementar un video juego de tipo "Runner" donde se debía resolver el loop del juego, el movimiento del fondo en capas, las animaciones del personaje (salto, caminata, muerte), la aparición de obstáculos y la detección de la colisión entre los obstáculos en pantalla y el personaje que provoque su muerte. Se agregó snido y se trabajó en la estética y el diseño del juego.',
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
@@ -77,12 +84,24 @@ export class GameComponent implements OnInit {
     // }
   ]
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private dialog: MatDialog) { }
 
+  openPopup(): void {
+    const dialogRef = this.dialog.open(PopupComponent, {
+      width: '600px', // Ajusta el ancho según tus necesidades
+      data: { /* Puedes pasar datos al popup si es necesario */ }
+    });
+
+    // Puedes realizar acciones después de que el popup se cierre, si es necesario
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('El popup se ha cerrado');
+    });
+  }
+  
   ngOnInit(): void {
     this.topFunction();
-    // this.updateButtonStatus();
-  }
+  console.log("Imagen actual:", this.imgGallery);
+ }
   
 /* ----------- MÉTODOS ----------- */
   topFunction() {
