@@ -1,0 +1,51 @@
+<app-header-section
+  [header]="header">
+</app-header-section>
+<article class="_mobile_version">
+  <article class="_container_all">
+    <div class="_container_desktop">
+      <img class="_desktop" src="../assets/images/desktop.png" alt="">
+    </div>
+    <app-gallery-desptop class="_gallery"
+      [imagesList]="imagesList" 
+      [imgGallery]="imgGallery"
+      [totalImages]="imagesList.length">
+    </app-gallery-desptop>
+    <div class="_container_selector">
+    </div>
+    <app-info
+      [information]="information">
+    </app-info>
+  </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de desarrollo/experimental</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
+</article>
+
+<article class="_desktop_version">
+  <article class="_container_all">
+    <div class="_container_desktop">
+      <img class="_desktop" src="../assets/images/desktop.png" alt="">
+    </div>
+    <div class="_container_gallery_selector">
+      <app-gallery-desptop class="_gallery"
+        [imagesList]="imagesList" 
+        [imgGallery]="imgGallery">
+      </app-gallery-desptop>
+    </div>
+    <div class="_container_info_works">
+      <app-info
+        [information]="information">
+      </app-info>
+    </div>
+  </article>
+  <!-- <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de desarrollo/bootstrap</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div> -->
+</article>

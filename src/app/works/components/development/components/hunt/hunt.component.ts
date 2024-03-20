@@ -53,7 +53,7 @@ export class HuntComponent implements OnInit {
   ];
   header: HeaderSection[] = [
     {
-    area: 'desarrollo/bootstrap',
+    area: 'desarrollo/webs',
     icon: 'developer_mode',
     routerLink: '../../',
     isFlows: true,

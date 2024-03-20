@@ -90,7 +90,7 @@ export class DevelopmentComponent implements OnInit {
       wordsToHighlight: [],
       brandsData: [
         {
-          route: 'works/development/stormtech',
+          route: 'works/development/game',
           img: '../assets/images/dev/game/zombie_logo.png',
           name: 'Game Runner',
           text: 'Ícono con cara de zombie',

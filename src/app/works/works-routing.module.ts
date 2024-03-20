@@ -22,6 +22,7 @@ import { HuntComponent } from './components/development/components/hunt/hunt.com
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
+import { GameComponent } from './components/development/components/game/game.component';
 
 const routes: Routes = [
   {
@@ -98,6 +99,11 @@ const routes: Routes = [
         path: 'development/hunt',
         pathMatch: 'full',
         component: HuntComponent
+      },
+      {
+        path: 'development/game',
+        pathMatch: 'full',
+        component: GameComponent
       },
       {
         path: 'biography',
