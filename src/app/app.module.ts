@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorksModule } from './works/works.module';
 import { GlobalModule } from "./global/global.module";
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
     declarations: [
@@ -18,7 +20,8 @@ import { GlobalModule } from "./global/global.module";
       AppRoutingModule,
       BrowserAnimationsModule,
       WorksModule,
-      GlobalModule
+      GlobalModule,
+      MatDialogModule
     ],
     bootstrap: [AppComponent],
 })
