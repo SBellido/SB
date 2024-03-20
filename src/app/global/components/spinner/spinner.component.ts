@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-loader',
@@ -11,14 +11,15 @@ export class LoaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // Espera máximo 2 segundos para que se complete la carga
     setTimeout(() => {
-      this.isLoading = false; // Después de 2 segundos, establece isLoading a false para ocultar el spinner
-    }, 1500);
+      this.isLoading = false;
+    }, 1200);
     
-    // Listener para verificar si la carga se completó antes de los 2 segundos
-    window.addEventListener('load', () => {
-      this.isLoading = false; // Después de cargar completamente la página, establece isLoading a false para ocultar el spinner
-    });
+  }
+  @HostListener('window:load', ['$event'])
+  onLoad(event: Event): void {
+    if (this.isLoading) {
+      this.isLoading = false;
+    }
   }
 }
