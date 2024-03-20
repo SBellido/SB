@@ -30,7 +30,7 @@ export class DevelopmentComponent implements OnInit {
       visible: false,
       text: 'Una aplicación web es un programa informático que opera en un navegador web, accesible a través de Internet o una red local. Estas aplicaciones permiten a los usuarios interactuar mediante interfaces dinámicas, ofreciendo funcionalidades desde la visualización de información estática hasta la interacción en tiempo real con bases de datos y servicios externos. Por otro lado, una aplicación móvil es un software diseñado para ejecutarse en dispositivos móviles como smartphones y tablets. Estas aplicaciones están optimizadas para pantallas táctiles y aprovechan características como la geolocalización, la cámara y los sensores de movimiento. Tanto aplicaciones web como móviles buscan proporcionar a los usuarios experiencias intuitivas y eficientes, adaptadas a las características de cada plataforma. Para ello, los desarrolladores utilizan tecnologías como React y Angular, que les permiten crear interfaces atractivas y .',
       disabled: false,
-      wordsToHighlight: ['Framework', 'de código abierto', 'para crear aplicaciones web'],
+      wordsToHighlight: [],
       isHovered: false,
       brandsData: [
         {
@@ -63,7 +63,7 @@ export class DevelopmentComponent implements OnInit {
       text: 'Un sitio web es un conjunto de páginas digitales alojadas en un servidor y accesibles a través de Internet. Estas páginas están diseñadas para ser visualizadas en un navegador web y pueden contener texto, imágenes, videos y otros elementos interactivos. HTML5 semántico es fundamental para estructurar el contenido de un sitio web de manera significativa. Utiliza etiquetas que describen el propósito y la función de cada elemento, lo que mejora la accesibilidad y la indexación en motores de búsqueda. CSS (Cascading Style Sheets) se encarga de definir el estilo visual del sitio web, incluyendo el diseño, los colores, las fuentes y los efectos visuales. Esto permite crear una apariencia coherente y atractiva en todas las páginas. JavaScript proporciona la interactividad y la funcionalidad dinámica en un sitio web. Permite agregar efectos visuales, validar formularios, cargar contenido de manera asíncrona y mucho más, mejorando la experiencia del usuario. Bootstrap es un framework front-end que ofrece herramientas predefinidas, componentes y estilos responsivos para agilizar el desarrollo web. Con Bootstrap, los desarrolladores pueden crear interfaces atractivas y adaptables de manera eficiente, optimizadas para diferentes dispositivos y tamaños de pantalla.',
       disabled: false,
       isHovered: false,
-      wordsToHighlight: ['Lorem ipsum dolor', 'adipisicing elit', 'asperiores'],
+      wordsToHighlight: [],
       brandsData: [
         {
           route: 'works/development/stormtech',
@@ -84,11 +84,19 @@ export class DevelopmentComponent implements OnInit {
     {
       title: 'experimental',
       visible: false,
-      text: '',
-      disabled: true,
+      text: 'El desarrollo experimental en programación implica explorar nuevas ideas, tecnologías y enfoques en este ámbito de una manera más libre y sin las restricciones típicas de un entorno laboral. Es un proceso creativo y dinámico que permite expandir habilidades y conocimientos trabajando en proyectos que apasionan. En este contexto, los desarrolladores pueden embarcarse en la creación de proyectos innovadores, sin necesariamente tener un objetivo comercial definido. Pueden experimentar con diferentes lenguajes de programación, frameworks, bibliotecas y herramientas, explorando sus capacidades y límites. Este enfoque les brinda la libertad de probar nuevas técnicas de codificación, resolver problemas complejos y aprender de los errores sin la presión de cumplir con plazos o requisitos específicos. El desarrollo experimental de programación a nivel personal también fomenta la colaboración y el intercambio de ideas con otros desarrolladores a través de comunidades en línea, foros y eventos relacionados con la tecnología. Estas interacciones pueden llevar a la retroalimentación constructiva, el descubrimiento de nuevas perspectivas y la mejora continua de las habilidades técnicas.',
+      disabled: false,
       isHovered: false,
       wordsToHighlight: [],
-      brandsData: [],
+      brandsData: [
+        {
+          route: 'works/development/stormtech',
+          img: '../assets/images/dev/game/zombie_logo.png',
+          name: 'Game Runner',
+          text: 'Ícono con cara de zombie',
+          title: ''
+        },
+      ],
     },
   ];
 
