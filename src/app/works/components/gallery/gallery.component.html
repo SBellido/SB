@@ -4,6 +4,8 @@
             [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
             <mat-icon>navigate_before</mat-icon>
         </button>
+        <app-loader></app-loader>
+
         <div class="_container_image">
             <img class="_image_gallery" alt="First slide"
             [src]="imgGallery">
