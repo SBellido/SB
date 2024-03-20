@@ -54,7 +54,7 @@ export class InvestigarComponent implements OnInit {
   ];
   header: HeaderSection[] = [
     {
-    area: 'desarrollo/angular',
+    area: 'desarrollo/aplicaciones',
     icon: 'developer_mode',
     routerLink: '../../',
     isFlows: true,

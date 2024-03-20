@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-gallery-desptop',
-  templateUrl: './gallery-desptop.component.html',
-  styleUrls: ['./gallery-desptop.component.scss']
+  selector: 'app-gallery-desktop',
+  templateUrl: './gallery-desktop.component.html',
+  styleUrls: ['./gallery-desktop.component.scss']
 })
 
-export class GalleryDesptopComponent implements OnInit {
+export class GalleryDesktopComponent implements OnInit {
 
 /*--------VARIABLES -------*/ 
   currentImageNumber: number = 1;
@@ -23,6 +23,8 @@ export class GalleryDesptopComponent implements OnInit {
   @Input() totalImages: number = 0;
 
   ngOnInit(): void {
+    console.log("Imagen actual:", this.imgGallery);
+
   }
 
   /*--------MÉTODOS -------*/ 

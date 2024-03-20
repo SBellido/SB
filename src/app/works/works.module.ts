@@ -26,7 +26,7 @@ import { NighxComponent } from './components/design/components/ux-ui/components/
 import { YpfComponent } from './components/design/components/ux-ui/components/ypf/ypf.component';
 import { BrandsButtonsComponent } from './components/brands-buttons/brands-buttons.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
-import { GalleryDesptopComponent } from './components/gallery-desptop/gallery-desptop.component';
+import { GalleryDesktopComponent } from './components/gallery-desktop/gallery-desktop.component';
 import { InvestigarComponent } from './components/development/components/investigar/investigar.component';
 import { XuboxComponent } from './components/development/components/xubox/xubox.component';
 import { HuntComponent } from './components/development/components/hunt/hunt.component';
@@ -42,6 +42,7 @@ import { TecnologiesComponent } from './components/tecnologies/tecnologies.compo
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
 import { InfoMobileComponent } from './components/info-mobile/info-mobile.component';
 import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.component';
+import { GameComponent } from './components/development/components/game/game.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.
     YpfComponent,
     BrandsButtonsComponent,
     GalleryComponent,
-    GalleryDesptopComponent,
+    GalleryDesktopComponent,
     InvestigarComponent,
     XuboxComponent,
     HuntComponent,
@@ -74,7 +75,8 @@ import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.
     TecnologiesComponent,
     HeaderSectionComponent,
     InfoMobileComponent,
-    InfoPolaroidComponent
+    InfoPolaroidComponent,
+    GameComponent
   ],
   imports: [
     CommonModule,
