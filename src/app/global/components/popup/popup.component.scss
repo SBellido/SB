@@ -1,0 +1,24 @@
+@import '../../global.component.scss';
+
+/* SCREEN 0px */
+@media (min-width: 0px) { 
+  
+  /*-------------HEADER------------*/
+  ::ng-deep .mat-dialog-container {
+    padding: 1rem;
+  }
+
+  ::ng-deep .cdk-overlay-dark-backdrop {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  section._popupHeader {
+    padding: 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: $dev_color_gradient;
+  }
+  
+}

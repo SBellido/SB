@@ -32,6 +32,8 @@ export class GameComponent implements OnInit {
     '../assets/images/dev/game/1.png',    
     '../assets/images/dev/game/2.png',    
     '../assets/images/dev/game/3.png',    
+    '../assets/images/dev/game/4.png',    
+    '../assets/images/dev/game/5.png',    
   ];
 
   information: Information[] = [

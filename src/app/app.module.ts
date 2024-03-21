@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WorksModule } from './works/works.module';
 import { GlobalModule } from "./global/global.module";
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MatDialogModule } from '@angular/material/dialog';
       BrowserAnimationsModule,
       WorksModule,
       GlobalModule,
-      MatDialogModule
+      MatDialogModule,
+      MatIconModule
     ],
     bootstrap: [AppComponent],
 })

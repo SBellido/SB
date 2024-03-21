@@ -1,3 +1,11 @@
-<h1>Popup Content</h1>
-<p>Este es un ejemplo de contenido de popup. Puedes personalizarlo según tus necesidades.</p>
-<button mat-button (click)="onClose()">Cerrar</button>
+<article class="_popup">
+  <section class="_popupHeader">
+    <h5>Zombie 404</h5>
+    <button mat-icon-button (click)="onClose()">
+      <mat-icon aria-label="Cerrar">close</mat-icon>
+    </button>
+  </section>
+  <section class="_popupBody">
+    <a href="../../../works/components/development/components/game/proyect/game.html" target="_blank">Abrir el juego</a>
+  </section>
+</article>
