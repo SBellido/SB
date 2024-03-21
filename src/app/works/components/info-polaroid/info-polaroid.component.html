@@ -1,15 +1,14 @@
 <section class="_container_info_tecno" *ngFor="let info of information">
-  <div class="_container_info">
-      <h4 class="_title_product">{{ info.title }}</h4>
-      <div class="_scroll">
-          <p class="_p_card">{{ info.text }}</p> 
-      </div> 
-      <h4 class="_title_tecno">{{ info.subtitle }}</h4><hr class="_hr">
-      
-      <div class="_container_tecno">
-          <app-tecnologies class="_tecno"
-              [tecnologies]="info.tecnologies">
-          </app-tecnologies>
-      </div>
+    <div class="_container_info">
+        <h4 class="_title_product">{{ info.title }}</h4>
+        <div class="_scroll">
+            <p class="_p_card">{{ info.text }}</p> 
+        </div> 
+        <h4 class="_title_tecno">{{ info.subtitle }}</h4><hr class="_hr">      
+        <div class="_container_tecno">
+            <app-tecnologies class="_tecno"
+                [tecnologies]="info.tecnologies">
+            </app-tecnologies>
+        </div>
   </div>     
 </section>

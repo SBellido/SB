@@ -1,8 +1,8 @@
-<app-loader></app-loader> 
 <article class="_container_gallery">
+    <app-loader></app-loader> 
     <section class="_gallery">  
         <button class="_active_button" (click)="beforeImg()"
-        [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
+            [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
             <mat-icon>navigate_before</mat-icon>
         </button>
         <div class="_container_image">

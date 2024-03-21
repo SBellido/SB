@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DownloadComponent } from './components/download/download.component';
 import { DownloadModalComponent } from './components/download-modal/download-modal.component';
 import { LoaderComponent } from './components/spinner/spinner.component';
+import { PopupComponent } from './components/popup/popup.component';
 /* Modules */
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -24,14 +25,15 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     FooterComponent,
     DownloadComponent,
     DownloadModalComponent,
-    LoaderComponent
+    LoaderComponent,
   ],
   declarations: [ 
     NavbarComponent, 
     FooterComponent, 
     DownloadComponent,
     DownloadModalComponent,
-    LoaderComponent
+    LoaderComponent,
+    PopupComponent
   ],
   imports: [
     CommonModule,
