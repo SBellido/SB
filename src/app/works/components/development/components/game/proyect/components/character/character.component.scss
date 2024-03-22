@@ -1,0 +1,100 @@
+
+/* CHARACTER */
+.characterMotionless{
+  display: absolute;
+  width: 183px;
+  height: 270px;
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  background: url(../../../../../../../../../assets/images/dev/zombie/character/zombie.png) no-repeat left center;
+  z-index: 0;
+}
+
+.characterRun {
+  display: flex;
+  width: 183px;
+  height: 270px;
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  background: url(../../../../../../../../../assets/images/dev/zombie/character/runZombie.png) no-repeat left center;
+  animation: run .8s steps(5) infinite;
+  z-index: 0;
+}
+@keyframes run {
+  100% { background-position: -911px; }
+}
+
+
+.characterJump {
+  width: 183px;
+  height: 270px;
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  background: url(../../../../../../../../../assets/images/dev/zombie/character/jumpZombie.png) no-repeat left center;
+  animation: jump 1.7s steps(7);
+  z-index: 0;
+
+}
+@keyframes jump {
+  0% { bottom: 5% }
+  20% { bottom: 5% }
+  25% { bottom: 10% }
+  50% { bottom: 20% }
+  75% { bottom: 10% }
+  80% { bottom: 5% }
+  100% { background-position: -1296px; 
+      bottom: 5% }
+} 
+
+.characterDead {
+  width: 270px;
+  height: 238px;
+  position: absolute;
+  bottom: 5%;
+  left: 20%;
+  background: url(../../../../../../../../../assets/images/dev/zombie/character/deadZombie.png) no-repeat left center;
+  animation: dead 1.1s steps(8) forwards;
+  z-index: 0;
+}
+
+@keyframes dead {
+  0% { background-position: 0; opacity: 1; }
+  87.5% { opacity: 1; } /* Este porcentaje representa el penúltimo fotograma */
+  100% { background-position: -2183px; opacity: 0; }
+}
+
+
+// .characterWalk {
+//   display: flex;
+//   width: 192px;
+//   height: 350px;
+//   position: fixed;
+//   bottom: 5%;
+//   left: 33%;
+//   background: url(../../../../../../../../../assets/images/dev/zombie/character/walkZombie.png) no-repeat left center;
+//   animation: walk 1.5s steps(6) infinite;
+//   z-index: 0;
+// }
+// @keyframes walk {
+//   100% { background-position: -1159px; }
+// } 
+
+
+
+.characterDown {
+  display: none;
+  width: 206px;
+  height: 214px;
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  background: url(../../../../../../../../../assets/images/dev/zombie/character/headDownZombie.png) no-repeat left center;
+  animation: down 1.5s steps(5) infinite;
+  z-index: 0;
+}
+@keyframes down {
+  100% { background-position: -1030px; }
+}

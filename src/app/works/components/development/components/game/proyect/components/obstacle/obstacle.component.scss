@@ -1,0 +1,41 @@
+/*OBSTACLES*/
+
+@keyframes obstacle {
+  from {transform: translate(1728px, 0px)}
+  to {transform: translate(-1728px, 0px)}
+}
+
+
+.obstacleRock {
+  width: 100px;
+  height: 64px;
+  position: absolute;
+  bottom: 5%;
+  background: transparent url(../../../../../../../../../assets/images/dev/zombie/obstacles/rock.png) no-repeat right;
+  animation: obstacle 17s linear infinite;
+  z-index: 2;
+}     
+
+.obstacleThorn {
+  width: 100px;
+  height: 64px;
+  position: absolute;
+  bottom: 5%;
+  background: transparent url(../../../../../../../../../assets/images/dev/zombie/obstacles/thorn.png) no-repeat left;
+  animation: obstacle 10s linear infinite;
+  z-index: 2;
+}
+
+.obstacleBomb {
+  width: 100px;
+  height: 64px;
+  position: absolute;
+  bottom: 5%; 
+  background: transparent url(../../../../../../../../../assets/images/dev/zombie/obstacles/bomb.png) no-repeat right center;
+  animation: obstacle 5s linear infinite;
+  z-index: 2;
+}
+
+/* @keyframes obstacle2 { 
+  100% { background-position: -100px; }
+} */

@@ -2,6 +2,9 @@
 
 @media (min-width: 0px) {
   button._playGame {
+    color: $first_color;
+    border: none;
+    margin-bottom: 6rem;
     position: absolute;
     top: 65.5%;
     left: 31%;
@@ -9,12 +12,12 @@
     border: none;
     cursor: pointer;
     border-radius: 25px;
-    background-color: $dev_color;
+    background-color: $first_color_lighter;
     padding: .5rem 3rem;
     font-weight: 700;
   }
   button._playGame:hover {
-    background-color: $dev_color_light;
+    background-color: white;
     box-shadow: none;
   }
   

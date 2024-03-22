@@ -11,6 +11,7 @@ import { PopupComponent } from '../../../../../global/components/popup/popup.com
 })
 
 export class GameComponent implements OnInit {
+  [x: string]: any;
   
   dev_color: string = '#ffdd57';
   routerLink: string = '../';
@@ -26,20 +27,20 @@ export class GameComponent implements OnInit {
     }
   ];
 
-  imgGallery: string = '../assets/images/dev/game/0.png';
+  imgGallery: string = '../assets/images/dev/zombie/0.png';
   imagesList : string[] = [
-    '../assets/images/dev/game/0.png',    
-    '../assets/images/dev/game/1.png',    
-    '../assets/images/dev/game/2.png',    
-    '../assets/images/dev/game/3.png',    
-    '../assets/images/dev/game/4.png',    
-    '../assets/images/dev/game/5.png',    
+    '../assets/images/dev/zombie/0.png',    
+    '../assets/images/dev/zombie/1.png',    
+    '../assets/images/dev/zombie/2.png',    
+    '../assets/images/dev/zombie/3.png',    
+    '../assets/images/dev/zombie/4.png',    
+    '../assets/images/dev/zombie/5.png',    
   ];
 
   information: Information[] = [
     {
       title: 'Zombie 404 | Game Runner',
-      text: 'Video Juego desarrollado en el marco de la materia Interfaces de Usuario e Interacción de la Tecnicatura en Desarrollo de Aplicaciones Informáticas (TUDAI) de la Universidad Nacional del Centro de la Provincia de Buenos Aires (UniCen). El práctico consistió en implementar un video juego de tipo "Runner" donde se debía resolver el loop del juego, el movimiento del fondo en capas, las animaciones del personaje (salto, caminata, muerte), la aparición de obstáculos y la detección de la colisión entre los obstáculos en pantalla y el personaje que provoque su muerte. Se agregó snido y se trabajó en la estética y el diseño del juego.',
+      text: 'Video Juego desarrollado en el marco de la materia Interfaces de Usuario e Interacción de la Tecnicatura en Desarrollo de Aplicaciones Informáticas (TUDAI) de la Universidad Nacional del Centro de la Provincia de Buenos Aires (UniCen). El práctico consistió en implementar un video juego de tipo "Runner" donde se debía resolver el loop del juego, el movimiento del fondo en capas, las animaciones del personaje (salto, caminata, muerte), la aparición de obstáculos y la detección de la colisión entre los obstáculos en pantalla y el personaje que provoque su muerte. Se agregó sonido y se trabajó en la estética y el diseño del juego, diseñando una identidad visual, sonora y animada (tipografías, color, sonido, botones, efectos de niebla, velocidades) acorde a la estética que proponían las imágenes elegidas desde bancos de la web, en este caso el personaje y el fondo. ',
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
