@@ -91,7 +91,7 @@ export class DevelopmentComponent implements OnInit {
       brandsData: [
         {
           route: 'works/development/game',
-          img: '../assets/images/dev/game/zombie_logo.png',
+          img: '../assets/images/dev/zombie/zombie_logo.png',
           name: 'Game Runner',
           text: 'Ícono con cara de zombie',
           title: ''
