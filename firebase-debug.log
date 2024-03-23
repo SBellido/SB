@@ -1,0 +1,24 @@
+[debug] [2024-03-23T23:34:02.211Z] ----------------------------------------------------------------------
+[debug] [2024-03-23T23:34:02.213Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Netgear\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-03-23T23:34:02.213Z] CLI Version:   13.5.1
+[debug] [2024-03-23T23:34:02.213Z] Platform:      win32
+[debug] [2024-03-23T23:34:02.213Z] Node Version:  v18.18.2
+[debug] [2024-03-23T23:34:02.217Z] Time:          Sat Mar 23 2024 20:34:02 GMT-0300 (hora estándar de Argentina)
+[debug] [2024-03-23T23:34:02.217Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-23T23:34:02.285Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-23T23:34:02.286Z] > authorizing via signed-in user (sebastianbellidodg@gmail.com)
+[debug] [2024-03-23T23:34:02.286Z] [iam] checking project sbellido-6621d for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-03-23T23:34:02.287Z] > refreshing access token with scopes: []
+[debug] [2024-03-23T23:34:02.288Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-03-23T23:34:02.289Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-23T23:34:02.546Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-03-23T23:34:02.547Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-23T23:34:02.559Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sbellido-6621d:testIamPermissions [none]
+[debug] [2024-03-23T23:34:02.559Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/sbellido-6621d:testIamPermissions x-goog-quota-user=projects/sbellido-6621d
+[debug] [2024-03-23T23:34:02.560Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sbellido-6621d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-23T23:34:03.532Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sbellido-6621d:testIamPermissions 200
+[debug] [2024-03-23T23:34:03.532Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sbellido-6621d:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-03-23T23:34:03.533Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sbellido-6621d [none]
+[debug] [2024-03-23T23:34:03.946Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sbellido-6621d 200
+[debug] [2024-03-23T23:34:03.946Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sbellido-6621d {"projectId":"sbellido-6621d","projectNumber":"855059497993","displayName":"sbellido","name":"projects/sbellido-6621d","resources":{"hostingSite":"sbellido-6621d"},"state":"ACTIVE","etag":"1_501ba158-47fd-4bd8-9a89-86b913223d58"}

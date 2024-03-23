@@ -126,8 +126,6 @@ export class PublicationsComponent implements OnInit {
         '../assets/images/publications/pienso/3.png',
         '../assets/images/publications/pienso/5.png',
         '../assets/images/publications/pienso/5.png',
-        '../assets/images/publications/pienso/6.png',
-        '../assets/images/publications/pienso/7.png',
     ];
       this.imgGallery = this.imagesList[0];
     }
