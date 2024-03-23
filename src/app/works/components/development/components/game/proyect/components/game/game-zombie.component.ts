@@ -1,13 +1,17 @@
+/*ANGULAR*/
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+/*COMPONENTS*/
 import { CharacterComponent } from '../character/character.component';
 import { ObstacleComponent } from '../obstacle/obstacle.component';
+/*SERVICES*/
+import { GameService } from 'src/app/services/game.service';
 
 @Component({
-  selector: 'app-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.scss']
+  selector: 'app-game-zombie',
+  templateUrl: './game-zombie.component.html',
+  styleUrls: ['./game-zombie.component.scss']
 })
-export class GameComponent implements OnInit {
+export class GameZombieComponent implements OnInit {
   @ViewChild('startButton') startButtonRef: ElementRef<HTMLButtonElement> | undefined;
   @ViewChild('jumpButton') jumpButtonRef: ElementRef<HTMLButtonElement> | undefined;
   @ViewChild('logoGame') logoGameRef: ElementRef<HTMLElement> | undefined;
@@ -29,19 +33,19 @@ export class GameComponent implements OnInit {
   gameStarted: boolean;
   parallaxMoving: boolean;
 
-  constructor() {
+  constructor(private gameService: GameService) {
     this.character = new CharacterComponent;
     this.obstacle = new ObstacleComponent;
     this.gameInterval = null;
     this.gameStarted = false;
     this.parallaxMoving = false;    
   }
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
 
-  OnInit(): void {
+  ngOnInit(): void {
     this.setGame();
+    this.gameService.startGame$.subscribe(() => this.loopGame());
+    this.gameService.jumpCharacter$.subscribe(() => this.jumpCharacter());
+    this.gameService.callGameOver$.subscribe(() => this.gameOver());
   }
 
   setGame(): void {     
@@ -103,8 +107,8 @@ export class GameComponent implements OnInit {
     if (characterState === 'run') {
       console.log("evalúa colision");
       const characterBounds = this.character.getCharacterElement().getBoundingClientRect();
-      for (let obstacle of this.obstacle.obstacles) {
-        const obstacleBounds = obstacle.getBoundingClientRect();
+      for (let obstacle of this.obstacle.getObstacles()) {
+        const obstacleBounds = obstacle.nativeElement.getBoundingClientRect();
         if (
           characterBounds.left < obstacleBounds.right &&
           characterBounds.right > obstacleBounds.left &&

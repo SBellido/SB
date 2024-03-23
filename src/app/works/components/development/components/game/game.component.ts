@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
 import { MatDialog } from '@angular/material/dialog';
-import { PopupComponent } from '../../../../../global/components/popup/popup.component';
 
 @Component({
   selector: 'app-game',
@@ -10,9 +9,7 @@ import { PopupComponent } from '../../../../../global/components/popup/popup.com
   styleUrls: ['./game.component.scss','../../../../../global/global.component.scss']
 })
 
-export class GameComponent implements OnInit {
-  [x: string]: any;
-  
+export class GameComponent implements OnInit {  
   dev_color: string = '#ffdd57';
   routerLink: string = '../';
   currentImageNumber: number = 1;
@@ -36,6 +33,8 @@ export class GameComponent implements OnInit {
     '../assets/images/dev/zombie/4.png',    
     '../assets/images/dev/zombie/5.png',    
   ];
+
+  // La acción de pasar un código de JavaScript a componentes de Angular se denomina "refactorización" o "reestructuración". Esto implica reorganizar y modificar el código existente para adaptarlo al contexto y las convenciones de Angular, como el uso de componentes, directivas, servicios y otras características propias de este framework. La refactorización puede incluir la conversión de funciones y métodos de JavaScript en métodos de componentes, la integración de enlaces de datos, el uso de decoradores para la inyección de dependencias, entre otros ajustes necesarios para aprovechar al máximo las capacidades de Angular.
 
   information: Information[] = [
     {
@@ -78,42 +77,36 @@ export class GameComponent implements OnInit {
   ];
 
   brands : Button[] = [
-    // {
-    //   route: 'works/development/hunt',
-    //   img: '../assets/images/dev/hunt/hunt_logo.png',
-    //   name: 'Hunt',
-    //   text: 'Logo de Hunt',
-    //   title: ''
-    // }
+    {
+      route: '',
+      img: '',
+      name: '',
+      text: '',
+      title: ''
+    }
   ]
 
   constructor(private router: Router, private dialog: MatDialog) { }
-
-  openPopup(): void {
-    const dialogRef = this.dialog.open(PopupComponent, {
-      width: '600px', // Ajusta el ancho según tus necesidades
-      data: { /* Puedes pasar datos al popup si es necesario */ }
-    });
-
-    // Puedes realizar acciones después de que el popup se cierre, si es necesario
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('El popup se ha cerrado');
-    });
-  }
   
+  openGame() {
+    this.router.navigateByUrl('works/development/game/proyect');
+  }
+
   ngOnInit(): void {
     this.topFunction();
-  console.log("Imagen actual:", this.imgGallery);
- }
+    console.log("Imagen actual:", this.imgGallery);
+  }
   
 /* ----------- MÉTODOS ----------- */
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
   routeBack() {    
-    this.router.navigateByUrl('works/design/ux-ui')
+    this.router.navigateByUrl('works/development/experimental')
   }
+
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }

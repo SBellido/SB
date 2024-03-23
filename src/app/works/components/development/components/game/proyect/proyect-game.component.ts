@@ -1,7 +1,11 @@
+/* ANGULAR */
 import { Component, OnInit } from '@angular/core';
-import { GameComponent } from '../game.component';
-import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+/* COMPONENTS */
+import { GameZombieComponent } from './components/game/game-zombie.component';
+/* SERVICES */
+import { GameService } from 'src/app/services/game.service';
 
 @Component({
   selector: 'app-proyect-game',
@@ -9,35 +13,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./proyect-game.component.scss']
 })
 export class ProyectGameComponent implements OnInit {
+  game: GameZombieComponent | undefined;
 
-  private game: GameComponent | undefined;
-
-  constructor(private router: Router, private dialog: MatDialog) { }
+  constructor(
+    private gameService: GameService,
+    private router: Router,
+    private dialog: MatDialog
+  ) { }
 
   ngOnInit(): void {
-    this.game = new GameComponent(this.router, this.dialog);
+    this.gameService.initializeGame();
 
-    window.onload = this.loadedGame;
-
-    this.game['btnStart']!.onclick = this.startGame.bind(this);
-    this.game['btnJump']!.onclick = this.jumpCharacter.bind(this);
+    window.onload = () => {
+      this.gameService.loadGame();
+    };
+    this.game = new GameZombieComponent(this.gameService);
   }
 
-  private loadedGame() {
-    this.game?.['setGame']();
-    // previewSound.play();
+  startGame(): void {
+    this.gameService.startGame();
   }
 
-  
-  private startGame() {
-    this.game?.['loopGame']();
+  jumpCharacter(): void {
+    this.gameService.jumpCharacter();
   }
 
-  private jumpCharacter() {
-    this.game?.['jumpCharacter']();
-  }
-
-  private callGameOver() {
-    this.game?.['gameOver']();
+  callGameOver(): void {
+    this.gameService.gameOver();
   }
 }

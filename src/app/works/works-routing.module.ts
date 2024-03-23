@@ -23,6 +23,7 @@ import { BrandsSectionComponent } from './components/design/components/brands-se
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
 import { GameComponent } from './components/development/components/game/game.component';
+import { ProyectGameComponent } from './components/development/components/game/proyect/proyect-game.component';
 
 const routes: Routes = [
   {
@@ -104,6 +105,11 @@ const routes: Routes = [
         path: 'development/game',
         pathMatch: 'full',
         component: GameComponent
+      },
+      {
+        path: 'development/game/proyect',
+        pathMatch: 'full',
+        component: ProyectGameComponent
       },
       {
         path: 'biography',

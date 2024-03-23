@@ -32,13 +32,13 @@ export class CharacterComponent {
   }
 
   motionless(): void {
-    this.character.className = 'characterMotionless';
+    this.character.classList.add('characterMotionless');
     this.setState('motionless'); 
     console.log("parado ", this.state);
   }
 
   run(): void {
-    this.character.className = 'characterRun';
+    this.character.classList.add('characterRun');
     this.setState('run');
     console.log("corre ", this.state);
   }

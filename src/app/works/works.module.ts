@@ -8,8 +8,9 @@ import { WorksRoutingModule } from './works-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-import { FormsModule } from '@angular/forms'; // Importa FormsModule
-import { MatSelectModule } from '@angular/material/select'; // Importa el módulo necesario
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { ProyectGameModule } from '../works/components/development/components/game/proyect/proyect-game.module';
 
 /* Components */
 import { WorksComponent } from './works.component';
@@ -76,7 +77,7 @@ import { GameComponent } from './components/development/components/game/game.com
     HeaderSectionComponent,
     InfoMobileComponent,
     InfoPolaroidComponent,
-    GameComponent
+    GameComponent,
   ],
   imports: [
     CommonModule,
@@ -86,7 +87,8 @@ import { GameComponent } from './components/development/components/game/game.com
     MatButtonModule,
     MatMenuModule,
     FormsModule,
-    MatSelectModule
+    MatSelectModule,
+    ProyectGameModule
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
