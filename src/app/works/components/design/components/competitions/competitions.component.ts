@@ -65,6 +65,14 @@ export class CompetitionsComponent implements OnInit {
       title: 'Diseño de Marca',
       
     },
+    {
+      route: 'works/design/publications',
+      img: '../assets/images/graph/publications.png',
+      name: 'Redes',
+      text: 'Ícono de altavoz',
+      title: 'Diseño de Publicaciones',
+      
+    },
   ]
 
   constructor(private router: Router) { }

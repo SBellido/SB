@@ -59,6 +59,14 @@ export class BrandsSectionComponent implements OnInit {
       text: 'Logo de eyeka!',
       title: 'Concursos Internacionales'
     },
+    {
+      route: 'works/design/publications',
+      img: '../assets/images/graph/publications.png',
+      name: 'Redes',
+      text: 'Ícono de altavoz',
+      title: 'Diseño de Publicaciones',
+      
+    },
   ]
  
   constructor(private router: Router) { }
