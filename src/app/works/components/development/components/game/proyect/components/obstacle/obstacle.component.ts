@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-obstacle',
@@ -6,34 +6,42 @@ import { Component } from '@angular/core';
   styleUrls: ['./obstacle.component.scss']
 })
 export class ObstacleComponent {
-  rock: HTMLElement;
-  bomb: HTMLElement;
-  thorn: HTMLElement;
-  obstacles: HTMLElement[];
+  @ViewChild('rock') rockRef: ElementRef<HTMLDivElement> | undefined;
+  @ViewChild('bomb') bombRef: ElementRef<HTMLDivElement> | undefined;
+  @ViewChild('thorn') thornRef: ElementRef<HTMLDivElement> | undefined;
+  private obstacles: ElementRef<HTMLDivElement>[] = [];
 
-  constructor() {
-    this.rock = document.getElementById('obstacleRock')!;
-    this.bomb = document.getElementById('obstacleBomb')!;
-    this.thorn = document.getElementById('obstacleThorn')!;
-    this.obstacles = [];
-    this.pushObstacles();
+
+  constructor() {}
+
+  ngOnInit(): void {
+    if (this.rockRef && this.bombRef && this.thornRef) {
+      this.rockRef.nativeElement.classList.add('obstacleRock');
+      this.bombRef.nativeElement.classList.add('obstacleBomb');
+      this.thornRef.nativeElement.classList.add('obstacleThorn');
+      this.pushObstacles();
+    }
+  }
+  
+  getObstacles(): ElementRef<HTMLDivElement>[] {
+    return [...this.obstacles];
   }
 
   pushObstacles(): void {
-    this.obstacles.push(this.rock);
-    this.obstacles.push(this.bomb);
-    this.obstacles.push(this.thorn);
+    if (this.rockRef && this.bombRef && this.thornRef) {
+      this.obstacles!.push(this.rockRef, this.bombRef, this.thornRef);
+    }
   }
 
   showAllObstacles(): void {
     for (let i = 0; i < this.obstacles.length; i++) {
-      const obst = this.obstacles[i];
+      const obst = this.obstacles[i].nativeElement;
       obst.classList.remove('hide');
-      if (obst === this.rock) {
+      if (obst === this.rockRef?.nativeElement) {
         obst.classList.add('obstacleRock');
-      } else if (obst === this.bomb) {
+      } else if (obst === this.bombRef?.nativeElement) {
         obst.classList.add('obstacleBomb');
-      } else if (obst === this.thorn) {
+      } else if (obst === this.thornRef?.nativeElement) {
         obst.classList.add('obstacleThorn');
       }
     }
@@ -41,15 +49,24 @@ export class ObstacleComponent {
 
   hideAllObstacles(): void {
     for (let i = 0; i < this.obstacles.length; i++) {
-      const obst = this.obstacles[i];
+      const obst = this.obstacles[i].nativeElement;
       obst.classList.add('hide');
     }
   }
 
   getPositionAllObstacles(): void {
     for (let i = 0; i < this.obstacles.length; i++) {
-      const obst = this.obstacles[i];
-      // Aquí puedes obtener la posición del obstáculo y realizar otras operaciones si es necesario
+      const obst = this.obstacles[i].nativeElement;
+      const rect = obst.getBoundingClientRect();
+      const position = {
+        top: rect.top,
+        left: rect.left,
+        right: rect.right,
+        bottom: rect.bottom
+      };
+      console.log(`Posición del obstáculo ${i + 1}: `, position);
+      // Puedes realizar otras operaciones con la posición del obstáculo aquí
     }
   }
+  
 }

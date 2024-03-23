@@ -7,7 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { DownloadComponent } from './components/download/download.component';
 import { DownloadModalComponent } from './components/download-modal/download-modal.component';
 import { LoaderComponent } from './components/spinner/spinner.component';
-import { PopupComponent } from './components/popup/popup.component';
+// import { PopupComponent } from './components/popup/popup.component';
 /* Modules */
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -17,7 +17,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { ProyectGameModule } from '../works/components/development/components/game/proyect/proyect-game.module';
 
 @NgModule({
   exports: [
@@ -33,7 +32,7 @@ import { ProyectGameModule } from '../works/components/development/components/ga
     DownloadComponent,
     DownloadModalComponent,
     LoaderComponent,
-    PopupComponent
+    // PopupComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +44,6 @@ import { ProyectGameModule } from '../works/components/development/components/ga
     MatGridListModule,
     MatDividerModule,
     MatProgressSpinnerModule,
-    ProyectGameModule
   ]
 })
 

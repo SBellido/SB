@@ -3,19 +3,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProyectGameComponent } from './proyect-game.component';
+import { GameZombieComponent } from './components/game/game-zombie.component';
 import { CharacterComponent } from './components/character/character.component';
-import { GameComponent } from './components/game/game.component';
 import { ObstacleComponent } from './components/obstacle/obstacle.component';
 
 @NgModule({
   exports: [
-    GameComponent
+    ProyectGameComponent,
+    GameZombieComponent,
+    CharacterComponent,
+    ObstacleComponent
   ],
   declarations: [
     ProyectGameComponent,
     CharacterComponent,
-    GameComponent,
-    ObstacleComponent
+    ObstacleComponent,
+    GameZombieComponent
   ],
   imports: [
     CommonModule
