@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     }
   ];
   concepts: string[] = [
-   // 'learning', 'overcoming', 'openness', 'perseverance', 'reading',
+    // 'learning', 'overcoming', 'openness', 'perseverance', 'reading',
     // 'creativity', 'experience', 'respect', 'balance', 'study',
     // 'commitment', 'communication', 'listening', 'practice', 'disposition',
     // 'dialogue', 'intuition', 'projects', 'ideas', 'friendship', 'reasoning',
