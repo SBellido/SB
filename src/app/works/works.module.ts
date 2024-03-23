@@ -35,6 +35,7 @@ import { StormtechComponent } from './components/development/components/stormtec
 import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-polaroid.component';
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
+import { PublicationsComponent } from './components/design/components/publications/publications.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
 import { SectionComponent } from './components/section/section.component';
 import { HighlightDirective } from '../directives/highlight.directive'; 
@@ -69,6 +70,7 @@ import { GameComponent } from './components/development/components/game/game.com
     GalleryPolaroidComponent,
     BrandsSectionComponent,
     CompetitionsComponent,
+    PublicationsComponent,
     QxComponent,
     SectionComponent,
     HighlightDirective,

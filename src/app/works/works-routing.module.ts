@@ -21,6 +21,7 @@ import { StormtechComponent } from './components/development/components/stormtec
 import { HuntComponent } from './components/development/components/hunt/hunt.component';
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
+import { PublicationsComponent } from './components/design/components/publications/publications.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
 import { GameComponent } from './components/development/components/game/game.component';
 import { ProyectGameComponent } from './components/development/components/game/proyect/proyect-game.component';
@@ -71,6 +72,11 @@ const routes: Routes = [
         path: 'design/competitions',
         pathMatch: 'full',
         component: CompetitionsComponent
+      },
+      {
+        path: 'design/publications',
+        pathMatch: 'full',
+        component: PublicationsComponent
       },
       {
         path: 'development',

@@ -87,6 +87,13 @@ parentColorHover: string = 'linear-gradient(0deg, #fdd6dd 33%, #fdf0f2 100%)';
           text: 'Logo de Eyeka',
           title: '',
         },
+        {
+          route: 'works/design/publications',
+          img: '../assets/images/graph/publications.png',
+          name: 'Redes',
+          text: 'Ícono de altavozr',
+          title: '',
+        },
       ]
     },
     {
