@@ -1,7 +1,7 @@
 <app-header-section
   [header]="header">
 </app-header-section>
-<article class="_mobile_version">
+<article class="_mobile_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
     <div class="_container_mobile">
       <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de V-life">
@@ -23,7 +23,7 @@
   </div>
 </article>
 
-<article class="_desktop_version">
+<article class="_desktop_version"  *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
     <div class="_container_mobile">
       <img class="_mobile" src="../assets/images/mobile_dark.png" alt="un teléfono móbil muestra imágenes de la galería de InvestigAr">

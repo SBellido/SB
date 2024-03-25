@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-xubox',
@@ -12,6 +13,7 @@ export class XuboxComponent implements OnInit {
 /*--------VARIABLES -------*/  
   imgGallery = '';
   imagesList : string[] = [];
+
 /*--------INTERFACES-------*/
   information: Information[] = [
     {
@@ -86,10 +88,15 @@ export class XuboxComponent implements OnInit {
     },
   ]
  
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
   ngOnInit() {
     this.topFunction();
     this.loadImages();
+    this.loadingService.setLoadingState(true);
   }
    
  /* ----------- MÉTODOS ----------- */
@@ -103,6 +110,8 @@ export class XuboxComponent implements OnInit {
  }
 
  loadImages() {
+  // Simulación de carga de imágenes
+  setTimeout(() => {
     this.imagesList = [ 
       '../assets/images/dev/xubox/mobile/0.png',     
       '../assets/images/dev/xubox/mobile/1.png',
@@ -118,7 +127,9 @@ export class XuboxComponent implements OnInit {
       '../assets/images/dev/xubox/mobile/11.png',
     ];
     this.imgGallery = this.imagesList[0];
-  }
+    this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
+  }, 1300); // Simulamos una demora de 2 segundos
+}
   
 
 }

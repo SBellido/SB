@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-investigar',
@@ -12,6 +13,7 @@ export class InvestigarComponent implements OnInit {
 /*--------VARIABLES -------*/  
   imgGallery = '';
   imagesList : string[] = [];
+
 /*--------INTERFACES-------*/ 
   information: Information[] = [
     {
@@ -86,10 +88,15 @@ export class InvestigarComponent implements OnInit {
     },
   ]
  
-  constructor(private router: Router) {}
-  ngOnInit() {
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
+  ngOnInit(): void {
     this.topFunction();
     this.loadImages();
+    this.loadingService.setLoadingState(true);
   }
    
  /* ----------- MÉTODOS ----------- */
@@ -102,24 +109,30 @@ export class InvestigarComponent implements OnInit {
     this.router.navigateByUrl('works/design/ux-ui')
   }
   loadImages() {
-    this.imagesList = [ 
-      '../assets/images/dev/investigar/mobile/0.png',
-      '../assets/images/dev/investigar/mobile/1.png',
-      '../assets/images/dev/investigar/mobile/2.png',
-      '../assets/images/dev/investigar/mobile/3.png',
-      '../assets/images/dev/investigar/mobile/4.png',
-      '../assets/images/dev/investigar/mobile/5.png', 
-      '../assets/images/dev/investigar/mobile/6.png', 
-      '../assets/images/dev/investigar/mobile/7.png', 
-      '../assets/images/dev/investigar/mobile/8.png', 
-      '../assets/images/dev/investigar/mobile/9.png',
-      '../assets/images/dev/investigar/mobile/10.png',
-      '../assets/images/dev/investigar/mobile/11.png',
-      '../assets/images/dev/investigar/mobile/12.png',
-      '../assets/images/dev/investigar/mobile/13.png',
-    ];
-    this.imgGallery = this.imagesList[0];
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/dev/investigar/mobile/0.png',
+        '../assets/images/dev/investigar/mobile/1.png',
+        '../assets/images/dev/investigar/mobile/2.png',
+        '../assets/images/dev/investigar/mobile/3.png',
+        '../assets/images/dev/investigar/mobile/4.png',
+        '../assets/images/dev/investigar/mobile/5.png', 
+        '../assets/images/dev/investigar/mobile/6.png', 
+        '../assets/images/dev/investigar/mobile/7.png', 
+        '../assets/images/dev/investigar/mobile/8.png', 
+        '../assets/images/dev/investigar/mobile/9.png',
+        '../assets/images/dev/investigar/mobile/10.png',
+        '../assets/images/dev/investigar/mobile/11.png',
+        '../assets/images/dev/investigar/mobile/12.png',
+        '../assets/images/dev/investigar/mobile/13.png',
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
+    }, 1300); // Simulamos una demora de 2 segundos
+
   }
+
   loadImages1() {
     this.imagesList = [ 
       '../assets/images/dev/desktop/0.png',
@@ -137,6 +150,6 @@ export class InvestigarComponent implements OnInit {
       '../assets/images/dev/desktop/12.png',
     ];
     this.imgGallery = this.imagesList[0];
-}
+  }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-competitions',
@@ -13,6 +14,7 @@ export class CompetitionsComponent implements OnInit {
   public imagesList: string[] = [];
   public selectedOption: string = '';
   public imgGallery: string = '';
+
 /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
     {value: 'imagesList', view_Text: 'Nescafé'},
@@ -46,6 +48,7 @@ export class CompetitionsComponent implements OnInit {
       ],
     },
   ];
+
   header: HeaderSection[] = [
     {
       area: 'diseño/gráfico',
@@ -56,6 +59,7 @@ export class CompetitionsComponent implements OnInit {
       color: '_design_color'
     }
   ];
+
   brands : Button[] = [
     {
       route: 'works/design/brands',
@@ -75,10 +79,15 @@ export class CompetitionsComponent implements OnInit {
     },
   ]
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
   ngOnInit(): void {
     this.topFunction();
-    this.loadImages(); 
+    this.loadImages();
+    this.loadingService.setLoadingState(true);
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -86,29 +95,37 @@ export class CompetitionsComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+  
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
+
   loadImages() {
-    this.imagesList = [
-      '../assets/images/competitions/nescafe/0.png',
-      '../assets/images/competitions/nescafe/1.png',
-      '../assets/images/competitions/nescafe/2.png',
-      '../assets/images/competitions/nescafe/3.png',
-      '../assets/images/competitions/nescafe/4.png',
-      '../assets/images/competitions/nescafe/5.png',
-      '../assets/images/competitions/nescafe/6.png',
-      '../assets/images/competitions/nescafe/7.png',
-      '../assets/images/competitions/nescafe/8.png',
-      '../assets/images/competitions/nescafe/9.png',
-      '../assets/images/competitions/nescafe/10.png',
-      '../assets/images/competitions/nescafe/11.png',
-    ];
-    this.imgGallery = this.imagesList[0];
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/competitions/nescafe/0.png',
+        '../assets/images/competitions/nescafe/1.png',
+        '../assets/images/competitions/nescafe/2.png',
+        '../assets/images/competitions/nescafe/3.png',
+        '../assets/images/competitions/nescafe/4.png',
+        '../assets/images/competitions/nescafe/5.png',
+        '../assets/images/competitions/nescafe/6.png',
+        '../assets/images/competitions/nescafe/7.png',
+        '../assets/images/competitions/nescafe/8.png',
+        '../assets/images/competitions/nescafe/9.png',
+        '../assets/images/competitions/nescafe/10.png',
+        '../assets/images/competitions/nescafe/11.png',
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
+    }, 1300); // Simulamos una demora de 2 segundos
   }
+
   loadImages1() {
     this.imagesList = [
         '../assets/images/competitions/doritos/0.png',

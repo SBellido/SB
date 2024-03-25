@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-publications',
@@ -13,12 +14,14 @@ export class PublicationsComponent implements OnInit {
   public imagesList: string[] = [];
   public selectedOption: string = '';
   public imgGallery: string = '';
+
 /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
     {value: 'imagesList', view_Text: 'Jam Poética & Musical'},
     {value: 'imagesList1', view_Text: 'Neptuno | Belleza Natural'},
     {value: 'imagesList2', view_Text: 'Dejando Huella | Pienso para Mascotas'},
   ];
+
   information: Information[] = [
     {
       title: 'Publicaciones para Redes Sociales',
@@ -46,6 +49,7 @@ export class PublicationsComponent implements OnInit {
       ],
     },
   ];
+  
   header: HeaderSection[] = [
     {
       area: 'diseño/gráfico',
@@ -56,6 +60,7 @@ export class PublicationsComponent implements OnInit {
       color: '_design_color'
     }
   ];
+
   brands : Button[] = [
     {
       route: 'works/design/brands',
@@ -74,10 +79,15 @@ export class PublicationsComponent implements OnInit {
     },
   ]
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
   ngOnInit(): void {
     this.topFunction();
-    this.loadImages(); 
+    this.loadImages();
+    this.loadingService.setLoadingState(true);
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -85,25 +95,33 @@ export class PublicationsComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
+
   loadImages() {
-    this.imagesList = [
-      '../assets/images/publications/jam/0.png',
-      '../assets/images/publications/jam/1.png',
-      '../assets/images/publications/jam/2.png',
-      '../assets/images/publications/jam/3.png',
-      '../assets/images/publications/jam/4.png',
-      '../assets/images/publications/jam/5.png',
-      '../assets/images/publications/jam/6.png',
-      '../assets/images/publications/jam/7.png',
-    ];
-    this.imgGallery = this.imagesList[0];
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/publications/jam/0.png',
+        '../assets/images/publications/jam/1.png',
+        '../assets/images/publications/jam/2.png',
+        '../assets/images/publications/jam/3.png',
+        '../assets/images/publications/jam/4.png',
+        '../assets/images/publications/jam/5.png',
+        '../assets/images/publications/jam/6.png',
+        '../assets/images/publications/jam/7.png',
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
+    }, 1300); // Simulamos una demora de 2 segundos
   }
+
   loadImages1() {
     this.imagesList = [
         '../assets/images/publications/neptuno/0.png',
@@ -118,6 +136,7 @@ export class PublicationsComponent implements OnInit {
       ];
       this.imgGallery = this.imagesList[0];
     }
+
     loadImages2() {
       this.imagesList = [
         '../assets/images/publications/pienso/0.png',   
