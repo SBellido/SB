@@ -18,7 +18,7 @@ info: MoreInfo[] = [
     subtitle_1: 'Metodología:',
     text_1: 'En cascada',
     subtitle_2: 'Tecnologías:',
-    text_2: 'React, DevExtreme, Azure Devops, GitHub.',
+    text_2: 'React, DevExtreme, Azure Devops.',
     subtitle_3: 'Aptitudes:',
     text_3: 'Diseño web adaptable, Diseño y prototipado, Comunicación, Trabajo en equipo, Desarrollo front-end, Análisis funcional, Autogestión',
     subtitle_4: '',
