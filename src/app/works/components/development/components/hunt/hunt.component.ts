@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-hunt',
@@ -11,6 +12,7 @@ export class HuntComponent implements OnInit {
 /*--------VARIABLES -------*/  
   imgGallery = '';
   imagesList : string[] = [];
+
 /*--------INTERFACES-------*/ 
   information: Information[] = [
     {
@@ -51,6 +53,7 @@ export class HuntComponent implements OnInit {
       ],
     },
   ];
+
   header: HeaderSection[] = [
     {
     area: 'desarrollo/webs',
@@ -61,6 +64,7 @@ export class HuntComponent implements OnInit {
     color: '_dev_color'
     }
   ];
+
   brands: Button[] = [
     {
       route: 'works/development/stormtech',
@@ -71,12 +75,16 @@ export class HuntComponent implements OnInit {
     },
   ]
   
-    constructor(private router: Router) {}
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
 
-    ngOnInit(): void {
-      this.topFunction();
-      this.loadImages(); 
-    }
+  ngOnInit(): void {
+    this.topFunction();
+    this.loadImages();
+    this.loadingService.setLoadingState(true);
+  }
     
   /* ----------- MÉTODOS ----------- */
   topFunction() {
@@ -87,28 +95,32 @@ export class HuntComponent implements OnInit {
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
-  loadImages() {
-    this.imagesList = [ 
-      '../assets/images/dev/hunt/mobile/0.png',
-      '../assets/images/dev/hunt/mobile/1.png',
-      '../assets/images/dev/hunt/mobile/2.png',
-      '../assets/images/dev/hunt/mobile/3.png',
-      '../assets/images/dev/hunt/mobile/4.png',
-      '../assets/images/dev/hunt/mobile/5.png',
-      '../assets/images/dev/hunt/mobile/6.png',
-      '../assets/images/dev/hunt/mobile/7.png',
-      '../assets/images/dev/hunt/mobile/8.png',
-      '../assets/images/dev/hunt/mobile/9.png',
-      '../assets/images/dev/hunt/mobile/10.png',
-      '../assets/images/dev/hunt/mobile/11.png',
-      '../assets/images/dev/hunt/mobile/12.png',
-      '../assets/images/dev/hunt/mobile/13.png',
-      '../assets/images/dev/hunt/mobile/14.png',
-    ];
-    this.imgGallery = this.imagesList[0];
-  }
 
- 
+  loadImages() {
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/dev/hunt/mobile/0.png',
+        '../assets/images/dev/hunt/mobile/1.png',
+        '../assets/images/dev/hunt/mobile/2.png',
+        '../assets/images/dev/hunt/mobile/3.png',
+        '../assets/images/dev/hunt/mobile/4.png',
+        '../assets/images/dev/hunt/mobile/5.png',
+        '../assets/images/dev/hunt/mobile/6.png',
+        '../assets/images/dev/hunt/mobile/7.png',
+        '../assets/images/dev/hunt/mobile/8.png',
+        '../assets/images/dev/hunt/mobile/9.png',
+        '../assets/images/dev/hunt/mobile/10.png',
+        '../assets/images/dev/hunt/mobile/11.png',
+        '../assets/images/dev/hunt/mobile/12.png',
+        '../assets/images/dev/hunt/mobile/13.png',
+        '../assets/images/dev/hunt/mobile/14.png',
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
+    }, 1300); // Simulamos una demora de 2 segundos
+
+  }
 
 }
 

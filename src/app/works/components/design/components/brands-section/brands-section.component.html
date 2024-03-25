@@ -1,7 +1,7 @@
 <app-header-section
   [header]="header">
 </app-header-section>
-<article class="_mobile_version">
+<article class="_mobile_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
     <div class="_container_polaroid">
       <img class="_polaroid" src="../assets/images/polaroid.png" alt="marco de foto polaroid">
@@ -23,7 +23,7 @@
   </div>
 </article>
 
-<article class="_desktop_version">
+<article class="_desktop_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
     <div class="_container_polaroid">
       <img class="_polaroid" src="../assets/images/polaroid.png" alt="marco de foto polaroid">

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-stormtech',
@@ -9,10 +10,14 @@ import { Button, HeaderSection, Information } from 'src/app/models/models';
 })
 
 export class StormtechComponent implements OnInit {
-  
+  /*--------VARIABLES -------*/  
+  imgGallery = '';
+  imagesList : string[] = [];
   dev_color: string = '#ffdd57';
   routerLink: string = '../';
   currentImageNumber: number = 1;
+
+  /*--------INTERFACES-------*/
   header: HeaderSection[] = [
     {
       area: 'desarrollo/webs',
@@ -24,19 +29,6 @@ export class StormtechComponent implements OnInit {
     }
   ];
 
-  imgGallery: string = '../assets/images/dev/stormtech/desktop/0.png';
-  imagesList : string[] = [
-    '../assets/images/dev/stormtech/desktop/0.png',    
-    '../assets/images/dev/stormtech/desktop/1.png',
-    '../assets/images/dev/stormtech/desktop/2.png',
-    '../assets/images/dev/stormtech/desktop/3.png',
-    '../assets/images/dev/stormtech/desktop/4.png',
-    '../assets/images/dev/stormtech/desktop/5.png',
-    '../assets/images/dev/stormtech/desktop/6.png',
-    '../assets/images/dev/stormtech/desktop/8.png',
-    '../assets/images/dev/stormtech/desktop/7.png',
-    '../assets/images/dev/stormtech/desktop/9.png', 
-  ];
   information: Information[] = [
     {
       title: 'Stormtech | Landing Page',
@@ -87,12 +79,15 @@ export class StormtechComponent implements OnInit {
     }
   ]
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
 
   ngOnInit(): void {
     this.topFunction();
-    console.log("Rutas de imágenes:", this.imagesList);
-    // this.updateButtonStatus();
+    this.loadImages();
+    this.loadingService.setLoadingState(true);
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -107,6 +102,26 @@ export class StormtechComponent implements OnInit {
     this.router.navigateByUrl(route);
   }
   
+  loadImages() {
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/dev/stormtech/desktop/0.png',    
+      '../assets/images/dev/stormtech/desktop/1.png',
+      '../assets/images/dev/stormtech/desktop/2.png',
+      '../assets/images/dev/stormtech/desktop/3.png',
+      '../assets/images/dev/stormtech/desktop/4.png',
+      '../assets/images/dev/stormtech/desktop/5.png',
+      '../assets/images/dev/stormtech/desktop/6.png',
+      '../assets/images/dev/stormtech/desktop/8.png',
+      '../assets/images/dev/stormtech/desktop/7.png',
+      '../assets/images/dev/stormtech/desktop/9.png', 
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
+    }, 1300); // Simulamos una demora de 2 segundos
+
+  }
 
 }
 

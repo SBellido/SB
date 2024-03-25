@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-brands-section',
@@ -13,6 +14,7 @@ export class BrandsSectionComponent implements OnInit {
   public imagesList: string[] = [];
   public selectedOption: string = '';
   public imgGallery: string = '';
+
 /*--------INTERFACES-------*/ 
   information: Information[] = [
     {
@@ -41,6 +43,7 @@ export class BrandsSectionComponent implements OnInit {
       ],
     },
   ];
+
   header: HeaderSection[] = [
     {
       area: 'diseño/gráfico',
@@ -51,6 +54,7 @@ export class BrandsSectionComponent implements OnInit {
       color: '_design_color'
     }
   ];
+
   brands : Button[] = [
     {
       route: 'works/design/competitions',
@@ -68,13 +72,18 @@ export class BrandsSectionComponent implements OnInit {
       
     },
   ]
- 
-  constructor(private router: Router) { }
+
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
   ngOnInit(): void {
     this.topFunction();
-    this.loadImages(); 
+    this.loadImages();
+    this.loadingService.setLoadingState(true);
   }
-  
+    
 /* ----------- MÉTODOS ----------- */
   topFunction() {
     document.body.scrollTop = 0;
@@ -88,7 +97,9 @@ export class BrandsSectionComponent implements OnInit {
   }
 
   loadImages() {
-    this.imagesList = [
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
         '../assets/images/brands/0.png',
         '../assets/images/brands/1.png',
         '../assets/images/brands/2.png',
@@ -100,5 +111,8 @@ export class BrandsSectionComponent implements OnInit {
         '../assets/images/brands/8.png',
       ];
       this.imgGallery = this.imagesList[0];
-    }
+      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
+    }, 1300); // Simulamos una demora de 2 segundos
   }
+  
+}
