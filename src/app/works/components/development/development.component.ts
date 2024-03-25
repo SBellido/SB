@@ -53,8 +53,14 @@ export class DevelopmentComponent implements OnInit {
           name: 'Logística',
           text: 'Logo de QX Logística',
           title: ''
-
-        }
+        },
+        {
+          route: 'works/development/portal',
+          img: '../assets/images/dev/ruano/portal_logo.png',
+          name: 'Gestorias',
+          text: 'Logo de Portal de Despachos',
+          title: ''
+        },
       ],
     },
     {

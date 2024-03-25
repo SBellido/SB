@@ -45,6 +45,7 @@ import { HeaderSectionComponent } from './components/header-section/header-secti
 import { InfoMobileComponent } from './components/info-mobile/info-mobile.component';
 import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.component';
 import { GameComponent } from './components/development/components/game/game.component';
+import { PortalComponent } from './components/development/components/ruano/portal.component'; 
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { GameComponent } from './components/development/components/game/game.com
     InfoMobileComponent,
     InfoPolaroidComponent,
     GameComponent,
+    PortalComponent
   ],
   imports: [
     CommonModule,

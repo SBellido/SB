@@ -76,7 +76,14 @@ export class XuboxComponent implements OnInit {
       name: 'Logística',
       text: 'Logo de QX Logística',
       title: 'QX Logística | Web App',
-    }
+    },
+    {
+      route: 'works/development/portal',
+      img: '../assets/images/dev/ruano/portal_logo.png',
+      name: 'Gestorías',
+      text: 'Logo de Portal de Despachos',
+      title: 'Portal de Despachos | Web App',
+    },
   ]
  
   constructor(private router: Router) {}

@@ -23,14 +23,7 @@ export class StormtechComponent implements OnInit {
       color: '_dev_color'
     }
   ];
-  options: { value: string, label: string }[] = [
-    { value: 'imagesList1', label: 'flujo 1' },
-    { value: 'imagesList2', label: 'flujo 2' },
-    { value: 'imagesList3', label: 'flujo 3' },
-    { value: 'imagesList4', label: 'flujo 4' },
-    { value: 'imagesList5', label: 'flujo 5' },
-    { value: 'imagesList6', label: 'flujo 6' },
-  ];
+
   imgGallery: string = '../assets/images/dev/stormtech/desktop/0.png';
   imagesList : string[] = [
     '../assets/images/dev/stormtech/desktop/0.png',    
@@ -47,7 +40,7 @@ export class StormtechComponent implements OnInit {
   information: Information[] = [
     {
       title: 'Stormtech | Landing Page',
-      text: '  Durante los años 2020, 2021 y 2022, Sebastián integra el equipo de desarrollo de Stormtech SL. Participó en varios proyectos como Desarrollador Frontend y Diseñador UX/UI. Una de las tareas asignadas fue rediseñar el sitio oficial de la compañia. Se definieron tecnologías como Bootstrap y JavaScript por la simplicidad del proyecto, la velocidad con la que se lo necesitaba activo y por no ser un producto que requiera gran escalabilidad. Es una Landing Page mobile first, simple y ordenada que muestra los servicios que ofrece la compañía, los clientes con los que ha trabajado, las tecnologías que utilizan en sus desarrollos y un formulario de contacto.',
+      text: 'Durante 2020, 2021 y 2022, Sebastián integra el equipo de desarrollo de Stormtech SL. Participó en varios proyectos como Desarrollador Frontend y Diseñador UX/UI. Una de las tareas asignadas fue rediseñar el sitio oficial de la compañia. Se definieron tecnologías como Bootstrap y JavaScript por la simplicidad del proyecto, la velocidad con la que se lo necesitaba activo y por no ser un producto que requiera gran escalabilidad. Es una Landing Page mobile first, simple y ordenada que muestra los servicios que ofrece la compañía, los clientes con los que ha trabajado, las tecnologías que utilizan en sus desarrollos y un formulario de contacto.',
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {

@@ -25,6 +25,7 @@ import { PublicationsComponent } from './components/design/components/publicatio
 import { QxComponent } from './components/development/components/qx/qx.component';
 import { GameComponent } from './components/development/components/game/game.component';
 import { ProyectGameComponent } from './components/development/components/game/proyect/proyect-game.component';
+import { PortalComponent } from './components/development/components/ruano/portal.component';
 
 const routes: Routes = [
   {
@@ -96,6 +97,11 @@ const routes: Routes = [
         path: 'development/qx',
         pathMatch: 'full',
         component: QxComponent
+      },
+      {
+        path: 'development/portal',
+        pathMatch: 'full',
+        component: PortalComponent
       },
       {
         path: 'development/stormtech',
