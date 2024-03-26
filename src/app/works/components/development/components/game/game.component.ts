@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information } from 'src/app/models/models';
 import { MatDialog } from '@angular/material/dialog';
+import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
   selector: 'app-game',
@@ -25,14 +26,7 @@ export class GameComponent implements OnInit {
   ];
 
   imgGallery: string = '../assets/images/dev/zombie/0.png';
-  imagesList : string[] = [
-    '../assets/images/dev/zombie/0.png',    
-    '../assets/images/dev/zombie/1.png',    
-    '../assets/images/dev/zombie/2.png',    
-    '../assets/images/dev/zombie/3.png',    
-    '../assets/images/dev/zombie/4.png',    
-    '../assets/images/dev/zombie/5.png',    
-  ];
+  imagesList : string[] = [];
 
   // La acción de pasar un código de JavaScript a componentes de Angular se denomina "refactorización" o "reestructuración". Esto implica reorganizar y modificar el código existente para adaptarlo al contexto y las convenciones de Angular, como el uso de componentes, directivas, servicios y otras características propias de este framework. La refactorización puede incluir la conversión de funciones y métodos de JavaScript en métodos de componentes, la integración de enlaces de datos, el uso de decoradores para la inyección de dependencias, entre otros ajustes necesarios para aprovechar al máximo las capacidades de Angular.
 
@@ -86,18 +80,23 @@ export class GameComponent implements OnInit {
     }
   ]
 
-  constructor(private router: Router, private dialog: MatDialog) { }
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
+  ngOnInit(): void {
+    this.topFunction();
+    this.loadImages();
+    this.loadingService.setLoadingState(true);
+  }
   
+  
+  /* ----------- MÉTODOS ----------- */
   openGame() {
     this.router.navigateByUrl('works/development/game/proyect');
   }
 
-  ngOnInit(): void {
-    this.topFunction();
-    console.log("Imagen actual:", this.imgGallery);
-  }
-  
-/* ----------- MÉTODOS ----------- */
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -111,6 +110,22 @@ export class GameComponent implements OnInit {
     this.router.navigateByUrl(route);
   }
   
+  loadImages() {
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/dev/zombie/0.png',    
+        '../assets/images/dev/zombie/1.png',    
+        '../assets/images/dev/zombie/2.png',    
+        '../assets/images/dev/zombie/3.png',    
+        '../assets/images/dev/zombie/4.png',    
+        '../assets/images/dev/zombie/5.png',    
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false);
+    }, 1300);
+
+  }
 
 }
 
