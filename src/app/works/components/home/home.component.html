@@ -1,4 +1,4 @@
-<section class="intro_myself">
+<section class="intro_myself" *ngIf="(loadingService.isLoading() | async) === false">
   <div class="_container_image">
     <img class="_img_me" src="../assets/images/sb/yo.jpg" alt="Sebastián Bellido mirando a la cámara y sonriendo">
   </div>
@@ -30,23 +30,3 @@
   </div>
 </section>
 <article class="_container_all_"></article>
-<!-- <article class="_container_all">
-  <section class="_container_concepts">  
-    <div class="_concept" *ngFor="let concept of concepts">
-      <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
-    </div>
-  
-    <div id="middle" class="_concept" *ngFor="let concept of concepts">
-      <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
-    </div>
-
-    <div id="middle_0" class="_concept" *ngFor="let concept of concepts">
-      <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
-    </div>
-  
-    <div id="back" class="_concept" *ngFor="let concept of concepts">
-      <h1 class="_h1" [ngStyle]="getStyles()">{{concept}}</h1>
-    </div>
-  </section>
-</article> -->
-<!-- <app-footer class="_footer"></app-footer> -->
