@@ -49,6 +49,12 @@ export class PortalComponent implements OnInit {
         },
         {
           href: '',
+          src: '../assets/images/tecnologies/swagger.png',
+          title: 'Swagger',
+          alt: 'Logo de Swagger',
+        },
+        {
+          href: '',
           src: '../assets/images/tecnologies/devops.png',
           title: 'Azure devops',
           alt: 'Logo de Azure devops',

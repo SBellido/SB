@@ -264,11 +264,11 @@ info: MoreInfo[] = [
       img: '../../../../assets/images/biography/profetional/juarez.png',
       href: ' ',
       description_img: 'Escudo del Partido de Benito Juárez, Buenos Aires, Argentina',
-      acronyms_career: 'Director de Cultura',
+      acronyms_career: 'Director de Cultura Municipal',
       year: '2009 | 2011',
       name_career: 'Benito Juárez | Buenos Aires | Argentina',
       link: 'https://www.bing.com/maps?mepi=24%7E%7ETopOfPage%7EMap_Image&ty=18&q=Benito+Ju%C3%A1rez%2C+Provincia+de+Buenos+Aires&satid=id.sid%3A9266ce7a-6bbf-7a28-c8a1-b8f00eb497b8&mb=-37.632778%7E-59.869301%7E-37.715473%7E-59.749504&ppois=-37.67412567138672_-59.80940246582031_Benito+Ju%C3%A1rez%2C+Provincia+de+Buenos+Aires_%7E&cp=-37.674038%7E-59.639969&v=2&sV=1&FORM=MIRE&lvl=11.0',
-      description_link: 'ubicación',
+      description_link: 'localidad',
       showDetail: false,
     },
     {
