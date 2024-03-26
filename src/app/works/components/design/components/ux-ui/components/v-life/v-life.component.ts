@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
+import { LoadingService } from '../../../../../../../services/loading.service';
 
 @Component({
   selector: 'app-v-life',
@@ -13,11 +14,13 @@ export class VLifeComponent implements OnInit {
   public imagesList: string[] = [];
   public selectedOption: string = '';
   public imgGallery: string = '';
+
   /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
     {value: 'imagesList1', view_Text: 'Usuario Paciente'},
     {value: 'imagesList2', view_Text: 'Usuario Médico'}
   ];
+
   information: Information[] = [
     {
       title: 'V-LIFE | App Mobile',
@@ -57,6 +60,7 @@ export class VLifeComponent implements OnInit {
       ],
     },
   ];
+
   header: HeaderSection[] = [
     {
     area: 'diseño/ux|ui',
@@ -67,6 +71,7 @@ export class VLifeComponent implements OnInit {
     color: '_design_color'
     }
   ];
+
   brands : Button[] = [
     {
       route: 'works/design/ux-ui/ypf',
@@ -91,10 +96,15 @@ export class VLifeComponent implements OnInit {
     },
   ];
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
   ngOnInit(): void {
     this.topFunction();
-    this.loadImages0(); 
+    this.loadImages0();
+    this.loadingService.setLoadingState(true);
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -102,52 +112,61 @@ export class VLifeComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+  
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
+
   loadImages0() {
-    this.imagesList = [
-      '../assets/images/ux_ui/v-life/patient/0.png',
-      '../assets/images/ux_ui/v-life/patient/1.png',
-      '../assets/images/ux_ui/v-life/patient/2.png',
-      '../assets/images/ux_ui/v-life/patient/3.png',
-      '../assets/images/ux_ui/v-life/patient/4.png',
-      '../assets/images/ux_ui/v-life/patient/5.png',
-      '../assets/images/ux_ui/v-life/patient/6.png',
-      '../assets/images/ux_ui/v-life/patient/7.png',
-      '../assets/images/ux_ui/v-life/patient/8.png',
-      '../assets/images/ux_ui/v-life/patient/8_.png',
-      '../assets/images/ux_ui/v-life/patient/9.png',
-      '../assets/images/ux_ui/v-life/patient/10.png',
-      '../assets/images/ux_ui/v-life/patient/12.png',
-      '../assets/images/ux_ui/v-life/patient/14.png',
-      '../assets/images/ux_ui/v-life/patient/13.png',
-      '../assets/images/ux_ui/v-life/patient/15.png',
-      '../assets/images/ux_ui/v-life/patient/16.png',
-      '../assets/images/ux_ui/v-life/patient/13.png',
-      '../assets/images/ux_ui/v-life/patient/17.png',
-      '../assets/images/ux_ui/v-life/patient/18.png',
-      '../assets/images/ux_ui/v-life/patient/19.png',
-      '../assets/images/ux_ui/v-life/patient/13.png',
-      '../assets/images/ux_ui/v-life/patient/20.png', 
-      '../assets/images/ux_ui/v-life/patient/21.png',
-      '../assets/images/ux_ui/v-life/patient/22.png',
-      '../assets/images/ux_ui/v-life/patient/23.png', 
-      '../assets/images/ux_ui/v-life/patient/24.png',
-      '../assets/images/ux_ui/v-life/patient/25.png', 
-      '../assets/images/ux_ui/v-life/patient/26.png',
-      '../assets/images/ux_ui/v-life/patient/20.png',
-      '../assets/images/ux_ui/v-life/patient/27.png',
-      '../assets/images/ux_ui/v-life/patient/28.png',
-      '../assets/images/ux_ui/v-life/patient/29.png',
-      '../assets/images/ux_ui/v-life/patient/30.png',
-      '../assets/images/ux_ui/v-life/patient/31.png',
-    ];
-    this.imgGallery = this.imagesList[0];
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/ux_ui/v-life/patient/0.png',
+        '../assets/images/ux_ui/v-life/patient/1.png',
+        '../assets/images/ux_ui/v-life/patient/2.png',
+        '../assets/images/ux_ui/v-life/patient/3.png',
+        '../assets/images/ux_ui/v-life/patient/4.png',
+        '../assets/images/ux_ui/v-life/patient/5.png',
+        '../assets/images/ux_ui/v-life/patient/6.png',
+        '../assets/images/ux_ui/v-life/patient/7.png',
+        '../assets/images/ux_ui/v-life/patient/8.png',
+        '../assets/images/ux_ui/v-life/patient/8_.png',
+        '../assets/images/ux_ui/v-life/patient/9.png',
+        '../assets/images/ux_ui/v-life/patient/10.png',
+        '../assets/images/ux_ui/v-life/patient/12.png',
+        '../assets/images/ux_ui/v-life/patient/14.png',
+        '../assets/images/ux_ui/v-life/patient/13.png',
+        '../assets/images/ux_ui/v-life/patient/15.png',
+        '../assets/images/ux_ui/v-life/patient/16.png',
+        '../assets/images/ux_ui/v-life/patient/13.png',
+        '../assets/images/ux_ui/v-life/patient/17.png',
+        '../assets/images/ux_ui/v-life/patient/18.png',
+        '../assets/images/ux_ui/v-life/patient/19.png',
+        '../assets/images/ux_ui/v-life/patient/13.png',
+        '../assets/images/ux_ui/v-life/patient/20.png', 
+        '../assets/images/ux_ui/v-life/patient/21.png',
+        '../assets/images/ux_ui/v-life/patient/22.png',
+        '../assets/images/ux_ui/v-life/patient/23.png', 
+        '../assets/images/ux_ui/v-life/patient/24.png',
+        '../assets/images/ux_ui/v-life/patient/25.png', 
+        '../assets/images/ux_ui/v-life/patient/26.png',
+        '../assets/images/ux_ui/v-life/patient/20.png',
+        '../assets/images/ux_ui/v-life/patient/27.png',
+        '../assets/images/ux_ui/v-life/patient/28.png',
+        '../assets/images/ux_ui/v-life/patient/29.png',
+        '../assets/images/ux_ui/v-life/patient/30.png',
+        '../assets/images/ux_ui/v-life/patient/31.png',
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false);
+    }, 1300);
+
   }
+
   loadImages1() {
     this.imagesList = [
        '../assets/images/ux_ui/v-life/professional/0.png',
@@ -164,6 +183,7 @@ export class VLifeComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0];
   }
+
   onChange(event: any) {
     this.selectedOption = event.value;    
     switch (this.selectedOption) {
@@ -178,5 +198,6 @@ export class VLifeComponent implements OnInit {
         break;
     }
   }
+
 }
 

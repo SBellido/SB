@@ -136,9 +136,8 @@ export class PortalComponent implements OnInit {
         '../assets/images/dev/ruano/desktop/19.png', 
       ];
       this.imgGallery = this.imagesList[0];
-      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
-    }, 1300); // Simulamos una demora de 2 segundos
-
+      this.loadingService.setLoadingState(false);
+    }, 1300);
   }
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
+import { LoadingService } from '../../../../../../../services/loading.service';
 
 @Component({
   selector: 'app-ypf',
@@ -9,7 +10,6 @@ import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models
 })
 
 export class YpfComponent implements OnInit {
-  
   /*--------VARIABLES--------*/ 
   public imagesList: string[] = [];
   public selectedOption: string = '';
@@ -35,6 +35,7 @@ export class YpfComponent implements OnInit {
      color: '_design_color'
     }
   ];
+
   information: Information[] = [
     {
       title: 'Gestión de Inversiones | Web App',
@@ -68,6 +69,7 @@ export class YpfComponent implements OnInit {
       ],
     },
   ];
+
   brands : Button[] = [
     {
       route: 'works/design/ux-ui/v-life',
@@ -92,11 +94,15 @@ export class YpfComponent implements OnInit {
     },
   ]
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
+
   ngOnInit(): void {
-    this.topFunction();  
-    this.loadImages0(); 
-    this.imgGallery = this.imagesList[0];
+    this.topFunction();
+    this.loadImages0();
+    this.loadingService.setLoadingState(true);
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -104,19 +110,25 @@ export class YpfComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }
 
   loadImages0() {
-    this.imagesList = [
-      '../assets/images/ux_ui/ypf/0/0.png', 
-      '../assets/images/ux_ui/ypf/0/1.png', 
-      '../assets/images/ux_ui/ypf/0/2.png', 
-      '../assets/images/ux_ui/ypf/0/3.png',
-    ];
-    this.imgGallery = this.imagesList[0];
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/ux_ui/ypf/0/0.png', 
+        '../assets/images/ux_ui/ypf/0/1.png', 
+        '../assets/images/ux_ui/ypf/0/2.png', 
+        '../assets/images/ux_ui/ypf/0/3.png',      
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false);
+    }, 1300);
   }
+
   loadImages1() {
     this.imagesList = [
       '../assets/images/ux_ui/ypf/1/0.png',
@@ -125,6 +137,7 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0];
   }
+
   loadImages2() {
     this.imagesList = [
       '../assets/images/ux_ui/ypf/2/0.png',
@@ -145,6 +158,7 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0];
   }
+
   loadImages4() {
     this.imagesList = [
       '../assets/images/ux_ui/ypf/4/0.png',
@@ -157,6 +171,7 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0];
   }
+
   loadImages5() {
     this.imagesList = [
       '../assets/images/ux_ui/ypf/5/0.png',
@@ -168,6 +183,7 @@ export class YpfComponent implements OnInit {
     ];
     this.imgGallery = this.imagesList[0]; 
   } 
+
   onChange(event: any) {
     this.selectedOption = event.value;    
     switch (this.selectedOption) {

@@ -100,36 +100,35 @@ export class XuboxComponent implements OnInit {
   }
    
  /* ----------- MÉTODOS ----------- */
- topFunction() {
-   document.body.scrollTop = 0;
-   document.documentElement.scrollTop = 0;
- }
- 
- routeBack() {    
-   this.router.navigateByUrl('works/design/ux-ui')
- }
-
- loadImages() {
-  // Simulación de carga de imágenes
-  setTimeout(() => {
-    this.imagesList = [ 
-      '../assets/images/dev/xubox/mobile/0.png',     
-      '../assets/images/dev/xubox/mobile/1.png',
-      '../assets/images/dev/xubox/mobile/2.png',
-      '../assets/images/dev/xubox/mobile/3.png',
-      '../assets/images/dev/xubox/mobile/4.png',
-      '../assets/images/dev/xubox/mobile/5.png',
-      '../assets/images/dev/xubox/mobile/6.png',
-      '../assets/images/dev/xubox/mobile/7.png',
-      '../assets/images/dev/xubox/mobile/8.png',
-      '../assets/images/dev/xubox/mobile/9.png',
-      '../assets/images/dev/xubox/mobile/10.png',
-      '../assets/images/dev/xubox/mobile/11.png',
-    ];
-    this.imgGallery = this.imagesList[0];
-    this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
-  }, 1300); // Simulamos una demora de 2 segundos
-}
+  topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
   
+  routeBack() {    
+    this.router.navigateByUrl('works/design/ux-ui')
+  }
+
+  loadImages() {
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/dev/xubox/mobile/0.png',     
+        '../assets/images/dev/xubox/mobile/1.png',
+        '../assets/images/dev/xubox/mobile/2.png',
+        '../assets/images/dev/xubox/mobile/3.png',
+        '../assets/images/dev/xubox/mobile/4.png',
+        '../assets/images/dev/xubox/mobile/5.png',
+        '../assets/images/dev/xubox/mobile/6.png',
+        '../assets/images/dev/xubox/mobile/7.png',
+        '../assets/images/dev/xubox/mobile/8.png',
+        '../assets/images/dev/xubox/mobile/9.png',
+        '../assets/images/dev/xubox/mobile/10.png',
+        '../assets/images/dev/xubox/mobile/11.png',
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false);
+    }, 1300);
+  }
 
 }

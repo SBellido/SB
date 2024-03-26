@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
+import { LoadingService } from '../../../../../../../services/loading.service';
 
 @Component({
   selector: 'app-travel-log',
@@ -12,6 +13,7 @@ export class TravelLogComponent implements OnInit {
   /*--------VARIABLES--------*/ 
   imgGallery = '';
   imagesList : string[] = [] 
+
   /*--------INTERFACES-------*/ 
   information: Information[] = [
     {
@@ -52,6 +54,7 @@ export class TravelLogComponent implements OnInit {
       ],
     },
   ];
+
   header: HeaderSection[] = [
     {
     area: 'diseño/ux|ui',
@@ -62,6 +65,7 @@ export class TravelLogComponent implements OnInit {
     color: '_design_color'
     }
   ];
+
   brands : Button[] = [
     {
       route: 'works/design/ux-ui/ypf',
@@ -86,11 +90,15 @@ export class TravelLogComponent implements OnInit {
     },
   ]
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) {}
 
   ngOnInit(): void {
     this.topFunction();
-    this.loadImages(); 
+    this.loadImages();
+    this.loadingService.setLoadingState(true);
   }
   
 /* ----------- MÉTODOS ----------- */
@@ -105,37 +113,25 @@ export class TravelLogComponent implements OnInit {
     this.router.navigateByUrl(route);
   }
 
-  onChange(event: Event) {
-    const selectedValue = (event.target as HTMLSelectElement).value;
-    if (selectedValue === 'imagesList') {
-      this.loadImages();
-    } else if (selectedValue === 'imagesList2') {
-      this.loadImages2();
-    }
-  }
-
   loadImages() {
-    this.imagesList = [ 
-      '../assets/images/ux_ui/travel_log/flujo_1/0.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/1.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/2.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/3.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/5.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/6.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/7.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/8.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/9.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/10.png',
-      '../assets/images/ux_ui/travel_log/flujo_1/11.png',
-    ];
-    this.imgGallery = this.imagesList[0];
-  }
-  loadImages2() {
-    this.imagesList = [
-      '../assets/images/ux_ui/ypf/asignarComite/2.png',
-      '../assets/images/yo.png',
-    ];
-    this.imgGallery = this.imagesList[0];
+    // Simulación de carga de imágenes
+    setTimeout(() => {
+      this.imagesList = [ 
+        '../assets/images/ux_ui/travel_log/flujo_1/0.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/1.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/2.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/3.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/5.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/6.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/7.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/8.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/9.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/10.png',
+        '../assets/images/ux_ui/travel_log/flujo_1/11.png',     
+      ];
+      this.imgGallery = this.imagesList[0];
+      this.loadingService.setLoadingState(false);
+    }, 1300);
   }
 
 }
