@@ -6,7 +6,6 @@
   }
   img._img_personal {
     width: 6rem;
-    border: solid $second_color 3px;
     border-radius: 50%;
     object-fit: contain;
   }
@@ -40,6 +39,9 @@
   }
 }  
 @media (min-width: 1024px) { 
+  img._img_personal {
+    border: solid $second_color 3px;
+  }
   div._scroll {
     height: 11.5rem;
   }

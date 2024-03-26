@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderSection } from 'src/app/models/models';
+import { LoadingService } from '../../../services/loading.service';
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,9 @@ export class HomeComponent implements OnInit {
       color: '$first_color_light'
     }
   ];
+
+  /*--------VARIABLES-------*/ 
+  isLoading: boolean = false;
   concepts: string[] = [
     // 'learning', 'overcoming', 'openness', 'perseverance', 'reading',
     // 'creativity', 'experience', 'respect', 'balance', 'study',
@@ -66,17 +70,23 @@ export class HomeComponent implements OnInit {
     '1.5rem', '1rem','1.75rem','1.25rem'
   ];
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router, 
+    public loadingService: LoadingService
+  ) { }
 
   ngOnInit(): void {   
-    this.mixArrayContent();
     this.topFunction();
-  }
+    window.onload = () => {
+      this.loadingService.setLoadingState(false);
+    };
+ }
 
   /*------------MÉTODOS--------------*/
    topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+
   }
 
   mixArrayContent() {   
@@ -92,7 +102,8 @@ export class HomeComponent implements OnInit {
       fontSize: this.getRandomFontSize()
     }
     this.mixArrayContent();
-    return myStyles;    
+    return 
+    myStyles;    
   }
   getRandomWeight(): number {
     let result: number;
@@ -101,6 +112,7 @@ export class HomeComponent implements OnInit {
     this.mixArrayContent();
     return result;
   }
+
   getRandomColor(): string {
     let result: string;
     this.colorFont.sort(()=> Math.random() - 0.5); 
@@ -108,6 +120,7 @@ export class HomeComponent implements OnInit {
     this.mixArrayContent();
     return result;
   }
+
   getRandomFontStyle(): string {
     let result: string;
     this.fontStyle.sort(()=> Math.random() - 0.5); 
