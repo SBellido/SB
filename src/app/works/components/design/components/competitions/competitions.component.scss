@@ -18,9 +18,9 @@
     margin-bottom: 1rem;
   }
   ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
-    background-color: $design_color;
+    background-color: $first_color_lighter;
     padding: .5rem;
-    border-radius: 25px;
+    border-radius: 10px 10px 0 0;
     margin-top: 0;
     text-align: center;
     width: 15.5rem;

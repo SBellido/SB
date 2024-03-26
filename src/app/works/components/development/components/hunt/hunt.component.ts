@@ -8,6 +8,7 @@ import { LoadingService } from '../../../../../services/loading.service';
   templateUrl: './hunt.component.html',
   styleUrls: ['./hunt.component.scss']
 })
+
 export class HuntComponent implements OnInit {
 /*--------VARIABLES -------*/  
   imgGallery = '';
@@ -117,8 +118,8 @@ export class HuntComponent implements OnInit {
         '../assets/images/dev/hunt/mobile/14.png',
       ];
       this.imgGallery = this.imagesList[0];
-      this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
-    }, 1300); // Simulamos una demora de 2 segundos
+      this.loadingService.setLoadingState(false);
+    }, 1300);
 
   }
 
