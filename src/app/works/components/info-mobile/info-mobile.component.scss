@@ -17,6 +17,11 @@
     height: 19rem;
   }
 }
+@media (min-width: 1280px) {
+  div._container_info {
+    width: 20vw;
+  }
+}
 @media (min-width: 1440px) {
   div._container_info {
       width: 17vw;
