@@ -1,15 +1,20 @@
-@import '../../../development/components/stormtech/stormtech.component.scss';
+@import '../../../design/components/ux-ui/components/nighx/nighx.component.scss';
 
 @media (min-width: 0px) {
+  ._container_button {
+    // position: absolute;
+    // top: 95%;
+    // left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
   button._openApp {
     color: $first_color;
     border: none;
-    margin-bottom: 6rem;
-    position: absolute;
-    top: 65.5%;
-    left: 31%;
+    // margin-bottom: 6rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    border: none;
     cursor: pointer;
     border-radius: 25px;
     background-color: $first_color_lighter;

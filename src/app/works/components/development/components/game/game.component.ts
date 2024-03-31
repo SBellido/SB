@@ -14,9 +14,11 @@ export class GameComponent implements OnInit {
   dev_color: string = '#ffdd57';
   routerLink: string = '../';
   currentImageNumber: number = 1;
+  activeGame: boolean = false;
+
   header: HeaderSection[] = [
     {
-      area: 'desarrollo/experimental',
+      area: 'desarrollo/prácticas',
       icon: 'developer_mode',
       routerLink: '../',
       isFlows: true,
@@ -70,14 +72,14 @@ export class GameComponent implements OnInit {
     },
   ];
 
-  brands : Button[] = [
+  brands: Button[] = [
     {
-      route: '',
-      img: '',
-      name: '',
-      text: '',
-      title: ''
-    }
+      route: 'works/development/platzi-react',
+      img: '../assets/images/graph/platzi_logo.png',
+      name: 'React.js',
+      text: 'Logo de Platzi',
+      title: 'React.js'
+    },
   ]
 
   constructor(
@@ -91,9 +93,8 @@ export class GameComponent implements OnInit {
     this.loadingService.setLoadingState(true);
   }
   
-  
   /* ----------- MÉTODOS ----------- */
-  openGame() {
+  openApp() {
     this.router.navigateByUrl('works/development/game/proyect');
   }
 

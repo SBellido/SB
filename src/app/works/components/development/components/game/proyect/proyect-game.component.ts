@@ -21,13 +21,20 @@ export class ProyectGameComponent implements OnInit {
     private dialog: MatDialog
   ) { }
 
+  // ngOnInit(): void {
+  //   this.gameService.initializeGame();
+
+  //   window.onload = () => {
+  //     this.gameService.loadGame();
+  //   };
+  //   this.game = new GameZombieComponent(this.gameService);
+  // }
   ngOnInit(): void {
     this.gameService.initializeGame();
-
+  
     window.onload = () => {
       this.gameService.loadGame();
     };
-    this.game = new GameZombieComponent(this.gameService);
   }
 
   startGame(): void {

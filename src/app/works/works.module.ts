@@ -46,6 +46,7 @@ import { InfoMobileComponent } from './components/info-mobile/info-mobile.compon
 import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.component';
 import { GameComponent } from './components/development/components/game/game.component';
 import { PortalComponent } from './components/development/components/ruano/portal.component'; 
+import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { PortalComponent } from './components/development/components/ruano/porta
     InfoMobileComponent,
     InfoPolaroidComponent,
     GameComponent,
-    PortalComponent
+    PortalComponent,
+    PlatziReact
   ],
   imports: [
     CommonModule,

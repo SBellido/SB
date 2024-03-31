@@ -5,6 +5,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './character.component.html',
   styleUrls: ['./character.component.scss']
 })
+
 export class CharacterComponent {
   @ViewChild('character') characterRef!: ElementRef<HTMLDivElement>;
 
@@ -17,6 +18,7 @@ export class CharacterComponent {
 
   ngAfterViewInit(): void {
     this.character = this.characterRef.nativeElement;
+    this.motionless();
   }
 
   getState(): string {
@@ -32,26 +34,26 @@ export class CharacterComponent {
   }
 
   motionless(): void {
-    this.character.classList.add('characterMotionless');
+    this.character!.classList.add('characterMotionless');
     this.setState('motionless'); 
     console.log("parado ", this.state);
   }
 
   run(): void {
-    this.character.classList.add('characterRun');
+    this.character!.classList.add('characterRun');
     this.setState('run');
     console.log("corre ", this.state);
   }
   
   jump(): void {
-    this.character.classList.add('characterJump');
+    this.character!.classList.add('characterJump');
     this.setState('jump');
     // Aquí deberías manejar la lógica para reproducir el sonido de salto
     console.log("salta ", this.state);
   }
 
   dead(): void {
-    this.character.classList.add('characterDead');
+    this.character!.classList.add('characterDead');
     this.setState('dead');
     console.log("muerte ", this.state);
   }
