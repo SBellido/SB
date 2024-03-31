@@ -1,10 +1,7 @@
-@import '../../../design/components/ux-ui/components/nighx/nighx.component.scss';
+@import '../../../../../global/global.section_mobile.scss';
 
 @media (min-width: 0px) {
   ._container_button {
-    // position: absolute;
-    // top: 95%;
-    // left: 25%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +10,6 @@
   button._openApp {
     color: $first_color;
     border: none;
-    // margin-bottom: 6rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     cursor: pointer;
     border-radius: 25px;
