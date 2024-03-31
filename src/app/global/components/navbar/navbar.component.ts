@@ -52,20 +52,23 @@ export class NavbarComponent implements OnInit {
   constructor(private router: Router) { 
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
   isHomePage(): boolean {
     return this.router.url === '/works/home';
   }
+
   toggleImage() {
     this.isClicked = !this.isClicked;
     this.navigateTo('works/home');
   }
+
   navigateBtnTo(btn: ItemNavBar) {
     this.setActiveButton(btn.id); 
     this. isHomePage();
     this.router.navigate([btn.router]);
   }
+
   navigateTo(destiny: string) {
     for (const btn of this.btnNavBar) {
       btn.active = false;
@@ -79,6 +82,7 @@ export class NavbarComponent implements OnInit {
       btn.active = btn.id === id;
     }
   }
+
   onButtonMouseEnter(btn: any) {
     this.hoverStates[btn.id] = true;
   }

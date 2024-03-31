@@ -88,9 +88,9 @@ export class DevelopmentComponent implements OnInit {
       ]
     },
     {
-      title: 'experimental',
+      title: 'prácticas',
       visible: false,
-      text: 'El desarrollo experimental en programación implica explorar nuevas ideas, tecnologías y enfoques en este ámbito de una manera más libre y sin las restricciones típicas de un entorno laboral. Es un proceso creativo y dinámico que permite expandir habilidades y conocimientos trabajando en proyectos que apasionan. En este contexto, los desarrolladores pueden embarcarse en la creación de proyectos innovadores, sin necesariamente tener un objetivo comercial definido. Pueden experimentar con diferentes lenguajes de programación, frameworks, bibliotecas y herramientas, explorando sus capacidades y límites. Este enfoque les brinda la libertad de probar nuevas técnicas de codificación, resolver problemas complejos y aprender de los errores sin la presión de cumplir con plazos o requisitos específicos. El desarrollo experimental de programación a nivel personal también fomenta la colaboración y el intercambio de ideas con otros desarrolladores a través de comunidades en línea, foros y eventos relacionados con la tecnología. Estas interacciones pueden llevar a la retroalimentación constructiva, el descubrimiento de nuevas perspectivas y la mejora continua de las habilidades técnicas.',
+      text: 'La práctica en el ámbito del desarrollo de software implica la exploración, experimentación y aprendizaje de nuevas tecnologías, metodologías y enfoques dentro del campo de la ingeniería informática. Es un proceso que permite expandir habilidades y conocimientos mientras se trabaja en proyectos de diversa índole. Durante este proceso, se tiene la oportunidad de investigar y poner a prueba diferentes lenguajes, frameworks, bibliotecas y herramientas, explorando sus funcionalidades y limitaciones. Esta práctica brinda la libertad de implementar nuevas estrategias, resolver desafíos complejos y aprender de los errores sin las restricciones típicas de los proyectos comerciales. Además, fomenta la colaboración y el intercambio de ideas a través de comunidades en línea, foros y eventos tecnológicos, lo que contribuye a una mejora continua de las habilidades y al descubrimiento de enfoques innovadores.',
       disabled: false,
       isHovered: false,
       wordsToHighlight: [],
@@ -100,6 +100,13 @@ export class DevelopmentComponent implements OnInit {
           img: '../assets/images/dev/zombie/zombie_logo.png',
           name: 'Game Runner',
           text: 'Ícono con cara de zombie',
+          title: ''
+        },
+        {
+          route: 'works/development/platzi-react',
+          img: '../assets/images/graph/platzi_logo.png',
+          name: 'React.js',
+          text: 'Logo de Platzi',
           title: ''
         },
       ],

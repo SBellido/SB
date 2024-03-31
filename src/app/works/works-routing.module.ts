@@ -26,6 +26,7 @@ import { QxComponent } from './components/development/components/qx/qx.component
 import { GameComponent } from './components/development/components/game/game.component';
 import { ProyectGameComponent } from './components/development/components/game/proyect/proyect-game.component';
 import { PortalComponent } from './components/development/components/ruano/portal.component';
+import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
 
 const routes: Routes = [
   {
@@ -122,6 +123,11 @@ const routes: Routes = [
         path: 'development/game/proyect',
         pathMatch: 'full',
         component: ProyectGameComponent
+      },
+      {
+        path: 'development/platzi-react',
+        pathMatch: 'full',
+        component: PlatziReact
       },
       {
         path: 'biography',

@@ -12,6 +12,8 @@ import { GameService } from 'src/app/services/game.service';
   styleUrls: ['./game-zombie.component.scss']
 })
 export class GameZombieComponent implements OnInit {
+  @ViewChild('character') characterRef: CharacterComponent | undefined;
+
   @ViewChild('startButton') startButtonRef: ElementRef<HTMLButtonElement> | undefined;
   @ViewChild('jumpButton') jumpButtonRef: ElementRef<HTMLButtonElement> | undefined;
   @ViewChild('logoGame') logoGameRef: ElementRef<HTMLElement> | undefined;
@@ -27,6 +29,7 @@ export class GameZombieComponent implements OnInit {
   @ViewChild('background_L4') background_L4Ref: ElementRef<HTMLElement> | undefined;
   @ViewChild('background_L5') background_L5Ref: ElementRef<HTMLElement> | undefined;
   
+  characterInitialized: boolean = false; 
   character: CharacterComponent;
   obstacle: ObstacleComponent;
   gameInterval: any;
@@ -42,21 +45,26 @@ export class GameZombieComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.characterInitialized = true;
     this.setGame();
     this.gameService.startGame$.subscribe(() => this.loopGame());
     this.gameService.jumpCharacter$.subscribe(() => this.jumpCharacter());
     this.gameService.callGameOver$.subscribe(() => this.gameOver());
   }
 
-  setGame(): void {     
-    this.character.motionless();
-    this.startButtonRef!.nativeElement.classList.add('startButton');
-    this.jumpButtonRef!.nativeElement.classList.add('jumpButtonInactive');
-    this.logoGameRef!.nativeElement.style.visibility = 'visible';
-    this.gameOverLogoRef!.nativeElement.style.visibility = 'hidden';
-    this.backgroundRef!.nativeElement.classList.add('background');
-    this.fogRef!.nativeElement.classList.add('fog');
-    this.fogGreenRef!.nativeElement.classList.add('fogGreen');
+  setGame(): void { 
+    if (!this.characterInitialized) {
+      return; 
+    } else {
+      this.character.motionless();
+      this.startButtonRef!.nativeElement.classList.add('startButton');
+      this.jumpButtonRef!.nativeElement.classList.add('jumpButtonInactive');
+      this.logoGameRef!.nativeElement.style.visibility = 'visible';
+      this.gameOverLogoRef!.nativeElement.style.visibility = 'hidden';
+      this.backgroundRef!.nativeElement.classList.add('background');
+      this.fogRef!.nativeElement.classList.add('fog');
+      this.fogGreenRef!.nativeElement.classList.add('fogGreen');
+    }    
   }
 
   showBackgroundLayer() {

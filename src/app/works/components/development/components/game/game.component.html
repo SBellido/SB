@@ -11,16 +11,16 @@
       [imgGallery]="imgGallery"
       [totalImages]="imagesList.length">
     </app-gallery-desktop>
-    <div class="_container_selector">
-    </div>
-    <!-- <button (click)="openGame()">Jugar</button> -->
+    <!-- <div class="_container_selector">
+    </div> -->
+    <!-- <button class="_openApp" (click)="openApp()">Jugar</button> -->
     <app-info
       [information]="information">
     </app-info>
   </article>
   <div class="_container_more_works">
     <div class="_container_text_more_works">
-      <h4 class="_title">Más trabajos de desarrollo/experimental</h4>
+      <h4 class="_title">Más trabajos de desarrollo/prácticas</h4>
     </div>
     <app-brands-buttons [brands]="brands"></app-brands-buttons>
   </div>
@@ -31,7 +31,7 @@
     <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
     </div>
-    <!-- <button class="_playGame" (click)="openGame()">jugar</button> -->
+    <!-- <button class="_openApp" (click)="openApp()">jugar</button> -->
     <div class="_container_gallery_selector">
       <app-gallery-desktop class="_gallery"
         [imagesList]="imagesList" 
@@ -44,4 +44,10 @@
       </app-info>
     </div>
   </article>
+  <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de desarrollo/prácticas</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div>
 </article>
