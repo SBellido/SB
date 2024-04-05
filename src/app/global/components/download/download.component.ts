@@ -29,7 +29,7 @@ export class DownloadComponent implements OnInit {
   //     });
   // }
   downloadCV() {
-    const url = '../../../../assets/images/biography/cvSBellido.pdf';
+    const url = '../../../../assets/images/biography/cvSBellido2024_English.pdf';
     fetch(url)
       .then(response => response.blob())
       .then(blob => {
