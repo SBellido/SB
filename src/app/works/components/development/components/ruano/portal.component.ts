@@ -133,7 +133,6 @@ export class PortalComponent implements OnInit {
         '../assets/images/dev/ruano/desktop/16.png', 
         '../assets/images/dev/ruano/desktop/17.png', 
         '../assets/images/dev/ruano/desktop/18.png', 
-        '../assets/images/dev/ruano/desktop/19.png', 
       ];
       this.imgGallery = this.imagesList[0];
       this.loadingService.setLoadingState(false);
