@@ -3,9 +3,9 @@
 </app-header-section>
 <article class="_mobile_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <div class="_container_desktop">
+    <!-- <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
-    </div>
+    </div> -->
     <app-gallery-desktop class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
@@ -28,9 +28,9 @@
 
 <article class="_desktop_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <div class="_container_desktop">
+    <!-- <div class="_container_desktop">
       <img class="_desktop" src="../assets/images/desktop.png" alt="">
-    </div>
+    </div> -->
     <!-- <button class="_openApp" (click)="openApp()">jugar</button> -->
     <div class="_container_gallery_selector">
       <app-gallery-desktop class="_gallery"
