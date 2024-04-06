@@ -1,6 +1,7 @@
 @import '../../global.component.scss';
 ::ng-deep .mat-dialog-container {
   padding: 1rem;
+  border-radius: 15px;
 }
 div._header_modal {
   display: flex;
@@ -28,18 +29,18 @@ div._container_info {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem 0 0 0;
+  padding: 1.5rem 1rem 0 1rem;
 }
 p {
-  font-size: .7rem;
+  font-size: .9rem;
 }
 div.container_buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 13rem;
-  padding: .6rem 0;
+  width: 15rem;
+  padding: 2rem 0 .6rem 0;
 }
 button._btn {
   display: flex;
@@ -47,7 +48,7 @@ button._btn {
   justify-content: space-between;
   border-radius: 25px;
   border: none;
-  padding: .2rem .5rem;
+  padding: .2rem .9rem;
   background-color: $first_color_lighter;
   cursor: pointer;
 }
