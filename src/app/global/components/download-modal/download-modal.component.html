@@ -1,4 +1,4 @@
-<div class="container_modal">
+<!-- <div class="container_modal">
   <div class="_header_modal">
     <div class="_container_icon">
       <mat-icon class="_icon_download">cloud_download</mat-icon>
@@ -14,5 +14,32 @@
     <mat-icon class="_icon_check">check_circle_outline</mat-icon>
     <p class="_text_modal">El CV de Sebastián fue desgargado con éxito.</p>
    <span class="_text_modal">Muchas gracias por tu interés.</span>
+  </div>
+</div> -->
+<!-- download-modal.component.html -->
+<div class="container_modal">
+  <div class="_header_modal">
+    <div class="_container_icon">
+      <mat-icon class="_icon_download">cloud_download</mat-icon>
+    </div>
+    <h4 class="_title_modal">
+      Descargar CV
+    </h4>
+    <div class="_container_close_btn" (click)="closeModal()" title="Cerrar">
+      <mat-icon>close</mat-icon>
+    </div>
+  </div>
+  <div class="_container_info">
+    <p>Selecciona la versión que prefieras.</p>
+    <div class="container_buttons">
+      <button class="_btn" (click)="downloadCV('english')" title="CV en inglés">
+        <img class="_icon_flag" src="../../../../assets/images/footer/english_icon.png" alt="English Flag">
+          English
+      </button>      
+      <button class="_btn" (click)="downloadCV('spanish')" title="CV en español" >
+        <img class="_icon_flag" src="../../../../assets/images/footer/spanish_icon.png" alt="Spanish Flag">
+          Español
+      </button>
+    </div>
   </div>
 </div>

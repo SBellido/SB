@@ -9,6 +9,7 @@ import { WorksModule } from './works/works.module';
 import { GlobalModule } from "./global/global.module";
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { MatIconModule } from '@angular/material/icon';
       GlobalModule,
       MatDialogModule,
       MatIconModule,
+      MatSnackBarModule
     ],
     bootstrap: [AppComponent],
 })

@@ -4,14 +4,18 @@
 }
 div._header_modal {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
+}
+._container_icon {
+  display: flex;
 }
 div._container_close_btn {
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  border-radius: 50px;
 }
 h4._title_modal {
   margin-block-start: 0em;
@@ -24,7 +28,37 @@ div._container_info {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: .5rem 0;
+  padding: 1.5rem 0 0 0;
+}
+p {
+  font-size: .7rem;
+}
+div.container_buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 13rem;
+  padding: .6rem 0;
+}
+button._btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+  border: none;
+  padding: .2rem .5rem;
+  background-color: $first_color_lighter;
+  cursor: pointer;
+}
+button._btn:hover {
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+}
+._icon_flag {
+  width: 25px;
+  height: auto;
 }
 ._icon_check {
   color: #bafe71;
