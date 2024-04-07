@@ -4,9 +4,6 @@
 </app-header-section>
 <article class="_mobile_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <div class="_container_polaroid">
-      <img class="_polaroid" src="../assets/images/polaroid.png" alt="marco de foto polaroid">
-    </div>
     <app-gallery-polaroid class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
@@ -39,9 +36,6 @@
 
 <article class="_desktop_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <div class="_container_polaroid">
-      <img class="_polaroid" src="../assets/images/polaroid.png" alt="marco de foto polaroid">
-    </div>
     <div class="_container_gallery_selector">
       <app-gallery-polaroid class="_gallery"
         [imagesList]="imagesList" 

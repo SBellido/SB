@@ -45,13 +45,6 @@
     align-items: center;
     flex-direction: column;
   }
-  div._container_polaroid {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 14.5rem;
-    z-index: -1;
-  }
   img._polaroid {
     width: 17rem;
     border-radius: 15px;
@@ -126,7 +119,8 @@
     margin-block-start: 0;
   }
   ::ng-deep .mat-form-field-appearance-legacy {
-      width: 24rem;
+      width: 23rem;
+      margin-right: 2rem;
   }
   article._desktop_version {
     display: flex; 
@@ -141,20 +135,15 @@
     align-items: flex-start;
     flex-direction: row;
   }
-  div._container_polaroid {
-    top: 14.6rem;
-    left: 1.4rem;
-    width: 32.5rem;
-  }
   div._container_gallery_selector {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  div._container_more_works  {
-    margin-left: 2rem;
-  }
+  // div._container_more_works  {
+  //   margin-left: 3rem;
+  // }
   div._container_selector {
     display: flex;
     flex-direction: column;
@@ -163,18 +152,12 @@
     margin: 0;
     width: 24rem;
     padding: 0;
-    margin-right: 2rem;
   }
   div._container_info_works {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-  }
-}
-@media (min-width: 1080px) {
-  div._container_polaroid {
-    left: 9rem;
   }
 }
 @media (min-width: 1440px) {
@@ -184,11 +167,6 @@
   article._container_all {
     justify-content: center;
   }
-  div._container_polaroid {
-    top: 14.7rem;
-    left: 15rem;
-    width: 29.2rem;
-  }
   div._container_selector {
     padding: 0;
   }
@@ -197,11 +175,6 @@
   article._header_section {
     padding: 10rem 38rem 1.2rem 38rem;
   }
-  div._container_polaroid {
-    top: 14.8rem;
-    left: 17.5rem;
-    width: 30rem;
-  }
   div._container_image {
       width: 21rem
   }
@@ -209,10 +182,6 @@
 @media (min-width: 1920px) {
   article._header_section {
     padding: 10rem 50rem 1.5rem 50rem;
-  }
-  div._container_polaroid {
-    top: 14.6rem;
-    left: 27rem;
   }
   div._container_selector {
     padding: 0;
@@ -225,8 +194,5 @@
 @media (min-width: 2560px) {
   article._header_section {
     padding: 10rem 70rem 1.5rem 71rem;
-  }
-  div._container_polaroid {
-    left: 46.3rem;
   }
 }
