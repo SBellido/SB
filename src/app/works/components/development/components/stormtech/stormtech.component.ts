@@ -107,16 +107,16 @@ export class StormtechComponent implements OnInit {
     setTimeout(() => {
       this.imagesList = [ 
         '../assets/images/dev/stormtech/desktop/0.png',    
-      '../assets/images/dev/stormtech/desktop/1.png',
-      '../assets/images/dev/stormtech/desktop/2.png',
-      '../assets/images/dev/stormtech/desktop/3.png',
-      '../assets/images/dev/stormtech/desktop/4.png',
-      '../assets/images/dev/stormtech/desktop/5.png',
-      '../assets/images/dev/stormtech/desktop/6.png',
-      '../assets/images/dev/stormtech/desktop/8.png',
-      '../assets/images/dev/stormtech/desktop/7.png',
-      '../assets/images/dev/stormtech/desktop/9.png', 
-      ];
+        '../assets/images/dev/stormtech/desktop/1.png',
+        '../assets/images/dev/stormtech/desktop/2.png',
+        '../assets/images/dev/stormtech/desktop/3.png',
+        '../assets/images/dev/stormtech/desktop/4.png',
+        '../assets/images/dev/stormtech/desktop/5.png',
+        '../assets/images/dev/stormtech/desktop/6.png',
+        '../assets/images/dev/stormtech/desktop/8.png',
+        '../assets/images/dev/stormtech/desktop/7.png',
+        '../assets/images/dev/stormtech/desktop/9.png', 
+    ];
       this.imgGallery = this.imagesList[0];
       this.loadingService.setLoadingState(false);
     }, 1300);

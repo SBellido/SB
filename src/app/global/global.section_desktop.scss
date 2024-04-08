@@ -1,4 +1,4 @@
-@import '../works/components/gallery/gallery.component.scss';
+@import '../works/components/gallery-desktop/gallery-desktop.component.scss';
 @media (min-width: 0px) {
   article._desktop_version {
     display: none
@@ -21,7 +21,7 @@
   ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-infix {
     background-color: $first_color_lighter;
     padding: .5rem;
-    border-radius: 10px 10px 0 0;
+    border-radius: 25px;
     margin-top: 0;
     text-align: center;
     width: 15rem;
@@ -46,8 +46,15 @@
     align-items: center;
     flex-direction: column;
   }
-  img._mobile {
-    width: 17rem;
+  div._container_desktop {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 11.5rem;
+    z-index: -1;
+  }
+  img._desktop {
+    width: 20rem;
     border-radius: 30px;
     object-fit: contain;
   }
@@ -56,7 +63,7 @@
   }
   h4._title, h4._title_ {
     margin-block-end: 0;
-    color: $design_color;
+    color: $dev_color;
     text-align: center;
     font-weight: 200;
   }
@@ -69,25 +76,34 @@
   }
   div._container_text_more_works {
     padding-bottom: .5rem;
-    border-bottom: solid .5px $design_color;
+    border-bottom: solid .5px $dev_color;
   }
-  div._container_text_selector {
-    padding-bottom: .5rem;
+}
+@media (min-width: 375px) {
+  img._desktop {
+    width: 24rem;
   }
 }
 @media (min-width: 425px) {
   h1._title {
     padding: 0 1.5rem;
   }
+  img._desktop {
+    width: 26rem;
+  }
 }
 @media (min-width: 768px) {
     div._container_selector {
       padding: 0;
     }
+    img._desktop {
+      width: 30rem;
+    }
 }
 @media (min-width: 1024px) {
   h4._title_ {
     margin-block-start: 0;
+    padding-bottom: .5rem;
   }
   ::ng-deep .mat-form-field-appearance-legacy {
       width: 16rem;
@@ -95,38 +111,43 @@
   article._desktop_version {
     display: flex; 
     flex-direction: column;
-    align-items: center;
   }
   article._mobile_version {
     display: none;
   }
   article._container_all {
     padding-top: 0;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
     flex-direction: row;
   }
-  div._container_gallery_selector {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  div._container_desktop {
+    top: 11rem;
+    left: -2.9rem;
+    width: 38rem;
+  }
+  img._desktop {
+    width: 32.3rem;
   }
   div._container_selector {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
-    width: 20rem;
+    margin: 2rem 0 0 0;
+    width: 37.6rem;
     padding: 0;
-    margin-right: 2rem;
   }
   div._container_info_works {
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+  }
+}
+@media (min-width: 1080px) {
+  div._container_desktop {
+    left: -.4rem;
   }
 }
 @media (min-width: 1440px) {
@@ -136,16 +157,28 @@
   article._container_all {
     justify-content: center;
   }
-    div._container_selector {
+  div._container_desktop {
+    top: 11.5rem;
+    left: 17.1rem;
+    width: 29.2rem;
+  }
+  div._container_selector {
     padding: 0;
+    margin: 2rem 0 0 0;
+    width: 45rem;
   }
   div._container_more_works {
-    margin: 0 0 0 3rem;
+    margin: auto;
   }
 }
 @media (min-width: 1500px) {
   article._header_section {
     padding: 10rem 38rem 1.2rem 38rem;
+  }
+  div._container_desktop {
+    top: 11rem;
+    left: 19rem;
+    width: 30rem;
   }
   div._container_image {
       width: 21rem
@@ -155,12 +188,16 @@
   article._header_section {
     padding: 10rem 50rem 1.5rem 50rem;
   }
+  div._container_desktop {
+    top: 11.2rem;
+    left: 31.5rem;
+  }
   div._container_selector {
     padding: 0;
-    margin: 0 0 0 -3.5rem;
+    margin: 1.7rem 0 0 0;
   }
   div._container_more_works {
-    margin: 0 0 0 -3rem;
+    margin: 0 0 0 3.5rem;
   }
 }
 @media (min-width: 2560px) {
@@ -169,5 +206,9 @@
   }
   div._container_selector {
     padding: 0;
+  }
+  div._container_desktop {
+    top: 11.5rem;
+    left: 51.5rem;
   }
 }

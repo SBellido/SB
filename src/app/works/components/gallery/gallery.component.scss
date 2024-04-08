@@ -21,13 +21,14 @@
     align-items: center;
     padding-top: 0;
     width: 13.5rem;
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-bottom: 0;
   }
   img._image_gallery {
     width: 111%;
     z-index: -2;  
     margin-bottom: .6rem;
+    border-radius: 15px;
   }
   button._inactive_button,
   button._active_button {
@@ -105,16 +106,14 @@
     margin-right: 2rem;
   }
   div._container_image {
-    margin-top: .7rem;
-    width: 14.2rem;
-    padding-top: 3.7rem;
+    width: 15rem;
     margin-bottom: -2.3rem;
   }
   img._image_gallery {
     margin-bottom: 2.3rem;
   }
   div._container_count {
-    margin-top: -.5rem;
+    margin-top: 1.5rem;
   }
 }
 @media (min-width: 1920px) {

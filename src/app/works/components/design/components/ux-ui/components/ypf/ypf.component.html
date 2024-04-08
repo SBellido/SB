@@ -1,11 +1,8 @@
-<app-header-section
+<!-- <app-header-section
   [header]="header">
 </app-header-section>
 <article class="_mobile_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <!-- <div class="_container_desktop">
-      <img class="_desktop" src="../assets/images/desktop.png" alt="">
-    </div> -->
     <app-gallery-desktop class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
@@ -38,9 +35,6 @@
 
 <article class="_desktop_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <!-- <div class="_container_desktop">
-      <img class="_desktop" src="../assets/images/desktop.png" alt="">
-    </div> -->
     <div class="_container_gallery_selector">
       <app-gallery-desktop class="_gallery"
         [imagesList]="imagesList" 
@@ -73,4 +67,85 @@
       </div>
     </div>
   </article>
+</article> -->
+
+<app-header-section
+  [header]="header">
+</app-header-section>
+<article class="_mobile_version" *ngIf="(loadingService.isLoading() | async) === false">
+  <article class="_container_all">
+    <app-gallery-desktop class="_gallery"
+      [imagesList]="imagesList" 
+      [imgGallery]="imgGallery"
+      [totalImages]="imagesList.length">
+    </app-gallery-desktop>
+    <div class="_container_selector">
+      <div class="_container_text_selector">
+        <h4 class="_title_">Más de flujos para YPF</h4>
+      </div>
+      <mat-form-field>
+        <mat-label>Opciones disponibles</mat-label>
+        <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+          <mat-option *ngFor="let item of options" [value]="item.value">
+            {{item.view_Text}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <!-- <app-info
+      [information]="information">
+    </app-info> -->
+  </article>
+  <div class="_container_info_works">
+    <app-info
+      [information]="information">
+    </app-info>
+    <div class="_container_more_works">
+      <div class="_container_text_more_works">
+        <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+      </div>
+      <app-brands-buttons [brands]="brands"></app-brands-buttons>
+    </div>
+  </div>
+</article>
+
+<article class="_desktop_version" *ngIf="(loadingService.isLoading() | async) === false">
+  <article class="_container_all">
+    <div class="_container_gallery_selector">
+      <app-gallery-desktop class="_gallery"
+        [imagesList]="imagesList" 
+        [imgGallery]="imgGallery">
+      </app-gallery-desktop>
+      <div class="_container_selector">
+        <div class="_container_text_selector">
+          <h4 class="_title_">Más de flujos para YPF</h4>
+        </div>
+        <mat-form-field>
+          <mat-label>Opciones disponibles</mat-label>
+          <mat-select [(ngModel)]="selectedOption" (selectionChange)="onChange($event)">
+            <mat-option *ngFor="let item of options" [value]="item.value">
+              {{item.view_Text}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="_container_info_works">
+      <app-info
+        [information]="information">
+      </app-info>
+      <div class="_container_more_works">
+        <div class="_container_text_more_works">
+          <h4 class="_title">Más trabajos de diseño/ux|ui</h4>
+        </div>
+        <app-brands-buttons [brands]="brands"></app-brands-buttons>
+      </div>
+    </div>
+  </article>
+  <!-- <div class="_container_more_works">
+    <div class="_container_text_more_works">
+      <h4 class="_title">Más trabajos de desarrollo/aplicaciones</h4>
+    </div>
+    <app-brands-buttons [brands]="brands"></app-brands-buttons>
+  </div> -->
 </article>
