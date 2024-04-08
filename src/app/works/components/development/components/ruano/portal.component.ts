@@ -115,6 +115,7 @@ export class PortalComponent implements OnInit {
     // Simulación de carga de imágenes
     setTimeout(() => {
       this.imagesList = [ 
+        '../assets/images/dev/ruano/desktop/00.png',    
         '../assets/images/dev/ruano/desktop/0.png',    
         '../assets/images/dev/ruano/desktop/1.png',
         '../assets/images/dev/ruano/desktop/2.png',

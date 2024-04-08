@@ -3,11 +3,12 @@
     section._container_info_tecno {
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
     div._container_info {
         background-color: #f9f9f9;
         width: 85vw;
-        height: auto;
+        height: 28rem;
         border-radius: 15px;
         margin: 0;
         padding: 1.5rem;
@@ -24,8 +25,7 @@
         font-size: 1rem;
         color: $first_color;
         line-height : 1.3rem;
-        // height: 25rem;
-        height: auto;
+        height: 18rem;
     }
     figure._container_tecno {
         display: flex;
@@ -74,11 +74,11 @@
 @media (min-width: 1024px) {
     div._container_info {
       width: 32vw;
-      height: 19.5rem;
-      margin-top: 1.7rem;
+      height: 18.6rem;
+      margin-top: 1.5rem;
     }
     p._p_card {
-        height: 10rem;
+        height: 9rem;
     }
     ._tecno {
         width: 17rem;
@@ -87,11 +87,11 @@
 @media (min-width: 1440px) {
     div._container_info {
       width: 23vw;
-      margin-left: 3rem;
-      height: 23rem;
+      margin-left: 2rem;
+      height: 22.3rem;
     }
     p._p_card {
-        height: 13rem;
+        height: 12.5rem;
     }
     ._tecno {
         width: 20rem;
@@ -106,7 +106,7 @@
         width: 22rem;
     }
     p._p_card {
-        height: 14rem;
+        height: 13rem;
     }
 }
 @media (min-width: 1920px) {
