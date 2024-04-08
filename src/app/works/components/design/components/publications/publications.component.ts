@@ -31,21 +31,27 @@ export class PublicationsComponent implements OnInit {
         {
           href: '',
           src: '../assets/images/tecnologies/photoshop.png',
-          title: 'Photoshop',
+          title: 'Adobe Photoshop',
           alt: 'Logo de Photoshop',
         },
         {
           href: '',
-          src: '../assets/images/tecnologies/illustrator.png',
-          title: 'Illustrator',
-          alt: 'Logo de Illustrator',
+          src: '../assets/images/tecnologies/firefly.png',
+          title: 'Adobe Firefly',
+          alt: 'Logo de Firefly',
         },
         {
           href: '',
-          src: '../assets/images/tecnologies/procreate.png',
-          title: 'Procreate',
-          alt: 'Logo de Procreate',
-        }
+          src: '../assets/images/tecnologies/bing.png',
+          title: 'Bing',
+          alt: 'Logo de Bing',
+        },
+        {
+          href: '',
+          src: '../assets/images/tecnologies/illustrator.png',
+          title: 'Adobe Illustrator',
+          alt: 'Logo de Illustrator',
+        },
       ],
     },
   ];
