@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
   div._container_image {
     display: flex;
@@ -106,7 +106,7 @@
     margin-right: 2rem;
   }
   div._container_image {
-    width: 15rem;
+    width: 14.4rem;
     margin-bottom: -2.3rem;
   }
   img._image_gallery {
@@ -114,6 +114,12 @@
   }
   div._container_count {
     margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  div._container_image {
+    width: 16.4rem;
+    margin-bottom: -2.3rem;
   }
 }
 @media (min-width: 1920px) {

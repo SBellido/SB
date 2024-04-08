@@ -45,12 +45,6 @@ export class QxComponent implements OnInit {
           title: 'CSS3',
           alt: 'Logo de CSS3',
         },
-        {
-          href: '',
-          src: '../assets/images/tecnologies/bitbucket.png',
-          title: 'Bitbucket',
-          alt: 'Logo de Bitbucket',
-        },
       ],
     },
   ];

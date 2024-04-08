@@ -1,1 +1,8 @@
-@import '../../../../../global/global.section_mobile.scss'
+@import '../../../../../global/global.section_mobile.scss';
+
+h4._title, h4._title_ {
+  color: $dev_color;
+}
+div._container_text_more_works {
+  border-bottom: solid .5px $dev_color;
+}

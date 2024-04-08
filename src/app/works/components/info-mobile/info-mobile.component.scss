@@ -9,26 +9,31 @@
 }
 @media (min-width: 1024px) {
   div._container_info {
-      width: 24vw;
-      height: 26.5rem;
-      margin-top: 1rem;
+      width: 22vw;
+      height: 25.4rem;
+      margin: 1rem 1.5rem 0 1.5rem;
   }
   p._p_card {
-    height: 16.2rem;
+    height: 15.5rem;
   }
 }
 @media (min-width: 1280px) {
   div._container_info {
-    width: 20vw;
+    width: 19vw;
   }
 }
 @media (min-width: 1440px) {
   div._container_info {
-      width: 17vw;
+      width: 18vw;
+      // height: 29.3rem;
+  }
+  p._p_card {
+    height: 20rem;
   }
 }
 @media (min-width: 1500px) {
   div._container_info {
+    width: 17vw;
     height: 29.4rem;
   }
 }
