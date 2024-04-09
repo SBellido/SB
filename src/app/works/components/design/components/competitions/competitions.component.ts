@@ -30,13 +30,13 @@ export class CompetitionsComponent implements OnInit {
         {
           href: '',
           src: '../assets/images/tecnologies/photoshop.png',
-          title: 'Photoshop',
+          title: 'Adobe Photoshop',
           alt: 'Logo de Photoshop',
         },
         {
           href: '',
           src: '../assets/images/tecnologies/illustrator.png',
-          title: 'Illustrator',
+          title: 'Adobe Illustrator',
           alt: 'Logo de Illustrator',
         },
         {

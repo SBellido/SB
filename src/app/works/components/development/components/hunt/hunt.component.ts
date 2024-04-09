@@ -45,12 +45,6 @@ export class HuntComponent implements OnInit {
           title: 'JavaScript',
           alt: 'Logo de JavaScript',
         },
-        {
-          href: '',
-          src: '../assets/images/tecnologies/bitbucket.png',
-          title: 'Bitbucket',
-          alt: 'Logo de Bitbucket',
-        },
       ],
     },
   ];

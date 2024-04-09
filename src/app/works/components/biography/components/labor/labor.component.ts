@@ -63,7 +63,7 @@ info: MoreInfo[] = [
     text_5: 'Comprender el requerimiento de software, colaborar en el proceso de estimación de esfuerzos junto al Líder de Proyecto para implementar las interfaces de usuarios, modelizar y refinar especificaciones a fin de determinar un diseño correcto tanto para UX como UI, asegurar la usabilidad del aplicativo, asegurar la máxima accesibilidad del aplicativo, combinar interfaces y flujos de trabajo para mejorar la experiencia de usuario, lograr que la interfaz sea amigable e intuitiva, revisar las interfaces de usuario y proponer mejoras, documentar apropiadamente los requerimientos y las IU de acuerdo a estándares, investigar nuevas tecnologías, cumplir con los procesos definidos y proponer mejoras, cumplir con las políticas, procesos y procedimientos internos de Tsoft, conocer los conceptos básicos de la norma ISO 9001.',
     subtitle_6: 'Aptitudes:',
     text_6: 'Comunicación, Prototipado, Diseño de la interfaz de usuario, Autogestión',
-    text_info: 'Período 2022 - 2023'
+    text_info: 'Período 2022 / 2023'
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ info: MoreInfo[] = [
     text_5: '',
     subtitle_6: '',
     text_6: '',
-    text_info: 'Período 2020 - 2022'
+    text_info: 'Período 2020 / 2022'
   },
   {
     id: 4,
@@ -99,7 +99,7 @@ info: MoreInfo[] = [
     text_5: 'Adobe Xd, Trello, HTML5, CSS3, Node.js, Angular 10, Angular Material, Firebase, Google Analytics, GitHub.',
     subtitle_6: '',
     text_6: '',
-    text_info: 'Período 2020'
+    text_info: 'Período 2020 / 2021'
   },
   {
     id: 5,
@@ -117,7 +117,7 @@ info: MoreInfo[] = [
     text_5: '',
     subtitle_6: '',
     text_6: '',
-    text_info: 'Período 2020 - 2021'
+    text_info: 'Período 2020 / 2021'
   }, 
   {
     id: 6,
@@ -135,7 +135,7 @@ info: MoreInfo[] = [
     text_5: '',
     subtitle_6: '',
     text_6: '',
-    text_info: 'Período 2019 - 2020'
+    text_info: 'Período 2019 / 2020'
   }, 
   {
     id: 7,
@@ -153,7 +153,7 @@ info: MoreInfo[] = [
     text_5: '',
     subtitle_6: '',
     text_6: '',
-    text_info: 'Período 2009 - 2011'
+    text_info: 'Período 2009 / 2011'
   },
   {
     id: 8,
@@ -171,7 +171,7 @@ info: MoreInfo[] = [
     text_5: '',
     subtitle_6: '',
     text_6: '',
-    text_info: 'Período 2006 - 2010'
+    text_info: 'Período 2006 / 2010'
   },
 ];
   items: ItemProfile[] = [ 
