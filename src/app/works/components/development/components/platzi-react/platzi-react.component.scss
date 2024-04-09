@@ -21,5 +21,10 @@
     background-color: white;
     box-shadow: none;
   }
-  
+  h4._title, h4._title_ {
+    color: $dev_color;
+  }
+  div._container_text_more_works {
+    border-bottom: solid .5px $dev_color;
+  }  
 }

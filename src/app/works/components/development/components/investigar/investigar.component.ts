@@ -45,12 +45,6 @@ export class InvestigarComponent implements OnInit {
           title: 'CSS3',
           alt: 'Logo de CSS3',
         },
-        {
-          href: '',
-          src: '../assets/images/tecnologies/github.png',
-          title: 'GitHub',
-          alt: 'Logo de GitHub',
-        },
       ],
     },
   ];
