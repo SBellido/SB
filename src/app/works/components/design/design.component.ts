@@ -76,15 +76,8 @@ parentColorHover: string = 'linear-gradient(0deg, #fdd6dd 33%, #fdf0f2 100%)';
         {
           route: 'works/design/brands',
           img: '../assets/images/graph/brands.png',
-          name: 'Marcas',
-          text: 'Logo de Marca Registrada',
-          title: '',
-        },
-        {
-          route: 'works/design/competitions',
-          img: '../assets/images/graph/eyeka_logo.png',
-          name: 'Concursos',
-          text: 'Logo de Eyeka',
+          name: 'Logotipos',
+          text: 'R: Marca Registrada',
           title: '',
         },
         {
@@ -92,6 +85,13 @@ parentColorHover: string = 'linear-gradient(0deg, #fdd6dd 33%, #fdf0f2 100%)';
           img: '../assets/images/graph/publications.png',
           name: 'Redes',
           text: 'Ícono de altavozr',
+          title: '',
+        },
+        {
+          route: 'works/design/competitions',
+          img: '../assets/images/graph/eyeka_logo.png',
+          name: 'Concursos',
+          text: 'Logo de Eyeka',
           title: '',
         },
       ]
