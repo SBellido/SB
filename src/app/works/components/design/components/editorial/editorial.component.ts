@@ -4,9 +4,9 @@ import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models
 import { LoadingService } from '../../../../../services/loading.service';
 
 @Component({
-  selector: 'app-publications',
-  templateUrl: './publications.component.html',
-  styleUrls: ['./publications.component.scss']
+  selector: 'app-editorial',
+  templateUrl: './editorial.component.html',
+  styleUrls: ['./editorial.component.scss']
 })
 
 export class PublicationsComponent implements OnInit {
