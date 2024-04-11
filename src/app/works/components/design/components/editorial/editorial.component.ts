@@ -18,17 +18,28 @@ export class EditorialComponent implements OnInit {
 /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
     {value: 'imagesList', view_Text: 'aviNews'},
-    {value: 'imagesList1', view_Text: 'Neptuno | Belleza Natural'},
-    {value: 'imagesList2', view_Text: 'Dejando Huella | Pienso para Mascotas'},
-    {value: 'imagesList3', view_Text: 'Convertiko | Agencia de Marketing'},
+    {value: 'imagesList1', view_Text: 'El Fénix'},
+    {value: 'imagesList2', view_Text: 'Centro Cultural América Libre'},
   ];
 
   information: Information[] = [
     {
-      title: 'Publicaciones para Redes Sociales',
-      text: 'En la era digital actual, la presencia en redes sociales es clave para promocionar productos y eventos. Sin embargo, destacarse requiere más que solo compartir información. Es vital emplear un diseño atractivo y un discurso persuasivo que conecte emocionalmente con la audiencia. El diseño atractivo captura la atención del usuario, mientras que un discurso persuasivo y emocional motiva a la acción. Apelar a las emociones genera una conexión profunda, impulsando el compromiso y la participación. Combinar un diseño atractivo con un mensaje emocionalmente persuasivo maximiza el impacto en redes sociales. Esto no solo aumenta la visibilidad, sino que también fortalece los lazos con la audiencia, esencial para el éxito a largo plazo.',
+      title: 'Diseño editorial',
+      text: 'El diseño editorial ha desempeñado un papel crucial a lo largo de la historia del diseño, consolidándose como un elemento esencial en la comunicación visual. Desde sus primeras manifestaciones hasta la actualidad, su relevancia ha sido innegable en la difusión de información, la construcción de identidades visuales y la promoción de productos y servicios. Su importancia radica en su capacidad para transmitir mensajes de manera efectiva y memorable. Mediante la combinación de elementos visuales y textuales, como tipografías, imágenes y espacios en blanco, logra captar la atención del lector y comunicar el contenido de forma clara y atractiva. Además, ha sido un vehículo fundamental para la preservación y difusión del conocimiento a lo largo de los siglos. Desde los primeros libros hasta las revistas y periódicos modernos, ha servido como un medio invaluable para compartir ideas, narrativas y descubrimientos, contribuyendo así al enriquecimiento cultural y educativo de la sociedad. No obstante, su importancia va más allá de la mera transmisión de información. También ha sido un poderoso instrumento para la expresión artística y la innovación estética. A través de portadas creativas, diseños innovadores y técnicas de impresión avanzadas, ha logrado cautivar al público y dejar una impresión duradera en la memoria colectiva.',
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
+        {
+          href: '',
+          src: '../assets/images/tecnologies/indesign.png',
+          title: 'Adobe InDesign',
+          alt: 'Logo de InDesign',
+        },
+        {
+          href: '',
+          src: '../assets/images/tecnologies/quarkexpress.png',
+          title: 'QuarkExpress',
+          alt: 'Logo de QuarkExpress',
+        },
         {
           href: '',
           src: '../assets/images/tecnologies/photoshop.png',
@@ -37,26 +48,14 @@ export class EditorialComponent implements OnInit {
         },
         {
           href: '',
-          src: '../assets/images/tecnologies/firefly.png',
-          title: 'Adobe Firefly',
-          alt: 'Logo de Firefly',
-        },
-        {
-          href: '',
           src: '../assets/images/tecnologies/bing.png',
           title: 'Bing',
           alt: 'Logo de Bing',
         },
-        {
-          href: '',
-          src: '../assets/images/tecnologies/illustrator.png',
-          title: 'Adobe Illustrator',
-          alt: 'Logo de Illustrator',
-        },
       ],
     },
   ];
-  
+
   header: HeaderSection[] = [
     {
       area: 'diseño/gráfico',
@@ -75,7 +74,6 @@ export class EditorialComponent implements OnInit {
       name: 'Marcas',
       text: 'Logo de Marca Registrada',
       title: 'Diseño de Logo',
-      
     },
     {
       route: 'works/design/competitions',
@@ -83,6 +81,13 @@ export class EditorialComponent implements OnInit {
       name: 'eyeka!',
       text: 'Logo de eyeka!',
       title: 'Concursos Internacionales'
+    },
+    {
+      route: 'works/design/publications',
+      img: '../assets/images/graph/publications.png',
+      name: 'Redes',
+      text: 'Ícono de altavoz',
+      title: 'Diseño de Publicaciones',
     },
   ]
 
@@ -102,7 +107,7 @@ export class EditorialComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
+  
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
@@ -115,15 +120,10 @@ export class EditorialComponent implements OnInit {
     // Simulación de carga de imágenes
     setTimeout(() => {
       this.imagesList = [ 
-        '../assets/images/publications/jam/00.png',
-        '../assets/images/publications/jam/0.png',
-        '../assets/images/publications/jam/1.png',
-        '../assets/images/publications/jam/2.png',
-        '../assets/images/publications/jam/3.png',
-        '../assets/images/publications/jam/4.png',
-        '../assets/images/publications/jam/5.png',
-        '../assets/images/publications/jam/6.png',
-        '../assets/images/publications/jam/7.png',
+        '../assets/images/editorial/aviNews/0.png',
+        '../assets/images/editorial/aviNews/1.png',
+        '../assets/images/editorial/aviNews/2.png',
+        '../assets/images/editorial/aviNews/3.png',
       ];
       this.imgGallery = this.imagesList[0];
       this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
@@ -132,40 +132,22 @@ export class EditorialComponent implements OnInit {
 
   loadImages1() {
     this.imagesList = [
-        '../assets/images/publications/neptuno/0.png',
-        '../assets/images/publications/neptuno/1.png',
-        '../assets/images/publications/neptuno/2.png',
-        '../assets/images/publications/neptuno/3.png',
-        '../assets/images/publications/neptuno/4.png',
-        '../assets/images/publications/neptuno/5.png',
-        '../assets/images/publications/neptuno/6.png',
-        '../assets/images/publications/neptuno/7.png',
-        '../assets/images/publications/neptuno/8.png',
+      '../assets/images/editorial/el_fenix/0.png',
+      '../assets/images/editorial/el_fenix/1.png',
+      '../assets/images/editorial/el_fenix/2.png',
+      '../assets/images/editorial/el_fenix/3.png',
+      '../assets/images/editorial/el_fenix/4.png',
+      '../assets/images/editorial/el_fenix/5.png',
       ];
       this.imgGallery = this.imagesList[0];
     }
-
     loadImages2() {
       this.imagesList = [
-        '../assets/images/publications/pienso/0.png',   
-        '../assets/images/publications/pienso/1.png',
-        '../assets/images/publications/pienso/2.png',
-        '../assets/images/publications/pienso/3.png',
-        '../assets/images/publications/pienso/4.png',
-        '../assets/images/publications/pienso/5.png',
-    ];
-      this.imgGallery = this.imagesList[0];
-    }
-
-    loadImages3() {
-      this.imagesList = [
-        '../assets/images/publications/convertiko/0.png',   
-        '../assets/images/publications/convertiko/1.png',
-        '../assets/images/publications/convertiko/2.png',
-        '../assets/images/publications/convertiko/3.png',
-        '../assets/images/publications/convertiko/4.png',
-        '../assets/images/publications/convertiko/5.png',
-        '../assets/images/publications/convertiko/6.png',
+        '../assets/images/editorial/cc/0.png',   
+        '../assets/images/editorial/cc/1.png',
+        '../assets/images/editorial/cc/2.png',
+        '../assets/images/editorial/cc/3.png',
+        '../assets/images/editorial/cc/4.png',
     ];
       this.imgGallery = this.imagesList[0];
     }
@@ -181,9 +163,6 @@ export class EditorialComponent implements OnInit {
           break;
         case 'imagesList2':
           this.loadImages2();
-          break;
-        case 'imagesList3':
-          this.loadImages3();
           break;
         default:
           // Lógica para el caso por defecto (opcional)

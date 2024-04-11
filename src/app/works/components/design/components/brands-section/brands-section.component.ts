@@ -69,7 +69,13 @@ export class BrandsSectionComponent implements OnInit {
       name: 'Redes',
       text: 'Ícono de altavoz',
       title: 'Diseño de Publicaciones',
-      
+    },
+    {
+      route: 'works/design/editorial',
+      img: '../assets/images/graph/editorial.png',
+      name: 'Editorial',
+      text: 'Ícono de editorial',
+      title: 'Diseño Editorial', 
     },
   ]
 
@@ -102,6 +108,7 @@ export class BrandsSectionComponent implements OnInit {
       this.imagesList = [ 
         '../assets/images/brands/-2.png',
         '../assets/images/brands/-1.png',
+        '../assets/images/brands/-3.png',
         '../assets/images/brands/0.png',
         '../assets/images/brands/1.png',
         '../assets/images/brands/2.png',

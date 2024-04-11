@@ -27,6 +27,7 @@ import { GameComponent } from './components/development/components/game/game.com
 import { ProyectGameComponent } from './components/development/components/game/proyect/proyect-game.component';
 import { PortalComponent } from './components/development/components/ruano/portal.component';
 import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
+import { EditorialComponent } from './components/design/components/editorial/editorial.component';
 
 const routes: Routes = [
   {
@@ -79,6 +80,11 @@ const routes: Routes = [
         path: 'design/publications',
         pathMatch: 'full',
         component: PublicationsComponent
+      },
+      {
+        path: 'design/editorial',
+        pathMatch: 'full',
+        component: EditorialComponent
       },
       {
         path: 'development',

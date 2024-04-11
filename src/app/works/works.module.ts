@@ -28,22 +28,24 @@ import { YpfComponent } from './components/design/components/ux-ui/components/yp
 import { BrandsButtonsComponent } from './components/brands-buttons/brands-buttons.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { GalleryDesktopComponent } from './components/gallery-desktop/gallery-desktop.component';
+import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-polaroid.component';
+import { GalleryEditorialComponent } from './components/gallery-editorial/gallery-editorial.component';
 import { InvestigarComponent } from './components/development/components/investigar/investigar.component';
 import { XuboxComponent } from './components/development/components/xubox/xubox.component';
 import { HuntComponent } from './components/development/components/hunt/hunt.component';
 import { StormtechComponent } from './components/development/components/stormtech/stormtech.component';
-import { GalleryPolaroidComponent } from './components/gallery-polaroid/gallery-polaroid.component';
 import { BrandsSectionComponent } from './components/design/components/brands-section/brands-section.component';
 import { CompetitionsComponent } from './components/design/components/competitions/competitions.component';
 import { PublicationsComponent } from './components/design/components/publications/publications.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
 import { SectionComponent } from './components/section/section.component';
 import { HighlightDirective } from '../directives/highlight.directive'; 
-import { InfoComponent } from './components/info/info.component';
 import { TecnologiesComponent } from './components/tecnologies/tecnologies.component';
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
+import { InfoComponent } from './components/info/info.component';
 import { InfoMobileComponent } from './components/info-mobile/info-mobile.component';
 import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.component';
+import { InfoEditorialComponent } from './components/info-editorial/info-editorial.component';
 import { GameComponent } from './components/development/components/game/game.component';
 import { PortalComponent } from './components/development/components/ruano/portal.component'; 
 import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
@@ -66,26 +68,28 @@ import { EditorialComponent } from './components/design/components/editorial/edi
     BrandsButtonsComponent,
     GalleryComponent,
     GalleryDesktopComponent,
+    GalleryPolaroidComponent,
+    GalleryEditorialComponent,
     InvestigarComponent,
     XuboxComponent,
     HuntComponent,
     StormtechComponent,
-    GalleryPolaroidComponent,
     BrandsSectionComponent,
     CompetitionsComponent,
     PublicationsComponent,
     QxComponent,
     SectionComponent,
     HighlightDirective,
-    InfoComponent,
     TecnologiesComponent,
     HeaderSectionComponent,
+    InfoComponent,
     InfoMobileComponent,
     InfoPolaroidComponent,
+    InfoEditorialComponent,
     GameComponent,
     PortalComponent,
     PlatziReact,
-    EditorialComponent
+    EditorialComponent,
   ],
   imports: [
     CommonModule,

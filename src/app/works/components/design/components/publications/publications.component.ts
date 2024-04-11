@@ -84,6 +84,13 @@ export class PublicationsComponent implements OnInit {
       text: 'Logo de eyeka!',
       title: 'Concursos Internacionales'
     },
+    {
+      route: 'works/design/editorial',
+      img: '../assets/images/graph/editorial.png',
+      name: 'Editorial',
+      text: 'Ícono de editorial',
+      title: 'Diseño Editorial', 
+    },
   ]
 
   constructor(
