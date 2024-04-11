@@ -9,7 +9,7 @@ import { LoadingService } from '../../../../../services/loading.service';
   styleUrls: ['./editorial.component.scss']
 })
 
-export class PublicationsComponent implements OnInit {
+export class EditorialComponent implements OnInit {
 /*--------VARIABLES--------*/ 
   public imagesList: string[] = [];
   public selectedOption: string = '';
@@ -17,7 +17,7 @@ export class PublicationsComponent implements OnInit {
 
 /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
-    {value: 'imagesList', view_Text: 'Jam Poética & Musical'},
+    {value: 'imagesList', view_Text: 'aviNews'},
     {value: 'imagesList1', view_Text: 'Neptuno | Belleza Natural'},
     {value: 'imagesList2', view_Text: 'Dejando Huella | Pienso para Mascotas'},
     {value: 'imagesList3', view_Text: 'Convertiko | Agencia de Marketing'},

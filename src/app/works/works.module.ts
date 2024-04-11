@@ -47,6 +47,7 @@ import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.
 import { GameComponent } from './components/development/components/game/game.component';
 import { PortalComponent } from './components/development/components/ruano/portal.component'; 
 import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
+import { EditorialComponent } from './components/design/components/editorial/editorial.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { PlatziReact } from './components/development/components/platzi-react/pl
     InfoPolaroidComponent,
     GameComponent,
     PortalComponent,
-    PlatziReact
+    PlatziReact,
+    EditorialComponent
   ],
   imports: [
     CommonModule,

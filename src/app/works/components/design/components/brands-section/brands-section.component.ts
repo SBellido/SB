@@ -100,7 +100,8 @@ export class BrandsSectionComponent implements OnInit {
     // Simulación de carga de imágenes
     setTimeout(() => {
       this.imagesList = [ 
-        '../assets/images/brands/00.png',
+        '../assets/images/brands/-2.png',
+        '../assets/images/brands/-1.png',
         '../assets/images/brands/0.png',
         '../assets/images/brands/1.png',
         '../assets/images/brands/2.png',
