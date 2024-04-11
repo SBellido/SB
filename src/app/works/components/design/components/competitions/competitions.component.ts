@@ -74,8 +74,14 @@ export class CompetitionsComponent implements OnInit {
       img: '../assets/images/graph/publications.png',
       name: 'Redes',
       text: 'Ícono de altavoz',
-      title: 'Diseño de Publicaciones',
-      
+      title: 'Diseño de Publicaciones', 
+    },
+    {
+      route: 'works/design/editorial',
+      img: '../assets/images/graph/editorial.png',
+      name: 'Editorial',
+      text: 'Ícono de editorial',
+      title: 'Diseño Editorial', 
     },
   ]
 
@@ -117,7 +123,7 @@ export class CompetitionsComponent implements OnInit {
         '../assets/images/competitions/nescafe/6.png',
         '../assets/images/competitions/nescafe/7.png',
         '../assets/images/competitions/nescafe/8.png',
-        '../assets/images/competitions/nescafe/9.png',
+        '../assets/images/competitions/nescafeAC/9.png',
         '../assets/images/competitions/nescafe/10.png',
         '../assets/images/competitions/nescafe/11.png',
       ];

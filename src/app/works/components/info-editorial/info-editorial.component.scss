@@ -1,0 +1,13 @@
+@import '../info-polaroid/info-polaroid.component.scss';
+
+@media (min-width: 1024px) {
+  p._p_card {
+    height: 19.5rem;
+  }
+}
+@media (min-width: 1500px) {
+  div._container_info {
+    height: 30rem;
+  }
+}
+
