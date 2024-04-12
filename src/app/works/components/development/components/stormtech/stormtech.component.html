@@ -3,16 +3,12 @@
 </app-header-section>
 <article class="_mobile_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <div class="_container_desktop">
-      <img class="_desktop" src="../assets/images/desktop.png" alt="">
-    </div>
     <app-gallery-desktop class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
+      [totalImages]="imagesList.length"
+      (contextmenu)="preventRightClick($event)">
     </app-gallery-desktop>
-    <!-- <div class="_container_selector">
-    </div> -->
     <app-info
       [information]="information">
     </app-info>
@@ -27,16 +23,13 @@
 
 <article class="_desktop_version" *ngIf="(loadingService.isLoading() | async) === false">
   <article class="_container_all">
-    <!-- <div class="_container_desktop">
-      <img class="_desktop" src="../assets/images/desktop.png" alt="">
-    </div> -->
     <div class="_container_gallery_selector">
       <app-gallery-desktop class="_gallery"
         [imagesList]="imagesList" 
-        [imgGallery]="imgGallery">
+        [imgGallery]="imgGallery"
+        [totalImages]="imagesList.length"
+        (contextmenu)="preventRightClick($event)">
       </app-gallery-desktop>
-      <!-- <div class="_container_selector">
-      </div> -->
     </div>
     <div class="_container_info_works">
       <app-info

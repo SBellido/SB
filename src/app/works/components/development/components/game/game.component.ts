@@ -94,6 +94,10 @@ export class GameComponent implements OnInit {
   }
   
   /* ----------- MÉTODOS ----------- */
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
+  
   openApp() {
     this.router.navigateByUrl('works/development/game/proyect');
   }

@@ -1,32 +1,20 @@
 <article class="_container_footer">
   <section class="_header_footer">
     <div class="_container_ornament">
-      <img class="_ornament" src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
+      <img class="_ornament" (contextmenu)="preventRightClick($event)"
+        src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
     </div>   
     <div class="_container_me">
-      <img class="_img_sb" src="../../../../assets/images/footer/azulejo_yo.png" alt="Firma de Sebastián Bellido">
+      <img class="_img_sb" (contextmenu)="preventRightClick($event)"
+        src="../../../../assets/images/footer/azulejo_yo.png" alt="Firma de Sebastián Bellido">
     </div>
     <div class="_container_ornament">
-      <img class="_ornament" src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
+      <img class="_ornament" (contextmenu)="preventRightClick($event)"
+        src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
     </div>  
   </section>
 
   <app-download></app-download>
-<!-- 
-  <p class="_message">Contáctame!</p>
-
-  <section class="_container_contact">     
-    <div class="_container_social_networks"
-    *ngFor="let btn of btnContact">
-      <a target="_blank" href="{{ btn.route }}">
-        <div class="">  
-          <button class="_button_contact" title="{{btn.name}}" id="icon_email" mat-menu-item>
-            <mat-icon class="_icon_contact">{{ btn.img }}</mat-icon>
-          </button>
-        </div>
-      </a>
-    </div>
-  </section> -->
   
   <section class="_container_social_networks">
     <div class="_container_logo_socialnet" 

@@ -91,13 +91,19 @@ export class StormtechComponent implements OnInit {
   }
   
 /* ----------- MÉTODOS ----------- */
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
+  
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+
   routeTo(route:string) {    
     this.router.navigateByUrl(route);
   }

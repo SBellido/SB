@@ -97,6 +97,10 @@ export class QxComponent implements OnInit {
   }
     
   /* ----------- MÉTODOS ----------- */
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
+
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -105,6 +109,7 @@ export class QxComponent implements OnInit {
   routeBack() {    
     this.router.navigateByUrl('works/design/ux-ui')
   }
+
   loadImages() {
     // Simulación de carga de imágenes
     setTimeout(() => {
@@ -136,6 +141,5 @@ export class QxComponent implements OnInit {
     }, 1300);
 
   }
-  
 
 }

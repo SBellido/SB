@@ -1,6 +1,7 @@
 <section class="intro_myself" *ngIf="(loadingService.isLoading() | async) === false">
   <div class="_container_image">
-    <img class="_img_me" src="../assets/images/sb/yo.jpg" alt="Sebastián Bellido mirando a la cámara y sonriendo">
+    <img class="_img_me" (contextmenu)="preventRightClick($event)"
+      src="../assets/images/sb/yo.jpg" alt="Sebastián Bellido mirando a la cámara y sonriendo">
   </div>
   <div class="_container_text">
     <h1 class="_title">Sebastián Bellido</h1>

@@ -82,6 +82,10 @@ export class HuntComponent implements OnInit {
   }
     
   /* ----------- MÉTODOS ----------- */
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
+  
   topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

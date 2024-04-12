@@ -6,7 +6,8 @@
     <app-gallery class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
+      [totalImages]="imagesList.length"
+      (contextmenu)="preventRightClick($event)">
     </app-gallery>
     <app-info-mobile
       [information]="information">
@@ -25,7 +26,8 @@
     <app-gallery class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
+      [totalImages]="imagesList.length"
+      (contextmenu)="preventRightClick($event)">
     </app-gallery>
     <app-info-mobile
       [information]="information">
