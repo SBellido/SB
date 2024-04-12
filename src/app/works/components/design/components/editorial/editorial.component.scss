@@ -5,3 +5,11 @@
       margin-right: 0;
   }
 }
+@media (min-width: 1024px) {
+  div._container_text_selector {
+    margin-right: 2rem;
+  }
+  div._container_more_works {
+    margin-left: 0.5rem;
+  }
+}
