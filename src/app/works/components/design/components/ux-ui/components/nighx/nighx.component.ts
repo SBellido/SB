@@ -87,6 +87,10 @@ export class NighxComponent implements OnInit {
 
   constructor(private router: Router) { }
 
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
+  
   ngOnInit(): void {
     this.topFunction();
     this.loadImages(); 

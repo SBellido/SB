@@ -76,6 +76,10 @@ export class PlatziReact implements OnInit {
   }
     
   /* ----------- MÉTODOS ----------- */
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
+  
   openApp() {
     window.open('https://sbellido.github.io/todo-machine/', '_blank');
   }

@@ -83,10 +83,13 @@ export class HomeComponent implements OnInit {
  }
 
   /*------------MÉTODOS--------------*/
-   topFunction() {
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
+  }
+
+  topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
-
   }
 
   mixArrayContent() {   
@@ -105,6 +108,7 @@ export class HomeComponent implements OnInit {
     return 
     myStyles;    
   }
+
   getRandomWeight(): number {
     let result: number;
     this.weightFont.sort(()=> Math.random() - 0.5); 
@@ -128,6 +132,7 @@ export class HomeComponent implements OnInit {
     this.mixArrayContent();
     return result;
   }
+  
   getRandomFontSize(): string {
     let result: string;
     this.fontSize.sort(()=> Math.random() - 0.5); 

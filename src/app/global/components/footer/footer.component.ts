@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button } from 'src/app/models/models';
 
@@ -8,18 +8,17 @@ import { Button } from 'src/app/models/models';
   styleUrls: ['./footer.component.scss']
 })
 
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
   designActive:boolean = false;
   developmentActive:boolean = false;
   interventionActive:boolean = false;
   biographyActive:boolean = false;
 
-  constructor(private router: Router) { 
-  }
+  constructor(private router: Router) {}
 
-  ngOnInit() {
-   
+  preventRightClick(event: MouseEvent) {
+    event.preventDefault();
   }
 
   btnSN: Button[] = [

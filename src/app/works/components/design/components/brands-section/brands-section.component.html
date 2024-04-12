@@ -6,7 +6,8 @@
     <app-gallery-polaroid class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
+      [totalImages]="imagesList.length"
+      (contextmenu)="preventRightClick($event)">
     </app-gallery-polaroid>
     <app-info-polaroid
       [information]="information">
@@ -25,7 +26,8 @@
     <app-gallery-polaroid class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
+      [totalImages]="imagesList.length"
+      (contextmenu)="preventRightClick($event)">
     </app-gallery-polaroid>
     <app-info-polaroid
       [information]="information">

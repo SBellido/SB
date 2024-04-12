@@ -6,7 +6,8 @@
     <app-gallery-desktop class="_gallery"
       [imagesList]="imagesList" 
       [imgGallery]="imgGallery"
-      [totalImages]="imagesList.length">
+      [totalImages]="imagesList.length"
+      (contextmenu)="preventRightClick($event)">
     </app-gallery-desktop>
     <app-info
       [information]="information">
@@ -25,7 +26,9 @@
     <div class="_container_gallery_selector">
       <app-gallery-desktop class="_gallery"
         [imagesList]="imagesList" 
-        [imgGallery]="imgGallery">
+        [imgGallery]="imgGallery"
+        [totalImages]="imagesList.length"
+        (contextmenu)="preventRightClick($event)">>
       </app-gallery-desktop>
     </div>
     <div class="_container_info_works">
