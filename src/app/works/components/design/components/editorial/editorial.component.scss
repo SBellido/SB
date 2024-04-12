@@ -1,2 +1,7 @@
 @import '../../../gallery-polaroid/gallery-polaroid.component.scss';
 @import '../competitions/competitions.component.scss';
+@media (min-width: 0px) {
+  div._container_text_selector {
+      margin-right: 0;
+  }
+}
