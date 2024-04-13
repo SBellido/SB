@@ -1,24 +1,21 @@
 <article class="_container_gallery">
     <ng-container> 
         <section class="_gallery">  
-            <button class="_active_button" (click)="beforeImg()"
-                [ngClass]="currentImageIndex === 0 ? '_inactive_button' : '_active_button'">
+            <button class="_active_button" (click)="previousImg(); onGalleryInteraction()">
                 <mat-icon>navigate_before</mat-icon>
             </button>
             <div class="_container_image">
                 <img class="_image_gallery" alt="First slide"
                 [src]="imgGallery">
             </div> 
-            <button class="_active_button" (click)="nextImg()"
-                [ngClass]="currentImageIndex === imagesList.length - 1 ? '_inactive_button' : '_active_button'">
+            <button class="_active_button" (click)="nextImg(); onGalleryInteraction()">
                 <mat-icon>navigate_next</mat-icon>
             </button>
         </section>
         <div class="_container_count" *ngIf="imagesList.length > 1">
             <div class="_image_counter">
-                {{ currentImageNumber }} / {{ imagesList.length }}
+                {{ currentImageIndex }} / {{ imagesList.length }}
             </div>
         </div>
     </ng-container>
 </article>
-
