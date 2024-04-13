@@ -7,58 +7,93 @@ import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 })
 
 export class GalleryEditorialComponent implements OnInit {
+  
+ /*--------VARIABLES -------*/ 
+ currentImageNumber: number = 1;
+ activeNext: boolean = false;
+ activeBefore: boolean = false;
+ currentImageIndex: number = 0;
+ private intervalId: any;
+ private autoChangeActive: boolean = true; // Flag to control auto change
 
-/*--------VARIABLES -------*/ 
-  currentImageNumber: number = 1;
-  activeNext: boolean = false;
-  activeBefore: boolean = false;
-  currentImageIndex: number = 0;
+ constructor() { 
+   this.updateButtonStatus();
+ }
 
-  constructor() { 
-    this.updateButtonStatus();
-  }
+ @Input() imagesList: string[] = [];
+ @Input() imgGallery: string = '';
+ @Input() totalImages: number = 0;
 
-  @Input() imagesList: string[] = [];
-  @Input() imgGallery: string = '';
-  @Input() totalImages: number = 0;
+ ngOnInit(): void {
+   this.startAutoChange();
+ }
 
-  ngOnInit(): void {
-  }
+ /*--------MÉTODOS -------*/ 
+ startAutoChange() {
+   this.intervalId = setInterval(() => {
+     if (this.autoChangeActive) { // Check if auto change is active
+       this.nextImg();
+     }
+   }, 5000); // Change image every 5 seconds
+ }
+ 
+ stopAutoChange() {
+   clearInterval(this.intervalId);
+ }
 
-  /*--------MÉTODOS -------*/ 
-  activeGallery() {
-    this.imgGallery='';
-  }
+ nextImg() {
+   if (this.currentImageIndex < this.imagesList.length - 1) {
+     this.currentImageIndex++;
+   } else {
+     this.currentImageIndex = 0;
+   }
+   this.imgGallery = this.imagesList[this.currentImageIndex];
+ }
 
-  updateButtonStatus() {
-    this.activeNext = this.currentImageIndex < this.imagesList.length - 1;
-    this.activeBefore = this.currentImageIndex > 0;
-  }
+ previousImg() {
+   if (this.currentImageIndex > 0) {
+     this.currentImageIndex--;
+   } else {
+     this.currentImageIndex = this.imagesList.length - 1;
+   }
+   this.imgGallery = this.imagesList[this.currentImageIndex];
+ }
 
-  nextImg() {
-    if (this.currentImageIndex < this.imagesList.length - 1) {
-      this.currentImageIndex++;
-      this.imgGallery = this.imagesList[this.currentImageIndex];
-      this.updateButtonStatus();
-      this.currentImageNumber = this.currentImageIndex + 1;
-    }
-  }
+ // Method to handle user interaction with the gallery
+ onGalleryInteraction() {
+   this.autoChangeActive = false; // Disable auto change
+   this.stopAutoChange(); // Stop auto change
+ }
 
-  beforeImg() {
-    if (this.currentImageIndex > 0) {
-      this.currentImageIndex--;
-      this.imgGallery = this.imagesList[this.currentImageIndex];
-      this.updateButtonStatus();
-      this.currentImageNumber = this.currentImageIndex + 1;
-    }
-  }
+ // Method to resume auto change after user interaction
+ resumeAutoChange() {
+   this.autoChangeActive = true; // Enable auto change
+   this.startAutoChange(); // Start auto change
+ }
 
-  ngOnChanges(changes: SimpleChanges) {
-    if (changes['imagesList']) { // Detectamos cambios en la lista de imágenes y actualizamos el contador
-      this.currentImageIndex = 0; // Reiniciamos el índice para mostrar la primera imagen
-      this.currentImageNumber = 1; // Reiniciamos el contador para mostrar "1 / N"
-      this.updateButtonStatus(); // Actualizamos los botones de navegación
-    }
-  }
+ updateButtonStatus() {
+   this.activeNext = this.currentImageIndex < this.imagesList.length - 1;
+   this.activeBefore = this.currentImageIndex > 0;
+ }
 
+ beforeImg() {
+   if (this.currentImageIndex > 0) {
+     this.currentImageIndex--;
+     this.imgGallery = this.imagesList[this.currentImageIndex];
+     this.updateButtonStatus();
+     this.currentImageNumber = this.currentImageIndex + 1;
+   }
+ }
+
+ ngOnChanges(changes: SimpleChanges) {
+   if (changes['imagesList']) { 
+     this.currentImageIndex = 0; 
+     this.currentImageNumber = 1; 
+     this.updateButtonStatus(); 
+   }
+ }
+
+ onClickImage() {
+   this.onGalleryInteraction(); // Call the method to handle gallery interaction
+ }
 }

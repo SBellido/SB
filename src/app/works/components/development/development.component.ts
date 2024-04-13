@@ -36,30 +36,30 @@ export class DevelopmentComponent implements OnInit {
         {
           route: 'works/development/investigar',
           img: '../assets/images/dev/investigar/logo_investigar.png',
-          name: 'InventigAr',
+          name: '',
           text: 'Logo de InventigAr',
-          title: ''
+          title: 'InventigAr'
         },
         {
           route: 'works/development/xubox',
           img: '../assets/images/dev/xubox/logo/xubox_logo.png',
-          name: 'Logística',
+          name: '',
           text: 'Logo de Xubox',
-          title: ''
+          title: 'XUBOX Logística'
         },
         {
           route: 'works/development/qx',
           img: '../assets/images/dev/qx/qx_logo.png',
-          name: 'Logística',
+          name: '',
           text: 'Logo de QX Logística',
-          title: ''
+          title: 'QX Logística'
         },
         {
           route: 'works/development/portal',
           img: '../assets/images/dev/ruano/portal_logo.png',
-          name: 'Gestorias',
+          name: '',
           text: 'Logo de Portal de Despachos',
-          title: ''
+          title: 'Portal de Despachos'
         },
       ],
     },
@@ -74,16 +74,16 @@ export class DevelopmentComponent implements OnInit {
         {
           route: 'works/development/stormtech',
           img: '../assets/images/dev/stormtech/stormtech_logo.png',
-          name: 'Stormtech',
+          name: '',
           text: 'Logo de Stormtech',
-          title: ''
+          title: 'Stormtech'
         },
         {
           route: 'works/development/hunt',
           img: '../assets/images/dev/hunt/hunt_logo.png',
-          name: 'Hunt',
+          name: '',
           text: 'Logo de Hunt',
-          title: ''
+          title: 'Hunt'
         }
       ]
     },
@@ -98,16 +98,16 @@ export class DevelopmentComponent implements OnInit {
         {
           route: 'works/development/game',
           img: '../assets/images/dev/zombie/zombie_logo.png',
-          name: 'Game Runner',
+          name: '',
           text: 'Ícono con cara de zombie',
-          title: ''
+          title: 'Game Runner'
         },
         {
           route: 'works/development/platzi-react',
           img: '../assets/images/graph/platzi_logo.png',
-          name: 'React.js',
+          name: '',
           text: 'Logo de Platzi',
-          title: ''
+          title: 'Curso | React.js'
         },
       ],
     },
