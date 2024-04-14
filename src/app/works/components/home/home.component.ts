@@ -23,6 +23,10 @@ export class HomeComponent implements OnInit {
   ];
 
   /*--------VARIABLES-------*/ 
+  angX: number = 0;
+  angY: number = 0;
+
+
   isLoading: boolean = false;
   concepts: string[] = [
     // 'learning', 'overcoming', 'openness', 'perseverance', 'reading',
@@ -85,6 +89,23 @@ export class HomeComponent implements OnInit {
   /*------------MÉTODOS--------------*/
   preventRightClick(event: MouseEvent) {
     event.preventDefault();
+  }
+
+  onButtonClick(direction: string): void {
+    switch (direction) {
+      case "up":
+        this.angX += 90;
+        break;
+      case "down":
+        this.angX -= 90;
+        break;
+      case "right":
+        this.angY += 90;
+        break;
+      case "left":
+        this.angY -= 90;
+        break;
+    }
   }
 
   topFunction() {
