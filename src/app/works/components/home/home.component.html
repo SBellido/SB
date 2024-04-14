@@ -1,8 +1,25 @@
-<section class="intro_myself" *ngIf="(loadingService.isLoading() | async) === false">
-  <div class="_container_image">
+<article class="intro_myself" *ngIf="(loadingService.isLoading() | async) === false">
+  <section class="_container_cube">
+    <div id="cube" (contextmenu)="preventRightClick($event)"
+      [style.transform]="'rotateX(' + angX + 'deg) rotateY(' + angY + 'deg)'">
+      <figure class="_back" src="../assets/images/sb/yo.jpg" alt="Sebastián Bellido mirando a la cámara y sonriendo"></figure>
+      <figure class="_left" src="../assets/images/sb/yo.jpg" alt="Enlace a Aplicaciones"></figure>
+      <figure class="_bottom" src="../assets/images/sb/yo.jpg" alt="Enlace a Webs"></figure>
+      <figure class="_front" src="../assets/images/sb/yo.jpg" alt="Enlace a UX/UI"></figure>
+      <figure class="_right" src="../assets/images/sb/yo.jpg" alt="Enlace a Concursos"></figure>
+      <figure class="_top" src="../assets/images/sb/yo.jpg" alt="Enlace a Logos"></figure>
+    </div>
+  </section>
+  <section class="_buttons">
+    <div class="_button" id="up" (click)="onButtonClick('up')">▲</div>
+    <div class="_button" id="down" (click)="onButtonClick('down')">▼</div>
+    <div class="_button" id="left" (click)="onButtonClick('left')">◄</div>
+    <div class="_button" id="right" (click)="onButtonClick('right')">►</div>
+  </section>
+  <!-- <div class="_container_image">
     <img class="_img_me" (contextmenu)="preventRightClick($event)"
       src="../assets/images/sb/yo.jpg" alt="Sebastián Bellido mirando a la cámara y sonriendo">
-  </div>
+  </div> -->
   <div class="_container_text">
     <h1 class="_title">Sebastián Bellido</h1>
     <ul class="_custom-list">
@@ -28,5 +45,5 @@
       </li>
     </ul>
   </div>
-</section>
+</article>
 <article class="_container_all_"></article>
