@@ -7,7 +7,7 @@ import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 })
 
 export class GalleryEditorialComponent implements OnInit {
-  
+
  /*--------VARIABLES -------*/ 
  currentImageNumber: number = 1;
  activeNext: boolean = false;
@@ -16,9 +16,7 @@ export class GalleryEditorialComponent implements OnInit {
  private intervalId: any;
  private autoChangeActive: boolean = true; // Flag to control auto change
 
- constructor() { 
-   this.updateButtonStatus();
- }
+ constructor() { }
 
  @Input() imagesList: string[] = [];
  @Input() imgGallery: string = '';
@@ -31,10 +29,10 @@ export class GalleryEditorialComponent implements OnInit {
  /*--------MÉTODOS -------*/ 
  startAutoChange() {
    this.intervalId = setInterval(() => {
-     if (this.autoChangeActive) { // Check if auto change is active
+     if (this.autoChangeActive) { // Compruebe si el cambio automático está activo
        this.nextImg();
      }
-   }, 5000); // Change image every 5 seconds
+   }, 5000); // Cambia imagen cada 5 segundos
  }
  
  stopAutoChange() {
@@ -48,6 +46,7 @@ export class GalleryEditorialComponent implements OnInit {
      this.currentImageIndex = 0;
    }
    this.imgGallery = this.imagesList[this.currentImageIndex];
+   this.currentImageNumber = this.currentImageIndex + 1;
  }
 
  previousImg() {
@@ -57,43 +56,22 @@ export class GalleryEditorialComponent implements OnInit {
      this.currentImageIndex = this.imagesList.length - 1;
    }
    this.imgGallery = this.imagesList[this.currentImageIndex];
+   this.currentImageNumber = this.currentImageIndex + 1;
  }
 
- // Method to handle user interaction with the gallery
+ //  Método para controlar la interacción del usuario con la galería
  onGalleryInteraction() {
-   this.autoChangeActive = false; // Disable auto change
-   this.stopAutoChange(); // Stop auto change
+   this.autoChangeActive = false; // Desactivar el cambio automático
+   this.stopAutoChange(); // Detener el cambio automático
  }
 
- // Method to resume auto change after user interaction
+ //  Método para reanudar el cambio automático después de la interacción del usuario
  resumeAutoChange() {
-   this.autoChangeActive = true; // Enable auto change
-   this.startAutoChange(); // Start auto change
- }
-
- updateButtonStatus() {
-   this.activeNext = this.currentImageIndex < this.imagesList.length - 1;
-   this.activeBefore = this.currentImageIndex > 0;
- }
-
- beforeImg() {
-   if (this.currentImageIndex > 0) {
-     this.currentImageIndex--;
-     this.imgGallery = this.imagesList[this.currentImageIndex];
-     this.updateButtonStatus();
-     this.currentImageNumber = this.currentImageIndex + 1;
-   }
- }
-
- ngOnChanges(changes: SimpleChanges) {
-   if (changes['imagesList']) { 
-     this.currentImageIndex = 0; 
-     this.currentImageNumber = 1; 
-     this.updateButtonStatus(); 
-   }
+   this.autoChangeActive = true; // Habilitar el cambio automático
+   this.startAutoChange(); // Iniciar el cambio automático
  }
 
  onClickImage() {
-   this.onGalleryInteraction(); // Call the method to handle gallery interaction
+   this.onGalleryInteraction(); // Llame al método para controlar la interacción de la galería
  }
 }
