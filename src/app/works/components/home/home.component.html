@@ -1,20 +1,27 @@
 <article class="intro_myself" *ngIf="(loadingService.isLoading() | async) === false">
   <section class="_container_cube">
-    <div id="cube" (contextmenu)="preventRightClick($event)"
-      [style.transform]="'rotateX(' + angX + 'deg) rotateY(' + angY + 'deg)'">
-      <figure class="_back" src="../assets/images/sb/yo.jpg" alt="Sebastián Bellido mirando a la cámara y sonriendo"></figure>
-      <figure class="_left" src="../assets/images/sb/yo.jpg" alt="Enlace a Aplicaciones"></figure>
-      <figure class="_bottom" src="../assets/images/sb/yo.jpg" alt="Enlace a Webs"></figure>
-      <figure class="_front" src="../assets/images/sb/yo.jpg" alt="Enlace a UX/UI"></figure>
-      <figure class="_right" src="../assets/images/sb/yo.jpg" alt="Enlace a Concursos"></figure>
-      <figure class="_top" src="../assets/images/sb/yo.jpg" alt="Enlace a Logos"></figure>
+    <div id="cube" #cubeElement (contextmenu)="preventRightClick($event)"
+      [style.transform]="'rotateX(' + angX + 'deg) rotateY(' + angY + 'deg)'"
+      (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)"
+      (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp($event)">
+      <img class="_front" (click)="routeTo('works/biography')"
+        src="../assets/images/yo_.png" alt="Enlace a perfil de Sebastián Bellido foto mirando a la cámara y sonriendo">
+
+      <img class="_back" (click)="routeTo('works/development/investigar')"
+        src="../assets/images/home/apps.png" alt="Enlace a Aplicaciones">
+
+      <img class="_left" (click)="routeTo('works/development/stormtech')"
+        src="../assets/images/home/webs.png" alt="Enlace a Webs">
+
+      <img class="_bottom" (click)="routeTo('works/design/competitions')"
+        src="../assets/images/home/concursos.png" alt="Enlace a Concursos">
+
+      <img class="_right" (click)="routeTo('works/design/brands')"
+        src="../assets/images/home/logos.png" alt="Enlace a Logotipos">
+      
+      <img class="_top" (click)="routeTo('works/design/ux-ui/ypf')"
+        src="../assets/images/home/ux-ui.png" alt="Enlace a UX/UI">
     </div>
-  </section>
-  <section class="_buttons">
-    <div class="_button" id="up" (click)="onButtonClick('up')">▲</div>
-    <div class="_button" id="down" (click)="onButtonClick('down')">▼</div>
-    <div class="_button" id="left" (click)="onButtonClick('left')">◄</div>
-    <div class="_button" id="right" (click)="onButtonClick('right')">►</div>
   </section>
   <!-- <div class="_container_image">
     <img class="_img_me" (contextmenu)="preventRightClick($event)"
@@ -26,24 +33,24 @@
       <li>
         <p>Diseñador en Comunicación Visual, Diseñador UX/UI, Técnico en Desarrollo de Aplicaciones Informáticas, Ilustrador y Docente.</p>
       </li>
-      <li> 
+      <li>
         <p>
-          Desde 2019 ha integrado diferentes equipos de desarrollo de software, ocupando roles como Desarrollador Frontend y Diseñador UX/UI. 
+          Desde 2019 ha integrado diferentes equipos de desarrollo de software, ocupando roles como Desarrollador Frontend y Diseñador UX/UI.
         </p>
       </li>
-      <li> 
+      <li>
         <p>
-          Ciudadano argentino y español, con toda la documentación al día. 
+          Ciudadano argentino y español, con toda la documentación al día.
           Actualmente viviendo en Almería Capital, pero dispuesto a reubicarse si es necesario.
         </p>
       </li>
       <li>
         <p>
-          Persona responsable, dinámica, meticulosa y creativa, con habilidades para trabajar en equipo, 
+          Persona responsable, dinámica, meticulosa y creativa, con habilidades para trabajar en equipo,
           manejar situaciones de alta presión, coordinar grupos y optimizar resultados.
         </p>
       </li>
     </ul>
   </div>
 </article>
-<article class="_container_all_"></article>
+<!-- <article class="_container_all_"></article> -->
