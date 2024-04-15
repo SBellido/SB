@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { HeaderSection } from 'src/app/models/models';
 import { LoadingService } from '../../../services/loading.service';
@@ -10,6 +10,8 @@ import { LoadingService } from '../../../services/loading.service';
 })
 
 export class HomeComponent implements OnInit {
+  @ViewChild('cubeElement') cubeElement: ElementRef | undefined;
+
   /*--------INTERFACES-------*/ 
   header: HeaderSection[] = [
     {
@@ -25,54 +27,9 @@ export class HomeComponent implements OnInit {
   /*--------VARIABLES-------*/ 
   angX: number = 0;
   angY: number = 0;
-
-
-  isLoading: boolean = false;
-  concepts: string[] = [
-    // 'learning', 'overcoming', 'openness', 'perseverance', 'reading',
-    // 'creativity', 'experience', 'respect', 'balance', 'study',
-    // 'commitment', 'communication', 'listening', 'practice', 'disposition',
-    // 'dialogue', 'intuition', 'projects', 'ideas', 'friendship', 'reasoning',
-    // 'curiosity', 'love', 'results', 'team', 'attention',
-    // 'interest', 'risks', 'attitude', 'training', 'family',
-    // 'training', 'trust', 'dreams', 'sincerity',
-    // 'knowledge', 'humility', 'empathy', 'resolution', 'responsibility'
-    'aprendizaje','superación','apertura','perseverancia', 'lectura',
-    'creatividad','experiencia', 'respeto', 'equilibrio', 'estudio',
-    'compromiso','comunicación','escucha','práctica', 'disposición',
-    'diálogo','intuición','proyectos','ideas','amistad', 'razonamiento',
-    'curiosidad','amor','resultados','equipo','atención',
-    'interés','riesgos','actitud','formación','familia',
-    'capacitación','confianza','sueños','sinceridad',
-    'conocimiento','humildad','empatía','resolución','responsabilidad',
-    'intelecto','ingenio'
-  ];
-
-  weightFont: number[] = [
-    100,200,300,400,
-    500,600,700,800,900
-  ];
-  
-  // colorFont: string[] = [
-  //   '#9b9b9b','#7f7f7f','#171717',
-  //   '#bbbbbb','#afafaf','#7e7e7e',
-  //   '#a5a5a5','#888888','#b9b9b9'
-  // ]; 
-  colorFont: string[] = [
-    '#9b9b9b','#7f7f7f','#171717',
-    '#bbbbbb','#afafaf','#7e7e7e',
-    '#a5a5a5','#888888','#b9b9b9',
-    '#03caff','#03caff','#7AE3FF',
-    '#f9f9f9','#f9f9f9','#FFDD57',
-    '#f8cbf6','#f8cbf6','#f89af3',
-    '#FFEB9B','#8F57FF','#C5A9FE'
-  ]; 
-  fontStyle: string[] = [
-    'oblique', 'italic','normal'
-  ];
-  fontSize: string[] = [
-    '1.5rem', '1rem','1.75rem','1.25rem'
-  ];
+  isDragging: boolean = false;
+  startX: number = 0;
+  startY: number = 0;
 
   constructor(
     private router: Router, 
@@ -84,9 +41,88 @@ export class HomeComponent implements OnInit {
     window.onload = () => {
       this.loadingService.setLoadingState(false);
     };
+    this.startCubeRotation();
+    document.addEventListener('wheel', this.onMouseWheel.bind(this));
+
+  //  this.cubeElement?.nativeElement.addEventListener('wheel', this.onMouseWheel.bind(this));
+
  }
 
   /*------------MÉTODOS--------------*/
+  startCubeRotation() {
+    setInterval(() => {
+      // Ajusta los ángulos de rotación para que el cubo gire automáticamente
+      this.angY += 1; // Ajusta la velocidad y dirección según sea necesario
+    }, 50); // Cambia el intervalo según la velocidad deseada
+  }
+
+  onMouseWheel(event: WheelEvent) {
+    // Obtener la dirección del desplazamiento de la rueda del mouse
+    const delta = Math.sign(event.deltaY);
+  console.log("delta: ", delta);
+  
+    // Actualizar las variables angX o angY según corresponda
+    if (delta > 0) {
+      // Desplazamiento hacia abajo: decrementar angX o angY
+      // Aquí puedes decrementar angX o angY según tus necesidades
+      this.angY -= 50; // Por ejemplo, decrementar angX en 5 grados
+    } else {
+      // Desplazamiento hacia arriba: incrementar angX o angY
+      // Aquí puedes incrementar angX o angY según tus necesidades
+      this.angX += 50; // Por ejemplo, incrementar angX en 5 grados
+    }
+  
+    // Actualizar la transformación del cubo con los nuevos valores de angX y angY
+    this.updateCubeTransform();
+  }
+
+  updateCubeTransform() {
+    if (this.cubeElement) {
+      this.cubeElement.nativeElement.style.transform = `rotateX(${this.angX}deg) rotateY(${this.angY}deg)`;
+    }
+  }
+
+
+  onTouchStart(event: TouchEvent) {
+    this.startX = event.touches[0].clientX;
+    this.startY = event.touches[0].clientY;
+    this.isDragging = true;
+  }
+
+  onTouchMove(event: TouchEvent) {
+    if (!this.isDragging) return;
+    const deltaX = event.touches[0].clientX - this.startX;
+    const deltaY = event.touches[0].clientY - this.startY;
+    this.angY += deltaX * 1.5; // Ajusta la velocidad de rotación según sea necesario
+    this.angX -= deltaY * 1.5;
+    this.startX = event.touches[0].clientX;
+    this.startY = event.touches[0].clientY;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    this.isDragging = false;
+  }
+
+  onMouseDown(event: MouseEvent) {
+    this.startX = event.clientX;
+    this.startY = event.clientY;
+    this.isDragging = true;
+  }
+
+  onMouseMove(event: MouseEvent) {
+    if (!this.isDragging) return;
+    const deltaX = event.clientX - this.startX;
+    const deltaY = event.clientY - this.startY;
+    this.angY += deltaX * 1; // Ajusta la velocidad de rotación según sea necesario
+    this.angX -= deltaY * 1;
+    this.startX = event.clientX;
+    this.startY = event.clientY;
+  }
+
+  onMouseUp(event: MouseEvent) {
+    this.isDragging = false;
+  }
+
   preventRightClick(event: MouseEvent) {
     event.preventDefault();
   }
@@ -113,53 +149,8 @@ export class HomeComponent implements OnInit {
     document.documentElement.scrollTop = 0;
   }
 
-  mixArrayContent() {   
-    this.topFunction(); 
-    this.concepts.sort(()=> Math.random() - 0.5); 
-  }
-
-  getStyles() {
-    let myStyles = {
-      fontWeight: this.getRandomWeight(),
-      color: this.getRandomColor(),
-      fontStyle: this.getRandomFontStyle(),
-      fontSize: this.getRandomFontSize()
-    }
-    this.mixArrayContent();
-    return 
-    myStyles;    
-  }
-
-  getRandomWeight(): number {
-    let result: number;
-    this.weightFont.sort(()=> Math.random() - 0.5); 
-    result = this.weightFont[0];
-    this.mixArrayContent();
-    return result;
-  }
-
-  getRandomColor(): string {
-    let result: string;
-    this.colorFont.sort(()=> Math.random() - 0.5); 
-    result = this.colorFont[0];
-    this.mixArrayContent();
-    return result;
-  }
-
-  getRandomFontStyle(): string {
-    let result: string;
-    this.fontStyle.sort(()=> Math.random() - 0.5); 
-    result = this.fontStyle[0];
-    this.mixArrayContent();
-    return result;
-  }
-  
-  getRandomFontSize(): string {
-    let result: string;
-    this.fontSize.sort(()=> Math.random() - 0.5); 
-    result = this.fontSize[0];
-    this.mixArrayContent();
-    return result;
+  routeTo(route:string) {    
+    this.router.navigate([route]);
   }
 
 }
