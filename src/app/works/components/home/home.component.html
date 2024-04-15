@@ -4,22 +4,22 @@
       [style.transform]="'rotateX(' + angX + 'deg) rotateY(' + angY + 'deg)'"
       (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)"
       (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp($event)">
-      <img class="_front" (click)="routeTo('works/biography')"
+      <img title="Perfil" class="_front" (click)="routeTo('works/biography')"
         src="../assets/images/yo_.png" alt="Enlace a perfil de Sebastián Bellido foto mirando a la cámara y sonriendo">
 
-      <img class="_back" (click)="routeTo('works/development/investigar')"
+      <img title="Desarrollo de Aplicaciones" class="_back" (click)="routeTo('works/development/investigar')"
         src="../assets/images/home/apps.png" alt="Enlace a Aplicaciones">
 
-      <img class="_left" (click)="routeTo('works/development/stormtech')"
+      <img title="Desarrollo Web" class="_left" (click)="routeTo('works/development/stormtech')"
         src="../assets/images/home/webs.png" alt="Enlace a Webs">
 
-      <img class="_bottom" (click)="routeTo('works/design/competitions')"
+      <img title="Participación en Concursos" class="_bottom" (click)="routeTo('works/design/competitions')"
         src="../assets/images/home/concursos.png" alt="Enlace a Concursos">
 
-      <img class="_right" (click)="routeTo('works/design/brands')"
+      <img title="Diseño de Logotipos" class="_right" (click)="routeTo('works/design/brands')"
         src="../assets/images/home/logos.png" alt="Enlace a Logotipos">
       
-      <img class="_top" (click)="routeTo('works/design/ux-ui/ypf')"
+      <img title="Diseño UX/UI" class="_top" (click)="routeTo('works/design/ux-ui/ypf')"
         src="../assets/images/home/ux-ui.png" alt="Enlace a UX/UI">
     </div>
   </section>
