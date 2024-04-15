@@ -49,10 +49,27 @@ export class NavbarComponent implements OnInit {
     // $design_color_lighter: #fdf0f2;
   ];
 
-  constructor(private router: Router) { 
+  constructor(private router: Router) {
+    
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.setActiveButtonBasedOnURL(); 
+
+    // Ejecutar setActiveButtonBasedOnURL() cada 1/2 segundo
+    setInterval(() => {
+      this.setActiveButtonBasedOnURL();
+    }, 500);
+  }
+
+  setActiveButtonBasedOnURL() {
+    const currentURL = this.router.url;
+    console.log("currentURL: ",currentURL);
+    
+    for (const btn of this.btnNavBar) {
+      btn.active = currentURL.includes(btn.router);
+    }
+  }
 
   isHomePage(): boolean {
     return this.router.url === '/works/home';
