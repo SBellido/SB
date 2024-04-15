@@ -1,0 +1,82 @@
+@import '../../../global/global.component.scss';
+@media (min-width: 0px) {
+/* ----------- CUBE -------------*/
+  section._container_cube {
+    width: 150px;
+    height: 150px;
+    margin: 50px auto;
+    position: relative;
+    perspective: 400px;
+  }
+  #cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+  #cube img {
+    opacity: .5;
+    width: 95%;
+    height: 95%;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    filter: grayscale(1);
+    border-radius: 25px;
+    // border: 5px solid $fifth_color;
+  }
+  #cube div {
+    opacity: .5;
+    width: 95%;
+    height: 95%;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px solid $fifth_color;
+    background-color: $fifth_color;
+  }
+  #cube img:hover {
+    filter: none;
+    opacity: 1;
+
+  }
+  #cube ._front {
+    transform: rotateX(0deg) translateZ(75px);
+  }
+  #cube ._front_ {
+    transform: rotateX(0deg) translateZ(72px);
+  }
+  #cube ._right {
+    transform: rotateY(90deg) translateZ(75px);
+  }
+  #cube ._right_ {
+    transform: rotateY(90deg) translateZ(72px);
+  }
+  #cube ._top {
+    transform: rotateX(90deg) translateZ(75px);
+  }
+  #cube ._top_ {
+    transform: rotateX(90deg) translateZ(72px);
+  }
+  #cube ._back {
+    transform: rotateX(0deg) translateZ(-75px);
+  }
+  #cube ._back_ {
+    transform: rotateX(0deg) translateZ(-72px);
+  }
+  #cube ._left {
+    transform: rotateY(90deg) translateZ(-75px);
+  }
+  #cube ._left_ {
+    transform: rotateY(90deg) translateZ(-72px);
+  }
+  #cube ._bottom {
+    transform: rotateX(90deg) translateZ(-75px);
+  }
+  #cube ._bottom_ {
+    transform: rotateX(90deg) translateZ(-72px);
+  }
+
+}
