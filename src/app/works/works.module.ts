@@ -50,6 +50,7 @@ import { GameComponent } from './components/development/components/game/game.com
 import { PortalComponent } from './components/development/components/ruano/portal.component'; 
 import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
 import { EditorialComponent } from './components/design/components/editorial/editorial.component';
+import { CubeComponent } from './components/cube/cube.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { EditorialComponent } from './components/design/components/editorial/edi
     PortalComponent,
     PlatziReact,
     EditorialComponent,
+    CubeComponent
   ],
   imports: [
     CommonModule,

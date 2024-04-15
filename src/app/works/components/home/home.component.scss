@@ -1,6 +1,5 @@
 @import '../../../global/global.component.scss';
 @media (min-width: 0px) {
-/* ----------- CUBE -------------*/
   section._container_cube {
     width: 150px;
     height: 150px;
@@ -8,52 +7,6 @@
     position: relative;
     perspective: 400px;
   }
-  #cube {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-  }
-  #cube img {
-    opacity: .8;
-    width: 95%;
-    height: 95%;
-    margin: 0;
-    position: absolute;
-    cursor: pointer;
-    filter: grayscale(1);
-    border-radius: 25px;
-  }
-  #cube img:hover {
-    filter: none;
-  }
-  #cube ._front {
-    background: hsla(180, 100%, 50%, 0.5);
-    transform: rotateX(0deg) translateZ(75px);
-  }
-  #cube ._right {
-    background: hsla(240, 100%, 50%, 0.5);
-    transform: rotateY(90deg) translateZ(75px);
-  }
-  #cube ._top {
-    background: hsla(320, 100%, 50%, 0.5);
-    transform: rotateX(90deg) translateZ(75px);
-  }
-  #cube ._back {
-    background: hsla(0, 100%, 50%, 0.5); 
-    transform: rotateX(0deg) translateZ(-75px);
-  }
-  #cube ._left {
-    background: hsla(60, 100%, 50%, 0.5);
-    transform: rotateY(90deg) translateZ(-75px);
-  }
-  #cube ._bottom {
-    background: hsla(120, 100%, 50%, 0.5);
-    transform: rotateX(90deg) translateZ(-75px);
-  }
-/*---------------------------------------*/
-
   article.intro_myself {
     display: flex;
     align-items: center;

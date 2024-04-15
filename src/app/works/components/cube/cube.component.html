@@ -1,0 +1,29 @@
+<div id="cube" #cubeElement (contextmenu)="preventRightClick($event)"
+  [style.transform]="'rotateX(' + angX + 'deg) rotateY(' + angY + 'deg)'"
+  (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd($event)"
+  (mousedown)="onMouseDown($event)" (mousemove)="onMouseMove($event)" (mouseup)="onMouseUp($event)">
+
+  <img title="Perfil" class="_front" (click)="routeTo('works/biography')"
+    src="../assets/images/yo_.png" alt="Enlace a perfil de Sebastián Bellido foto mirando a la cámara y sonriendo">
+  <div class="_front_"></div>
+  
+  <img title="Desarrollo de Aplicaciones" class="_back" (click)="routeTo('works/development/investigar')"
+    src="../assets/images/home/apps.png" alt="Enlace a Aplicaciones">
+  <div class="_back_"></div>
+  
+  <img title="Desarrollo Web" class="_left" (click)="routeTo('works/development/stormtech')"
+    src="../assets/images/home/webs.png" alt="Enlace a Webs">
+  <div class="_left_"></div>
+  
+  <img title="Participación en Concursos" class="_bottom" (click)="routeTo('works/design/competitions')"
+    src="../assets/images/home/concursos.png" alt="Enlace a Concursos">
+  <div class="_bottom_"></div>
+  
+  <img title="Diseño de Logotipos" class="_right" (click)="routeTo('works/design/brands')"
+    src="../assets/images/home/logos.png" alt="Enlace a Logotipos">
+  <div class="_right_"></div>
+  
+  <img title="Diseño UX/UI" class="_top" (click)="routeTo('works/design/ux-ui/ypf')"
+    src="../assets/images/home/ux-ui.png" alt="Enlace a UX/UI">
+  <div class="_top_"></div>
+</div>
