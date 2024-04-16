@@ -36,8 +36,9 @@ export class CubeComponent implements OnInit {
   /*------------MÉTODOS--------------*/
   startCubeRotation() {
     setInterval(() => {
-      // Ajusta los ángulos de rotación para que el cubo gire automáticamente
-      this.angY += 1; // Ajusta la velocidad y dirección según sea necesario
+      // Ángulos de rotación para que el cubo gire automáticamente
+      this.angY += .5; 
+      this.angX += .5;
     }, 50); // Cambia el intervalo según la velocidad deseada
   }
 
@@ -45,16 +46,15 @@ export class CubeComponent implements OnInit {
     // Obtener la dirección del desplazamiento de la rueda del mouse
     const delta = Math.sign(event.deltaY);
   
-    // Actualizar las variables angX o angY según corresponda
+    // Actualiza las variables angX o angY según corresponda
     if (delta > 0) {
       // Desplazamiento hacia abajo: decrementar angX o angY
-      this.angY -= 50; // Por ejemplo, decrementar angX en 5 grados
+      this.angY -= 50;
     } else {
       // Desplazamiento hacia arriba: incrementar angX o angY
-      this.angX += 50; // Por ejemplo, incrementar angX en 5 grados
+      this.angX += 50; 
     }
-  
-    // Actualizar la transformación del cubo con los nuevos valores de angX y angY
+    // Actualiza la transformación del cubo con los nuevos valores de angX y angY
     this.updateCubeTransform();
   }
 
@@ -74,7 +74,7 @@ export class CubeComponent implements OnInit {
     if (!this.isDragging) return;
     const deltaX = event.touches[0].clientX - this.startX;
     const deltaY = event.touches[0].clientY - this.startY;
-    this.angY += deltaX * 1.5; // Ajusta la velocidad de rotación según sea necesario
+    this.angY += deltaX * 1.5; // Velocidad de rotación
     this.angX -= deltaY * 1.5;
     this.startX = event.touches[0].clientX;
     this.startY = event.touches[0].clientY;
@@ -94,7 +94,7 @@ export class CubeComponent implements OnInit {
     if (!this.isDragging) return;
     const deltaX = event.clientX - this.startX;
     const deltaY = event.clientY - this.startY;
-    this.angY += deltaX * 1; // Ajusta la velocidad de rotación según sea necesario
+    this.angY += deltaX * 1; // Velocidad de rotación
     this.angX -= deltaY * 1;
     this.startX = event.clientX;
     this.startY = event.clientY;
