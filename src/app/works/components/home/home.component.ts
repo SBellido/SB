@@ -13,10 +13,7 @@ export class HomeComponent implements OnInit {
   originalHeight: number = 70; // Guarda el valor original de la altura
   mobileMaxWidth: number = 768; // Ancho máximo para dispositivos móviles
 
-  constructor(
-    public loadingService: LoadingService,
-  ) { }
-  
+  constructor(public loadingService: LoadingService) { }
   
   ngOnInit(): void {
     this.topFunction();
