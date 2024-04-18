@@ -1,41 +1,9 @@
-<article class="intro_myself" *ngIf="(loadingService.isLoading() | async) === false">
-  <section class="_container_cube">
-    <app-cube></app-cube>
-  </section>
-  <!-- <div class="_container_image">
-    <img class="_img_me" (contextmenu)="preventRightClick($event)"
-      src="../assets/images/sb/yo.jpg" alt="Sebastián Bellido mirando a la cámara y sonriendo">
-  </div> -->
-  <div>
-    <h1 class="_title">Sebastián Bellido</h1>
-    <!-- <p id="weirdtext">
-      Take every letter in its own span(likely done with JS), from there, I would assign them classes with the font size animation.
-    </p>  -->
-  </div>
-  <div class="_container_text">
-
-
-    <ul class="_custom-list">
-      <li>
-        <p>Diseñador en Comunicación Visual, Diseñador UX/UI, Técnico en Desarrollo de Aplicaciones Informáticas, Ilustrador y Docente.</p>
-      </li>
-      <li>
-        <p>
-          Desde 2019 ha integrado diferentes equipos de desarrollo de software, ocupando roles como Desarrollador Frontend y Diseñador UX/UI.
-        </p>
-      </li>
-      <!-- <li>
-        <p>
-          Ciudadano argentino y español, con toda la documentación al día.
-          Actualmente viviendo en Almería Capital, pero dispuesto a reubicarse si es necesario.
-        </p> 
-      </li> -->
-      <li>
-        <p>
-          Persona responsable, dinámica, meticulosa y creativa, con habilidades para trabajar en equipo,
-          manejar situaciones de alta presión, coordinar grupos y optimizar resultados.
-        </p>
-      </li>
-    </ul>
-  </div>
+<article class="_intro_myself" 
+  *ngIf="(loadingService.isLoading() | async) === false"
+  [style.height.vh]="introHeight">
+  <h1>DCV Sebastián Bellido</h1>
+  <app-card (cardClicked)="onCardClicked()"></app-card>
 </article>
+<section class="_container_cube">
+  <app-cube></app-cube>
+</section>

@@ -51,6 +51,7 @@ import { PortalComponent } from './components/development/components/ruano/porta
 import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
 import { EditorialComponent } from './components/design/components/editorial/editorial.component';
 import { CubeComponent } from './components/cube/cube.component';
+import { CardComponent } from '../global/components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { CubeComponent } from './components/cube/cube.component';
     PortalComponent,
     PlatziReact,
     EditorialComponent,
-    CubeComponent
+    CubeComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
