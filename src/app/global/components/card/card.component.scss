@@ -3,7 +3,7 @@
 @media (min-width: 0px) {
   article._container {
     display: flex;
-    justify-_content: center;
+    justify-content: center;
     flex-direction: column;
   }
   h1, h2, p { 
@@ -21,6 +21,9 @@
     font-size: 1.5rem;
     text-align: center;
   }
+  h2 {
+    margin-bottom: .3rem;
+  }
     
   ul._cards {
     width: 320px;
@@ -31,7 +34,7 @@
     padding: 20px 0;
     cursor: pointer;
     display: flex;
-    justify-_content: center;
+    justify-content: center;
     z-index: 0;
 
     li._card {
@@ -50,23 +53,19 @@
         max-width: 100%;
         height: auto;
       }
-
       div._content {
         padding: 5px 10px;
       }
-
       &._card-1 {
         left: calc(50% - 100px); /* Centramos la _card-1 */
         z-index: 3;
         transform: rotateZ(-2deg); /* Mantenemos la rotación */
       }
-
       &._card-2 {
         left: calc(50% - 100px); /* Centramos la _card-2 */
         z-index: 2;
         transform: rotateZ(-7deg); /* Mantenemos la rotación */
       }
-
       &._card-3 {
         left: calc(50% - 100px); /* Centramos la _card-3 */
         z-index: 1;
@@ -79,19 +78,24 @@
       }
     }
   }
-  ul._cards.transition li._card._card-2:hover,
-  ul._cards.transition li._card._card-1:hover,
-  ul._cards.transition li._card._card-3:hover {
+  ul._cards.transition li._card._card-2,
+  ul._cards.transition li._card._card-1,
+  ul._cards.transition li._card._card-3 {
     transform: scale(1.05);
     border: 1px solid $fifth_color;
     filter: none;
   }
-  
 }
+
 @media (max-width: 767px) {
-  // ul._cards {
-  //   height: auto; // Cambiar la altura a automática para ajustarse al contenido
-  // }
+  ul._cards.transition li._card._card-2,
+  ul._cards.transition li._card._card-1,
+  ul._cards.transition li._card._card-3 {
+    transform: scale(1.05);
+    border: 1px solid $fifth_color;
+    filter: none;   
+    transform: rotateZ(0deg);  
+  }
 
   ul._cards.transition li._card {
     transition: all 0.4s cubic-bezier(.63,.15,.03,1.12);
@@ -99,6 +103,7 @@
 
   ul._cards.transition li._card._card-1 {
     top: 20px; // Desplazar la _card-1 hacia arriba
+    transform: rotateZ(0deg);
   }
 
   ul._cards.transition li._card._card-2 {
