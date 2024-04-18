@@ -16,7 +16,7 @@
     transition: transform 1s;
   }
   #cube img {
-    opacity: .5;
+    opacity: .8;
     width: 95%;
     height: 95%;
     margin: 0;
@@ -24,10 +24,9 @@
     cursor: pointer;
     filter: grayscale(1);
     border-radius: 25px;
-    // border: 5px solid $fifth_color;
   }
   #cube div {
-    opacity: .5;
+    opacity: .4;
     width: 95%;
     height: 95%;
     margin: 0;

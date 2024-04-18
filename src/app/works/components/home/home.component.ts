@@ -8,55 +8,38 @@ import { LoadingService } from '../../../services/loading.service';
 })
 
 export class HomeComponent implements OnInit {
-  @ViewChild('weirdtext', { static: true }) weirdtextElement: ElementRef | undefined;
+  @ViewChild('title') titleElement: ElementRef | undefined;
+  introHeight: number = 80; // Valor inicial del height
+  originalHeight: number = 80; // Guarda el valor original de la altura
+  mobileMaxWidth: number = 768; // Ancho máximo para dispositivos móviles
 
-  // /*--------INTERFACES-------*/ 
-  // header: HeaderSection[] = [
-  //   {
-  //     area: 'Sebastián Bellido',
-  //     icon: '../assets/images/sb/eye.svg',
-  //     routerLink: '',
-  //     isFlows: false,
-  //     isSubSection: false,
-  //     color: '$first_color_light'
-  //   }
-  // ];
-
-  /*--------VARIABLES-------*/ 
   constructor(
-    private elementRef: ElementRef,
-    public loadingService: LoadingService
+    public loadingService: LoadingService,
   ) { }
-
-  ngOnInit(): void {   
+  
+  
+  ngOnInit(): void {
     this.topFunction();
+    const titleElement = this.titleElement?.nativeElement;
     window.onload = () => {
       this.loadingService.setLoadingState(false);
-    };
-    this.setup();
+    }; 
   }
 
-  setup(): void {
-    const passageElement = this.elementRef.nativeElement.querySelector('#weirdtext');
-    const rawText = passageElement.innerHTML;
-    const len = rawText.length;
-    let newText = '';
-
-    for (let i = 0; i < len; i++) {
-      const rng = Math.floor(Math.random() * 5) + 1;
-      const currentChar = rawText.charAt(i);
-      let newChar = '';
-      if (currentChar === ' ') {
-        newChar = '<span class="space"></span>';
+  onCardClicked(): void {
+    if (this.shouldChangeHeight()) {
+      if (this.introHeight === this.originalHeight) {
+        this.introHeight = 215; // Cambia al valor deseado si es el valor original
       } else {
-        newChar = `<span class="effect${rng}">${currentChar}</span>`;
+        this.introHeight = this.originalHeight; // Vuelve al valor original si ya está cambiado
       }
-      newText += newChar;
     }
-
-    passageElement.innerHTML = newText;
   }
 
+  shouldChangeHeight(): boolean {
+    return window.innerWidth < this.mobileMaxWidth; // Verifica si el ancho de la pantalla es menor que el ancho máximo para dispositivos móviles
+  }
+  
   preventRightClick(event: MouseEvent) {
     event.preventDefault();
   }
@@ -65,5 +48,5 @@ export class HomeComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
+  
 }

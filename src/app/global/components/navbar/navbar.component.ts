@@ -63,9 +63,7 @@ export class NavbarComponent implements OnInit {
   }
 
   setActiveButtonBasedOnURL() {
-    const currentURL = this.router.url;
-    console.log("currentURL: ",currentURL);
-    
+    const currentURL = this.router.url;    
     for (const btn of this.btnNavBar) {
       btn.active = currentURL.includes(btn.router);
     }
