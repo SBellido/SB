@@ -13,7 +13,7 @@
   section._container_cube {
     width: 150px;
     height: 150px;
-    margin: 8rem auto 5rem auto;
+    margin: 8rem auto 0 auto;
     position: relative;
     perspective: 400px;
   }
@@ -24,5 +24,11 @@
     justify-content: start;
     flex-direction: column;
     padding-top: 10rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  section._container_cube {
+    margin: 0 auto;
   }
 }

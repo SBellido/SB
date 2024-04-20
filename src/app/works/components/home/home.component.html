@@ -1,8 +1,9 @@
 <article class="_intro_myself" 
-  *ngIf="(loadingService.isLoading() | async) === false"
   [style.height.vh]="introHeight">
   <h1>Sebastián Bellido</h1>
-  <app-card (cardClicked)="onCardClicked()"></app-card>
+  <app-card (cardClicked)="onCardClicked()"
+    *ngIf="(loadingService.isLoading() | async) === false"
+  ></app-card>
 </article>
 <section class="_container_cube">
   <app-cube></app-cube>

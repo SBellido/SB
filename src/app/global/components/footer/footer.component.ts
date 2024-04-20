@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button } from 'src/app/models/models';
 
@@ -10,13 +10,35 @@ import { Button } from 'src/app/models/models';
 
 export class FooterComponent {
 
-  designActive:boolean = false;
-  developmentActive:boolean = false;
-  interventionActive:boolean = false;
-  biographyActive:boolean = false;
+  constructor(private elRef: ElementRef) {}
 
-  constructor(private router: Router) {}
+  ngOnInit(): void {
+    this.addIntersectionObserver();
+  }
 
+  addIntersectionObserver() {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5 // Define el porcentaje de visibilidad para activar la animación
+    };
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.elRef.nativeElement.querySelector('._header_footer').classList.add('in-view');
+          this.elRef.nativeElement.querySelector('._container_download').classList.add('in-view'); 
+        } else {
+          this.elRef.nativeElement.querySelector('._left').classList.add('in-view');
+          this.elRef.nativeElement.querySelector('._right').classList.add('in-view'); 
+        }
+      });
+    }, options);
+  
+    observer.observe(this.elRef.nativeElement.querySelector('._header_footer'));
+    observer.observe(this.elRef.nativeElement.querySelector('._container_download')); 
+  }
+  
   preventRightClick(event: MouseEvent) {
     event.preventDefault();
   }
@@ -64,7 +86,8 @@ export class FooterComponent {
       text:'logo de github',
       title:'' 
     },
-  ]
+  ];
+
   btnContact: Button[] = [
     {  
       route: 'mailto:sebastianbellidodg@gmail.com?subject=Hola Seba!&body=¿Qué propones?.', 
@@ -80,7 +103,7 @@ export class FooterComponent {
       text: 'WhatsApp',
       title:''
     },
-  ]
+  ];
 
-  }
+}
 
