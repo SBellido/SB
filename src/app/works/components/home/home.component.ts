@@ -27,9 +27,14 @@ export class HomeComponent implements OnInit {
     if (this.shouldChangeHeight()) {
       if (this.introHeight === this.originalHeight) {
         this.introHeight = 215; // Cambia al valor deseado si es el valor original
+      } else if (window.innerWidth == 2560) {
+        console.log("window.innerWidth: ", window.innerWidth);
+        
+        // Si la pantalla está entre 1920px y 2560px de ancho, establece introHeight en 20
+        this.introHeight = 20;
+      }
       } else {
         this.introHeight = this.originalHeight; // Vuelve al valor original si ya está cambiado
-      }
     }
   }
 

@@ -1,7 +1,7 @@
 <article class="_container_footer">
   <section class="_header_footer">
     <div class="_container_ornament">
-      <img class="_ornament" (contextmenu)="preventRightClick($event)"
+      <img class="_ornament _left" (contextmenu)="preventRightClick($event)"
         src="../../../../assets/images/footer/ornamento_bottom_footer.svg" alt="ojo pez volador">
     </div>   
     <div class="_container_me">
@@ -9,12 +9,13 @@
         src="../../../../assets/images/footer/azulejo_yo.png" alt="Firma de Sebastián Bellido">
     </div>
     <div class="_container_ornament">
-      <img class="_ornament" (contextmenu)="preventRightClick($event)"
+      <img class="_ornament _right" (contextmenu)="preventRightClick($event)"
         src="../../../../assets/images/footer/ornamento_top_footer.svg" alt="ojo pez volador">
     </div>  
   </section>
-
-  <app-download></app-download>
+  <div class="_container_download">
+    <app-download class="_download"></app-download>
+  </div>  
   
   <section class="_container_social_networks">
     <div class="_container_logo_socialnet" 
