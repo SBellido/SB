@@ -29,8 +29,8 @@ export class FooterComponent {
           this.elRef.nativeElement.querySelector('._header_footer').classList.add('in-view');
           this.elRef.nativeElement.querySelector('._container_download').classList.add('in-view'); 
         } else {
-          this.elRef.nativeElement.querySelector('._left').classList.add('in-view');
-          this.elRef.nativeElement.querySelector('._right').classList.add('in-view'); 
+          this.elRef.nativeElement.querySelector('._header_footer').classList.remove('in-view');
+          // this.elRef.nativeElement.querySelector('._right').classList.add('in-view'); 
         }
       });
     }, options);

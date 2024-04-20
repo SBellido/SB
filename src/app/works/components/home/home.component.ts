@@ -12,7 +12,8 @@ export class HomeComponent implements OnInit {
   introHeight: number = 70; // Valor inicial del height
   originalHeight: number = 70; // Guarda el valor original de la altura
   mobileMaxWidth: number = 768; // Ancho máximo para dispositivos móviles
-
+  desktopMinWidth: number = 1920; // Ancho mínimo para escritorio
+  
   constructor(public loadingService: LoadingService) { }
   
   ngOnInit(): void {
@@ -20,7 +21,12 @@ export class HomeComponent implements OnInit {
     const titleElement = this.titleElement?.nativeElement;
     window.onload = () => {
       this.loadingService.setLoadingState(false);
-    }; 
+    };
+
+    // Preguntar en el ngOnInit si la pantalla mide más de 1920 para inicializar introHeight
+    if (window.innerWidth > this.desktopMinWidth) {
+      this.introHeight = 50;
+    }
   }
 
   onCardClicked(): void {
