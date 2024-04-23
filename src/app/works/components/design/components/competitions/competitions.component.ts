@@ -127,7 +127,7 @@ export class CompetitionsComponent implements OnInit {
         '../assets/images/competitions/nescafe/6.png',
         '../assets/images/competitions/nescafe/7.png',
         '../assets/images/competitions/nescafe/8.png',
-        '../assets/images/competitions/nescafeAC/9.png',
+        '../assets/images/competitions/nescafe/9.png',
         '../assets/images/competitions/nescafe/10.png',
         '../assets/images/competitions/nescafe/11.png',
       ];
