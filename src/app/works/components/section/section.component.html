@@ -1,6 +1,6 @@
 <div class="_container_component">
   <ng-container *ngFor="let item of sections">
-    <article class="_container_section" [ngClass]="{'_disabled': item.disabled}">
+    <article class="_container_section" [ngClass]="{'_disabled': item.disabled}" style="animation: fadeIn 2.5s;">
       <section class="_container_item" 
         [style.background]="item.isHovered ? parentColorHover : parentColor" 
         (click)="OpenClose(item.title)">
