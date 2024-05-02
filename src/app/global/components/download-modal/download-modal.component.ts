@@ -22,10 +22,10 @@ export class DownloadModalComponent implements OnInit {
 
     if (language === 'english') {
       fileName = 'cvSBellido_English.pdf';
-      url = '../../../../assets/images/biography/cvSBellido2024_English.pdf';
+      url = '../../../../assets/images/biography/cvSBellido_English.pdf';
     } else {
       fileName = 'cvSBellido_Spanish.pdf';
-      url = '../../../../assets/images/biography/cvSBellido2024_Spanish.pdf';
+      url = '../../../../assets/images/biography/cvSBellido_Spanish.pdf';
     }
 
     fetch(url)
