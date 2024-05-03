@@ -47,4 +47,7 @@ Thumbs.db
 
 # Firebase
 .firebase/
+<<<<<<< HEAD
 firebase-debug.log
+=======
+>>>>>>> f44fb3a001a9acab8dd45f03a913bb0fe2cef2b0
