@@ -23,7 +23,6 @@ export class CardComponent {
 
   toggleTransition(): void {
     this.transitionClass = !this.transitionClass;
-    console.log("this.transitionClass: ",this.transitionClass);  
     this.cardClicked.emit();
   }
   

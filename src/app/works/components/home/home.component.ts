@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
   
   ngOnInit(): void {
     this.topFunction();
-    console.log(window.innerWidth, this.desktopMinWidth);
     const titleElement = this.titleElement?.nativeElement;
     window.onload = () => {
       this.loadingService.setLoadingState(false);

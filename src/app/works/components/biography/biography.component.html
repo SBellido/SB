@@ -1,7 +1,5 @@
-<app-header-section
-  [header]="header">
-</app-header-section>
-<article class="_container_all" style="animation: fadeIn 2.5s;">
+<app-header-section [header]="header"> </app-header-section>
+<article class="_container_all" style="animation: fadeIn 2.5s">
   <section class="_container">
     <div class="_container_cards">
       <article class="_container_section">
@@ -30,11 +28,10 @@
         </section>
         <app-labor [hidden]="!visibleLabor"></app-labor>
         <div class="_container_button" *ngIf="visibleLabor">
-            <button class="_close" (click)="OpenClose('laboral')">cerrar</button>
+          <button class="_close" (click)="OpenClose('laboral')">cerrar</button>
         </div>
       </article>
       <!-- <p class="_construction"></p> -->
     </div>
-    
   </section>
 </article>
