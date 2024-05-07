@@ -21,8 +21,8 @@ export class YpfComponent implements OnInit {
     {value: 'imagesList2', view_Text: 'Crear Caso'},
     {value: 'imagesList3', view_Text: 'Asignar Comité'},
     {value: 'imagesList4', view_Text: 'Cortar Cadena'},
-    {value: 'imagesList5', view_Text: 'Admin 1'},
-    {value: 'imagesList6', view_Text: 'Admin 2'},
+    {value: 'imagesList5', view_Text: 'Administrar Parámetros'},
+    {value: 'imagesList6', view_Text: 'Administrar Personal'},
   ];
   
   header: HeaderSection[] = [
@@ -172,6 +172,7 @@ export class YpfComponent implements OnInit {
       '../assets/images/ux_ui/ypf/4/4.png',
       '../assets/images/ux_ui/ypf/4/5.png',
       '../assets/images/ux_ui/ypf/4/6.png',
+      '../assets/images/ux_ui/ypf/4/7.png',
     ];
     this.imgGallery = this.imagesList[0];
   }
@@ -184,6 +185,7 @@ export class YpfComponent implements OnInit {
       '../assets/images/ux_ui/ypf/5/3.png',
       '../assets/images/ux_ui/ypf/5/4.png',
       '../assets/images/ux_ui/ypf/5/5.png',
+      '../assets/images/ux_ui/ypf/5/6.png',
     ];
     this.imgGallery = this.imagesList[0]; 
   } 
