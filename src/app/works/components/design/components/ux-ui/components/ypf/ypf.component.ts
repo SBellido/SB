@@ -17,7 +17,7 @@ export class YpfComponent implements OnInit {
   
   /*--------INTERFACES-------*/ 
   options: OptionSelect[] = [
-    {value: 'imagesList1', view_Text: 'Nuevo Caso'},
+    {value: 'imagesList1', view_Text: 'Nuevo Caso | OPESSA'},
     {value: 'imagesList2', view_Text: 'Crear Caso'},
     {value: 'imagesList3', view_Text: 'Asignar Comité'},
     {value: 'imagesList4', view_Text: 'Cortar Cadena'},
@@ -127,6 +127,10 @@ export class YpfComponent implements OnInit {
         '../assets/images/ux_ui/ypf/0/1.png', 
         '../assets/images/ux_ui/ypf/0/2.png', 
         '../assets/images/ux_ui/ypf/0/3.png',      
+        '../assets/images/ux_ui/ypf/0/4.png',      
+        '../assets/images/ux_ui/ypf/0/5.png',      
+        '../assets/images/ux_ui/ypf/0/6.png',      
+        '../assets/images/ux_ui/ypf/0/7.png',      
       ];
       this.imgGallery = this.imagesList[0];
       this.loadingService.setLoadingState(false);
