@@ -152,6 +152,9 @@ export class YpfComponent implements OnInit {
       '../assets/images/ux_ui/ypf/2/1.png',
       '../assets/images/ux_ui/ypf/2/2.png',
       '../assets/images/ux_ui/ypf/2/3.png',
+      '../assets/images/ux_ui/ypf/2/4.png',
+      '../assets/images/ux_ui/ypf/2/5.png',
+      '../assets/images/ux_ui/ypf/2/6.png',
     ]
     this.imgGallery = this.imagesList[0]; 
   }
