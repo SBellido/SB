@@ -21,6 +21,7 @@ export class PublicationsComponent implements OnInit {
     {value: 'imagesList1', view_Text: 'Neptuno | Belleza Natural'},
     {value: 'imagesList2', view_Text: 'Dejando Huella | Pienso para Mascotas'},
     {value: 'imagesList3', view_Text: 'Convertiko | Agencia de Marketing'},
+    {value: 'imagesList4', view_Text: 'aviNews | Revista Digital'},
   ];
 
   information: Information[] = [
@@ -126,6 +127,8 @@ export class PublicationsComponent implements OnInit {
     // Simulación de carga de imágenes
     setTimeout(() => {
       this.imagesList = [ 
+        '../assets/images/publications/jam/0000.png',
+        '../assets/images/publications/jam/000.png',
         '../assets/images/publications/jam/00.png',
         '../assets/images/publications/jam/0.png',
         '../assets/images/publications/jam/1.png',
@@ -181,6 +184,13 @@ export class PublicationsComponent implements OnInit {
       this.imgGallery = this.imagesList[0];
     }
 
+    loadImages4() {
+      this.imagesList = [
+        '../assets/images/publications/aviNews/0.png',   
+    ];
+      this.imgGallery = this.imagesList[0];
+    }
+
     onChange(event: any) {
       this.selectedOption = event.value;    
       switch (this.selectedOption) {
@@ -195,6 +205,9 @@ export class PublicationsComponent implements OnInit {
           break;
         case 'imagesList3':
           this.loadImages3();
+          break;
+        case 'imagesList4':
+          this.loadImages4();
           break;
         default:
           // Lógica para el caso por defecto (opcional)
