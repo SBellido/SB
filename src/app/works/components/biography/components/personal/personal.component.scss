@@ -1,52 +1,64 @@
 @import '../../../biography/biography.component.scss';
-@media (min-width: 0px) { 
+@media (min-width: 0px) {
   div._container_img_personal {
     display: flex;
     justify-content: center;
+    margin-bottom: .5rem;
   }
+
   img._img_personal {
     width: 6rem;
     border-radius: 50%;
     object-fit: contain;
   }
+
   h3._name {
     padding-bottom: .5rem;
   }
+
   ul {
     padding-inline-start: 1.5rem;
     padding-inline-end: 1.5rem;
   }
+
   li {
     font-size: .9rem;
   }
+
   li._year {
     color: $first_color;
     margin: 0 0 .5rem 0;
   }
+
   li._info {
     color: $first_color;
-    line-height : 1.2rem;
+    line-height: 1.2rem;
     margin: .5rem 0;
     text-align: left;
   }
+
   a {
     text-decoration: none;
     color: $first_color;
     font-weight: 600;
   }
+
   span {
     font-weight: 700;
   }
-}  
-@media (min-width: 1024px) { 
+}
+
+@media (min-width: 1024px) {
   img._img_personal {
     border: solid $second_color 3px;
   }
+
   div._scroll {
     height: 11.5rem;
   }
 }
-@media (min-width: 1500px) { 
+
+@media (min-width: 1500px) {
   div._container_info {
     height: 20rem;
   }

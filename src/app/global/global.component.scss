@@ -1,6 +1,9 @@
-$profile_color: #59cdff;
-$profile_color_light: #75e1ff;
-$profile_color_lighter: #b8f1ff;
+$profile_color: #27e6be;
+$profile_color_light: #62e5c8;
+$profile_color_lighter: #b2ebdf;
+// $profile_color: #59cdff;
+// $profile_color_light: #75e1ff;
+// $profile_color_lighter: #b8f1ff;
 $dev_color: #ffdc51;
 $dev_color_light: #fbe9a2;
 $dev_color_lighter: #fff7d8;
@@ -13,93 +16,77 @@ $ok_color: #bafe71;
 // $design_color_light: #cafa96;
 // $design_color_lighter: #ddffb9;
 
-$profile_color_gradient:  
-    linear-gradient(
-        0deg, $profile_color 33%, 
-        $profile_color_light 100%
-    );
-$profile_color_gradient_hover:  
-    linear-gradient(
-        0deg, $profile_color_light 33%, 
-        $profile_color_lighter 100%
-    );
-$dev_color_gradient: 
-    linear-gradient(
-        0deg, $dev_color 33%, 
-        $dev_color_light 100%
-    );
-$dev_color_gradient_hover: 
-    linear-gradient(
-        0deg, $dev_color_light 33%, 
-        $dev_color_lighter 100%
-    );
-$design_color_gradient: 
-    linear-gradient(
-        0deg, $design_color 33%, 
-        $design_color_light 100%
-    );
-$design_color_gradient_hover: 
-    linear-gradient(
-        0deg, $design_color_light 33%, 
-        $design_color_lighter 100%
-    );
+$profile_color_gradient: linear-gradient(0deg, $profile_color 33%,
+        $profile_color_light 100%);
+$profile_color_gradient_hover: linear-gradient(0deg, $profile_color_light 33%,
+        $profile_color_lighter 100%);
+$dev_color_gradient: linear-gradient(0deg, $dev_color 33%,
+        $dev_color_light 100%);
+$dev_color_gradient_hover: linear-gradient(0deg, $dev_color_light 33%,
+        $dev_color_lighter 100%);
+$design_color_gradient: linear-gradient(0deg, $design_color 33%,
+        $design_color_light 100%);
+$design_color_gradient_hover: linear-gradient(0deg, $design_color_light 33%,
+        $design_color_lighter 100%);
+
 ._dev_background_color_gradient {
-   background: linear_gradient(
-      0deg, $dev_color 33%, 
-      $dev_color_light 100%
-    ); 
+    background: linear_gradient(0deg, $dev_color 33%,
+            $dev_color_light 100%);
 }
+
 ._dev_background_color_gradient:hover {
-   background: linear-gradient(
-      0deg, $dev_color_light 33%, 
-      $dev_color_lighter 100%
-    ); 
+    background: linear-gradient(0deg, $dev_color_light 33%,
+            $dev_color_lighter 100%);
 }
+
 ._dev_background_color {
     background-color: $dev_color;
 }
+
 ._dev_color {
     color: $dev_color;
 }
+
 ._design_background_color_gradient {
-    background: linear-gradient(
-       0deg, $design_color 33%, 
-       $design_color_light 100%
-     ); 
- }
- ._design_background_color_gradient:hover {
-    background: linear-gradient(
-       0deg, $design_color_light 33%, 
-       $design_color_lighter 100%
-     ); 
- }
+    background: linear-gradient(0deg, $design_color 33%,
+            $design_color_light 100%);
+}
+
+._design_background_color_gradient:hover {
+    background: linear-gradient(0deg, $design_color_light 33%,
+            $design_color_lighter 100%);
+}
+
 ._design_background_color {
     background-color: $design_color;
 }
+
 ._design_color {
     color: $design_color;
 }
+
 ._profile_background_color {
     background-color: $profile_color;
 }
+
 ._profile_color {
     color: $profile_color;
 }
+
 ._design_background_color_gradient {
-    background: linear-gradient(
-       0deg, $design_color 33%, 
-       $design_color_light 100%
-     ); 
- }
- ._dev_background_color_gradient:hover {
-    background: linear-gradient(
-       0deg, $design_color_light 33%, 
-       $design_color_lighter 100%
-     ); 
- }
+    background: linear-gradient(0deg, $design_color 33%,
+            $design_color_light 100%);
+}
+
+._dev_background_color_gradient:hover {
+    background: linear-gradient(0deg, $design_color_light 33%,
+            $design_color_lighter 100%);
+}
+
 .home_background_color {
     background-color: #e3e2e2;
 }
+
 .home_color {
     color: #e3e2e2;
 }
@@ -109,9 +96,9 @@ $first_color_medium: #5b5b5b;
 $first_color_light: #b4b2b2;
 $first_color_lighter: #e3e2e2;
 $first_color_hover: #1a1a1a;
-$second_color: #03caff;
-$second_color_light: #7ae3ff;
-$second_color_lighter: #beeefa;
+$second_color: #27e6be;
+$second_color_light: #62e5c8;
+$second_color_lighter: #b2ebdf;
 $third_color: #ffdd57;
 $third_color_light: #fbe27e;
 $third_color_lighter: #fbecb1;
@@ -131,26 +118,32 @@ $height_xl: 70px;
         height: auto;
         overflow-x: auto;
     }
+
     div._scroll::-webkit-scrollbar {
         width: 4px;
     }
+
     div._scroll::-webkit-scrollbar-thumb {
         background: #ccc;
         border-radius: 4px;
     }
+
     div._scroll::-webkit-scrollbar-thumb:active {
         background-color: #999999;
     }
+
     div._scroll::-webkit-scrollbar-thumb:hover {
         background: #b3b3b3;
         box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
     }
+
     div._scroll::-webkit-scrollbar-track {
         background: #e1e1e1;
         border-radius: 4px;
     }
-    div._scroll::-webkit-scrollbar-track:hover, 
+
+    div._scroll::-webkit-scrollbar-track:hover,
     div._scroll::-webkit-scrollbar-track:active {
         background: #d4d4d4;
-    } 
+    }
 }

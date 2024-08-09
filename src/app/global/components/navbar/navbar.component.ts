@@ -1,7 +1,7 @@
 /* Angular */
 import { Component, OnInit, HostListener, HostBinding } from '@angular/core';
 import { Router } from '@angular/router';
-import { ItemNavBar, ItemContact} from '../../../models/models';
+import { ItemNavBar, ItemContact } from '../../../models/models';
 
 @Component({
   selector: 'app-navbar',
@@ -14,34 +14,34 @@ export class NavbarComponent implements OnInit {
 
   hoverStates: { [id: string]: boolean } = {};
   btnNavBar: ItemNavBar[] = [
-    { 
-      id: 1, 
+    {
+      id: 1,
       icon: 'fingerprint',
-      title: 'perfil', 
-      active: false, 
-      hover: false, 
+      title: 'perfil',
+      active: false,
+      hover: false,
       styleClass: '_profile',
-      router:'works/biography',
-      hoverColor: '#37d4ff'
+      router: 'works/biography',
+      hoverColor: '#27e6be'
     },
-    { 
-      id: 2, 
-      icon: 'developer_mode', 
-      title: 'desarrollo', 
-      hover: false, 
-      styleClass: '_dev', 
-      active: false, 
-      router:'works/development',
+    {
+      id: 2,
+      icon: 'developer_mode',
+      title: 'desarrollo',
+      hover: false,
+      styleClass: '_dev',
+      active: false,
+      router: 'works/development',
       hoverColor: '#ffdc51'
     },
-    { 
-      id: 3, 
-      icon: 'local_florist', 
-      title: 'diseño', 
-      hover: false, 
-      styleClass: '_design', 
-      active: false, 
-      router:'works/design',
+    {
+      id: 3,
+      icon: 'local_florist',
+      title: 'diseño',
+      hover: false,
+      styleClass: '_design',
+      active: false,
+      router: 'works/design',
       hoverColor: '#ff97aa'
     },
     // $design_color: #ff97aa;
@@ -50,11 +50,11 @@ export class NavbarComponent implements OnInit {
   ];
 
   constructor(private router: Router) {
-    
+
   }
 
   ngOnInit() {
-    this.setActiveButtonBasedOnURL(); 
+    this.setActiveButtonBasedOnURL();
 
     // Ejecutar setActiveButtonBasedOnURL() cada 1/2 segundo
     setInterval(() => {
@@ -63,7 +63,7 @@ export class NavbarComponent implements OnInit {
   }
 
   setActiveButtonBasedOnURL() {
-    const currentURL = this.router.url;    
+    const currentURL = this.router.url;
     for (const btn of this.btnNavBar) {
       btn.active = currentURL.includes(btn.router);
     }
@@ -79,8 +79,8 @@ export class NavbarComponent implements OnInit {
   }
 
   navigateBtnTo(btn: ItemNavBar) {
-    this.setActiveButton(btn.id); 
-    this. isHomePage();
+    this.setActiveButton(btn.id);
+    this.isHomePage();
     this.router.navigate([btn.router]);
   }
 
@@ -88,10 +88,10 @@ export class NavbarComponent implements OnInit {
     for (const btn of this.btnNavBar) {
       btn.active = false;
     }
-    this. isHomePage();
+    this.isHomePage();
     this.router.navigate([destiny]);
   }
-  
+
   setActiveButton(id: number) {
     for (const btn of this.btnNavBar) {
       btn.active = btn.id === id;
@@ -101,9 +101,9 @@ export class NavbarComponent implements OnInit {
   onButtonMouseEnter(btn: any) {
     this.hoverStates[btn.id] = true;
   }
-  
+
   onButtonMouseLeave(btn: any) {
     this.hoverStates[btn.id] = false;
   }
-  
+
 }
