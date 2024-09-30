@@ -10,16 +10,17 @@ import { LoadingService } from '../../../../../services/loading.service';
 })
 
 export class EditorialComponent implements OnInit {
-/*--------VARIABLES--------*/ 
+  /*--------VARIABLES--------*/
   public imagesList: string[] = [];
   public selectedOption: string = '';
   public imgGallery: string = '';
 
-/*--------INTERFACES-------*/ 
+  /*--------INTERFACES-------*/
   options: OptionSelect[] = [
-    {value: 'imagesList', view_Text: 'aviNews'},
-    {value: 'imagesList1', view_Text: 'El Fénix'},
-    {value: 'imagesList2', view_Text: 'Centro Cultural América Libre'},
+    { value: 'imagesList', view_Text: 'aviNews' },
+    { value: 'imagesList0', view_Text: 'Libros para Colorear' },
+    { value: 'imagesList1', view_Text: 'El Fénix' },
+    { value: 'imagesList2', view_Text: 'Centro Cultural América Libre' },
   ];
 
   information: Information[] = [
@@ -67,7 +68,7 @@ export class EditorialComponent implements OnInit {
     }
   ];
 
-  brands : Button[] = [
+  brands: Button[] = [
     {
       route: 'works/design/brands',
       img: '../assets/images/graph/brands.png',
@@ -92,17 +93,17 @@ export class EditorialComponent implements OnInit {
   ]
 
   constructor(
-    private router: Router, 
+    private router: Router,
     public loadingService: LoadingService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.topFunction();
     this.loadImages();
     this.loadingService.setLoadingState(true);
   }
-  
-/* ----------- MÉTODOS ----------- */
+
+  /* ----------- MÉTODOS ----------- */
   preventRightClick(event: MouseEvent) {
     event.preventDefault();
   }
@@ -111,19 +112,19 @@ export class EditorialComponent implements OnInit {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-  
-  routeBack() {    
+
+  routeBack() {
     this.router.navigateByUrl('works/design/ux-ui')
   }
 
-  routeTo(route:string) {    
+  routeTo(route: string) {
     this.router.navigateByUrl(route);
   }
 
   loadImages() {
     // Simulación de carga de imágenes
     setTimeout(() => {
-      this.imagesList = [ 
+      this.imagesList = [
         '../assets/images/editorial/aviNews/0.png',
         '../assets/images/editorial/aviNews/1.png',
         '../assets/images/editorial/aviNews/2.png',
@@ -134,6 +135,21 @@ export class EditorialComponent implements OnInit {
     }, 1300); // Simulamos una demora de 2 segundos
   }
 
+  loadImages0() {
+    this.imagesList = [
+      '../assets/images/editorial/pintar/0.png',
+      '../assets/images/editorial/pintar/1.png',
+      '../assets/images/editorial/pintar/2.png',
+      '../assets/images/editorial/pintar/3.png',
+      '../assets/images/editorial/pintar/4.png',
+      '../assets/images/editorial/pintar/5.png',
+      '../assets/images/editorial/pintar/6.png',
+      '../assets/images/editorial/pintar/7.png',
+      '../assets/images/editorial/pintar/8.png',
+      '../assets/images/editorial/pintar/9.png',
+    ];
+    this.imgGallery = this.imagesList[0];
+  }
   loadImages1() {
     this.imagesList = [
       '../assets/images/editorial/el_fenix/0.png',
@@ -142,36 +158,39 @@ export class EditorialComponent implements OnInit {
       '../assets/images/editorial/el_fenix/3.png',
       '../assets/images/editorial/el_fenix/4.png',
       '../assets/images/editorial/el_fenix/5.png',
-      ];
-      this.imgGallery = this.imagesList[0];
-    }
-    loadImages2() {
-      this.imagesList = [
-        '../assets/images/editorial/cc/0.png',   
-        '../assets/images/editorial/cc/1.png',
-        '../assets/images/editorial/cc/2.png',
-        '../assets/images/editorial/cc/3.png',
-        '../assets/images/editorial/cc/4.png',
     ];
-      this.imgGallery = this.imagesList[0];
-    }
+    this.imgGallery = this.imagesList[0];
+  }
+  loadImages2() {
+    this.imagesList = [
+      '../assets/images/editorial/cc/0.png',
+      '../assets/images/editorial/cc/1.png',
+      '../assets/images/editorial/cc/2.png',
+      '../assets/images/editorial/cc/3.png',
+      '../assets/images/editorial/cc/4.png',
+    ];
+    this.imgGallery = this.imagesList[0];
+  }
 
-    onChange(event: any) {
-      this.selectedOption = event.value;    
-      switch (this.selectedOption) {
-        case 'imagesList':
-          this.loadImages();
-          break;
-        case 'imagesList1':
-          this.loadImages1();
-          break;
-        case 'imagesList2':
-          this.loadImages2();
-          break;
-        default:
-          // Lógica para el caso por defecto (opcional)
-          break;
-      }
+  onChange(event: any) {
+    this.selectedOption = event.value;
+    switch (this.selectedOption) {
+      case 'imagesList':
+        this.loadImages();
+        break;
+      case 'imagesList0':
+        this.loadImages0();
+        break;
+      case 'imagesList1':
+        this.loadImages1();
+        break;
+      case 'imagesList2':
+        this.loadImages2();
+        break;
+      default:
+        // Lógica para el caso por defecto (opcional)
+        break;
     }
   }
+}
 

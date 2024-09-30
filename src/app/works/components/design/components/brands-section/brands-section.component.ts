@@ -10,12 +10,12 @@ import { LoadingService } from '../../../../../services/loading.service';
 })
 
 export class BrandsSectionComponent implements OnInit {
-/*--------VARIABLES--------*/ 
+  /*--------VARIABLES--------*/
   public imagesList: string[] = [];
   public selectedOption: string = '';
   public imgGallery: string = '';
 
-/*--------INTERFACES-------*/ 
+  /*--------INTERFACES-------*/
   information: Information[] = [
     {
       title: 'Diseño de Logo',
@@ -55,7 +55,7 @@ export class BrandsSectionComponent implements OnInit {
     }
   ];
 
-  brands : Button[] = [
+  brands: Button[] = [
     {
       route: 'works/design/competitions',
       img: '../assets/images/graph/eyeka_logo.png',
@@ -75,22 +75,22 @@ export class BrandsSectionComponent implements OnInit {
       img: '../assets/images/graph/editorial.png',
       name: 'Editorial',
       text: 'Ícono de editorial',
-      title: 'Diseño Editorial', 
+      title: 'Diseño Editorial',
     },
   ]
 
   constructor(
-    private router: Router, 
+    private router: Router,
     public loadingService: LoadingService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.topFunction();
     this.loadImages();
     this.loadingService.setLoadingState(true);
   }
-    
-/* ----------- MÉTODOS ----------- */
+
+  /* ----------- MÉTODOS ----------- */
   preventRightClick(event: MouseEvent) {
     event.preventDefault();
   }
@@ -100,19 +100,20 @@ export class BrandsSectionComponent implements OnInit {
     document.documentElement.scrollTop = 0;
   }
 
-  routeBack() {    
+  routeBack() {
     this.router.navigateByUrl('works/design/ux-ui')
   }
-  
-  routeTo(route:string) {    
+
+  routeTo(route: string) {
     this.router.navigateByUrl(route);
   }
 
   loadImages() {
     // Simulación de carga de imágenes
     setTimeout(() => {
-      this.imagesList = [ 
+      this.imagesList = [
         '../assets/images/brands/-2.png',
+        '../assets/images/brands/-6.png',
         '../assets/images/brands/-4.png',
         '../assets/images/brands/-5.png',
         '../assets/images/brands/-1.png',
@@ -131,5 +132,5 @@ export class BrandsSectionComponent implements OnInit {
       this.loadingService.setLoadingState(false);
     }, 1300);
   }
-  
+
 }
