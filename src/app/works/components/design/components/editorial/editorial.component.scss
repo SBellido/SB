@@ -1,15 +1,24 @@
 @import '../../../gallery-polaroid/gallery-polaroid.component.scss';
 @import '../competitions/competitions.component.scss';
+@import '../../../../../global/global_btn.scss';
+
 @media (min-width: 0px) {
   div._container_text_selector {
-      margin-right: 0;
+    margin-right: 0;
+    margin-left: 4rem;
+  }
+
+  div._container_btn {
+    margin-top: -0.5rem;
   }
 }
+
 @media (min-width: 1024px) {
-  div._container_text_selector {
-    margin-right: 2rem;
-  }
-  div._container_more_works {
-    margin-left: 0.5rem;
-  }
+  // div._container_text_selector {
+  //   margin-right: 2rem;
+  // }
+
+  // div._container_more_works {
+  //   margin-left: 0.5rem;
+  // }
 }

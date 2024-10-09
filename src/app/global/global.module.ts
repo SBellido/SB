@@ -26,9 +26,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     DownloadModalComponent,
     LoaderComponent,
   ],
-  declarations: [ 
-    NavbarComponent, 
-    FooterComponent, 
+  declarations: [
+    NavbarComponent,
+    FooterComponent,
     DownloadComponent,
     DownloadModalComponent,
     LoaderComponent,

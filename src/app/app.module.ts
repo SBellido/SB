@@ -12,21 +12,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
-    declarations: [
-      AppComponent,
-      ErrorFourZeroFourComponent,
-    ],
-    imports: [
-      BrowserModule,
-      AppRoutingModule,
-      BrowserAnimationsModule,
-      WorksModule,
-      GlobalModule,
-      MatDialogModule,
-      MatIconModule,
-      MatSnackBarModule
-    ],
-    bootstrap: [AppComponent],
+  declarations: [
+    AppComponent,
+    ErrorFourZeroFourComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    WorksModule,
+    GlobalModule,
+    MatDialogModule,
+    MatIconModule,
+    MatSnackBarModule
+  ],
+  bootstrap: [AppComponent],
 })
 
 export class AppModule { }

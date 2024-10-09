@@ -3,7 +3,7 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /* Modules */
-import { GlobalModule }  from '../global/global.module';
+import { GlobalModule } from '../global/global.module';
 import { WorksRoutingModule } from './works-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
@@ -39,7 +39,7 @@ import { CompetitionsComponent } from './components/design/components/competitio
 import { PublicationsComponent } from './components/design/components/publications/publications.component';
 import { QxComponent } from './components/development/components/qx/qx.component';
 import { SectionComponent } from './components/section/section.component';
-import { HighlightDirective } from '../directives/highlight.directive'; 
+import { HighlightDirective } from '../directives/highlight.directive';
 import { TecnologiesComponent } from './components/tecnologies/tecnologies.component';
 import { HeaderSectionComponent } from './components/header-section/header-section.component';
 import { InfoComponent } from './components/info/info.component';
@@ -47,11 +47,12 @@ import { InfoMobileComponent } from './components/info-mobile/info-mobile.compon
 import { InfoPolaroidComponent } from './components/info-polaroid/info-polaroid.component';
 import { InfoEditorialComponent } from './components/info-editorial/info-editorial.component';
 import { GameComponent } from './components/development/components/game/game.component';
-import { PortalComponent } from './components/development/components/ruano/portal.component'; 
+import { PortalComponent } from './components/development/components/ruano/portal.component';
 import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
 import { EditorialComponent } from './components/design/components/editorial/editorial.component';
 import { CubeComponent } from './components/cube/cube.component';
 import { CardComponent } from '../global/components/card/card.component';
+import { BooksComponent } from '../works/components/design/components/editorial/books/books.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +94,8 @@ import { CardComponent } from '../global/components/card/card.component';
     PlatziReact,
     EditorialComponent,
     CubeComponent,
-    CardComponent
+    CardComponent,
+    BooksComponent,
   ],
   imports: [
     CommonModule,

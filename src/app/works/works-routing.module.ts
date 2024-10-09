@@ -28,12 +28,13 @@ import { ProyectGameComponent } from './components/development/components/game/p
 import { PortalComponent } from './components/development/components/ruano/portal.component';
 import { PlatziReact } from './components/development/components/platzi-react/platzi-react.component';
 import { EditorialComponent } from './components/design/components/editorial/editorial.component';
+import { BooksComponent } from './components/design/components/editorial/books/books.component';
 
 const routes: Routes = [
   {
     path: '',
     component: WorksComponent,
-    children: [     
+    children: [
       {
         path: '',
         component: HomeComponent
@@ -85,6 +86,11 @@ const routes: Routes = [
         path: 'design/editorial',
         pathMatch: 'full',
         component: EditorialComponent
+      },
+      {
+        path: 'design/editorial/books',
+        pathMatch: 'full',
+        component: BooksComponent
       },
       {
         path: 'development',

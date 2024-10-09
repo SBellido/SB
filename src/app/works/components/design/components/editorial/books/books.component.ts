@@ -1,15 +1,15 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Button, HeaderSection, Information, OptionSelect } from 'src/app/models/models';
-import { LoadingService } from '../../../../../services/loading.service';
+import { LoadingService } from '../..//../../../../services/loading.service';
 
 @Component({
-  selector: 'app-editorial',
-  templateUrl: './editorial.component.html',
-  styleUrls: ['./editorial.component.scss']
+  selector: 'app-books',
+  templateUrl: './books.component.html',
+  styleUrls: ['./books.component.scss']
 })
 
-export class EditorialComponent implements OnInit {
+export class BooksComponent implements OnInit {
   /*--------VARIABLES--------*/
   public imagesList: string[] = [];
   public selectedOption: string = '';
@@ -25,21 +25,15 @@ export class EditorialComponent implements OnInit {
 
   information: Information[] = [
     {
-      title: 'Diseño editorial',
-      text: 'El diseño editorial ha desempeñado un papel crucial a lo largo de la historia del diseño, consolidándose como un elemento esencial en la comunicación visual. Desde sus primeras manifestaciones hasta la actualidad, su relevancia ha sido innegable en la difusión de información, la construcción de identidades visuales y la promoción de productos y servicios. Su importancia radica en su capacidad para transmitir mensajes de manera efectiva y memorable. Mediante la combinación de elementos visuales y textuales, como tipografías, imágenes y espacios en blanco, logra captar la atención del lector y comunicar el contenido de forma clara y atractiva. Además, ha sido un vehículo fundamental para la preservación y difusión del conocimiento a lo largo de los siglos. Desde los primeros libros hasta las revistas y periódicos modernos, ha servido como un medio invaluable para compartir ideas, narrativas y descubrimientos, contribuyendo así al enriquecimiento cultural y educativo de la sociedad. No obstante, su importancia va más allá de la mera transmisión de información. También ha sido un poderoso instrumento para la expresión artística y la innovación estética. A través de portadas creativas, diseños innovadores y técnicas de impresión avanzadas, ha logrado cautivar al público y dejar una impresión duradera en la memoria colectiva.',
+      title: 'Libros para colorear',
+      text: '¡Bienvenido a mi rincón de venta de libros! Te presento mis libros para colorear, diseñados para brindar horas de diversión y relajación. Cada libro contiene 50 dibujos únicos que te invitarán a explorar tu imaginación y expresarte a través del arte y el color. Algo súper interesante es que puedes personalizar tu libro según tus preferencias. Elige entre diversas temáticas, como deportes, dinosaurios, animales, fantasía, mandalas, letras, o combina las que mas te gusten. Además, podés personalizar el nombre y el personaje de la portada, haciendo que tu regalo sea verdaderamente único, dándole el toque personal que lo hace perfecto para vos o para sorprender a alguien especial. Podés hacer tu pedido, o consultar precios en el botón de abajo. Encantado de ayudarte a crear un libro que se adapte a tus deseos. ¡No esperes más, podés comenzar tu aventura de color hoy mismo!. Espero tu mensaje',
       subtitle: 'Tecnologías utilizadas',
       tecnologies: [
         {
           href: '',
-          src: '../assets/images/tecnologies/indesign.png',
-          title: 'Adobe InDesign',
-          alt: 'Logo de InDesign',
-        },
-        {
-          href: '',
-          src: '../assets/images/tecnologies/quarkexpress.png',
-          title: 'QuarkExpress',
-          alt: 'Logo de QuarkExpress',
+          src: '../assets/images/tecnologies/illustrator.png',
+          title: 'Adobe Illustrator',
+          alt: 'Logo de Illustrator',
         },
         {
           href: '',
@@ -49,9 +43,9 @@ export class EditorialComponent implements OnInit {
         },
         {
           href: '',
-          src: '../assets/images/tecnologies/bing.png',
-          title: 'Bing',
-          alt: 'Logo de Bing',
+          src: '../assets/images/tecnologies/indesign.png',
+          title: 'Adobe InDesign',
+          alt: 'Logo de InDesign',
         },
       ],
     },
@@ -90,6 +84,13 @@ export class EditorialComponent implements OnInit {
       text: 'Ícono de altavoz',
       title: 'Diseño de Publicaciones',
     },
+    {
+      route: 'works/design/editorial',
+      img: '../assets/images/graph/editorial.png',
+      name: '',
+      text: 'Ícono de editorial',
+      title: 'Editorial',
+    },
   ];
 
   /* ----------- EVENTOS ----------- */
@@ -119,38 +120,49 @@ export class EditorialComponent implements OnInit {
   }
 
   routeTo(route: string) {
-    this.router.navigateByUrl(route);
+    // Si la ruta contiene "wa.me", abre el enlace en una nueva pestaña
+    if (route.includes('wa.me')) {
+      window.open(route, '_blank'); // Abre en una nueva pestaña
+    } else {
+      this.router.navigateByUrl(route); // Navega normalmente
+    }
   }
 
   loadImages() {
     // Simulación de carga de imágenes
     setTimeout(() => {
       this.imagesList = [
-        '../assets/images/editorial/aviNews/0.png',
-        '../assets/images/editorial/aviNews/1.png',
-        '../assets/images/editorial/aviNews/2.png',
-        '../assets/images/editorial/aviNews/3.png',
+        '../assets/images/editorial/pintar/infantil_nena/0.png',
+        '../assets/images/editorial/pintar/infantil_nena/00.png',
+        '../assets/images/editorial/pintar/infantil_nena/000.png',
+        '../assets/images/editorial/pintar/infantil_nena/0000.png',
+        '../assets/images/editorial/pintar/infantil_nena/1.png',
+        '../assets/images/editorial/pintar/infantil_nena/2.png',
+        '../assets/images/editorial/pintar/infantil_nena/3.png',
+        '../assets/images/editorial/pintar/infantil_nena/4.png',
+        '../assets/images/editorial/pintar/infantil_nena/5.png',
+        '../assets/images/editorial/pintar/infantil_nena/6.png',
+        '../assets/images/editorial/pintar/infantil_nena/7.png',
+        '../assets/images/editorial/pintar/infantil_nena/8.png',
+        '../assets/images/editorial/pintar/infantil_nena/9.png',
+        '../assets/images/editorial/pintar/mandala/0.png',
+        '../assets/images/editorial/pintar/mandala/0.jpg',
+        '../assets/images/editorial/pintar/mandala/1.png',
+        '../assets/images/editorial/pintar/mandala/1.jpg',
+        '../assets/images/editorial/pintar/mandala/2.jpg',
+        '../assets/images/editorial/pintar/mandala/3.jpg',
+        '../assets/images/editorial/pintar/mandala/4.jpg',
+        '../assets/images/editorial/pintar/mandala/5.jpg',
+        '../assets/images/editorial/pintar/mandala/6.jpg',
+        '../assets/images/editorial/pintar/mandala/7.jpg',
+        '../assets/images/editorial/pintar/mandala/8.jpg',
+        '../assets/images/editorial/pintar/mandala/10.png',
       ];
       this.imgGallery = this.imagesList[0];
       this.loadingService.setLoadingState(false); // Cambiar estado de carga una vez que las imágenes se han cargado
     }, 1300); // Simulamos una demora de 2 segundos
   }
 
-  // loadImages0() {
-  //   this.imagesList = [
-  //     '../assets/images/editorial/pintar/infantil_nena/0.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/1.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/2.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/3.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/4.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/5.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/6.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/7.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/8.png',
-  //     '../assets/images/editorial/pintar/infantil_nena/9.png',
-  //   ];
-  //   this.imgGallery = this.imagesList[0];
-  // }
   loadImages1() {
     this.imagesList = [
       '../assets/images/editorial/el_fenix/0.png',

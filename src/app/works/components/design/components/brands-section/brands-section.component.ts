@@ -126,6 +126,7 @@ export class BrandsSectionComponent implements OnInit {
         '../assets/images/brands/5.png',
         '../assets/images/brands/6.png',
         '../assets/images/brands/7.png',
+        '../assets/images/brands/9.png',
         '../assets/images/brands/8.png',
       ];
       this.imgGallery = this.imagesList[0];
