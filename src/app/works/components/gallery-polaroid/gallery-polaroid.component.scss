@@ -1,20 +1,28 @@
 @import '../gallery/gallery.component.scss';
+
+div._container_image {
+    padding-top: 2.5rem; // Predeterminado para pantallas menores a 1920px
+}
+
 @media (min-width: 0px) {
     article._container_gallery {
-       display: flex;
-       align-items: center;
-       justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
     div._container_image {
         width: 15rem;
         margin-top: 1rem;
         margin-bottom: 0;
     }
+
     img._image_gallery {
         margin-bottom: .8rem;
         margin-top: 0;
         border-radius: 15px;
     }
+
     div._container_container {
         display: flex;
         align-items: center;
@@ -22,35 +30,43 @@
         width: 100%;
     }
 }
+
 @media (min-width: 375px) {
     article._container_gallery {
         margin-bottom: 4rem;
     }
+
     div._container_image {
         padding-top: .3rem;
         width: 18rem;
     }
+
     img._image_gallery {
         margin-bottom: 1.3rem;
     }
 }
+
 @media (min-width: 425px) {
     img._image_gallery {
         margin-bottom: 2rem;
     }
+
     div._container_image {
         width: 21rem;
     }
 }
+
 @media (min-width: 1024px) {
     article._container_gallery {
         margin-bottom: 3rem;
     }
+
     div._container_image {
         margin-top: 0;
         padding-top: 1.7rem;
         margin-bottom: -2.3rem;
     }
+
     section._gallery {
         display: flex;
         flex-direction: row;
@@ -59,30 +75,37 @@
         margin-bottom: -.8rem;
         width: 26rem;
     }
+
     img._image_gallery {
         margin-bottom: 4.5rem;
     }
+
     div._container_count {
         margin-top: 0;
     }
 }
+
 @media (min-width: 1440px) {
     img._image_gallery {
         width: 23.5rem;
     }
 }
+
 @media (min-width: 1500px) {
     div._container_image {
         padding-top: 1.6rem;
     }
 }
+
 @media (min-width: 1920px) {
     div._container_image {
-        padding-top: 2.5rem;
+        padding-top: 2rem; // Cambia el padding-top a 2rem para pantallas mayores a 1920px
     }
+
     img._image_gallery {
         width: 23rem;
     }
+
     article._container_gallery {
         margin-right: 7.5rem;
     }
